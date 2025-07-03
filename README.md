@@ -1,12 +1,12 @@
 # CreAgentive
 
-CreAgentic 是一个基于 Autogen 框架实现的基于多智能体的创意文本生成工作流。
+CreAgentive 是一个基于 Autogen 框架实现的基于多智能体的创意文本生成工作流。
 
 ## 创建环境
 
 ```cmd
-conda create -n creagentic python=3.10
-conda activate creagentic
+conda create -n creagentive python=3.10
+conda activate creagentive
 pip install -r requirement.txt
 ```
 
@@ -17,7 +17,7 @@ pip install -r requirement.txt
 项目结构按照 HAWK 的层次架构进行分布。
 
 ```raw
-CreAgentic
+CreAgentive
 ├── .env                  # LLM API Key 和相关环境配置
 ├── workflow              # 定义项目的各种 Agent 工作流，包括总的工作流和各个小模块内部的工作流
 │   └── main_wk.py        # 主工作流
