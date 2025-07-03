@@ -14,7 +14,7 @@ Deepseek_client = OpenAIChatCompletionClient(
     base_url="https://api.siliconflow.cn/v1",       # API 地址
     api_key=siliconflow_api_key,                    # API 密钥
     model_info={
-        "family": "qwen",              
+        "family": "deepseek",              
         "context_length": 8192,        
         "max_output_tokens": 2048,     
         "tool_choice_supported": True, 
@@ -32,7 +32,7 @@ QWEN_client = OpenAIChatCompletionClient(
     base_url="https://api.siliconflow.cn/v1",       # API 地址
     api_key=siliconflow_api_key,                    # API 密钥
     model_info={
-        "family": "qwen",              
+        "family": "glm",              
         "context_length": 8192,        
         "max_output_tokens": 2048,     
         "tool_choice_supported": True, 
@@ -50,7 +50,7 @@ GLM_client = OpenAIChatCompletionClient(
     base_url="https://api.siliconflow.cn/v1",       # API 地址
     api_key=siliconflow_api_key,                    # API 密钥
     model_info={
-        "family": "qwen",              
+        "family": "glm",              
         "context_length": 8192,        
         "max_output_tokens": 2048,     
         "tool_choice_supported": True, 
@@ -62,4 +62,4 @@ GLM_client = OpenAIChatCompletionClient(
     },
 )
 
-# print("硅基流动平台的模型客户端已成功初始化！")
+print("硅基流动平台的模型客户端已成功初始化！")
