@@ -10,7 +10,12 @@ conda activate creagentive
 pip install -r requirement.txt
 ```
 
-自行配置 `.env` 文件存储 API Key
+
+在项目根目录中创建一个文件并添加您的 OpenAI API 密钥： `.env`
+
+```raw
+OPENAI_API_KEY=<your_openai_api_key>
+```
 
 ## 项目说明
 
