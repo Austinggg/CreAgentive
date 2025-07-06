@@ -1,65 +1,90 @@
 import os
 from dotenv import load_dotenv
 from autogen_ext.models.openai import OpenAIChatCompletionClient
+# from autogen_core.models import UserMessage
+# import asyncio
 
-# 加载环境变量
-load_dotenv()
-# 获取硅基流动平台的 API 密钥
-siliconflow_api_key = os.getenv("SILICONFLOW_API_KEY")
-# print("读取到的 API Key 是：", siliconflow_api_key)
+class LLMClientManager:
+    """
+    LLMClientManager 封装了多种 LLM 客户端的初始化与获取方法。
+    可通过 get_client(model_name) 获取指定模型的客户端实例。
+    """
 
-# 初始化 DeepSeek-V3 模型客户端
-Deepseek_client = OpenAIChatCompletionClient(
-    model="deepseek-ai/DeepSeek-V3",                # 模型名称
-    base_url="https://api.siliconflow.cn/v1",       # API 地址
-    api_key=siliconflow_api_key,                    # API 密钥
-    model_info={
-        "family": "deepseek",              
-        "context_length": 8192,        
-        "max_output_tokens": 2048,     
-        "tool_choice_supported": True, 
-        "tool_choice_required": False,  
-        "structured_output": True,     
-        "vision": False,                
-        "function_calling": True,      
-        "json_output": True           
-    },
-)
+    def __init__(self):
+        load_dotenv()
+        siliconflow_api_key = os.getenv("SILICONFLOW_API_KEY") # 修改你的 API Key 环境变量名
 
-# 初始化 Qwen3-30B 模型客户端
-QWEN_client = OpenAIChatCompletionClient(
-    model="Qwen/Qwen3-30B-A3B",                     # 模型名称
-    base_url="https://api.siliconflow.cn/v1",       # API 地址
-    api_key=siliconflow_api_key,                    # API 密钥
-    model_info={
-        "family": "glm",              
-        "context_length": 8192,        
-        "max_output_tokens": 2048,     
-        "tool_choice_supported": True, 
-        "tool_choice_required": False,  
-        "structured_output": True,     
-        "vision": False,                
-        "function_calling": True,      
-        "json_output": True           
-    },
-)
+        # 初始化各类模型客户端
+        self.clients = {
+            "deepseek-v3": OpenAIChatCompletionClient(
+                model="deepseek-ai/DeepSeek-V3",
+                base_url="https://api.siliconflow.cn/v1",
+                api_key=siliconflow_api_key,
+                model_info={
+                    "family": "deepseek",
+                    "context_length": 8192,
+                    "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
+            "qwen3": OpenAIChatCompletionClient(
+                model="Qwen/Qwen3-30B-A3B",
+                base_url="https://api.siliconflow.cn/v1",
+                api_key=siliconflow_api_key,
+                model_info={
+                    "family": "glm",
+                    "context_length": 8192,
+                    "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
+            "glm4": OpenAIChatCompletionClient(
+                model="THUDM/GLM-4-32B-0414",
+                base_url="https://api.siliconflow.cn/v1",
+                api_key=siliconflow_api_key,
+                model_info={
+                    "family": "glm",
+                    "context_length": 8192,
+                    "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
+        }
 
-# 初始化 GLM4-32B 模型客户端
-GLM_client = OpenAIChatCompletionClient(
-    model="THUDM/GLM-4-32B-0414",                   # 模型名称
-    base_url="https://api.siliconflow.cn/v1",       # API 地址
-    api_key=siliconflow_api_key,                    # API 密钥
-    model_info={
-        "family": "glm",              
-        "context_length": 8192,        
-        "max_output_tokens": 2048,     
-        "tool_choice_supported": True, 
-        "tool_choice_required": False,  
-        "structured_output": True,     
-        "vision": False,                
-        "function_calling": True,      
-        "json_output": True           
-    },
-)
+    def get_client(self, model_name: str):
+        """
+        根据模型名称获取对应的 LLM 客户端实例。
+        支持 'deepseek-v3'、'qwen3'、'glm4'。
+        """
+        client = self.clients.get(model_name.lower())
+        if not client:
+            raise ValueError(f"不支持的模型名称: {model_name}")
+        return client
 
-print("硅基流动平台的模型客户端已成功初始化！")
+# 测试代码
+# async def main():
+#     llm_manager = LLMClientManager()
+#     client = llm_manager.get_client("deepseek-v3")
+#     result = await client.create([
+#         UserMessage(content="请介绍一下AutoGen框架。", source="user")
+#     ])
+#     print(result)
+#     await client.close()
+
+# if __name__ == "__main__":
+#     asyncio.run(main())
