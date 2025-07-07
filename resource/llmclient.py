@@ -33,7 +33,7 @@ class LLMClientManager:
                 },
             ),
             "deepseek-r1": OpenAIChatCompletionClient(
-                model="Pro/deepseek-ai/DeepSeek-R1",
+                model="deepseek-ai/DeepSeek-R1",
                 base_url="https://api.siliconflow.cn/v1",
                 api_key=siliconflow_api_key,
                 model_info={

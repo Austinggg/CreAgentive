@@ -3,7 +3,7 @@ from resource.llmclient import LLMClientManager
 from collections import deque
 
 # 初始化模型客户端
-model_client = LLMClientManager().get_client("deepseek-v3")
+model_client = LLMClientManager().get_client("deepseek-r1")
 
 # 测试输入队列
 test_inputs = deque([

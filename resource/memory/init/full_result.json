@@ -1,207 +1,65 @@
 {
   "__metadata__": {
     "description": "完整多智能体执行结果",
-    "saved_at": "2025-07-07 16:43:41",
+    "saved_at": "2025-07-07 16:50:03",
     "version": "1.0"
   },
   "data": {
     "messages": [
       {
-        "id": "3500493b-311f-4dc4-926d-77e2d88a3357",
+        "id": "f1a9dae3-fd5d-4424-82f4-a77c802ceb1f",
         "source": "user_input",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-07T08:42:14.134497+00:00"
+        "created_at": "2025-07-07T08:48:14.095571+00:00"
       },
       {
-        "id": "c7421805-c5bc-438b-8702-16e568ca8360",
+        "id": "8ac806d7-49d1-4cb6-b3b7-9b8d327b0a0e",
         "source": "user_input",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-07T08:42:14.134497+00:00"
+        "created_at": "2025-07-07T08:48:14.106582+00:00"
       },
       {
-        "id": "47d3cb2c-d4cb-46af-8201-d311b612847b",
+        "id": "aafd6cbf-af1d-4e5f-bead-39b13046b5ff",
+        "source": "extractor",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2025-07-07T08:49:44.216799+00:00"
+      },
+      {
+        "id": "5e45764d-5820-4cfd-9b29-5abaeb2c05cc",
         "source": "extractor",
         "models_usage": {
           "prompt_tokens": 896,
-          "completion_tokens": 48
+          "completion_tokens": 1539
         },
         "metadata": {},
-        "created_at": "2025-07-07T08:42:17.884763+00:00"
+        "created_at": "2025-07-07T08:49:44.216799+00:00"
       },
       {
-        "id": "c971e6a3-5483-46b3-bd7d-68fdb972235f",
+        "id": "cda6b491-82e9-4252-9efe-e064c67360c2",
+        "source": "validator",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2025-07-07T08:50:03.896268+00:00"
+      },
+      {
+        "id": "6c24e3e1-4586-493f-8d5f-8b41dfe1d8f3",
         "source": "validator",
         "models_usage": {
-          "prompt_tokens": 545,
-          "completion_tokens": 53
+          "prompt_tokens": 783,
+          "completion_tokens": 370
         },
         "metadata": {},
-        "created_at": "2025-07-07T08:42:21.288954+00:00"
+        "created_at": "2025-07-07T08:50:03.896268+00:00"
       },
       {
-        "id": "46b0790e-5ab2-4126-ac6b-3053c032752d",
-        "source": "user_input",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:21.290969+00:00"
-      },
-      {
-        "id": "20ca5b05-8f86-4e11-9478-b2a5b80e329f",
-        "source": "user_input",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:21.294493+00:00"
-      },
-      {
-        "id": "04bce7b8-6c02-4a0f-bafd-eba91514042e",
-        "source": "extractor",
-        "models_usage": {
-          "prompt_tokens": 1019,
-          "completion_tokens": 98
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:26.485182+00:00"
-      },
-      {
-        "id": "ceed87ab-65db-46de-adc5-153116ff010a",
-        "source": "validator",
-        "models_usage": {
-          "prompt_tokens": 717,
-          "completion_tokens": 59
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:30.030115+00:00"
-      },
-      {
-        "id": "d4522691-7110-433a-a326-8d042eb38172",
-        "source": "user_input",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:30.035231+00:00"
-      },
-      {
-        "id": "2ff42fa5-a517-43ce-a371-83342e284eae",
-        "source": "user_input",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:30.035231+00:00"
-      },
-      {
-        "id": "2d543ed8-f403-487e-9630-2e3a4fcee91a",
-        "source": "extractor",
-        "models_usage": {
-          "prompt_tokens": 1190,
-          "completion_tokens": 87
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:35.039020+00:00"
-      },
-      {
-        "id": "6b6bcb7f-8033-4ce7-a19b-d2d0fc44ba3a",
-        "source": "validator",
-        "models_usage": {
-          "prompt_tokens": 878,
-          "completion_tokens": 26
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:37.052997+00:00"
-      },
-      {
-        "id": "e9084c4b-f6a4-4b4d-89cf-7452be00241e",
-        "source": "user_input",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:37.055592+00:00"
-      },
-      {
-        "id": "5f18b22f-7622-4908-8661-125d80334e0e",
-        "source": "user_input",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:37.055592+00:00"
-      },
-      {
-        "id": "378f43ac-d9d1-4d33-8733-2a82df311716",
-        "source": "extractor",
-        "models_usage": {
-          "prompt_tokens": 1327,
-          "completion_tokens": 235
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:48.159892+00:00"
-      },
-      {
-        "id": "77dc6bd5-073e-4375-ae9a-a94badf4ddca",
-        "source": "validator",
-        "models_usage": {
-          "prompt_tokens": 1162,
-          "completion_tokens": 69
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:52.559916+00:00"
-      },
-      {
-        "id": "3138d9e5-a179-40ba-9cd9-f5c7039f1474",
-        "source": "user_input",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:52.563038+00:00"
-      },
-      {
-        "id": "c145858d-78ae-42aa-9519-8c7d22a956d0",
-        "source": "user_input",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-07T08:42:52.565861+00:00"
-      },
-      {
-        "id": "5d6a56d6-2eb4-4a8f-85d1-774d8385b8f2",
-        "source": "extractor",
-        "models_usage": {
-          "prompt_tokens": 1649,
-          "completion_tokens": 250
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:43:05.474304+00:00"
-      },
-      {
-        "id": "9b2f86b5-4800-4738-a059-2e98b00dc7d6",
-        "source": "validator",
-        "models_usage": {
-          "prompt_tokens": 1499,
-          "completion_tokens": 1
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:43:07.090788+00:00"
-      },
-      {
-        "id": "70abe48a-8328-4dde-996e-da217005835a",
-        "source": "structurer",
-        "models_usage": {
-          "prompt_tokens": 2121,
-          "completion_tokens": 428
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:43:26.319893+00:00"
-      },
-      {
-        "id": "3edbea63-c6af-47a2-8e57-be931b5d4bbf",
-        "source": "initializer",
-        "models_usage": {
-          "prompt_tokens": 2350,
-          "completion_tokens": 366
-        },
-        "metadata": {},
-        "created_at": "2025-07-07T08:43:41.076355+00:00"
-      },
-      {
-        "id": "3ae4c0b1-3270-41f6-a408-786c7583893a",
+        "id": "2551fd6a-7c76-4062-9bd5-384f3d73b7d2",
         "source": "DiGraphStopAgent",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-07T08:43:41.080094+00:00"
+        "created_at": "2025-07-07T08:50:03.901853+00:00"
       }
     ],
     "stop_reason": "Stop message received"
