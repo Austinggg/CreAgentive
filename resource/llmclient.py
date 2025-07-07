@@ -32,6 +32,22 @@ class LLMClientManager:
                     "json_output": True
                 },
             ),
+            "deepseek-r1": OpenAIChatCompletionClient(
+                model="Pro/deepseek-ai/DeepSeek-R1",
+                base_url="https://api.siliconflow.cn/v1",
+                api_key=siliconflow_api_key,
+                model_info={
+                    "family": "deepseek",
+                    "context_length": 8192,
+                    "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
             "qwen3": OpenAIChatCompletionClient(
                 model="Qwen/Qwen3-30B-A3B",
                 base_url="https://api.siliconflow.cn/v1",
@@ -69,7 +85,7 @@ class LLMClientManager:
     def get_client(self, model_name: str):
         """
         根据模型名称获取对应的 LLM 客户端实例。
-        支持 'deepseek-v3'、'qwen3'、'glm4'。
+        支持 'deepseek-v3'、'deepseek-r1','qwen3'、'glm4'。
         """
         client = self.clients.get(model_name.lower())
         if not client:

@@ -1,20 +1,11 @@
 from autogen_agentchat.teams import DiGraphBuilder, GraphFlow
-from agent.InitializeAgent import create_agents, set_automated_input, automated_input_func
+from agent.InitializeAgent import create_agents, set_automated_input
 import os
 import json
 from datetime import datetime
 import asyncio
-
-class CustomJSONEncoder(json.JSONEncoder):
-    def default(self, o):
-        """
-        自定义 JSON 编码器，用于处理特殊类型的对象。处理 datetime 对象和 set 类型。
-        """
-        if isinstance(o, datetime):
-            return o.isoformat()  # 将 datetime 转换为 ISO 格式的字符串
-        if isinstance(o, set):
-            return list(o)  # 将 set 转换为 list
-        return super().default(o)
+from resource.tools.CustomJSONEncoder import CustomJSONEncoder
+from resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
 
 class InitialWorkflow:
     def __init__(self, model_client, test_inputs=None):
@@ -31,6 +22,11 @@ class InitialWorkflow:
         self.validator = agents["validator"]
         self.structurer = agents["structurer"]
         self.initializer = agents["initializer"]
+
+        # ✅ 自动注入测试输入
+        if self.test_inputs:
+            print("🧪 检测到 test_inputs，正在注入测试输入...")
+            set_automated_input(self.test_inputs)
 
     def _build_graph(self):
         """构建有向图流程"""
@@ -74,23 +70,30 @@ class InitialWorkflow:
         os.makedirs(save_dir, exist_ok=True)
 
         # 创建智能体
+        print("🚀 正在创建智能体...")
         self._create_agents()
 
         # 构建图流程
+        print("🧠 正在构建图流程...")
         self._build_graph()
         self._create_graph_flow()
 
         # 执行流程
+        print("🎬 正在执行 GraphFlow...")
         result = asyncio.run(self.graph_flow.run())
+
+        print(result)
 
         # 保存 initializer 输出
         for msg in result.messages:
             if msg.source == "initializer":
-                content = msg.content
-                save_path = os.path.join(save_dir, "output_init_config.json")
+                content = strip_markdown_codeblock(msg.content)
+
+                # 提取JSON 代码块中的内容
+                save_path = os.path.join(save_dir, "init_config.json")
                 with open(save_path, "w", encoding="utf-8") as f:
                     f.write(content)
-                print(f"\n✅ 初始化配置已保存至 {save_path}")
+                print(f"\n📦 初始化配置已保存至 {save_path}")
 
         # 保存完整 result（带元数据）
         full_result_path = os.path.join(save_dir, "full_result.json")
@@ -104,6 +107,6 @@ class InitialWorkflow:
         }
         with open(full_result_path, "w", encoding="utf-8") as f:
             json.dump(output_data, f, indent=2, ensure_ascii=False, cls=CustomJSONEncoder)
-        print(f"\n✅ 完整执行结果已保存至 {full_result_path}")
+        print(f"\n📄 完整执行结果已保存至 {full_result_path}")
 
         return result
