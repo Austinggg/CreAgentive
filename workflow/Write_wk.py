@@ -4,7 +4,7 @@ import os
 import json
 from datetime import datetime
 import asyncio
-from Resource.tools.CustomJSONEncoder import CustomJSONEncoder
+from Resource.tools.customJSONEncoder import CustomJSONEncoder
 from Resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
 
 

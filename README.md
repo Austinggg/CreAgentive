@@ -4,10 +4,10 @@ CreAgentive 是一个基于 Autogen 框架实现的基于多智能体的创意�
 
 ## 创建环境
 
-### 
+### Neo4j 图数据库配置
 
-本地需要安装 neo4j 图数据库，参考博客：https://blog.csdn.net/AustinCyy/article/details/149020499
-安装完 Neo4j 后需要安装 apoc 插件，参考博客：https://blog.csdn.net/shdabai/article/details/132880323
+本地需要安装 neo4j 图数据库，参考博客：`https://blog.csdn.net/AustinCyy/article/details/149020499`
+安装完 Neo4j 后需要安装 apoc 插件，参考博客：`https://blog.csdn.net/shdabai/article/details/132880323`
 
 ### conda 创建环境并安装依赖包
 
@@ -27,7 +27,6 @@ NEO4J_URI=bolt://localhost:7687
 NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=******
 ```
-
 
 ## 运行项目
 
@@ -107,9 +106,8 @@ CreAgentive
 │   └── llmclient.py                 # LLM 客户端管理
 ```
 
-故事生成工作流 生成的每一章方案 存放在 resource/memory/story_plan
-生成的
-
+故事生成工作流 生成的每一章方案 存放在 Resource/memory/story_plan
+生成的故事存储在 Resource/memory/story
 
 ## Todo
 
@@ -119,6 +117,4 @@ CreAgentive
 4. 写作工作流的实现
 5. 测试文件的外部实现
 6. 各项文件保存路径的修改
-7. 各项中间提示词的格式校对
-
-
+7. 各项中间提示词的格式统一
