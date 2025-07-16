@@ -74,7 +74,7 @@ class WritingWorkflow:
             graph=self.graph
         )
 
-    def run(self, article_type="novel", save_dir="./resource/memory/writing"):
+    def run(self, article_type="novel", save_dir="./Resource/memory/writing"):
         """运行整个写作工作流并保存结果"""
         os.makedirs(save_dir, exist_ok=True)
         self.article_type = article_type.lower()

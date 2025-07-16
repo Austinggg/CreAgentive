@@ -2,6 +2,7 @@ import json
 import logging
 from pathlib import Path
 from typing import Dict
+from autogen_agentchat.agents import BaseChatAgent
 from Resource.tools.kg_builder import KnowledgeGraphBuilder
 from Resource.tools.neo4j_connector import Neo4jConnector
 
@@ -140,7 +141,7 @@ class MemoryAgent:
             return
 
         # 保存记忆的基础文件夹
-        memory_base_dir = Path("resource\memory")
+        memory_base_dir = Path("Resource\memory\character")
         # 确保记忆基础文件夹存在，如果不存在则创建
         memory_base_dir.mkdir(parents=True, exist_ok=True)
 

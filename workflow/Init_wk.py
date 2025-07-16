@@ -65,7 +65,7 @@ class InitialWorkflow:
             graph=self.graph
         )
 
-    def run(self, save_dir="./resource/memory/init"):
+    def run(self, save_dir="./Resource/memory/init"):
         """运行整个工作流并保存结果"""
         os.makedirs(save_dir, exist_ok=True)
 
