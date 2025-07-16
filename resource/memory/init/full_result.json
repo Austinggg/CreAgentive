@@ -1,65 +1,65 @@
 {
   "__metadata__": {
     "description": "完整多智能体执行结果",
-    "saved_at": "2025-07-07 16:50:03",
+    "saved_at": "2025-07-16 18:09:56",
     "version": "1.0"
   },
   "data": {
     "messages": [
       {
-        "id": "f1a9dae3-fd5d-4424-82f4-a77c802ceb1f",
+        "id": "33e8e15e-3212-4511-9982-794454d797a3",
         "source": "user_input",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-07T08:48:14.095571+00:00"
+        "created_at": "2025-07-16T10:09:12.111784+00:00"
       },
       {
-        "id": "8ac806d7-49d1-4cb6-b3b7-9b8d327b0a0e",
+        "id": "b9e43899-dd33-4b2f-aab8-7b637d4d4de4",
         "source": "user_input",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-07T08:48:14.106582+00:00"
+        "created_at": "2025-07-16T10:09:12.114930+00:00"
       },
       {
-        "id": "aafd6cbf-af1d-4e5f-bead-39b13046b5ff",
+        "id": "9a0278fd-6c88-4598-a808-b68dbec392e7",
         "source": "extractor",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-07T08:49:44.216799+00:00"
+        "created_at": "2025-07-16T10:09:38.549400+00:00"
       },
       {
-        "id": "5e45764d-5820-4cfd-9b29-5abaeb2c05cc",
+        "id": "201a28d6-4179-4fcb-ba50-2ebf8ea25de4",
         "source": "extractor",
         "models_usage": {
           "prompt_tokens": 896,
-          "completion_tokens": 1539
+          "completion_tokens": 451
         },
         "metadata": {},
-        "created_at": "2025-07-07T08:49:44.216799+00:00"
+        "created_at": "2025-07-16T10:09:38.550399+00:00"
       },
       {
-        "id": "cda6b491-82e9-4252-9efe-e064c67360c2",
+        "id": "d25e84e1-8606-40bc-ba69-3a60eb4db484",
         "source": "validator",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-07T08:50:03.896268+00:00"
+        "created_at": "2025-07-16T10:09:56.365655+00:00"
       },
       {
-        "id": "6c24e3e1-4586-493f-8d5f-8b41dfe1d8f3",
+        "id": "df8c349b-122b-48bc-ab0a-9c1cab160f87",
         "source": "validator",
         "models_usage": {
-          "prompt_tokens": 783,
-          "completion_tokens": 370
+          "prompt_tokens": 673,
+          "completion_tokens": 293
         },
         "metadata": {},
-        "created_at": "2025-07-07T08:50:03.896268+00:00"
+        "created_at": "2025-07-16T10:09:56.365655+00:00"
       },
       {
-        "id": "2551fd6a-7c76-4062-9bd5-384f3d73b7d2",
+        "id": "2a660c80-96fd-413a-8598-42c3ec560442",
         "source": "DiGraphStopAgent",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-07T08:50:03.901853+00:00"
+        "created_at": "2025-07-16T10:09:56.370293+00:00"
       }
     ],
     "stop_reason": "Stop message received"

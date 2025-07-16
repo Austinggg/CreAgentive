@@ -3,3 +3,4 @@ autogen==0.9.4
 autogen-ext
 openai==1.82.1
 dotenv
+neo4j

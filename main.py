@@ -1,6 +1,8 @@
-from workflow.Init_wk import InitialWorkflow
-from resource.llmclient import LLMClientManager
-from collections import deque
+from Workflow.Init_wk import InitialWorkflow
+from Workflow.Write_wk import WritingWorkflow
+from Workflow.StoryGen_wk import StoryGenWorkflow
+from Resource.llmclient import LLMClientManager
+from collections import deque # 用于测试输入队列
 
 # 初始化模型客户端
 model_client = LLMClientManager().get_client("deepseek-r1")
@@ -18,7 +20,20 @@ test_inputs = deque([
 ])
 
 # 创建工作流实例
-workflow = InitialWorkflow(model_client, test_inputs)
+initialworkflow = InitialWorkflow(model_client, test_inputs) # 初始化工作流
+storygenworkflow = StoryGenWorkflow(model_client) # 故事生成工作流
+writingworkflow = WritingWorkflow(model_client) # 写作工作流
 
-# 启动工作流
-result = workflow.run()
+
+# ============================================================================
+# ================================= 运行工作流 ================================
+# ============================================================================
+
+# 运行初始化工作流
+init_result = initialworkflow.run()
+
+# 运行故事生成工作流
+#storygenworkflow.run(init_result)
+
+# 运行写作工作流
+# writingworkflow.run(init_result)

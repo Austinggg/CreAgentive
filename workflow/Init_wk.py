@@ -1,11 +1,11 @@
 from autogen_agentchat.teams import DiGraphBuilder, GraphFlow
-from agent.InitializeAgent import create_agents, set_automated_input
+from Agent.InitializeAgent import create_agents, set_automated_input
 import os
 import json
 from datetime import datetime
 import asyncio
-from resource.tools.CustomJSONEncoder import CustomJSONEncoder
-from resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
+from Resource.tools.customJSONEncoder import CustomJSONEncoder
+from Resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
 
 class InitialWorkflow:
     def __init__(self, model_client, test_inputs=None):
@@ -87,7 +87,7 @@ class InitialWorkflow:
         # 保存 initializer 输出
         for msg in result.messages:
             if msg.source == "initializer":
-                content = strip_markdown_codeblock(msg.content)
+                content = msg.content
 
                 # 提取JSON 代码块中的内容
                 save_path = os.path.join(save_dir, "init_config.json")

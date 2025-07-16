@@ -1,0 +1,35 @@
+{
+    "chapter": 2,
+    "character": {
+        "id": "p2",
+        "affiliations": [
+            "格兰芬多"
+        ],
+        "occupation": [
+            "学生",
+            "巫师"
+        ],
+        "name": "罗恩·韦斯莱",
+        "age": 11,
+        "gender": "MALE"
+    },
+    "relationships": [
+        {
+            "target": "哈利·波特",
+            "type": "KNOWS",
+            "intensity": 8,
+            "subtype": null
+        }
+    ],
+    "events": [
+        {
+            "name": "分院仪式",
+            "scene": "霍格沃茨礼堂",
+            "impact": "兴奋",
+            "consequences": [
+                "三人成为同院同学",
+                "哈利与德拉科对立"
+            ]
+        }
+    ]
+}

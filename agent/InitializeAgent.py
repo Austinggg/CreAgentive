@@ -1,10 +1,10 @@
 from autogen_agentchat.agents import AssistantAgent, UserProxyAgent
-from resource.template.struct_init import demand_template, init_info_template
+from Resource.template.struct_init import demand_template, init_info_template
 from collections import deque
-from resource.template.init_prompt.extractor import extractor_prompt_template
-from resource.template.init_prompt.validator import validator_prompt_template
-from resource.template.init_prompt.structurer import structurer_prompt_template
-from resource.template.init_prompt.initializer import initializer_prompt_template
+from Resource.template.init_prompt.extractor import extractor_prompt_template
+from Resource.template.init_prompt.validator import validator_prompt_template
+from Resource.template.init_prompt.structurer import structurer_prompt_template
+from Resource.template.init_prompt.initializer import initializer_prompt_template
 
 # 自动化输入函数（测试用）
 def automated_input_func(prompt):
