@@ -1,11 +1,15 @@
 from  Agent.MemoryAgent import MemoryAgent
 from pathlib import Path
-
+import os
 
 agent = MemoryAgent()
 try:
 # 修改为正确的测试数据路径
-    CHAPTERS_PATH = "Resource\memory\story_plan"
+    #CHAPTERS_PATH = "Resource\memory\story_plan"
+
+    # 使用跨平台路径
+    CHAPTERS_PATH = os.path.join("Resource", "memory", "story_plan")
+    Path(CHAPTERS_PATH).mkdir(parents=True, exist_ok=True)
 
     # 确保目录存在
     Path(CHAPTERS_PATH).mkdir(parents=True, exist_ok=True)
