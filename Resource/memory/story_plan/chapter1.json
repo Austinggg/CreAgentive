@@ -1,0 +1,109 @@
+{
+  "chapter": 1,
+  "persons": [
+    {
+      "id": "p1",
+      "name": "哈利·波特",
+      "aliases": ["大难不死的男孩"],
+      "gender": "MALE",
+      "age": 11,
+      "occupation": ["学生", "巫师"],
+      "affiliations": ["格兰芬多"]
+    },
+    {
+      "id": "p2",
+      "name": "罗恩·韦斯莱",
+      "gender": "MALE",
+      "age": 11,
+      "occupation": ["学生", "巫师"],
+      "affiliations": ["格兰芬多"]
+    },
+    {
+      "id": "p3",
+      "name": "赫敏·格兰杰",
+      "gender": "FEMALE",
+      "age": 11,
+      "occupation": ["学生", "巫师"],
+      "affiliations": ["格兰芬多"]
+    },
+    {
+      "id": "p4",
+      "name": "阿不思·邓布利多",
+      "gender": "MALE",
+      "age": 110,
+      "occupation": ["校长", "巫师"],
+      "affiliations": ["霍格沃茨", "凤凰社"]
+    }
+  ],
+  "relationships": [
+    {
+      "from_id": "p1",
+      "to_id": "p2",
+      "type": "FRIENDSHIP",
+      "intensity": 8,
+      "awareness": "MUTUAL_KNOW"
+    },
+    {
+      "from_id": "p2",
+      "to_id": "p1",
+      "type": "FRIENDSHIP",
+      "intensity": 8,
+      "awareness": "MUTUAL_KNOW"
+    },
+    {
+      "from_id": "p1",
+      "to_id": "p3",
+      "type": "FRIENDSHIP",
+      "intensity": 7,
+      "awareness": "MUTUAL_KNOW"
+    },
+    {
+      "from_id": "p1",
+      "to_id": "p4",
+      "type": "TRUST",
+      "intensity": 9,
+      "awareness": "MUTUAL_KNOW"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1_1",
+      "name": "对角巷",
+      "place": "魔法商店",
+      "time_period": "DAY"
+    },
+    {
+      "id": "s1_2",
+      "name": "九又四分之三站台",
+      "place": "国王十字车站",
+      "time_period": "MORNING"
+    }
+  ],
+  "events": [
+    {
+      "id": "e1_1",
+      "name": "购买魔杖",
+      "order": 1,
+      "scene_id": "s1_1",
+      "details": "哈利在对角巷购买了他的第一根魔杖",
+      "participants": ["p1"],
+      "emotional_impact": {
+        "p1": "兴奋"
+      },
+      "consequences": ["哈利获得了魔杖"]
+    },
+    {
+      "id": "e1_2",
+      "name": "遇见罗恩",
+      "order": 2,
+      "scene_id": "s1_2",
+      "details": "哈利在站台第一次遇见罗恩",
+      "participants": ["p1", "p2"],
+      "emotional_impact": {
+        "p1": "好奇",
+        "p2": "友好"
+      },
+      "consequences": ["两人成为朋友"]
+    }
+  ]
+}
