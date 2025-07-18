@@ -50,7 +50,7 @@ class MemoryAgent:
                 raise FileNotFoundError(f"JSON文件不存在: {json_path}")
 
             # 打开并读取 JSON 文件内容
-            with open(json_path) as f:
+            with open(json_path, 'r', encoding='utf-8') as f:
                 chapter_data = json.load(f)
                 self.current_chapter = chapter_data["chapter"]
 
@@ -150,7 +150,7 @@ class MemoryAgent:
             # 加载章节内容，如果成功则继续处理
             if self.load_chapter(str(file)):
                 # 获取本章所有人物ID
-                with open(file) as f:
+                with open(file, 'r', encoding='utf-8') as f:
                     persons = [p["id"] for p in json.load(f).get("persons", [])]
 
                 # 为每个角色存储记忆
