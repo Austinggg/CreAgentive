@@ -3,7 +3,7 @@ from autogen_agentchat.agents import BaseChatAgent
 from autogen_agentchat.base import Response
 from autogen_agentchat.messages import BaseAgentEvent, BaseChatMessage, TextMessage
 from autogen_core import CancellationToken
-from agent.MemoryAgent import MemoryAgent
+from Agent.MemoryAgent import MemoryAgent
 import uuid
 
 
