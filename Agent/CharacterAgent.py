@@ -56,7 +56,7 @@ class CharacterAgent(BaseChatAgent):
         character_memory = memory.get_character_memory(name, chapter)  # 假设章节
         # 生成回复内容
         prompt = messages[-1].content if messages else ""
-        full_prompt = f"你现在是{self.name}，请以该角色的身份回复：{prompt},你所知道的信息是：{character_memory}。刚刚发生了{tmp_memory}"
+        full_prompt = f"你现在是{self.name}，请以该角色的身份回复：{prompt},你所知道的信息是：{character_memory}。刚刚发生了{self.tmp_memory}"
         result = self.client.chat.completions.create(
             messages=[{"role": "user", "content": full_prompt}],
             max_tokens=4096

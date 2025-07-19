@@ -49,5 +49,15 @@
             "subtype": null
         }
     ],
-    "events": []
+    "events": [
+        {
+            "name": "第一场魁地奇比赛",
+            "scene": "魁地奇球场",
+            "impact": "激动",
+            "consequences": [
+                "格兰芬多获胜",
+                "哈利成为学院英雄"
+            ]
+        }
+    ]
 }

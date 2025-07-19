@@ -27,24 +27,28 @@ def create_agents(model_client, test_inputs=None):
 
     extractor = AssistantAgent(
         name="extractor",
+        description="一个需求提取助手，负责从用户输入中提取需求模板。",
         model_client=model_client,
         system_message= extractor_prompt_template
     )
 
     validator = AssistantAgent(
         name="validator",
+        description="一个需求验证助手，负责检查当前模板是否完整（所有字段非 None）。",
         model_client=model_client,
         system_message=validator_prompt_template
     )
 
     structurer = AssistantAgent(
         name="structurer",
+        description="一个需求结构化助手，负责将用户需求模板转化为结构化数据。",
         model_client=model_client,
         system_message=structurer_prompt_template
     )
 
     initializer = AssistantAgent(
         name="initializer",
+        description="一个需求初始化助手，负责将用户需求转化为结构化数据。",
         model_client=model_client,
         system_message=initializer_prompt_template
     )

@@ -19,6 +19,7 @@ class Neo4jConnector:
         该方法从环境变量中读取Neo4j数据库的URI、用户名和密码，并使用这些信息建立数据库连接
         如果未设置密码环境变量，则抛出ValueError异常
         """
+        load_dotenv()
         # 从环境变量中获取Neo4j数据库的URI，如果未设置，则使用默认值
         self.uri = os.getenv("NEO4J_URI", "bolt://localhost:7687")
         # 从环境变量中获取Neo4j数据库的用户名，如果未设置，则使用默认值
