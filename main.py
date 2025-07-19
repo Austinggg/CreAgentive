@@ -1,5 +1,5 @@
 from Workflow.Init_wk import InitialWorkflow
-from Workflow.Write_wk import WritingWorkflow
+from Workflow.Writing_wk import WritingWorkflow
 from Workflow.StoryGen_wk import StoryGenWorkflow
 from Resource.llmclient import LLMClientManager
 from collections import deque # 用于测试输入队列
@@ -30,10 +30,10 @@ writingworkflow = WritingWorkflow(model_client) # 写作工作流
 # ============================================================================
 
 # 运行初始化工作流
-init_result = initialworkflow.run()
+# init_result = initialworkflow.run()
 
 # 运行故事生成工作流
 #storygenworkflow.run(init_result)
 
 # 运行写作工作流
-# writingworkflow.run(init_result)
+writingworkflow.run()

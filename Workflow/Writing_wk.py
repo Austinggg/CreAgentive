@@ -5,7 +5,6 @@ from datetime import datetime
 from Resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
 from Resource.llmclient import LLMClientManager
 from autogen_agentchat.teams import DiGraphBuilder
-from Agent.WriteAgent import MergePlan
 
 class WritingWorkflow:
     def __init__(self, model_client, chapters_dir, save_dir=None):
@@ -124,14 +123,14 @@ class WritingWorkflow:
         return need_recall, recall_data
     
     # Todo 要求将 检索结果进行合并一个完整的方案,这一步的变量设置待完善
-    def _merge_plans(self, need_recall, recall_data, need_dig, dig_data):
+    def _combine_plans(self, need_recall, recall_data, need_dig, dig_data):
         print("🔄 合并当前章节方案...")
         
         wait_to_merge = dig_data + recall_data # 合并 回忆和挖坑 的 数据，需要统一数据格式
-        merge_plan = self.combinerAgent.run(task=wait_to_merge)
-        return merge_plan
+        combined_plan = self.combinerAgent.run(task=wait_to_merge)
+        return combined_plan
 
-    def _write_and_save(self, merged_data, article_type):
+    def _write_and_save(self, combined_data, article_type):
         """
         执行写作并保存结果
         :param merged_data: 合并后的数据
@@ -147,7 +146,7 @@ class WritingWorkflow:
         else:
             raise ValueError("文本格式不正确")
         
-        write_resp = writer.run(task=merged_data) # Writer 写作得到该章节的写作结果
+        write_resp = writer.run(task=combined_data) # Writer 写作得到该章节的写作结果
         output_text = strip_markdown_codeblock(write_resp)
         print(f"✍️ 写作完成")
         # 根据写作类型确定文件扩展名
@@ -212,11 +211,11 @@ class WritingWorkflow:
 
         # ---- 步骤 5：合并数据 ----
         print(f"🔗 合并数据成为一个方案...")
-        merged_plan = self._merge_plans(need_recall, recall_data, need_dig, dig_data)
+        combined_plan = self._combine_plans(need_recall, recall_data, need_dig, dig_data)
         print(f"🔗 合并数据完成！")
 
         # ---- 步骤 6：写作 & 保存 ----
-        output_text = self._write_and_save(merged_plan, article_type)
+        output_text = self._write_and_save(combined_plan, article_type)
 
         return output_text
 
