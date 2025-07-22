@@ -6,8 +6,9 @@ from neo4j import GraphDatabase
 from Resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
 from Agent.WriteAgent import create_agents
 from Resource.tools.extract_llm_content import extract_llm_content
+from autogen_agentchat.messages import TextMessage
+from autogen_agentchat.agents import AssistantAgent
 #from Resource.tools.extract_last_text_content import extract_last_text_content
-
 import re
 
 class WritingWorkflow:
@@ -393,7 +394,12 @@ class WritingWorkflow:
 
         try:
             # 调用写作智能体
+            # write_result = await writer.run(task=combined_data)
             write_result = await writer.a_run(task=combined_data)
+            # print(write_result.messages)
+            print("\n======================\n")
+            print(f"✍️ 第{chapter_num}章 {article_type}生成完成")
+            print(write_result)
 
             # 提取输出
             raw_output = extract_llm_content(write_result)
@@ -513,32 +519,32 @@ class WritingWorkflow:
         print("\n🎉 所有章节处理完成！")
 
 
-# 运行示例
-if __name__ == '__main__':
-    import asyncio
-    from dotenv import load_dotenv
-    from Resource.llmclient import LLMClientManager
+# # 运行示例
+# if __name__ == '__main__':
+#     import asyncio
+#     from dotenv import load_dotenv
+#     from Resource.llmclient import LLMClientManager
 
-    # 加载环境变量
-    load_dotenv()
-
-
-    async def main():
-        # 配置路径
-        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        chapters_dir = os.path.join(project_root, "Resource", "memory", "story_plan")
-
-        # 获取模型客户端和Neo4j密码
-        llm_client = LLMClientManager().get_client("deepseek-v3")
-        neo4j_password = os.getenv("NEO4J_PASSWORD")
-
-        # 初始化并运行工作流
-        workflow = WritingWorkflow(
-            model_client=llm_client,
-            chapters_dir=chapters_dir,
-            neo4j_password=neo4j_password
-        )
-        await workflow.run(article_type="novel")  # 可切换为"script"
+#     # 加载环境变量
+#     load_dotenv()
 
 
-    asyncio.run(main())
+#     async def main():
+#         # 配置路径
+#         project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#         chapters_dir = os.path.join(project_root, "Resource", "memory", "story_plan")
+
+#         # 获取模型客户端和Neo4j密码
+#         llm_client = LLMClientManager().get_client("deepseek-v3")
+#         neo4j_password = os.getenv("NEO4J_PASSWORD")
+
+#         # 初始化并运行工作流
+#         workflow = WritingWorkflow(
+#             model_client=llm_client,
+#             chapters_dir=chapters_dir,
+#             neo4j_password=neo4j_password
+#         )
+#         await workflow.run(article_type="novel")  # 可切换为"script"
+
+
+#     asyncio.run(main())
