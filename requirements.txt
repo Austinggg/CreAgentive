@@ -5,3 +5,4 @@ openai==1.82.1
 dotenv
 neo4j
 torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 
+scikit-learn
