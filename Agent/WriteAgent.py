@@ -1,15 +1,12 @@
 from autogen_agentchat.agents import AssistantAgent
 from Agent.MemoryAgent import MemoryAgent
-from Resource.template.struct_init import demand_template, init_info_template
-from Resource.template.init_prompt.extractor import extractor_prompt_template
-from Resource.template.init_prompt.validator import validator_prompt_template
-from Resource.template.init_prompt.structurer import structurer_prompt_template
 from Resource.template.write_prompt.novel_writer import novel_write_prompt_template
 from Resource.template.write_prompt.script_writer import script_write_prompt_template
 from Resource.template.write_prompt.recallagent import recall_prompt_template
 from Resource.template.write_prompt.digagent import dig_prompt_template
 import os
 import json
+from autogen_agentchat.messages import TextMessage
 def create_agents(model_client):
     """
     创建并返回所有需要的智能体

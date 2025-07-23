@@ -1,33 +1,81 @@
-import torch
-from Resource.tools.DNF_decision.mark import score_goal_and_plan, load_trained_model
-from Resource.tools.DNF_decision.models.llm_extractor import LLMExtractor
-def evaluate_decisions(decisions, llm_extractor,background):
+from autogen_agentchat.agents import AssistantAgent
+from Resource.template.storygen_prompt.decision import decision_prompt_template
+from Resource.tools import extract_last_content
+
+
+def score_plan(plan, model_client):
     """
-    对一组决策进行评分，并选出评分最高的决策。
+    对单个plan进行评分
+
+    该函数通过定义多个评估维度及其权重，利用评分Agent对方案进行分析，
+    提取逻辑原子评分并计算加权综合得分。
     
-    :param decisions: 决策列表，每个决策包含 "goal" 和 "plan"。
-    :param llm_extractor: LLM 提取器实例。
-    :param predicate_set: 谓词集合，用于特征转换。
-    :param model: 训练过的 DNF 模型。
-    :param device: 设备（CPU 或 GPU）。
-    :return: 包含每条决策评分的列表，以及评分最高的决策和分数。
+    参数:
+        plan (str): 待评分的计划内容
+        model_client: 模型客户端对象，用于与评分Agent进行交互
+        
+    返回:
+        float: 加权综合评分结果
     """
-    decision_scores = []
-    for decision in decisions:
-        goal = decision["goal"]
-        plan = decision["plan"]
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        goal_predicate_set = ["p1","p2","p3","p4","p5"]  
-        plan_predicate_set = ["p6","p7","p8","p9","p10"]
-        score = score_goal_and_plan(goal, plan, llm_extractor, goal_predicate_set, plan_predicate_set, device,background)
-        decision_scores.append((decision, score))
 
-    # 输出每条决策的评分
-    for i, (decision, score) in enumerate(decision_scores):
-        print(f"Decision {i + 1}: {decision}, Score: {score}")
+    # 定义每个评估维度的权重，TODO: 权重可以修改
+    weights = {
+        "p1": 0.1,  # 目标与角色动机背景一致性
+        "p2": 0.15, # 目标对故事主线推动作用
+        "p3": 0.1,  # 目标创新性
+        "p4": 0.15, # 目标冲突引入效果
+        "p5": 0.1,  # 目标情感共鸣效果
+        "p6": 0.1,  # 计划可行性
+        "p7": 0.1,  # 计划与角色匹配度
+        "p8": 0.05, # 计划多角色互动
+        "p9": 0.1,  # 计划风险悬念
+        "p10": 0.05 # 计划连贯性吸引力
+    }
 
-    # 选出评分最高的决策
-    best_decision, best_score = max(decision_scores, key=lambda x: x[1])
-    print(f"\nBest Decision: {best_decision}, Score: {best_score}")
+    # 定义评分 Agent 用以对方案进行评分
+    # TODO: 评分规则待完善
+    scoreAgent = AssistantAgent(
+        name="scoreAgent",
+        description="根据评分模板对提取逻辑原子，对每个逻辑原子进行评分",
+        client = model_client,
+        system_message=decision_prompt_template
+    )
 
-    return decision_scores, best_decision, best_score
+    # Agent 分析得到的10个逻辑原子的值
+    score_atoms = extract_last_content(scoreAgent.run(plan))
+
+    # 加权综合评分算法
+    weighted_score = 0 # 加权计算得分
+    for key, value in score_atoms.items():
+        if key in weights:
+            weighted_score += value * weights[key]
+
+    return weighted_score
+
+    
+def evaluate_plan(plans,model_client):
+    """
+    对一组计划进行评分，并选出评分最高的计划。
+
+    :param plans: 计划列表，每个计划是一个字典。
+    :param model_client: 模型客户端实例，用于评分。
+    :return: 最佳计划及其评分 (best_plan, best_score)。
+    """
+
+    plan_scores = []
+    for plan in plans:
+        # 计算每个故事方案的评分
+        score = score_plan(plan, model_client)
+        
+        # 将故事方案及其评分添加到列表中
+        plan_scores.append((plan, score))
+
+    # 选出评分最高的故事方案
+    if plan_scores:
+        best_plan, best_score = max(plan_scores, key=lambda x: x[1])
+    else:
+        best_plan, best_score = None, 0
+
+
+    # 返回故事方案列表，最佳故事方案及评分
+    return best_plan, best_score

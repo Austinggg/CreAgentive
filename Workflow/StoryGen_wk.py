@@ -8,6 +8,7 @@ from Agent.StoryGenAgent import create_agents
 from Resource.template.storygen_prompt.longgoal import longgoal_prompt_template
 from Resource.tools.extract_last_content import extract_last_text_content
 from Resource.tools.read_json import read_json, read_max_index_file
+from Resource.tools.decision import evaluate_plan, score_plan
 
 
 class StoryGenWorkflow:
@@ -103,7 +104,7 @@ class StoryGenWorkflow:
         return chat_team
     
     # TODO: 评分函数待完善，DNF 需要训练模型
-    def _score_plan(self, plans:list):
+    def _score_plan(self, plans):
         """
         对传入的 plan 列表中的每个元素进行评分，选出得分最高的 plan 并返回。
 
@@ -284,9 +285,10 @@ class StoryGenWorkflow:
 
             # 对生成的方案进行评分，并选出最佳方案,
             # Todo: 评分决策系统还未实现
-            # best_plan = self._score_plan(round_plans)
-            # 暂时选择第一个方案使用
-            best_plan = round_plans[0]
+            best_plan, best_score = self.score_plan(round_plans,self.model_client)
+            print(f"最佳方案为：{best_plan}\n")
+            print(f"最佳方案评分为：{best_score}\n")
+
             # Todo: 更新memory 模块还未实现，需要保存至 neo4j 中
             # self._save_chapter(best_plan)
             self._save_chapter(best_plan)

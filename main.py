@@ -33,7 +33,7 @@ writingworkflow = WritingWorkflow(model_client) # 写作工作流
 # init_result = initialworkflow.run()
 
 # 运行故事生成工作流
-#storygenworkflow.run(init_result)
+# storygenworkflow.run(init_result)
 
 # 运行写作工作流
 writingworkflow.run()
