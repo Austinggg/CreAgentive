@@ -28,6 +28,5 @@ def create_agents(model_client):
 
     return {
         "shortgoalAgent": shortgoal_agent,
-        "longgoalAgent": longgoal_agent,
-        "decisionAgent": decision_agent
+        "longgoalAgent": longgoal_agent
     }
