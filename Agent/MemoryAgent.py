@@ -1,14 +1,16 @@
 import json
 import logging
+import os
+import shutil
 from pathlib import Path
 from typing import Dict
-from autogen_agentchat.agents import BaseChatAgent
+# from autogen_agentchat.agents import BaseChatAgent
 from Resource.tools.kg_builder import KnowledgeGraphBuilder
 from Resource.tools.neo4j_connector import Neo4jConnector
 
 # 设置日志记录
-logging.basicConfig(level=logging.INFO) # 设置日志级别为INFO
-logger = logging.getLogger(__name__) # 获取当前模块的日志记录器
+logging.basicConfig(level=logging.INFO)  # 设置日志级别为INFO
+logger = logging.getLogger(__name__)  # 获取当前模块的日志记录器
 
 
 class MemoryAgent:
@@ -17,10 +19,10 @@ class MemoryAgent:
     """
 
     def __init__(self):
-        self.connector = Neo4jConnector() # 连接到 Neo4j 数据库
-        self.builder = KnowledgeGraphBuilder(self.connector) # 初始化知识图谱构建器
-        self.current_chapter = 0 # 初始化当前章节编号 初始为 0
-        self.clear_all_chapter_data() # 清空当前知识图谱
+        self.connector = Neo4jConnector()  # 连接到 Neo4j 数据库
+        self.builder = KnowledgeGraphBuilder(self.connector)  # 初始化知识图谱构建器
+        self.current_chapter = 0  # 初始化当前章节编号 初始为 0
+        self.clear_all_chapter_data()  # 清空当前知识图谱
         print("MemoryAgent初始化完成")
         logger.info("MemoryAgent初始化完成")
 
@@ -40,7 +42,7 @@ class MemoryAgent:
 
         参数:
         json_path (str): JSON 文件路径，包含章节数据。
-    
+
         返回:
         bool: 如果章节知识图谱构建成功，则返回 True，否则返回 False。
         """
@@ -54,14 +56,11 @@ class MemoryAgent:
                 chapter_data = json.load(f)
                 self.current_chapter = chapter_data["chapter"]
 
-            # 检查 KnowledgeGraphBuilder 类是否有构建图谱的方法
-            if hasattr(self.builder, 'build_graph_from_json'):
-                # 调用 KnowledgeGraphBuilder 的方法构建图谱
-                self.builder.build_graph_from_json(json_path)
-            else:
-                # 如果没有构建图谱的方法，记录错误并返回 False
-                logger.error("KnowledgeGraphBuilder 类没有 build_graph_from_json 方法")
-                return False
+            # 处理章节数据
+            self.builder.process_chapter(json_path)
+
+            # 保存角色记忆
+            self.save_character_memories(self.current_chapter)
 
             # 如果图谱构建成功，记录日志并返回 True
             logger.info(f"成功构建第 {self.current_chapter} 章知识图谱")
@@ -71,8 +70,23 @@ class MemoryAgent:
             logger.error(f"加载章节失败: {str(e)}")
             return False
 
+    def save_character_memories(self, chapter: int, base_path: str = None):
+        """
+        保存所有角色的记忆到JSON文件
+
+        参数:
+            chapter (int): 章节编号
+            base_path (str): 可选的自定义基础路径
+        """
+        try:
+            # 使用知识图谱构建器的方法保存记忆
+            self.builder.save_character_memories(chapter, base_path)
+            logger.info(f"成功保存第{chapter}章的角色记忆")
+        except Exception as e:
+            logger.error(f"保存角色记忆失败: {str(e)}")
+            raise
+
     def get_character_memory(self, person_id: str, chapter: int) -> Dict:
-        
         """
         获取指定角色在特定章节的记忆
 
@@ -98,40 +112,28 @@ class MemoryAgent:
         enhanced_memory = {
             "chapter": chapter,
             "character": memory["properties"],
-            "relationships": [
-                {
-                    "target": rel["name"],
-                    "type": rel["relation_type"],
-                    "intensity": rel["all_properties"].get("intensity"),
-                    "subtype": rel["all_properties"].get("subtype")
-                } for rel in memory["relationships"]
-            ],
-            "events": [
-                {
-                    "name": event["event_name"],
-                    "scene": event["scene_name"],
-                    "impact": event["impact"],
-                    "consequences": event["consequences"]
-                } for event in memory["events"]
-            ]
+            "relationships": memory["relationships"],
+            "events": memory["events"]
         }
         # 返回增强格式的记忆
         return enhanced_memory
 
+    def build_graph_from_json(self, json_path: str):
+        """
+        从JSON文件构建知识图谱
+        """
+        self.builder.process_chapter(json_path)
+
     def process_all_chapters(self, base_path: str, pattern: str = "chapter*.json"):
         """
         批量处理所有章节文件
-        
+
         Args:
             base_path (str): 包含章节文件的基础路径
             pattern (str): 章节文件的命名模式，默认为"chapter*.json"
-        
+
         Yields:
             tuple: 包含章节文件名和对应人物记忆的字典
-
-        这个方法是一个生成器函数，它会 逐个处理章节文件，每处理完一个文件后通过 yield 返回当前文件名和对应的角色记忆数据。这种方式的优点是：
-        - 不需要将所有数据一次性加载到内存中，适用于处理大量文件。
-        - 外部可以通过迭代的方式逐步获取每个文件的处理结果。
         """
         # 根据提供的基础路径和模式获取所有匹配的章节文件
         chapter_files = sorted(Path(base_path).glob(pattern))
@@ -141,7 +143,7 @@ class MemoryAgent:
             return
 
         # 保存记忆的基础文件夹
-        memory_base_dir = Path("Resource\memory\character")
+        memory_base_dir = Path(base_path).parent / "character"
         # 确保记忆基础文件夹存在，如果不存在则创建
         memory_base_dir.mkdir(parents=True, exist_ok=True)
 
@@ -151,23 +153,14 @@ class MemoryAgent:
             if self.load_chapter(str(file)):
                 # 获取本章所有人物ID
                 with open(file, 'r', encoding='utf-8') as f:
-                    persons = [p["id"] for p in json.load(f).get("persons", [])]
+                    data = json.load(f)
+                    persons = [p["id"] for p in data.get("characters", data.get("persons", []))]
 
                 # 为每个角色存储记忆
                 memories = {
-                    person_id: self.get_character_memory(person_id, self.current_chapter)  # 修改此处，传入当前章节号
+                    person_id: self.get_character_memory(person_id, self.current_chapter)
                     for person_id in persons
                 }
-
-                # 创建章节目录
-                chapter_dir = memory_base_dir / f"chapter_{self.current_chapter}_memories"
-                chapter_dir.mkdir(exist_ok=True)
-
-                # 存储每个角色的记忆到单独的JSON文件
-                for person_id, memory in memories.items():
-                    file_name = chapter_dir / f"{person_id}_memory.json"
-                    with open(file_name, 'w', encoding='utf-8') as json_file:
-                        json.dump(memory, json_file, ensure_ascii=False, indent=4)
 
                 # 生成章节文件名和对应人物记忆的字典
                 yield file.stem, memories
@@ -175,17 +168,10 @@ class MemoryAgent:
     def get_previous_chapters_events(self, person_id: str, current_chapter: int):
         """
         获取指定人物在所有小于当前章节编号的章节中参与的事件
-    
-        参数:
-        person_id: str - 人物的唯一标识符
-        current_chapter: int - 当前章节的编号
-    
-        返回:
-        list - 包含人物在之前章节中参与的事件信息的列表
         """
         # 构建查询语句，以获取指定人物在当前章节之前的所有章节中参与的事件
         query = f"""
-        MATCH (p:Person)-[r:IN_EVENT]->(e:Event)
+        MATCH (p:Character)-[r:IN_EVENT]->(e:Event)
         WHERE p.id = $person_id AND ANY(label IN labels(e) WHERE label STARTS WITH 'Chapter' AND toInteger(substring(label, 7)) < {current_chapter})
         RETURN e.id as event_id, e.name as event_name, e.details as details, e.order as event_order, 
                [label IN labels(e) WHERE label STARTS WITH 'Chapter'][0] as chapter_label
@@ -198,17 +184,10 @@ class MemoryAgent:
     def get_next_chapters_events(self, person_id: str, current_chapter: int):
         """
         获取指定人物在所有大于当前章节编号的章节中参与的事件
-    
-        参数:
-        person_id -- 人物的唯一标识符
-        current_chapter -- 当前章节的编号
-    
-        返回:
-        返回一个列表，包含指定人物在后续章节中参与的事件信息，包括事件ID、名称、详情、顺序和章节标签
         """
         # 构建查询语句，用于获取指定人物在后续章节中的事件信息
         query = f"""
-        MATCH (p:Person)-[r:IN_EVENT]->(e:Event)
+        MATCH (p:Character)-[r:IN_EVENT]->(e:Event)
         WHERE p.id = $person_id AND ANY(label IN labels(e) WHERE label STARTS WITH 'Chapter' AND toInteger(substring(label, 7)) > {current_chapter})
         RETURN e.id as event_id, e.name as event_name, e.details as details, e.order as event_order, 
                [label IN labels(e) WHERE label STARTS WITH 'Chapter'][0] as chapter_label
@@ -220,47 +199,7 @@ class MemoryAgent:
 
     def close(self):
         """
-        关闭与Neo4j数据库的连接。
-
-        此方法通过调用self.connector的close方法来关闭数据库连接。
-        随后，记录一条信息到日志，表明Neo4j连接已关闭。
+        关闭与Neo4j数据库的连接
         """
         self.connector.close()  # 关闭Neo4j数据库连接
         logger.info("Neo4j连接已关闭")  # 记录连接关闭的信息到日志
-
-
-# 使用示例
-# if __name__ == "__main__":
-    # agent = MemoryAgent()
-    # try:
-    #     # 修改为正确的测试数据路径
-    #     CHAPTERS_PATH = "D:\Desktop\CreAgentive\resource\data\chapters"
-
-    #     # 确保目录存在
-    #     Path(CHAPTERS_PATH).mkdir(parents=True, exist_ok=True)
-    #     print(f"章节数据目录: {CHAPTERS_PATH}")
-
-    #     # 处理多章节数据
-    #     for chapter_name, memories in agent.process_all_chapters(CHAPTERS_PATH):
-    #         print(f"\n=== {chapter_name} 角色记忆 ===")
-    #         for person_id, memory in memories.items():
-    #             print(f"\n角色 {memory['character']['name']} 的记忆:")
-    #             print(f"- 人际关系: {len(memory['relationships'])} 条")
-    #             print(f"- 参与事件: {len(memory['events'])} 个")
-
-    #     # 测试 get_previous_chapters_events 方法
-    #     person_id = "p1"
-    #     current_chapter = agent.current_chapter
-    #     previous_events = agent.get_previous_chapters_events(person_id, current_chapter)
-    #     print(f"\n{person_id} 在之前章节参与的事件:")
-    #     for event in previous_events:
-    #         print(f"章节: {event['chapter_label']}, 事件名称: {event['event_name']}, 事件顺序: {event['event_order']}")
-
-    #     # 测试 get_next_chapters_events 方法
-    #     next_events = agent.get_next_chapters_events(person_id, current_chapter)
-    #     print(f"\n{person_id} 在之后章节参与的事件:")
-    #     for event in next_events:
-    #         print(f"章节: {event['chapter_label']}, 事件名称: {event['event_name']}, 事件顺序: {event['event_order']}")
-
-    # finally:
-    #     agent.close()
