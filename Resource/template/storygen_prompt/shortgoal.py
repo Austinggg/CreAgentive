@@ -43,6 +43,13 @@ shortgoal_prompt_template ="""
 - 输出必须是完整JSON对象，使用指定键值对：chapter_goal, key_tasks, expected_outcomes, new_conflicts。
 - chapter_goal使用简体中文字符串（≤20字），key_tasks、expected_outcomes、new_conflicts为字符串数组。
 - 内容全部用中文描述，禁止使用标点或空格以外任何符号。
+示例：
+{
+  "chapter_goal": "≤20字，符合初始化环境的章节核心目标",
+  "key_tasks": ["任务1（需体现环境约束）", "任务2（如“在无电子设备下绘制游轮地图”）"],
+  "expected_outcomes": ["成果1", "成果2"],
+  "new_conflicts": ["冲突1（如“发现游轮结构与历史记录不符”，呼应历史背景）"]
+}
 
 ## Suggestions:
 - 建立故事模式库，快速调用常见冲突模板以提升创意效率。
