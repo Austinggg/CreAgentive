@@ -27,7 +27,7 @@ class KnowledgeGraphBuilder:
         self.connector = connector
         self._clean_duplicate_data()  # 先清理重复数据
         self._setup_constraints()  # 再创建约束
-        self._person_cache = {} # 缓存人物数据
+        self._character_cache = {} # 缓存人物数据
         self._relationship_cache = {} # 缓存人物关系数据
 
     def clear_all_data(self):
@@ -45,11 +45,11 @@ class KnowledgeGraphBuilder:
     def _prepare_properties(self, properties: Dict, defaults: Dict) -> Dict:
         """
         准备节点/关系的属性字典，合并默认值和提供的值
-    
+
         参数:
         properties - 提供的属性字典
         defaults - 默认属性字典
-    
+
         合并后的属性字典，确保所有属性都包含默认值和提供的值
         """
         props = defaults.copy() # 创建默认属性的副本，以避免修改原始字典
@@ -86,7 +86,7 @@ class KnowledgeGraphBuilder:
     def _clean_duplicate_data(self):
         """
         清理重复数据
-        
+
         该方法使用APOC插件来检测并合并图数据库中的重复节点
         仅当APOC插件可用时，才执行清理操作
         """
@@ -96,9 +96,9 @@ class KnowledgeGraphBuilder:
 
         # 定义一系列Cypher查询，旨在合并不同类型的重复节点
         queries = [
-            # 清理重复Person节点
+            # 清理重复Character节点
             """
-            MATCH (p:Person)
+            MATCH (p:Character)
             WITH p.id AS id, collect(p) AS nodes
             WHERE size(nodes) > 1
             CALL apoc.refactor.mergeNodes(nodes, {properties: 'combine'})
@@ -133,13 +133,13 @@ class KnowledgeGraphBuilder:
 
     def _setup_constraints(self):
         """创建必要的约束
-        
-        此函数负责在数据库中设置必要的唯一性约束，以确保Person、Scene和Event标签的id属性的唯一性
+
+        此函数负责在数据库中设置必要的唯一性约束，以确保Character、Scene和Event标签的id属性的唯一性
         这对于维护数据的一致性和完整性至关重要
         """
 
         constraints = [
-            "CREATE CONSTRAINT IF NOT EXISTS FOR (p:Person) REQUIRE p.id IS UNIQUE",
+            "CREATE CONSTRAINT IF NOT EXISTS FOR (p:Character) REQUIRE p.id IS UNIQUE",
             "CREATE CONSTRAINT IF NOT EXISTS FOR (s:Scene) REQUIRE s.id IS UNIQUE",
             "CREATE CONSTRAINT IF NOT EXISTS FOR (e:Event) REQUIRE e.id IS UNIQUE"
         ]
@@ -159,28 +159,26 @@ class KnowledgeGraphBuilder:
     def clear_chapter_data(self, chapter: int):
         """
         清理指定章节的所有数据
-        
+
         这个方法通过删除与指定章节相关的所有节点和关系来清理数据
         它特别针对以下几种标签的节点和关系进行清理：
-        - Person（人物）
+        - Character（人物）
         - Scene（场景）
         - Event（事件）
-        - KNOWS（认识关系）
         - IN_EVENT（参与事件关系）
-        
+
         参数:
         - chapter (int): 需要清理数据的章节编号
-        
+
         返回:
         无
         """
         # 定义一系列Cypher查询以删除指定章节的所有相关数据
         queries = [
-            f"MATCH (n:Person:Chapter{chapter}) DETACH DELETE n",
+            f"MATCH (n:Character:Chapter{chapter}) DETACH DELETE n",
             f"MATCH (n:Scene:Chapter{chapter}) DETACH DELETE n",
             f"MATCH (n:Event:Chapter{chapter}) DETACH DELETE n",
-            f"MATCH ()-[r:KNOWS]->() WHERE r.chapter = {chapter} DELETE r",
-            f"MATCH ()-[r:IN_EVENT]->() WHERE r.chapter = {chapter} DELETE r"
+            f"MATCH ()-[r]-() WHERE r.chapter = {chapter} DELETE r"
         ]
         # 遍历每个查询，尝试执行删除操作
         for query in queries:
@@ -208,8 +206,9 @@ class KnowledgeGraphBuilder:
         with open(json_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
-        # 初始化缓存
-        self._person_cache = {p['id']: p for p in data.get('persons', [])}
+        # 缓存初始关系（用于第0章继承）
+        self._initial_relationships = data.get('relationships', [])
+        self._character_cache = {p['id']: p for p in data.get('characters', [])}
         self._relationship_cache = {
             f"{rel['from_id']}-{rel['to_id']}-{rel['type']}": rel
             for rel in data.get('relationships', [])
@@ -218,36 +217,19 @@ class KnowledgeGraphBuilder:
         # 初始化章节编号
         chapter = 0
         # 写入Neo4j 人物和 关系
-        self._update_persons(chapter)
+        self._update_characters(chapter)
         self._update_relationships(chapter)
         # 日志输出加载数据的结果
-        logger.info(f"✅ 已加载初始数据，共 {len(self._person_cache)} 个人物和 {len(self._relationship_cache)} 条关系")
+        logger.info(f"✅ 已加载初始数据，共 {len(self._character_cache)} 个人物和 {len(self._relationship_cache)} 条关系")
 
-    def build_graph_from_json(self, json_path: str):
-        """
-        从JSON文件构建知识图谱
 
-        调用 process_chapter方法来处理指定的JSON文件
-        该方法假设JSON文件包含章节数据，并将其转换为知识图谱
 
-        该方法通过读取和解析JSON文件中的数据，将其转换为知识图谱的结构并进行处理
-        这里的JSON文件应包含构建图谱所需的所有信息，比如节点和边的数据
-
-        参数:
-        json_path (str): JSON文件的路径，用于指定要处理的文件位置
-
-        返回:
-        无返回值，但会根据JSON文件中的数据更新或创建知识图谱
-        
-        """
-        self.process_chapter(json_path)
-
-    def _update_persons(self, chapter: int):
+    def _update_characters(self, chapter: int):
         """
         批量更新人物节点
 
         此函数负责将缓存中的人物数据批量更新到图数据库中，为每个角色添加章节特定的标签
-        
+
         参数:
         chapter (int): 当前章节编号，用于添加章节特定的标签
 
@@ -255,29 +237,29 @@ class KnowledgeGraphBuilder:
         无
         """
         # 如果人物缓存为空，则不执行任何操作
-        if not self._person_cache:
+        if not self._character_cache:
             return
 
         # Cypher查询语句，用于批量更新人物节点及其属性，并添加章节标签
         query = """
-        UNWIND $persons AS person
-        MERGE (p:Person {id: person.id})
-        SET p += person.props
+        UNWIND $characters AS character
+        MERGE (p:Character {id: character.id})
+        SET p += character.props
         WITH p
         CALL apoc.create.addLabels(p, ['Chapter' + $chapter]) YIELD node
         RETURN count(node) as count
         """
 
         # 准备人物数据，将每个角色的属性和ID整理成查询所需的格式
-        persons_data = [{
+        characters_data = [{
             "id": pid,
             "props": {k: v for k, v in data.items() if k != 'id'}
-        } for pid, data in self._person_cache.items()]
+        } for pid, data in self._character_cache.items()]
 
         # 执行Cypher查询，更新人物节点，并记录更新的人物节点数量
         try:
             result = self.connector.execute_query(query, {
-                "persons": persons_data,
+                "characters": characters_data,
                 "chapter": chapter
             })
             logger.debug(f"更新了 {result[0]['count']} 个人物节点")
@@ -287,63 +269,78 @@ class KnowledgeGraphBuilder:
 
     # 添加单向关系
     def _update_relationships(self, chapter: int):
-        """
-        批量更新关系
-    
-        此方法用于在知识图谱中批量更新人物之间的单向关系，
-        特别是当处理大量数据时，通过减少数据库交互次数来优化性能。
-        
-        注意：此方法创建的是单向关系，即 A->B 不意味着 B->A
-        如果需要双向关系，请在数据源中明确提供两个方向的关系记录。
+        """简化版关系更新：完全按照from_id/to_id匹配覆盖"""
+        # 1. 如果是第0章，直接使用初始关系
+        if chapter == 0:
+            rels_to_update = list(self._relationship_cache.values())
+        else:
+            # 2. 查询上一章节所有关系
+            try:
+                query = f"""
+                MATCH (a:Character:Chapter{chapter - 1})-[r]->(b:Character:Chapter{chapter - 1})
+                RETURN a.id as from_id, b.id as to_id, type(r) as type, properties(r) as props
+                """
+                inherited_rels = self.connector.execute_query(query) or []
 
-        参数:
-            chapter (int): 关系所在的章节编号，用于跟踪关系在故事中的发展。
+                # 3. 用本章关系覆盖继承的关系
+                rels_to_update = []
+                # 先添加所有继承的关系
+                for rel in inherited_rels:
+                    rels_to_update.append({
+                        'from_id': rel['from_id'],
+                        'to_id': rel['to_id'],
+                        'type': rel['type'],
+                        **rel['props']
+                    })
 
-        返回:
-            无直接返回值，但会日志记录更新了多少条关系。
-        """
+                # 用本章关系覆盖
+                for rel in self._relationship_cache.values():
+                    # 找到相同from_id/to_id的关系并替换
+                    for i, existing_rel in enumerate(rels_to_update):
+                        if existing_rel['from_id'] == rel['from_id'] and existing_rel['to_id'] == rel['to_id']:
+                            rels_to_update[i] = rel
+                            break
+                    else:
+                        rels_to_update.append(rel)
 
-        # 如果关系缓存为空，则直接返回，避免无谓的处理
-        if not self._relationship_cache:
-            return
+            except Exception as e:
+                logger.error(f"关系更新失败: {str(e)}")
+                return
 
-        # # Cypher 查询语言，用于在 Neo4j 数据库中更新关系
+        # 4. 批量更新关系
         query = """
-        UNWIND $rels AS rel
-        MATCH (a:Person {id: rel.from_id})
-        MATCH (b:Person {id: rel.to_id})
-        MERGE (a)-[r:KNOWS]->(b)
-        SET r += rel.props, r.chapter = $chapter
-        RETURN count(r) as count
-        """
+            UNWIND $rels AS rel_data
+            MATCH (a:Character {id: rel_data.from_id})
+            MATCH (b:Character {id: rel_data.to_id})
+            CALL apoc.merge.relationship(
+                a,
+                rel_data.type,  // 直接使用type作为关系类型
+                {chapter: $chapter},
+                {intensity: rel_data.intensity},
+                b,
+                {}
+            ) YIELD rel
+            RETURN count(rel) as count
+            """
 
-        # 准备关系数据，将缓存中的关系信息提取并格式化
-        rels_data = []
-        for rel in self._relationship_cache.values():
-            rel_data = {
-                "from_id": rel['from_id'],
-                "to_id": rel['to_id'],
-                "props": {k: v for k, v in rel.items() if k not in ['from_id', 'to_id']}
-            }
-            rels_data.append(rel_data)
-
-        # 尝试执行查询，更新数据库中的关系信息
         try:
             result = self.connector.execute_query(query, {
-                "rels": rels_data,
+                "rels": [{
+                    "from_id": r["from_id"],
+                    "to_id": r["to_id"],
+                    "type": r["type"],
+                    "intensity": r.get("intensity", 3)
+                } for r in rels_to_update],
                 "chapter": chapter
             })
-            # 日志记录更新了多少条关系
-            logger.debug(f"更新了 {result[0]['count']} 条关系")
+            logger.info(f"更新了 {result[0]['count']} 条关系")
         except Exception as e:
-            # 如果更新失败，记录错误信息并重新抛出异常
-            logger.error(f"批量更新关系失败: {str(e)}")
-            raise
+            logger.error(f"关系更新失败: {str(e)}")
 
     def create_scene(self, chapter: int, **properties):
         """
         创建/更新场景节点
-        
+
         此函数用于在特定章节中创建或更新一个场景节点。它要求传入的属性中必须包含"id"字段，
         以确保场景的唯一性。其他场景属性如"name", "place", "time_period", "pov_character", 和 "owner"可以通过
         properties参数进行指定。如果这些属性未被指定，它们将使用默认值。
@@ -414,10 +411,13 @@ class KnowledgeGraphBuilder:
 
         # 定义事件的默认属性值
         default_props = {
+            "id": None,
             "name": None,
             "details": None,
+            "scene_id": None,
             "order": 0,
-            "emotional_impact": "{}",  # 默认改为字符串形式的JSON
+            "participants": [],
+            "emotional_impact": "{}",
             "consequences": []
         }
 
@@ -447,14 +447,14 @@ class KnowledgeGraphBuilder:
         # 如果有参与者，创建参与者与事件的关联关系
         for participant in props.get("participants", []):
             rel_query = """
-            MERGE (p:Person {id: $person_id})
+            MERGE (p:Character {id: $character_id})
             MERGE (e:Event {id: $event_id})
             MERGE (p)-[r:IN_EVENT {chapter: $chapter}]->(e)
             RETURN r
             """
             try:
                 self.connector.execute_query(rel_query, {
-                    "person_id": participant,
+                    "character_id": participant,
                     "event_id": props["id"],
                     "chapter": chapter
                 })
@@ -480,11 +480,11 @@ class KnowledgeGraphBuilder:
     def process_chapter(self, json_file: str):
         """
         处理指定章节的JSON数据，更新缓存和Neo4j数据库。
-        
+
         本函数首先读取和解析给定的JSON文件，然后根据文件中的数据更新内部缓存，
         包括人物和关系的缓存。接着，根据数据中的场景和事件调用相应的处理函数，
         最后更新Neo4j数据库中的信息。
-        
+
         参数:
         json_file: str - JSON文件的路径，包含章节数据。
         """
@@ -499,21 +499,21 @@ class KnowledgeGraphBuilder:
         logger.info(f"开始处理第 {chapter} 章数据...")
 
         # 清理当前章节的缓存
-        self._person_cache = {k: v for k, v in self._person_cache.items() if f":Chapter{chapter}" not in str(v)}
+        self._character_cache = {k: v for k, v in self._character_cache.items() if f":Chapter{chapter}" not in str(v)}
         self._relationship_cache = {k: v for k, v in self._relationship_cache.items() if v.get('chapter') != chapter}
 
         # 更新人物缓存
-        updated_persons = set()
-        for person in data.get('persons', []):
-            person_id = person['id']
-            if person_id in self._person_cache:
+        updated_characters = set()
+        for character in data.get('characters', []):
+            character_id = character['id']
+            if character_id in self._character_cache:
                 # 合并更新属性
-                self._person_cache[person_id].update(person)
-                updated_persons.add(person_id)
+                self._character_cache[character_id].update(character)
+                updated_characters.add(character_id)
             else:
                 # 新增人物
-                self._person_cache[person_id] = person
-                updated_persons.add(person_id)
+                self._character_cache[character_id] = character
+                updated_characters.add(character_id)
 
         # 更新关系缓存
         updated_rels = set()
@@ -534,97 +534,163 @@ class KnowledgeGraphBuilder:
             self.create_event(chapter, **event)
 
         # 更新Neo4j
-        self._update_persons(chapter)
+        self._update_characters(chapter)
         self._update_relationships(chapter)
 
-        logger.info(f"✅ 第 {chapter} 章处理完成，更新了 {len(updated_persons)} 个人物和 {len(updated_rels)} 条关系")
+        # 存储章节的人物记忆
+        self.save_character_memories(chapter)
+        logger.info(f"✅ 第 {chapter} 章处理完成，更新了 {len(updated_characters)} 个人物和 {len(updated_rels)} 条关系")
 
-    def get_character_profile(self, person_id: str, chapter: int):
+    def get_character_profile(self, character_id: str, chapter: int):
         """
         查询人物完整档案
-        
+
         本函数用于根据给定的人物ID和章节号查询该人物的完整档案信息。
         档案包括以下内容：
         - 基本信息（如姓名、性别、年龄等）
-        - 关系网络（与其他人物的关系类型及属性）
+        - 关系网络（只返回当前人物指向他人的关系）
         - 参与的事件（事件名称、场景、情感影响等）
 
         参数:
-        - person_id (str): 要查询的人物唯一标识符
+        - character_id (str): 要查询的人物唯一标识符
         - chapter (int): 章节号，表示在哪个章节中查询该人物的信息
 
         返回:
-        - dict: 包含人物基本信息、关系和参与事件的字典。如果未找到人物，则返回 {"error": "Person not found"}。
+        - dict: 包含人物基本信息、关系和参与事件的字典。如果未找到人物，则返回 {"error": "Character not found"}。
         """
-        # 查询人物基本信息
-        person_query = f"""
-        MATCH (p:Person:Chapter{chapter} {{id: $person_id}})
-        RETURN p {{.*}} as properties
+        # 1. 查询基本信息
+        query = f"""
+            MATCH (p:Character:Chapter{chapter} {{id: $character_id}})
+            RETURN p {{.*}} as properties
+            """
+        character_info = self.connector.execute_query(query, {"character_id": character_id})
+
+        if not character_info:
+            return {"error": "Character not found"}
+
+        # 2. 查询Outgoing关系
+        rel_query = f"""
+        MATCH (p:Character {{id: $character_id}})-[r]->(other:Character)
+        WHERE r.chapter = {chapter}
+        RETURN {{
+            character_id: other.id,
+            name: other.name,
+            type: TYPE(r),  // 改为直接获取关系类型
+            intensity: r.intensity,
+            chapter: r.chapter
+        }} AS relationship
         """
-        person_info = self.connector.execute_query(person_query, {"person_id": person_id})
+        relationships = self.connector.execute_query(rel_query, {"character_id": character_id}) or []
 
-        if not person_info:
-            return {"error": "Person not found"}
-
-        # 查询人物关系
-        relations_query = f"""
-        MATCH (p:Person:Chapter{chapter} {{id: $person_id}})-[r]->(other:Person:Chapter{chapter})
-        RETURN 
-            other.id as person_id,
-            other.name as name,
-            type(r) as relation_type,
-            properties(r) as all_properties
-        """
-        relations = self.connector.execute_query(relations_query, {"person_id": person_id})
-
-        # 查询人物参与的事件
+        # 3. 查询人物参与的事件（保持不变）
         events_query = f"""
-        MATCH (p:Person:Chapter{chapter} {{id: $person_id}})-[r:IN_EVENT]->(e:Event:Chapter{chapter})-[o:OCCURRED_IN]->(s:Scene:Chapter{chapter})
-        RETURN 
-            e.id as event_id,
-            e.name as event_name,
-            e.details as details,
-            e.order as event_order,
-            s.id as scene_id,
-            s.name as scene_name,
-            s.place as scene_place,
-            e.emotional_impact as emotional_impact,
-            e.consequences as consequences
-        ORDER BY e.order
-        """
+                MATCH (p:Character:Chapter{chapter} {{id: $character_id}})-[r:IN_EVENT]->(e:Event:Chapter{chapter})-[o:OCCURRED_IN]->(s:Scene:Chapter{chapter})
+                RETURN 
+                    e.id as event_id,
+                    e.name as event_name,
+                    e.order as event_order,
+                    e.details as details,
+                    s.id as scene_id,
+                    s.name as scene_name,
+                    s.place as scene_place,
+                    e.emotional_impact as emotional_impact,
+                    e.consequences as consequences
+                ORDER BY e.order
+                """
 
-        events = self.connector.execute_query(events_query, {"person_id": person_id})
+        events = self.connector.execute_query(events_query, {"character_id": character_id})
 
-        # 处理emotional_impact字段，将其从JSON字符串转换为字典，并提取当前人物的情感影响
+        # 情感影响处理逻辑（保持不变）
         for event in events:
             if event["emotional_impact"]:
                 try:
                     emotions = json.loads(event["emotional_impact"])
-                    event["impact"] = emotions.get(person_id, "无记录")
+                    event["emotional_impact"] = emotions.get(character_id, "无记录")
                 except (json.JSONDecodeError, AttributeError):
-                    event["impact"] = "数据格式错误"
+                    event["emotional_impact"] = "数据格式错误"
             else:
-                event["impact"] = "无记录"
+                event["emotional_impact"] = "无记录"
 
-        # 返回完整档案信息
+        # 返回档案信息（仅包含Outgoing关系）
         return {
-            "properties": person_info[0]['properties'], # 基本信息
-            "relationships": relations, # 关系网络
-            "events": events    # 参与的事件及其详细信息
+            "properties": character_info[0]['properties'],
+            "relationships": [r["relationship"] for r in relationships],
+            "events": events
         }
 
+    def save_character_memories(self, chapter: int, base_path: str = None):
+        """
+        保存所有角色的记忆到JSON文件
 
-def test_character_profile(initial_data_file: str, chapter_file: str, person_id: str):
+        参数:
+            chapter (int): 章节编号
+            base_path (str): 可选的自定义基础路径
+        """
+        # 确定基础路径
+        if base_path is None:
+            # 从当前文件(kg_builder.py)所在目录计算项目根目录
+            current_dir = Path(__file__).parent
+            project_root = current_dir.parent.parent  # kg_builder.py在Resource/tools/下
+            base_path = project_root / "Resource" / "memory" / "character"
+
+        # 创建章节记忆文件夹
+        chapter_dir = base_path / f"chapter_{chapter}_memories"
+        chapter_dir.mkdir(parents=True, exist_ok=True)
+
+        # 获取本章所有人物ID
+        character_ids = self.get_chapter_character_ids(chapter)
+
+        # 为每个人物保存记忆
+        for character_id in character_ids:
+            memory = self.get_character_profile(character_id, chapter)
+
+            # 确保记忆格式与MemoryAgent一致
+            formatted_memory = {
+                "properties": memory["properties"],
+                "relationships": memory["relationships"],
+                "events": memory["events"]
+            }
+
+            memory_file = chapter_dir / f"{character_id}_memory.json"
+
+            with open(memory_file, 'w', encoding='utf-8') as f:
+                json.dump(formatted_memory, f, ensure_ascii=False, indent=2)
+
+            logger.info(f"✅ 已保存角色 {character_id} 的记忆到 {memory_file}")
+
+
+    def get_chapter_character_ids(self, chapter: int) -> list:
+        """
+        获取指定章节的所有人物ID
+
+        参数:
+            chapter (int): 章节编号
+
+        返回:
+            list: 人物ID列表
+        """
+        query = f"""
+        MATCH (p:Character:Chapter{chapter})
+        RETURN p.id as character_id
+        """
+        try:
+            result = self.connector.execute_query(query)
+            return [record['character_id'] for record in result]
+        except Exception as e:
+            logger.error(f"获取章节人物ID失败: {e}")
+            return []
+
+def test_character_profile(initial_data_file: str, chapter_file: str, character_id: str):
     """
     测试人物完整档案查询功能
-    
+
     本函数主要用于测试和展示如何通过知识图谱构建器查询特定人物的完整档案
     包括人物属性、关系和参与的事件等信息
 
     参数:
     initial_data_file (str): 初始数据文件路径，用于构建知识图谱的基础数据
     chapter_file (str): 章节数据文件路径，包含特定章节的信息和数据
-    person_id (str): 需要查询的人物标识符
+    character_id (str): 需要查询的人物标识符
     """
     # 初始化连接
     connector = Neo4jConnector()
@@ -645,8 +711,8 @@ def test_character_profile(initial_data_file: str, chapter_file: str, person_id:
         chapter = chapter_data['chapter']
 
         # 查询人物完整档案
-        logger.info(f"\n查询人物 {person_id} 的完整档案...")
-        profile = builder.get_character_profile(person_id, chapter)
+        logger.info(f"\n查询人物 {character_id} 的完整档案...")
+        profile = builder.get_character_profile(character_id, chapter)
 
         if "error" in profile:
             print(f"错误: {profile['error']}")
@@ -659,8 +725,8 @@ def test_character_profile(initial_data_file: str, chapter_file: str, person_id:
 
         print(f"\n=== 人物关系 ===")
         for rel in profile['relationships']:
-            rel_info = f"{rel['name']} ({rel['person_id']})"
-            rel_info += f"\n  关系类型: {rel['relation_type']}"
+            rel_info = f"{rel['name']} ({rel['character_id']})"
+            rel_info += f"\n  关系类型: {rel['type']}"
 
             # 显示其他属性
             props = rel.get('all_properties', {})
@@ -686,3 +752,15 @@ def test_character_profile(initial_data_file: str, chapter_file: str, person_id:
 # if __name__ == "__main__":
 #     # 测试完整功能
 #     test_character_profile("initial_data.json", "chapter_data.json", "p1")
+
+# if __name__ == "__main__":
+#     connector = Neo4jConnector()
+#     builder = KnowledgeGraphBuilder(connector)
+#     builder.clear_all_data()  # 先清空
+#     builder.load_initial_data("/Users/sylvia/anaconda_projects/PythonProject/CreAgentive/Resource/memory/story_plan/initial_data.json")  # 再加载
+#
+#     # 查询初始数据
+#     result = connector.execute_query("MATCH (n:Chapter0) RETURN count(n) AS count")
+#     print("Chapter0节点数量:", result[0]["count"])
+#
+#     connector.close()
