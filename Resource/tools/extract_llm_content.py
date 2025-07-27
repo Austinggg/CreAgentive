@@ -12,7 +12,7 @@ def extract_llm_content(agent_result) -> str:
         print("打印 Messages 列表")
         print(messages)
         for msg in reversed(messages):
-            if getattr(msg, 'source', '') in ('diggerAgent', 'recallAgent', 'combinerAgent','NovelwriterAgent','ScriptwriterAgent'):
+            if getattr(msg, 'source', '') in ('diggerAgent', 'recallAgent', 'combinerAgent','NovelwriterAgent','ScriptwriterAgent','shortgoal_agent','scoreAgent','Env_Agent'):
                 return getattr(msg, 'content', '')
         return ""
     except Exception as e:

@@ -23,7 +23,7 @@ async def main():
         chapters_dir=chapters_dir,
         neo4j_password=neo4j_password
     )
-    await workflow.run(article_type="novel")  # 可切换为"script"
+    await workflow.run(article_type="script")  # 可切换为"script"
 
 
 asyncio.run(main())

@@ -44,10 +44,13 @@ def read_max_index_file(folder_path: str) -> Dict:
     # 使用 max 查找最大序号文件
     def get_index(filename: str) -> int:
         match = re.search(r'\d+', filename)
+        # 如果没有数字部分则返回 -1
         return int(match.group()) if match else -1
     
+    
     max_file = max(files, key=get_index)
+    max_number = get_index(max_file) # 最大编号
     file_path = os.path.join(folder_path, max_file)
     
     # 读取并返回文件内容
-    return _read_json_file(file_path)
+    return _read_json_file(file_path), max_number
