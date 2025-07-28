@@ -13,6 +13,7 @@ class LLMClientManager:
     def __init__(self):
         load_dotenv()
         siliconflow_api_key = os.getenv("SILICONFLOW_API_KEY") # 修改你的 API Key 环境变量名
+        openrouter_api_key = os.getenv("OPENROUTER_API_KEY") # openrouter api key
 
         # 初始化各类模型客户端
         self.clients = {
@@ -80,6 +81,70 @@ class LLMClientManager:
                     "json_output": True
                 },
             ),
+            "gpt4o": OpenAIChatCompletionClient(
+                model="openai/chatgpt-4o-latest",
+                base_url="https://openrouter.ai/api/v1",
+                api_key=openrouter_api_key,
+                model_info={
+                    "family": "glm",
+                    "context_length": 8192,
+                    "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
+            "gpt4o-mini": OpenAIChatCompletionClient(
+                model="openai/gpt-4o-mini",
+                base_url="https://openrouter.ai/api/v1",
+                api_key=openrouter_api_key,
+                model_info={
+                    "family": "glm",
+                    "context_length": 8192,
+                    "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
+            "llama4-maverick": OpenAIChatCompletionClient(
+                model="meta-llama/llama-4-maverick",
+                base_url="https://openrouter.ai/api/v1",
+                api_key=openrouter_api_key,
+                model_info={
+                    "family": "glm",
+                    "context_length": 8192,
+                    "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
+            "llama4-scout": OpenAIChatCompletionClient(
+                model="meta-llama/llama-4-scout",
+                base_url="https://openrouter.ai/api/v1",
+                api_key=openrouter_api_key,
+                model_info={
+                    "family": "glm",
+                    "context_length": 8192,
+                    "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            )
         }
 
     def get_client(self, model_name: str):
