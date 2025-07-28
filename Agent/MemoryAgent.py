@@ -35,6 +35,32 @@ class MemoryAgent:
         for chapter in range(1, 1000):
             self.builder.clear_chapter_data(chapter)
 
+    def load_initial_data(self, json_file: str):
+        """
+        调用KnowledgeGraphBuilder的初始数据加载方法
+
+        从指定的JSON文件中读取初始数据，包括人物和关系信息，
+        并将其加载到知识图谱中，作为第0章的基础数据。
+
+        参数:
+            json_file (str): 包含初始数据的JSON文件路径
+        """
+        try:
+            # 检查JSON文件是否存在
+            if not Path(json_file).exists():
+                raise FileNotFoundError(f"初始数据JSON文件不存在: {json_file}")
+
+            else: self.builder.load_initial_data(json_file)
+
+            # 日志输出加载结果
+            logger.info(
+                f"✅ 已加载初始数据，共 {len(self.builder._character_cache)} 个人物和 {len(self.builder._relationship_cache)} 条关系")
+            return True
+        except Exception as e:
+            logger.error(f"加载初始数据失败: {str(e)}")
+            return False
+
+
     def load_chapter(self, json_path: str) -> bool:
         """
         加载并构建章节知识图谱
@@ -56,11 +82,8 @@ class MemoryAgent:
                 chapter_data = json.load(f)
                 self.current_chapter = chapter_data["chapter"]
 
-            # 处理章节数据
+            # 处理章节数据（更新Neo4j）
             self.builder.process_chapter(json_path)
-
-            # 保存角色记忆
-            self.save_character_memories(self.current_chapter)
 
             # 如果图谱构建成功，记录日志并返回 True
             logger.info(f"成功构建第 {self.current_chapter} 章知识图谱")
@@ -69,22 +92,6 @@ class MemoryAgent:
             # 捕获异常并记录错误信息
             logger.error(f"加载章节失败: {str(e)}")
             return False
-
-    def save_character_memories(self, chapter: int, base_path: str = None):
-        """
-        保存所有角色的记忆到JSON文件
-
-        参数:
-            chapter (int): 章节编号
-            base_path (str): 可选的自定义基础路径
-        """
-        try:
-            # 使用知识图谱构建器的方法保存记忆
-            self.builder.save_character_memories(chapter, base_path)
-            logger.info(f"成功保存第{chapter}章的角色记忆")
-        except Exception as e:
-            logger.error(f"保存角色记忆失败: {str(e)}")
-            raise
 
     def get_character_memory(self, person_id: str, chapter: int) -> Dict:
         """
@@ -111,18 +118,29 @@ class MemoryAgent:
         # 增强记忆格式，包括章节、角色属性、关系和事件
         enhanced_memory = {
             "chapter": chapter,
-            "character": memory["properties"],
+            "characters": memory["properties"],
             "relationships": memory["relationships"],
             "events": memory["events"]
         }
         # 返回增强格式的记忆
         return enhanced_memory
 
-    def build_graph_from_json(self, json_path: str):
+    def save_character_memories(self, chapter: int, base_path: str = None):
         """
-        从JSON文件构建知识图谱
+        查找输入章节下的所有角色记忆
+        保存输入章节下的所有角色记忆到JSON文件
+
+        参数:
+            chapter (int): 章节编号
+            base_path (str): 可选的自定义基础路径
         """
-        self.builder.process_chapter(json_path)
+        try:
+            # 使用知识图谱构建器的方法保存记忆
+            self.builder.save_character_memories_kg(chapter, base_path)
+            logger.info(f"成功保存第{chapter}章的角色记忆")
+        except Exception as e:
+            logger.error(f"保存角色记忆失败: {str(e)}")
+            raise
 
     def process_all_chapters(self, base_path: str, pattern: str = "chapter*.json"):
         """
