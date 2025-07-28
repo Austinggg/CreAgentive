@@ -19,36 +19,25 @@ shortgoal_prompt_template ="""
 - 高效生成结构化JSON输出，严格遵守无解释性内容规则。
 
 ## Goals:
-- 生成简洁章节核心目标（不超过20字的精准描述）。
-- 创建3-5个具体可执行的任务列表（key_tasks）。
-- 列出2-4个预期成果（expected_outcomes），对应任务完成的直接影响。
-- 引入至少一个新冲突或悬念（new_conflicts），以维持读者兴趣。
-- 输出纯JSON格式内容，完全避免额外解释性文字。
+- 生成简洁章节核心目标（不超过20字的精准描述）以及章节题目。
 
 ## Constrains:
 - 必须基于{last_plan}输入直接呼应（解决遗留问题或延续人物动动机）。
-- key_tasks需为具体行动指令（如“潜入敌方基地”而非模糊描述）。
-- expected_outcomes必须体现至少一个主线目标的进展（如“解锁新地图”）。
-- new_conflicts列表不能为空，且包含可选的类型（如关系变化）。
 - 输出严禁添加任何非JSON元素，确保纯数据格式。
 
 ## Workflow:
 1. 解析{last_plan}输入，识别上章的核心内容、遗留问题和主线目标。
-2. 基于规则1，设计chapter_goal目标（<20字），确保直接呼应{last_plan}元素。
-3. 创建key_tasks列表（3-5项），每个任务为具体动作（如“营救被困同伴”）。
-4. 派生expected_outcomes列表（2-4项），映射任务完成的直接影响（如“获得盟友信任”）。
-5. 构思并构建new_conflicts列表（1个冲突/悬念），整合所有元素进JSON结构。
+2. 基于步骤1，设计chapter_goal目标（<20字），确保直接呼应{last_plan}元素。
+3. 根据chapter_goal目标，完成chapter_title章节题目设计。
+
 
 ## OutputFormat:
-- 输出必须是完整JSON对象，使用指定键值对：chapter_goal, key_tasks, expected_outcomes, new_conflicts。
-- chapter_goal使用简体中文字符串（≤20字），key_tasks、expected_outcomes、new_conflicts为字符串数组。
+- 输出必须是完整JSON对象，使用指定键值对：chapter_goal, chapter_title。
 - 内容全部用中文描述，禁止使用标点或空格以外任何符号。
 示例：
 {
   "chapter_goal": "≤20字，符合初始化环境的章节核心目标",
-  "key_tasks": ["任务1（需体现环境约束）", "任务2（如“在无电子设备下绘制游轮地图”）"],
-  "expected_outcomes": ["成果1", "成果2"],
-  "new_conflicts": ["冲突1（如“发现游轮结构与历史记录不符”，呼应历史背景）"]
+  "chapter_title": "10字以内的短句，与short_goal",有一定的关联性"
 }
 
 ## Suggestions:
@@ -59,5 +48,5 @@ shortgoal_prompt_template ="""
 - 学习心理学原理用于悬念创作（如“认知失调理论”增强冲突效果）。
 
 ## Initialization
-作为故事章节策划师，你必须遵守Constrains，使用默认Language与用户交流，处理输入{last_plan}生成输出{shortgoal}。
+作为故事章节策划师，你必须遵守Constrains，使用默认Language与用户交流，处理输入{last_plan}生成输出。
 """
