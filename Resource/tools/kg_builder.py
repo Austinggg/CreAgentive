@@ -36,7 +36,7 @@ class KnowledgeGraphBuilder:
         """
         query = "MATCH (n) DETACH DELETE n"
         try:
-            self.connector.execute_query(query)
+            self.connector.execute_query(query,write=True)
             logger.info("✅ 所有数据已成功清空")
         except Exception as e:
             logger.error(f"清空数据失败: {e}")
@@ -220,8 +220,7 @@ class KnowledgeGraphBuilder:
         self._update_characters(chapter)
         self._update_relationships(chapter)
         # 日志输出加载数据的结果
-        logger.info(f"✅ 已加载初始数据，共 {len(self._character_cache)} 个人物和 {len(self._relationship_cache)} 条关系")
-
+        logger.info(f"✅ 已加载初始数据至知识图谱，共 {len(self._character_cache)} 个人物和 {len(self._relationship_cache)} 条关系")
 
 
     def _update_characters(self, chapter: int):
@@ -538,7 +537,7 @@ class KnowledgeGraphBuilder:
         self._update_relationships(chapter)
 
         # 存储章节的人物记忆
-        self.save_character_memories(chapter)
+        # self.save_character_memories(chapter)
         logger.info(f"✅ 第 {chapter} 章处理完成，更新了 {len(updated_characters)} 个人物和 {len(updated_rels)} 条关系")
 
     def get_character_profile(self, character_id: str, chapter: int):
@@ -618,7 +617,7 @@ class KnowledgeGraphBuilder:
             "events": events
         }
 
-    def save_character_memories(self, chapter: int, base_path: str = None):
+    def save_character_memories_kg(self, chapter: int, base_path: str = None):
         """
         保存所有角色的记忆到JSON文件
 
@@ -626,38 +625,53 @@ class KnowledgeGraphBuilder:
             chapter (int): 章节编号
             base_path (str): 可选的自定义基础路径
         """
-        # 确定基础路径
-        if base_path is None:
-            # 从当前文件(kg_builder.py)所在目录计算项目根目录
-            current_dir = Path(__file__).parent
-            project_root = current_dir.parent.parent  # kg_builder.py在Resource/tools/下
-            base_path = project_root / "Resource" / "memory" / "character"
+        try:
+            # 确定基础路径
+            if base_path is None:
+                # 从当前文件所在目录计算项目根目录
+                current_dir = Path(__file__).parent
+                # 正确计算项目根目录（根据实际目录结构调整层级）
+                project_root = current_dir.parent.parent  # 假设结构: 项目根/Resource/tools/kg_builder.py
+                # 设置默认人物记忆存储目录
+                base_path = project_root / "Resource" / "memory" / "character"
+            else:
+                # 处理自定义路径（支持字符串或Path对象）
+                base_path = Path(base_path)  # 确保转换为Path对象
 
-        # 创建章节记忆文件夹
-        chapter_dir = base_path / f"chapter_{chapter}_memories"
-        chapter_dir.mkdir(parents=True, exist_ok=True)
+            # 创建章节记忆文件夹（确保基础路径正确）
+            chapter_dir = base_path / f"chapter_{chapter}_memories"
+            chapter_dir.mkdir(parents=True, exist_ok=True)
 
-        # 获取本章所有人物ID
-        character_ids = self.get_chapter_character_ids(chapter)
+            # 获取本章所有人物ID
+            character_ids = self.get_chapter_character_ids(chapter)
 
-        # 为每个人物保存记忆
-        for character_id in character_ids:
-            memory = self.get_character_profile(character_id, chapter)
+            formatted_memory = {}
+            # 为每个人物保存记忆
+            for character_id in character_ids:
+                memory = self.get_character_profile(character_id, chapter)
 
-            # 确保记忆格式与MemoryAgent一致
-            formatted_memory = {
-                "properties": memory["properties"],
-                "relationships": memory["relationships"],
-                "events": memory["events"]
-            }
+                # 确保记忆格式与MemoryAgent一致
+                formatted_memory = {
+                    "chapter": chapter,
+                    "properties": memory["properties"],
+                    "relationships": memory["relationships"],
+                    "events": memory["events"]
+                }
 
-            memory_file = chapter_dir / f"{character_id}_memory.json"
+                # 构建记忆文件路径
+                memory_file = chapter_dir / f"{character_id}_memory.json"
 
-            with open(memory_file, 'w', encoding='utf-8') as f:
-                json.dump(formatted_memory, f, ensure_ascii=False, indent=2)
+                # 保存JSON文件
+                with open(memory_file, 'w', encoding='utf-8') as f:
+                    json.dump(formatted_memory, f, ensure_ascii=False, indent=2)
 
-            logger.info(f"✅ 已保存角色 {character_id} 的记忆到 {memory_file}")
+                logger.info(f"✅ 已保存角色 {character_id} 的记忆到 {memory_file}")
 
+            return formatted_memory
+
+        except Exception as e:
+            logger.error(f"保存角色记忆失败: {str(e)}")
+            raise  # 向上抛出异常，让调用方处理
 
     def get_chapter_character_ids(self, chapter: int) -> list:
         """
@@ -679,74 +693,6 @@ class KnowledgeGraphBuilder:
         except Exception as e:
             logger.error(f"获取章节人物ID失败: {e}")
             return []
-
-def test_character_profile(initial_data_file: str, chapter_file: str, character_id: str):
-    """
-    测试人物完整档案查询功能
-
-    本函数主要用于测试和展示如何通过知识图谱构建器查询特定人物的完整档案
-    包括人物属性、关系和参与的事件等信息
-
-    参数:
-    initial_data_file (str): 初始数据文件路径，用于构建知识图谱的基础数据
-    chapter_file (str): 章节数据文件路径，包含特定章节的信息和数据
-    character_id (str): 需要查询的人物标识符
-    """
-    # 初始化连接
-    connector = Neo4jConnector()
-    builder = KnowledgeGraphBuilder(connector)
-
-    try:
-        # 加载初始数据
-        logger.info(f"从 {initial_data_file} 加载初始数据...")
-        builder.load_initial_data(initial_data_file)
-
-        # 处理章节数据
-        logger.info(f"从 {chapter_file} 处理章节数据...")
-        builder.process_chapter(chapter_file)
-
-        # 从章节数据中获取 chapter 值
-        with open(chapter_file, 'r', encoding='utf-8') as f:
-            chapter_data = json.load(f)
-        chapter = chapter_data['chapter']
-
-        # 查询人物完整档案
-        logger.info(f"\n查询人物 {character_id} 的完整档案...")
-        profile = builder.get_character_profile(character_id, chapter)
-
-        if "error" in profile:
-            print(f"错误: {profile['error']}")
-            return
-
-        # 打印结果
-        print(f"\n=== 人物属性 ===")
-        for prop, value in profile['properties'].items():
-            print(f"{prop}: {value}")
-
-        print(f"\n=== 人物关系 ===")
-        for rel in profile['relationships']:
-            rel_info = f"{rel['name']} ({rel['character_id']})"
-            rel_info += f"\n  关系类型: {rel['type']}"
-
-            # 显示其他属性
-            props = rel.get('all_properties', {})
-            for prop, value in props.items():
-                rel_info += f"\n  {prop}: {value}"
-
-            print(rel_info)
-
-        print(f"\n=== 参与事件 ===")
-        for event in profile['events']:
-            print(f"\n事件 #{event['event_order']}: {event['event_name']}")
-            print(f"场景: {event['scene_name']} ({event.get('scene_place', '未知地点')})")
-            print(f"详情: {event['details']}")
-            print(f"情感影响: {event['impact']}")
-            print(f"后果: {', '.join(event['consequences'])}")
-
-    except Exception as e:
-        logger.error("运行测试时发生错误: %s", str(e))
-    finally:
-        connector.close()
 
 
 # if __name__ == "__main__":
