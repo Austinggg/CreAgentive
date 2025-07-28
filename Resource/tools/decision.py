@@ -89,9 +89,6 @@ async def evaluate_plan(plans,model_client):
     # 选出评分最高的故事方案
     if plan_scores:
         best_plan, best_score = max(plan_scores, key=lambda x: x[1])
-
-        # 从响应中提取实际内容, plan 是 Agent 的输出，需要提取其中的内容
-        actual_best_plan = strip_markdown_codeblock(extract_llm_content(str(best_plan)))
         
     else:
         best_plan, best_score = None, 0
