@@ -266,7 +266,7 @@ class KnowledgeGraphBuilder:
             logger.error(f"批量更新人物失败: {str(e)}")
             raise
 
-    # 添加单向关系
+    # 更新关系节点
     def _update_relationships(self, chapter: int):
         """简化版关系更新：完全按照from_id/to_id匹配覆盖"""
         # 1. 如果是第0章，直接使用初始关系
