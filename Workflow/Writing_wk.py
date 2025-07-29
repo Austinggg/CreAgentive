@@ -412,7 +412,7 @@ class WritingWorkflow:
             output_text = strip_markdown_codeblock(raw_output)
             output_text = output_text.strip()  # 清理首尾空白
 
-            # 验证提取结果（增加明确的长度检查）
+            # 验证提取结果（增加明确长度检查）
             if not output_text or len(output_text) < 10:  # 避免极短无效内容
                 raise ValueError(
                     f"提取的文本内容无效 "
