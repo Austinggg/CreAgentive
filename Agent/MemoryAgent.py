@@ -4,7 +4,6 @@ import os
 import shutil
 from pathlib import Path
 from typing import Dict
-# from autogen_agentchat.agents import BaseChatAgent
 from Resource.tools.kg_builder import KnowledgeGraphBuilder
 from Resource.tools.neo4j_connector import Neo4jConnector
 
@@ -93,22 +92,22 @@ class MemoryAgent:
             logger.error(f"加载章节失败: {str(e)}")
             return False
 
-    def get_character_memory(self, person_id: str, chapter: int) -> Dict:
+    def get_character_memory(self, character_id: str, chapter: int) -> Dict:
         """
         获取指定角色在特定章节的记忆
 
-        此函数通过请求的person_id和chapter参数，调用builder的get_character_profile方法
+        此函数通过请求的character_id和chapter参数，调用builder的get_character_profile方法
         来获取角色的基本记忆信息，并对其进行处理和格式化，返回一个增强格式的记忆字典
 
         参数:
-            person_id (str): 角色ID，用于指定需要获取记忆的角色
+            character_id (str): 角色ID，用于指定需要获取记忆的角色
             chapter (int): 章节编号，用于指定角色在哪个章节的记忆
 
         返回:
             Dict: 格式化后的角色记忆字典，如果发生错误，则直接返回错误信息
         """
         # 调用builder的方法获取角色记忆信息
-        memory = self.builder.get_character_profile(person_id, chapter)
+        memory = self.builder.get_character_profile(character_id, chapter)
 
         # 检查获取的记忆中是否包含错误信息，如果包含则直接返回
         if "error" in memory:
@@ -142,78 +141,69 @@ class MemoryAgent:
             logger.error(f"保存角色记忆失败: {str(e)}")
             raise
 
-    def process_all_chapters(self, base_path: str, pattern: str = "chapter*.json"):
+    def get_previous_chapters_events(self, character_id: str, current_chapter: int):
         """
-        批量处理所有章节文件
-
-        Args:
-            base_path (str): 包含章节文件的基础路径
-            pattern (str): 章节文件的命名模式，默认为"chapter*.json"
-
-        Yields:
-            tuple: 包含章节文件名和对应人物记忆的字典
+        从已保存的角色记忆中获取前五章的事件
+        如果当前章节<=5，则返回从第1章到当前章节前一章的所有事件
         """
-        # 根据提供的基础路径和模式获取所有匹配的章节文件
-        chapter_files = sorted(Path(base_path).glob(pattern))
-        # 如果没有找到任何匹配的文件，则记录警告信息并返回
-        if not chapter_files:
-            logger.warning(f"未找到匹配文件: {base_path}/{pattern}")
-            return
+        previous_events = []
 
-        # 保存记忆的基础文件夹
-        memory_base_dir = Path(base_path).parent / "character"
-        # 确保记忆基础文件夹存在，如果不存在则创建
-        memory_base_dir.mkdir(parents=True, exist_ok=True)
+        # 确定查询范围
+        start_chapter = max(1, current_chapter - 5)
+        end_chapter = current_chapter - 1
 
-        # 遍历每个章节文件
-        for file in chapter_files:
-            # 加载章节内容，如果成功则继续处理
-            if self.load_chapter(str(file)):
-                # 获取本章所有人物ID
-                with open(file, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    persons = [p["id"] for p in data.get("characters", data.get("persons", []))]
+        # 遍历范围内的每一章
+        for chapter in range(start_chapter, end_chapter + 1):
+            try:
+                # 获取该章节的角色记忆
+                memory = self.get_character_memory(character_id, chapter)
+                if memory and "events" in memory:
+                    # 为每个事件添加章节信息
+                    for event in memory["events"]:
+                        event["chapter_num"] = chapter
+                        event["chapter_label"] = f"Chapter{chapter}"
+                    previous_events.extend(memory["events"])
+            except Exception as e:
+                logger.error(f"获取第{chapter}章记忆失败: {str(e)}")
 
-                # 为每个角色存储记忆
-                memories = {
-                    person_id: self.get_character_memory(person_id, self.current_chapter)
-                    for person_id in persons
-                }
+        # 按章节和事件顺序排序
+        previous_events.sort(key=lambda x: (x["chapter_num"], x.get("event_order", 0)))
+        return previous_events
 
-                # 生成章节文件名和对应人物记忆的字典
-                yield file.stem, memories
+    def get_next_chapters_events(self, current_chapter: int, end_chapter: int):
+        """
+        获取当前章节后最多5章中的所有事件（增强兼容性版本）
+        """
+        if current_chapter >= end_chapter:
+            return []
 
-    def get_previous_chapters_events(self, person_id: str, current_chapter: int):
+        # 更健壮的查询方案
+        query = """
+        MATCH (e:Event)
+        // 提取所有Chapter开头的标签
+        WITH e, [label IN labels(e) WHERE label STARTS WITH 'Chapter'] AS chapter_labels
+        WHERE size(chapter_labels) > 0
+        // 提取纯数字部分（兼容各种Chapter标签格式）
+        WITH e, chapter_labels[0] AS chapter_label,
+             toInteger(apoc.text.replace(chapter_labels[0], '[^0-9]', '')) AS chapter_num
+        WHERE chapter_num > $current_chapter 
+              AND chapter_num <= $max_chapter
+        RETURN e.id as event_id, e.name as event_name, e.details as details,
+               e.order as event_order, chapter_label
+        ORDER BY chapter_num, e.order
         """
-        获取指定人物在所有小于当前章节编号的章节中参与的事件
-        """
-        # 构建查询语句，以获取指定人物在当前章节之前的所有章节中参与的事件
-        query = f"""
-        MATCH (p:Character)-[r:IN_EVENT]->(e:Event)
-        WHERE p.id = $person_id AND ANY(label IN labels(e) WHERE label STARTS WITH 'Chapter' AND toInteger(substring(label, 7)) < {current_chapter})
-        RETURN e.id as event_id, e.name as event_name, e.details as details, e.order as event_order, 
-               [label IN labels(e) WHERE label STARTS WITH 'Chapter'][0] as chapter_label
-        ORDER BY toInteger(substring(chapter_label, 7)), event_order
-        """
-        # 执行查询并获取结果
-        result = self.connector.execute_query(query, {"person_id": person_id})
-        return result
+        params = {
+            "current_chapter": current_chapter,
+            "max_chapter": min(current_chapter + 5, end_chapter)
+        }
 
-    def get_next_chapters_events(self, person_id: str, current_chapter: int):
-        """
-        获取指定人物在所有大于当前章节编号的章节中参与的事件
-        """
-        # 构建查询语句，用于获取指定人物在后续章节中的事件信息
-        query = f"""
-        MATCH (p:Character)-[r:IN_EVENT]->(e:Event)
-        WHERE p.id = $person_id AND ANY(label IN labels(e) WHERE label STARTS WITH 'Chapter' AND toInteger(substring(label, 7)) > {current_chapter})
-        RETURN e.id as event_id, e.name as event_name, e.details as details, e.order as event_order, 
-               [label IN labels(e) WHERE label STARTS WITH 'Chapter'][0] as chapter_label
-        ORDER BY toInteger(substring(chapter_label, 7)), event_order
-        """
-        # 执行查询并获取结果
-        result = self.connector.execute_query(query, {"person_id": person_id})
-        return result
+        try:
+            result = self.connector.execute_query(query, params)
+            logger.info(f"查询第{current_chapter}章后事件: 条件{params} 结果{len(result)}条")
+            return result
+        except Exception as e:
+            logger.error(f"查询后续章节事件失败: {str(e)}")
+            return []
 
     def close(self):
         """
