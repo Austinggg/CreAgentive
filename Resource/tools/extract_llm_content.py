@@ -1,6 +1,7 @@
 from Resource.tools.extract_last_content import extract_last_text_content
 from autogen_agentchat.messages import TextMessage
 from autogen_agentchat.agents import AssistantAgent
+import re
 def extract_llm_content(agent_result) -> str:
     """
     从 TaskResult 中提取最后一条来自智能体的文本消息
@@ -12,7 +13,9 @@ def extract_llm_content(agent_result) -> str:
         print("打印 Messages 列表")
         print(messages)
         for msg in reversed(messages):
-            if getattr(msg, 'source', '') in ('diggerAgent', 'recallAgent', 'combinerAgent','NovelwriterAgent','ScriptwriterAgent','shortgoal_agent','scoreAgent','Env_Agent','p1'):
+            source = getattr(msg, 'source', '')
+            # 检查source是否匹配指定的智能体名称或 p+数字（角色智能体） 的模式
+            if source in ('diggerAgent', 'recallAgent', 'combinerAgent','NovelwriterAgent','ScriptwriterAgent','shortgoal_agent','scoreAgent','Env_Agent') or re.match(r'p\d+', source):
                 return getattr(msg, 'content', '')
         return ""
     except Exception as e:
