@@ -95,4 +95,4 @@ async def evaluate_plan(plans,model_client):
 
 
     # 返回故事方案列表，最佳故事方案及评分
-    return actual_best_plan, best_score
+    return best_plan, best_score
