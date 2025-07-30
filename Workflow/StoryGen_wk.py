@@ -11,7 +11,7 @@ from Agent.StoryGenAgent import create_agents
 from Resource.tools.extract_last_content import extract_last_text_content
 from Resource.tools.read_json import read_json, read_max_index_file
 from Resource.tools.decision import score_plan,evaluate_plan
-from Resource.template.story_plan_llmtemplate import story_plan_template, story_plan_example
+from Resource.template.story_template import story_plan_template, story_plan_example
 from Resource.tools.extract_last_content import extract_last_text_content
 from Resource.tools.extract_llm_content import extract_llm_content
 from Resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
@@ -22,10 +22,10 @@ from pathlib import Path
 
 
 class StoryGenWorkflow:
-    def __init__(self, model_client, maxround=5):
+    def __init__(self, model_client, maxround=3):
         # 设置模型客户端和最大轮次参数
         self.model_client = model_client  #设置模型客户端
-        self.maxround = int(maxround)  #设置模型最大轮次参数
+        self.maxround = int(maxround)  #设置模型最大轮次参数, 所有角色智能体参与一次对话为一轮
         self.memory_agent = MemoryAgent()  # 初始化知识图谱连接
         self.current_chapter = 0  # 添加章节计数器(从0开始)
 
@@ -314,14 +314,6 @@ class StoryGenWorkflow:
             role_identity = self._get_role_identity(agent_config) # 读取角色的基本信息
             print(f"{role_identity}")
             role_prompt = self._create_role_prompt(role_relation, role_events, role_identity, short_goal)
-            # 角色名称读取
-            # role_name = agent_config.get("name", agent_config.get("id", "Unknown"))
-            # 简单的名称处理
-            # role_name = agent_config.get("id", f"role_{len(role_agents)}")
-            # # 确保名称中没有空格等无效字符
-            # role_name = role_name.replace(" ", "_").replace("-", "_")
-            # 获取显示用的名字（中文）
-            # display_name = agent_config.get("name", "未知角色")
 
             # 获取合法的 agent name（用于内部逻辑）
             agent_id = agent_config.get("id", f"role_{len(role_agents)}")
@@ -341,6 +333,7 @@ class StoryGenWorkflow:
             participants=role_agents, # 组合所有将参与对话的 agent 包含 环境智能体 + 角色智能体
             max_turns=len(role_agents) * self.maxround
         )
+        # 
         print(f"DEBUG - maxround类型: {type(self.maxround)}, 值: {self.maxround}")
 
 
