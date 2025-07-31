@@ -30,25 +30,18 @@ script_write_prompt_template = """
 ## 输入数据结构说明：
 ```json
 {
-  "chapter": 2,
-  "persons": [...],  // 当前章节人物档案
-  "events": [...],   // 当前章节主要事件
-  "dig_events": [    // 需要埋下伏笔的未来事件
-    {
-      "id": "e3_1",
-      "name": "第一场魁地奇比赛",
-      "details": "哈利作为找球手首次参赛..."
-      ...
-    }
-  ],
-  "recall_events": [  // 需要插入的回忆事件
-    {
-      "id": "e1_3",
-      "name": "童年约定",
-      "details": "两人在槐树下的约定..."
-      ...
-    }
-  ]
+  "title": init_data["title"],  # 小说标题
+  "background": init_data["background"],  # 世界观设定
+  "init_relationships": init_data["relationships"],
+  **current_data,  # 当前章节数据
+  "dig_events": dig_events or [],
+  "recall_events": recall_events or []
+}
+其中current_data包括字段{
+    characters
+    relationships
+    scenes
+    events
 }
 
 ## 回忆和挖坑事件融合原则：
