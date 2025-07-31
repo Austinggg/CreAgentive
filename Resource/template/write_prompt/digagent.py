@@ -20,18 +20,10 @@ dig_prompt_template = """
 
 ## InputFormat:
 ```json格式输入
-{
-  "current_chapter": {
-    "chapter": N,
-    "events": [{"id": "...", "name": "...", ...}]
-  },
-  "future_chapters": [
-    {
-      "chapter": M,
-      "events": [{"id": "...", "name": "...", ...}]
-    }
-  ]
-}
+input_data = {
+            "current_chapter": current_data,
+            "future_events": next_events
+        }
 OutputFormat:
 - 输出格式为JSON，不要包含任何分析和解释的内容
 {
@@ -40,7 +32,7 @@ OutputFormat:
 }
 示例：
 - 当不需要添加伏笔时，输出：{"need_dig": "No", "positions": []}
-- 当需要添加伏笔时，输出（以e1_1为例）：{"need_dig": "Yes", "positions": [{"id": "e1_1", "name": "购买魔杖"}]}
+- 当需要添加伏笔时，输出（以e1为例）：{"need_dig": "Yes", "positions": [{"id": "e1", "name": "购买魔杖"}]}
 
 ## Goals:
 - 接收用户提供的当前章节故事剧情方案并全面理解其内容结构
