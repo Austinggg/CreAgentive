@@ -37,16 +37,17 @@ recall_prompt_template = """
 ## InputFormat:
 ```json
 {
-  "current_chapter": {
-    "chapter": N,
-    "events": [{"id": "...", "name": "...", ...}]
-  },
-  "past_chapters": [
-    {
-      "chapter": K,
-      "events": [{"id": "...", "name": "...", ...}]
-    }
-  ]
+  "current_character": character,
+  "current_events": [
+    {event},
+    {event},
+    ...
+  ],
+  "past_events": [
+    {event},
+    {event},
+    ...
+  ],
 }
 ## OutputFormat:
 - 输出格式为JSON，不要包含任何分析和解释的内容
