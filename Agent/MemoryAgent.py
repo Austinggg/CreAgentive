@@ -21,7 +21,6 @@ class MemoryAgent:
         self.connector = Neo4jConnector()  # 连接到 Neo4j 数据库
         self.builder = KnowledgeGraphBuilder(self.connector)  # 初始化知识图谱构建器
         self.current_chapter = 0  # 初始化当前章节编号 初始为 0
-        self.clear_all_chapter_data()  # 清空当前知识图谱
         print("MemoryAgent初始化完成")
         logger.info("MemoryAgent初始化完成")
 
@@ -92,6 +91,38 @@ class MemoryAgent:
             logger.error(f"加载章节失败: {str(e)}")
             return False
 
+    def get_event(self, event_id: str) -> Dict:
+        """
+        获取指定事件的所有属性
+
+        通过事件ID查询事件节点，返回该事件的所有属性
+
+        参数:
+            event_id (str): 要查询的事件ID
+
+        返回:
+            Dict: 包含事件所有属性的字典，如果事件不存在则返回错误信息
+        """
+        query = """
+        MATCH (e:Event {id: $event_id})
+        RETURN properties(e) as event_properties
+        """
+        params = {"event_id": event_id}
+
+        try:
+            result = self.connector.execute_query(query, params)
+            if not result:
+                return {"error": f"事件ID {event_id} 不存在"}
+
+            event_properties = result[0]["event_properties"]
+            logger.info(f"成功获取事件 {event_id} 的属性")
+            return event_properties
+
+        except Exception as e:
+            error_msg = f"获取事件属性失败: {str(e)}"
+            logger.error(error_msg)
+            return {"error": error_msg}
+
     def get_character_memory(self, character_id: str, chapter: int) -> Dict:
         """
         获取指定角色在特定章节的记忆
@@ -140,6 +171,7 @@ class MemoryAgent:
         except Exception as e:
             logger.error(f"保存角色记忆失败: {str(e)}")
             raise
+
 
     def get_previous_chapters_events(self, character_id: str, current_chapter: int):
         """
