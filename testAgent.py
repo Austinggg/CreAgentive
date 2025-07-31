@@ -86,13 +86,15 @@ def test_memory_agent_with_files():
         print("\n=== 测试前序章节事件查询 ===")
         prev_events = agent.get_previous_chapters_events("p1", 2)
         print(f"p1在第2章前的事件数: {len(prev_events)} (预期: 来自chapter_1的事件数)")
+        print(prev_events)
         for event in prev_events:
             print(f"事件: {event['event_name']} (章节: {event['chapter_label']})")
 
 
+
         # 7. 测试获取后续章节事件 (相对于第1章)
         print("\n=== 测试后序章节事件查询 ===")
-        post_events = agent.get_next_chapters_events(2, 7)
+        post_events = agent.get_next_chapters_events(1, 7)
         print(f"第2章后的事件数: {len(post_events)} (预期: 来自chapter_3的事件数)")
         for event in post_events:
             print(f"事件: {event['event_name']} (章节: {event['chapter_label']})")
