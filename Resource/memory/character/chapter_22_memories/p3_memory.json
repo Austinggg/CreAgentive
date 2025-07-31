@@ -1,0 +1,331 @@
+{
+  "chapter": 22,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "记忆传递"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 6,
+      "character_id": "p1",
+      "type": "机械抗拒"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "基因牵引"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "记忆共享"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "服从关系→觉醒反抗"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "报恩心理→使命传承"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "机械反制"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 10,
+      "character_id": "p2",
+      "type": "时间锚点共振"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "机械共振→相位同步"
+    },
+    {
+      "chapter": 22,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "复仇欲望→量子共生"
+    },
+    {
+      "chapter": 22,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "实验连接→记忆融合"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e132",
+      "event_name": "纽扣解码",
+      "event_order": 27,
+      "details": "制服纽扣自动排列成莫比乌斯环形状，显示出20年前实验舱的完整坐标",
+      "scene_id": "s50",
+      "scene_name": "因果操作台",
+      "scene_place": "游轮量子计算机核心",
+      "emotional_impact": "首次理解自身紫外线过敏的真正来源",
+      "consequences": [
+        "解锁维度坐标编辑器"
+      ]
+    },
+    {
+      "event_id": "e133",
+      "event_name": "麻醉共振",
+      "event_order": 28,
+      "details": "利用苏明月对麻醉剂的异常代谢能力，在四个维度同时稳定量子涨落",
+      "scene_id": "s51",
+      "scene_name": "克莱因甲板",
+      "scene_place": "第四维度交界处",
+      "emotional_impact": "服务生制服开始自主生成防护场",
+      "consequences": [
+        "建立临时时空稳定区"
+      ]
+    },
+    {
+      "event_id": "e135",
+      "event_name": "记忆重构",
+      "event_order": 30,
+      "details": "三人通过90年代的医疗监控设备，看到彼此在不同时间线上的命运交织",
+      "scene_id": "s51",
+      "scene_name": "克莱因甲板",
+      "scene_place": "第四维度交界处",
+      "emotional_impact": "制服袖口浮现出全部遇难者名单",
+      "consequences": [
+        "激活最终抉择协议"
+      ]
+    },
+    {
+      "event_id": "e136",
+      "event_name": "维度献祭",
+      "event_order": 31,
+      "details": "将游轮21层甲板压缩成克莱因瓶，注入第四维度的逃生通道",
+      "scene_id": "s50",
+      "scene_name": "因果操作台",
+      "scene_place": "游轮量子计算机核心",
+      "emotional_impact": "服务生徽章变成微型白洞",
+      "consequences": [
+        "开启元维度逃生通道"
+      ]
+    },
+    {
+      "event_id": "e136",
+      "event_name": "维度献祭",
+      "event_order": 31,
+      "details": "将游轮21层甲板压缩成克莱因瓶，注入第四维度的逃生通道",
+      "scene_id": "s51",
+      "scene_name": "克莱因甲板",
+      "scene_place": "第四维度交界处",
+      "emotional_impact": "服务生徽章变成微型白洞",
+      "consequences": [
+        "开启元维度逃生通道"
+      ]
+    },
+    {
+      "event_id": "e136",
+      "event_name": "维度献祭",
+      "event_order": 31,
+      "details": "将游轮21层甲板压缩成克莱因瓶，注入第四维度的逃生通道",
+      "scene_id": "s50",
+      "scene_name": "因果操作台",
+      "scene_place": "游轮量子计算机核心",
+      "emotional_impact": "服务生徽章变成微型白洞",
+      "consequences": [
+        "开启元维度逃生通道"
+      ]
+    },
+    {
+      "event_id": "e136",
+      "event_name": "维度献祭",
+      "event_order": 31,
+      "details": "将游轮21层甲板压缩成克莱因瓶，注入第四维度的逃生通道",
+      "scene_id": "s51",
+      "scene_name": "克莱因甲板",
+      "scene_place": "第四维度交界处",
+      "emotional_impact": "服务生徽章变成微型白洞",
+      "consequences": [
+        "开启元维度逃生通道"
+      ]
+    },
+    {
+      "event_id": "e137",
+      "event_name": "读者链接",
+      "event_order": 32,
+      "details": "通过游轮残骸的反光，看到现实世界读者正在阅读这段文字",
+      "scene_id": "s51",
+      "scene_name": "克莱因甲板",
+      "scene_place": "第四维度交界处",
+      "emotional_impact": "意识到自身是更高维度的虚构存在",
+      "consequences": [
+        "打破第四面墙"
+      ]
+    }
+  ]
+}

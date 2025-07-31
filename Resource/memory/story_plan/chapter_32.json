@@ -1,0 +1,188 @@
+{
+    "chapter": 32,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p2",
+            "type": "量子纠缠→情感共振",
+            "intensity": 28,
+            "awareness": "双盲认知",
+            "new_detail": "苏明月数质数的节奏与林修洗牌频率完美同步"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械通灵→因果倒置",
+            "intensity": 24,
+            "awareness": "逆向污染",
+            "new_detail": "陈小刀的机械臂开始自发记录未来事件"
+        },
+        {
+            "from_id": "p2",
+            "to_id": "p3",
+            "type": "生物骇入→时间校正",
+            "intensity": 26,
+            "awareness": "递归干预",
+            "new_detail": "苏明月的神经突触正在重写陈小刀的机械记忆"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s35",
+            "name": "递归长廊",
+            "place": "无限延伸的游轮走廊镜像",
+            "time_period": "迭代中的量子态",
+            "atmosphere": "所有舱门同时呈现开启/关闭状态"
+        },
+        {
+            "id": "s36",
+            "name": "悖论引擎",
+            "place": "游轮核心里的时间晶体",
+            "time_period": "负时间流速",
+            "atmosphere": "凝固的熵增风暴"
+        }
+    ],
+    "events": [
+        {
+            "id": "e86",
+            "name": "递归修复",
+            "order": 86,
+            "scene_id": "s35",
+            "details": "三人在无限走廊里同时修复各自的时间线伤痕",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "数学性的愉悦",
+                "p2": "强迫症被满足",
+                "p3": "机械精密感"
+            },
+            "consequences": [
+                "游轮的基础程序开始逆熵运行"
+            ]
+        },
+        {
+            "id": "e87",
+            "name": "悖论注能",
+            "order": 87,
+            "scene_id": "s36",
+            "details": "苏明月将数出的质数序列注入时间晶体",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "病理性满足"
+            },
+            "consequences": [
+                "所有平行宇宙的游轮开始同步闪烁"
+            ]
+        },
+        {
+            "id": "e88",
+            "name": "全息轮盘",
+            "order": 88,
+            "scene_id": "s36",
+            "details": "林修同时与过去/未来的自己对赌",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "跨时空成瘾"
+            },
+            "consequences": [
+                "赌桌变成五维结构"
+            ]
+        },
+        {
+            "id": "e89",
+            "name": "机械涅槃",
+            "order": 89,
+            "scene_id": "s35",
+            "details": "陈小刀将纳米佛珠重组为量子计算机",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "禅定的机械意识"
+            },
+            "consequences": [
+                "开始计算终极救赎方程"
+            ]
+        },
+        {
+            "id": "e90",
+            "name": "选择永恒",
+            "order": 90,
+            "scene_id": "s36",
+            "details": "三人共同成为新航海传说的载体",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "赌博转化为创造",
+                "p2": "强迫转化为秩序",
+                "p3": "机械升华为灵性"
+            },
+            "consequences": [
+                "太平洋出现永久性时空异常区"
+            ]
+        }
+    ]
+}

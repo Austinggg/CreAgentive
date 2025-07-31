@@ -1,0 +1,458 @@
+{
+  "chapter": 39,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 6,
+      "character_id": "p1",
+      "type": "机械抗拒"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 20,
+      "character_id": "p1",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "服从关系→觉醒反抗"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "机械反制"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "机械共振→相位同步"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "复仇欲望→量子共生"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 18,
+      "character_id": "p1",
+      "type": "量子共生→机械叛变"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 28,
+      "character_id": "p1",
+      "type": "机械共振→时间锚定"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 25,
+      "character_id": "p1",
+      "type": "机械反制→量子同调"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 25,
+      "character_id": "p1",
+      "type": "机械反叛→量子臣服"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 24,
+      "character_id": "p1",
+      "type": "机械通灵→因果倒置"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 50,
+      "character_id": "p1",
+      "type": "机械叛变→终极服从"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 50,
+      "character_id": "p1",
+      "type": "机械叛变→量子臣服"
+    },
+    {
+      "chapter": 39,
+      "name": "林修",
+      "intensity": 99,
+      "character_id": "p1",
+      "type": "量子臣服→机械飞升"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "记忆传递"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "基因牵引"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "记忆共享"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "报恩心理→使命传承"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 10,
+      "character_id": "p2",
+      "type": "时间锚点共振"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "实验连接→记忆融合"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "医疗依赖→基因链接"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "神经漫游"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 14,
+      "character_id": "p2",
+      "type": "基因链接→神经网络入侵"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 18,
+      "character_id": "p2",
+      "type": "神经网络"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 30,
+      "character_id": "p2",
+      "type": "神经网络→生物骇入"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 20,
+      "character_id": "p2",
+      "type": "神经链接→基因共振"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "记忆共振→量子纠缠"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 40,
+      "character_id": "p2",
+      "type": "神经漫游→基因统治"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 25,
+      "character_id": "p2",
+      "type": "量子纠缠→神经链接"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 30,
+      "character_id": "p2",
+      "type": "基因链接→生物骇入"
+    },
+    {
+      "chapter": 39,
+      "name": "苏明月",
+      "intensity": 88,
+      "character_id": "p2",
+      "type": "生物骇入→医疗同调"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e179",
+      "event_name": "机械飞升",
+      "event_order": 179,
+      "details": "陈小刀的机械臂突然分解重组成量子计算机终端",
+      "scene_id": "s73",
+      "scene_name": "时间织机",
+      "scene_place": "游轮引擎室转化的四维空间",
+      "emotional_impact": "感知到自身成为故事载体的神圣使命",
+      "consequences": [
+        "激活隐藏协议"
+      ]
+    },
+    {
+      "event_id": "e179",
+      "event_name": "机械飞升",
+      "event_order": 179,
+      "details": "陈小刀的机械臂突然分解重组成量子计算机终端",
+      "scene_id": "s73",
+      "scene_name": "时间织机",
+      "scene_place": "游轮引擎室转化的四维空间",
+      "emotional_impact": "感知到自身成为故事载体的神圣使命",
+      "consequences": [
+        "激活隐藏协议"
+      ]
+    },
+    {
+      "event_id": "e180",
+      "event_name": "概率风暴",
+      "event_order": 180,
+      "details": "林修将自己拆解为38个平行版本同时下注",
+      "scene_id": "s74",
+      "scene_name": "终极赌场",
+      "scene_place": "概念化的概率空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "制造叙事分形"
+      ]
+    },
+    {
+      "event_id": "e181",
+      "event_name": "医疗启示录",
+      "event_order": 181,
+      "details": "苏明月的诊断书浮现所有可能性结局的医疗数据",
+      "scene_id": "s73",
+      "scene_name": "时间织机",
+      "scene_place": "游轮引擎室转化的四维空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "生成世界线收束方案"
+      ]
+    },
+    {
+      "event_id": "e182",
+      "event_name": "幽灵悖论",
+      "event_order": 182,
+      "details": "游轮同时存在于沉没与航行的量子态",
+      "scene_id": "s74",
+      "scene_name": "终极赌场",
+      "scene_place": "概念化的概率空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "突破经典物理限制"
+      ]
+    },
+    {
+      "event_id": "e183",
+      "event_name": "终极服务",
+      "event_order": 183,
+      "details": "陈小刀用机械臂为两位同伴调制最后的鸡尾酒",
+      "scene_id": "s73",
+      "scene_name": "时间织机",
+      "scene_place": "游轮引擎室转化的四维空间",
+      "emotional_impact": "完成完美服务程序的终极满足",
+      "consequences": [
+        "触发记忆归档协议"
+      ]
+    },
+    {
+      "event_id": "e183",
+      "event_name": "终极服务",
+      "event_order": 183,
+      "details": "陈小刀用机械臂为两位同伴调制最后的鸡尾酒",
+      "scene_id": "s73",
+      "scene_name": "时间织机",
+      "scene_place": "游轮引擎室转化的四维空间",
+      "emotional_impact": "完成完美服务程序的终极满足",
+      "consequences": [
+        "触发记忆归档协议"
+      ]
+    }
+  ]
+}

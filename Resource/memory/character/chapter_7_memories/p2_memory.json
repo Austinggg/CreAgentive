@@ -1,0 +1,314 @@
+{
+  "chapter": 7,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 7,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 7,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 7,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 7,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 7,
+      "name": "林修",
+      "intensity": 150,
+      "character_id": "p1",
+      "type": "量子观测→债务重构"
+    },
+    {
+      "chapter": 7,
+      "name": "林修",
+      "intensity": 150,
+      "character_id": "p1",
+      "type": "量子赌局"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 45,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 18,
+      "character_id": "p3",
+      "type": "机械共生→意识上传"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "神经漫游→意识统合"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 26,
+      "character_id": "p3",
+      "type": "生物骇入→时间校正"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 100,
+      "character_id": "p3",
+      "type": "基因链接→叙事锚定"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 600,
+      "character_id": "p3",
+      "type": "基因统合→量子污染"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 90,
+      "character_id": "p3",
+      "type": "基因锁链"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 60,
+      "character_id": "p3",
+      "type": "神经链接→痛觉共享"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 150,
+      "character_id": "p3",
+      "type": "基因链接→量子观测"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e112",
+      "event_name": "齿轮审判",
+      "event_order": 12,
+      "details": "倒映的引擎突然启动，审判三人组当年的罪行",
+      "scene_id": "s37",
+      "scene_name": "倒映引擎室",
+      "scene_place": "船底镜像空间",
+      "emotional_impact": "手术刀开始逆向生长",
+      "consequences": [
+        "引擎吐出1999年的航海日志"
+      ]
+    },
+    {
+      "event_id": "e115",
+      "event_name": "量子缝合",
+      "event_order": 15,
+      "details": "苏明月用概率走廊的骰子缝合时空裂缝",
+      "scene_id": "s38",
+      "scene_name": "概率走廊",
+      "scene_place": "连接各时空的波动通道",
+      "emotional_impact": "每缝合一次就失去一段记忆",
+      "consequences": [
+        "骰子点数显示剩余逃生时间"
+      ]
+    },
+    {
+      "event_id": "e116",
+      "event_name": "终局镜像",
+      "event_order": 16,
+      "details": "三人同时触摸镜像引擎，引发时间坍缩",
+      "scene_id": "s37",
+      "scene_name": "倒映引擎室",
+      "scene_place": "船底镜像空间",
+      "emotional_impact": "强迫症达到量子级精确",
+      "consequences": [
+        "引擎室显现出唯一的逃生路线"
+      ]
+    },
+    {
+      "event_id": "e86",
+      "event_name": "递归修复",
+      "event_order": 86,
+      "details": "三人在无限走廊里同时修复各自的时间线伤痕",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "强迫症被满足",
+      "consequences": [
+        "游轮的基础程序开始逆熵运行"
+      ]
+    },
+    {
+      "event_id": "e86",
+      "event_name": "递归修复",
+      "event_order": 86,
+      "details": "三人在无限走廊里同时修复各自的时间线伤痕",
+      "scene_id": "s34",
+      "scene_name": "冷冻舱室",
+      "scene_place": "船尾秘密仓库",
+      "emotional_impact": "强迫症被满足",
+      "consequences": [
+        "游轮的基础程序开始逆熵运行"
+      ]
+    },
+    {
+      "event_id": "e86",
+      "event_name": "递归修复",
+      "event_order": 86,
+      "details": "三人在无限走廊里同时修复各自的时间线伤痕",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "强迫症被满足",
+      "consequences": [
+        "游轮的基础程序开始逆熵运行"
+      ]
+    },
+    {
+      "event_id": "e86",
+      "event_name": "递归修复",
+      "event_order": 86,
+      "details": "三人在无限走廊里同时修复各自的时间线伤痕",
+      "scene_id": "s34",
+      "scene_name": "冷冻舱室",
+      "scene_place": "船尾秘密仓库",
+      "emotional_impact": "强迫症被满足",
+      "consequences": [
+        "游轮的基础程序开始逆熵运行"
+      ]
+    },
+    {
+      "event_id": "e87",
+      "event_name": "悖论注能",
+      "event_order": 87,
+      "details": "苏明月将数出的质数序列注入时间晶体",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "病理性满足",
+      "consequences": [
+        "所有平行宇宙的游轮开始同步闪烁"
+      ]
+    },
+    {
+      "event_id": "e87",
+      "event_name": "悖论注能",
+      "event_order": 87,
+      "details": "苏明月将数出的质数序列注入时间晶体",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "病理性满足",
+      "consequences": [
+        "所有平行宇宙的游轮开始同步闪烁"
+      ]
+    },
+    {
+      "event_id": "e89",
+      "event_name": "机械涅槃",
+      "event_order": 89,
+      "details": "陈小刀将纳米佛珠重组为量子计算机",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "开始计算终极救赎方程"
+      ]
+    },
+    {
+      "event_id": "e90",
+      "event_name": "选择永恒",
+      "event_order": 90,
+      "details": "三人共同成为新航海传说的载体",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "强迫转化为秩序",
+      "consequences": [
+        "太平洋出现永久性时空异常区"
+      ]
+    }
+  ]
+}

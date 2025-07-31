@@ -1,0 +1,174 @@
+{
+  "chapter": 27,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 27,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 27,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 27,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "契约解除/新的羁绊"
+    },
+    {
+      "chapter": 27,
+      "name": "苏明月",
+      "intensity": 15,
+      "character_id": "p2",
+      "type": "量子纠缠→细胞共生"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 12,
+      "character_id": "p3",
+      "type": "量子同步→熵增共振"
+    },
+    {
+      "chapter": 27,
+      "name": "陈小刀",
+      "intensity": 15,
+      "character_id": "p3",
+      "type": "量子共振→机械通灵"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e16",
+      "event_name": "细胞暗物质手术",
+      "event_order": 16,
+      "details": "苏明月用手术刀切开林修左胸，露出机械心脏里跳动的微型游轮模型",
+      "scene_id": "s7",
+      "scene_name": "奇点手术室",
+      "scene_place": "悬浮在七重时空裂隙中的手术台",
+      "emotional_impact": "解脱",
+      "consequences": [
+        "手术刀自动雕刻起搏器上的时空坐标"
+      ]
+    },
+    {
+      "event_id": "e18",
+      "event_name": "维度轮盘赌",
+      "event_order": 18,
+      "details": "林修将机械心脏抛向量子引擎，七个时空漩涡同时改变旋转方向",
+      "scene_id": "s7",
+      "scene_name": "奇点手术室",
+      "scene_place": "悬浮在七重时空裂隙中的手术台",
+      "emotional_impact": "绝对理性",
+      "consequences": [
+        "引擎频率与心电图形成克莱因瓶结构"
+      ]
+    },
+    {
+      "event_id": "e19",
+      "event_name": "三位一体坍缩",
+      "event_order": 19,
+      "details": "三人的倒影在镜中融合成发光体，现实身体开始量子化离散",
+      "scene_id": "s8",
+      "scene_name": "记忆回廊",
+      "scene_place": "由乘客记忆构建的莫比乌斯环走廊",
+      "emotional_impact": "超脱",
+      "consequences": [
+        "所有镜面浮现「OBSERVER_END」的视网膜烙印"
+      ]
+    },
+    {
+      "event_id": "e20",
+      "event_name": "元叙事湮灭",
+      "event_order": 20,
+      "details": "无影灯下手术记录本的字迹开始消失，而读者手中的书页同步泛黄",
+      "scene_id": "s7",
+      "scene_name": "奇点手术室",
+      "scene_place": "悬浮在七重时空裂隙中的手术台",
+      "emotional_impact": "顿悟",
+      "consequences": [
+        "现实世界传来游轮汽笛声和翻书声的量子叠加态"
+      ]
+    }
+  ]
+}

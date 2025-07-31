@@ -1,0 +1,134 @@
+{
+    "chapter": 31,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "记忆共振→量子纠缠",
+            "intensity": 28,
+            "awareness": "双向觉醒",
+            "new_detail": "陈小刀机械臂浮现苏明月童年手术的所有细节"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s29",
+            "name": "时间手术台",
+            "place": "由记忆碎片重构的四维空间",
+            "time_period": "时间流停滞状态",
+            "atmosphere": "悬浮着发光的神经系统投影"
+        },
+        {
+            "id": "s30",
+            "name": "量子赌场",
+            "place": "存在于平行世界夹缝中的金色大厅",
+            "time_period": "所有时间线的赌局同时进行",
+            "atmosphere": "每张赌桌显示不同维度的概率云"
+        }
+    ],
+    "events": [
+        {
+            "id": "e72",
+            "name": "神经嫁接",
+            "order": 72,
+            "scene_id": "s29",
+            "details": "苏明月将陈小刀的机械神经元接入自己的疼痛感知系统",
+            "participants": [
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p2": "认知颠覆",
+                "p3": "机械震颤"
+            },
+            "consequences": [
+                "两人记忆开始量子纠缠"
+            ]
+        },
+        {
+            "id": "e73",
+            "name": "概率解构",
+            "order": 73,
+            "scene_id": "s30",
+            "details": "林修同时与所有时间线的自己对赌",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "多维快感"
+            },
+            "consequences": [
+                "赌桌开始吞噬现实维度"
+            ]
+        },
+        {
+            "id": "e74",
+            "name": "时空缝合",
+            "order": 74,
+            "scene_id": "s29",
+            "details": "陈小刀用机械臂将三人伤口缝合为莫比乌斯环",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "绝对冷静"
+            },
+            "consequences": [
+                "形成封闭时间环"
+            ]
+        }
+    ]
+}

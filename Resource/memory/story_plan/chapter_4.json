@@ -1,0 +1,188 @@
+{
+    "chapter": 4,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p2",
+            "type": "量子纠缠→意识融合",
+            "intensity": 55,
+            "awareness": "双向觉醒",
+            "new_detail": "林修能够读取苏明月手术时的视觉记忆"
+        },
+        {
+            "from_id": "p2",
+            "to_id": "p3",
+            "type": "神经链接→痛觉共享",
+            "intensity": 60,
+            "awareness": "被动连接",
+            "new_detail": "苏明月注射药剂时陈小刀的义眼会产生刺痛"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械崇拜→指令植入",
+            "intensity": 75,
+            "awareness": "单向控制",
+            "new_detail": "林修的机械左手能强制启动陈小刀的义眼录像功能"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s23",
+            "name": "循环钟楼",
+            "place": "船长室天文钟",
+            "time_period": "TIMELOOP",
+            "atmosphere": "六面钟表分别显示不同年份的同一天"
+        },
+        {
+            "id": "s24",
+            "name": "血肉图书馆",
+            "place": "船医档案室",
+            "time_period": "BLOODMOON",
+            "atmosphere": "病历档案的纸张会渗出与患者血型相同的液体"
+        }
+    ],
+    "events": [
+        {
+            "id": "e61",
+            "name": "时间刻痕",
+            "order": 16,
+            "scene_id": "s23",
+            "details": "天文钟的齿轮突然咬住林修的机械手，在金属表面刻下'第7次校正失败'的印记",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "机械性恐惧（首次出现对自身改造的排斥）"
+            },
+            "consequences": [
+                "齿轮间掉落1999年的船员值班表"
+            ]
+        },
+        {
+            "id": "e62",
+            "name": "活体档案",
+            "order": 17,
+            "scene_id": "s24",
+            "details": "当苏明月触碰病历架时，整个档案室的纸质开始生长血肉组织",
+            "participants": [
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p2": "强迫症爆发（试图用手术刀修剪生长组织）",
+                "p3": "义眼自动记录细胞分裂过程"
+            },
+            "consequences": [
+                "新生的组织构成三人小时候的指纹"
+            ]
+        },
+        {
+            "id": "e63",
+            "name": "记忆闪回",
+            "order": 18,
+            "scene_id": "s23",
+            "details": "钟声响起时三人同时看见幻象：年幼的自己正在给现在的自己实施手术",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "机械臂抽搐",
+                "p2": "手术刀掉落",
+                "p3": "义眼超负荷"
+            },
+            "consequences": [
+                "幻象中的手术器械出现在现实世界"
+            ]
+        },
+        {
+            "id": "e64",
+            "name": "血脉共鸣",
+            "order": 19,
+            "scene_id": "s24",
+            "details": "档案室突然播放三人的心跳声，频率完全同步时书架上浮现第四份病历",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "强迫性计算心跳差值"
+            },
+            "consequences": [
+                "空白病历的姓名栏会吸收任何写上去的墨水"
+            ]
+        },
+        {
+            "id": "e65",
+            "name": "机械神谕",
+            "order": 20,
+            "scene_id": "s23",
+            "details": "林修的机械手突然拆解天文钟，用零件拼出海德拉号的微缩模型",
+            "participants": [
+                "p1",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "宗教性狂喜",
+                "p3": "数据过载性昏迷"
+            },
+            "consequences": [
+                "模型显示的沉船日期是三天后的正午"
+            ]
+        }
+    ]
+}

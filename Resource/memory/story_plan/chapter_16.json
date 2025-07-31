@@ -1,0 +1,198 @@
+{
+    "chapter": 16,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "量子纠缠",
+            "intensity": 10,
+            "awareness": "完全认知",
+            "new_detail": "陈小刀的机械臂与林修的机械骨骼产生共鸣时闪现实验体编号"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "镜像同步",
+            "intensity": 8,
+            "awareness": "单向认知",
+            "new_detail": "陈小刀发现苏明月的手术伤疤与自己成镜像对称"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s16",
+            "name": "颠倒餐厅",
+            "place": "镜像船宴会厅",
+            "time_period": "NIGHT",
+            "atmosphere": "所有餐具倒悬在天花板，食物在真空球体内漂浮"
+        },
+        {
+            "id": "s17",
+            "name": "量子锚点室",
+            "place": "两船核心连接处",
+            "time_period": "TWILIGHT",
+            "atmosphere": "蓝光粒子在十二面体空间内形成克莱因环"
+        }
+    ],
+    "events": [
+        {
+            "id": "e40",
+            "name": "反向进餐",
+            "order": 1,
+            "scene_id": "s16",
+            "details": "陈小刀机械臂的电磁场导致食物逆向飞入口中，触发20年前的味觉记忆",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "认知失调引发的生理呕吐"
+            },
+            "consequences": [
+                "确认镜像船时间流向完全相反"
+            ]
+        },
+        {
+            "id": "e41",
+            "name": "伤痕论证",
+            "order": 2,
+            "scene_id": "s17",
+            "details": "三人将手术疤痕拼合，组成完整的海德拉标志",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "偏执狂式的验证快感",
+                "p2": "病理性记录冲动",
+                "p3": "存在主义眩晕"
+            },
+            "consequences": [
+                "疤痕发出生物荧光指向锚点控制器"
+            ]
+        },
+        {
+            "id": "e42",
+            "name": "侍者密令",
+            "order": 3,
+            "scene_id": "s16",
+            "details": "陈小刀的制服纽扣浮现摩斯密码，显示他原本是实验监控者",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "身份认知崩塌"
+            },
+            "consequences": [
+                "获得锚点室三级权限"
+            ]
+        },
+        {
+            "id": "e43",
+            "name": "疼痛桥接",
+            "order": 4,
+            "scene_id": "s17",
+            "details": "林修故意伤害自己左手，同时陈小刀右手出现相同伤口",
+            "participants": [
+                "p1",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "冷酷的实验心态",
+                "p3": "创伤性闪回"
+            },
+            "consequences": [
+                "确认量子纠缠已达分子级别"
+            ]
+        },
+        {
+            "id": "e44",
+            "name": "制服启示",
+            "order": 5,
+            "scene_id": "s16",
+            "details": "紫外线照射下，陈小刀制服浮现同款克隆体名单",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "宗教仪式的庄重感"
+            },
+            "consequences": [
+                "发现还有七个存活克隆体"
+            ]
+        },
+        {
+            "id": "e45",
+            "name": "机械圣餐",
+            "order": 6,
+            "scene_id": "s17",
+            "details": "三人将机械部位浸入液态量子，形成微型虫洞",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "近乎宗教狂热的专注",
+                "p2": "医者与实验体的身份冲突",
+                "p3": "侍者礼仪与反抗本能的撕裂"
+            },
+            "consequences": [
+                "虫洞中出现制造者的全息影像"
+            ]
+        }
+    ]
+}

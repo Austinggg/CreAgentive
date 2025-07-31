@@ -1,0 +1,79 @@
+{
+  "chapter": 12,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 12,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 12,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 12,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 12,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 12,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 12,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 12,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 12,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    }
+  ],
+  "events": []
+}

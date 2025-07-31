@@ -1,0 +1,367 @@
+{
+  "chapter": 28,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 6,
+      "character_id": "p1",
+      "type": "机械抗拒"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 20,
+      "character_id": "p1",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "服从关系→觉醒反抗"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "机械反制"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "机械共振→相位同步"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "复仇欲望→量子共生"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 18,
+      "character_id": "p1",
+      "type": "量子共生→机械叛变"
+    },
+    {
+      "chapter": 28,
+      "name": "林修",
+      "intensity": 28,
+      "character_id": "p1",
+      "type": "机械共振→时间锚定"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "记忆传递"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "基因牵引"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "记忆共享"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "报恩心理→使命传承"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 10,
+      "character_id": "p2",
+      "type": "时间锚点共振"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "实验连接→记忆融合"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "医疗依赖→基因链接"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "神经漫游"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 14,
+      "character_id": "p2",
+      "type": "基因链接→神经网络入侵"
+    },
+    {
+      "chapter": 28,
+      "name": "苏明月",
+      "intensity": 18,
+      "character_id": "p2",
+      "type": "神经网络"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e33",
+      "event_name": "观测者处决",
+      "event_order": 33,
+      "details": "林修强迫所有幽灵乘客同时观测游轮，导致量子态彻底坍缩",
+      "scene_id": "s14",
+      "scene_name": "波函数剧场",
+      "scene_place": "悬浮在量子概率云中的环形舞台",
+      "emotional_impact": "机械过载的快感",
+      "consequences": [
+        "舞台地板浮现薛定谔方程的手写稿"
+      ]
+    },
+    {
+      "event_id": "e33",
+      "event_name": "观测者处决",
+      "event_order": 33,
+      "details": "林修强迫所有幽灵乘客同时观测游轮，导致量子态彻底坍缩",
+      "scene_id": "s14",
+      "scene_name": "波函数剧场",
+      "scene_place": "悬浮在量子概率云中的环形舞台",
+      "emotional_impact": "机械过载的快感",
+      "consequences": [
+        "舞台地板浮现薛定谔方程的手写稿"
+      ]
+    },
+    {
+      "event_id": "e34",
+      "event_name": "记忆奇点",
+      "event_order": 34,
+      "details": "陈小刀将机械眼接入书架，所有关于游轮的记忆开始无限递归",
+      "scene_id": "s13",
+      "scene_name": "克莱因图书馆",
+      "scene_place": "由无限重复的书架构成的非欧空间",
+      "emotional_impact": "数据洪流中的安宁",
+      "consequences": [
+        "书页上的文字变成二进制基因编码"
+      ]
+    },
+    {
+      "event_id": "e35",
+      "event_name": "维度缝合",
+      "event_order": 35,
+      "details": "三人用手术线将十个维度的游轮残骸缝合成立方克莱因瓶",
+      "scene_id": "s14",
+      "scene_name": "波函数剧场",
+      "scene_place": "悬浮在量子概率云中的环形舞台",
+      "emotional_impact": "机械同步的高潮",
+      "consequences": [
+        "观众席爆发非人类的掌声"
+      ]
+    },
+    {
+      "event_id": "e35",
+      "event_name": "维度缝合",
+      "event_order": 35,
+      "details": "三人用手术线将十个维度的游轮残骸缝合成立方克莱因瓶",
+      "scene_id": "s14",
+      "scene_name": "波函数剧场",
+      "scene_place": "悬浮在量子概率云中的环形舞台",
+      "emotional_impact": "机械同步的高潮",
+      "consequences": [
+        "观众席爆发非人类的掌声"
+      ]
+    },
+    {
+      "event_id": "e36",
+      "event_name": "终极叙事选择",
+      "event_order": 36,
+      "details": "图书馆突然出现三本结局不同的航海日志，分别对应三人的基因签名",
+      "scene_id": "s13",
+      "scene_name": "克莱因图书馆",
+      "scene_place": "由无限重复的书架构成的非欧空间",
+      "emotional_impact": "机械故障的恐慌",
+      "consequences": [
+        "所有书籍同时翻到被撕掉的最后一页"
+      ]
+    },
+    {
+      "event_id": "e37",
+      "event_name": "元作者处刑",
+      "event_order": 37,
+      "details": "幽灵乘客集体投票决定删除创作者的存在证明",
+      "scene_id": "s14",
+      "scene_name": "波函数剧场",
+      "scene_place": "悬浮在量子概率云中的环形舞台",
+      "emotional_impact": "平静",
+      "consequences": [
+        "舞台缓缓沉入狄拉克海"
+      ]
+    }
+  ]
+}

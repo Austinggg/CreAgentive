@@ -1,0 +1,339 @@
+{
+  "chapter": 4,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 4,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 4,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 4,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 4,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 4,
+      "name": "林修",
+      "intensity": 150,
+      "character_id": "p1",
+      "type": "量子观测→债务重构"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 45,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 18,
+      "character_id": "p3",
+      "type": "机械共生→意识上传"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "神经漫游→意识统合"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 26,
+      "character_id": "p3",
+      "type": "生物骇入→时间校正"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 100,
+      "character_id": "p3",
+      "type": "基因链接→叙事锚定"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 600,
+      "character_id": "p3",
+      "type": "基因统合→量子污染"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 90,
+      "character_id": "p3",
+      "type": "基因锁链"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 60,
+      "character_id": "p3",
+      "type": "神经链接→痛觉共享"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e62",
+      "event_name": "活体档案",
+      "event_order": 17,
+      "details": "当苏明月触碰病历架时，整个档案室的纸质开始生长血肉组织",
+      "scene_id": "s24",
+      "scene_name": "血肉图书馆",
+      "scene_place": "船医档案室",
+      "emotional_impact": "强迫症爆发（试图用手术刀修剪生长组织）",
+      "consequences": [
+        "新生的组织构成三人小时候的指纹"
+      ]
+    },
+    {
+      "event_id": "e62",
+      "event_name": "活体档案",
+      "event_order": 17,
+      "details": "当苏明月触碰病历架时，整个档案室的纸质开始生长血肉组织",
+      "scene_id": "s24",
+      "scene_name": "血肉图书馆",
+      "scene_place": "船医档案室",
+      "emotional_impact": "强迫症爆发（试图用手术刀修剪生长组织）",
+      "consequences": [
+        "新生的组织构成三人小时候的指纹"
+      ]
+    },
+    {
+      "event_id": "e62",
+      "event_name": "活体档案",
+      "event_order": 17,
+      "details": "当苏明月触碰病历架时，整个档案室的纸质开始生长血肉组织",
+      "scene_id": "s24",
+      "scene_name": "血肉图书馆",
+      "scene_place": "船医档案室",
+      "emotional_impact": "强迫症爆发（试图用手术刀修剪生长组织）",
+      "consequences": [
+        "新生的组织构成三人小时候的指纹"
+      ]
+    },
+    {
+      "event_id": "e63",
+      "event_name": "记忆闪回",
+      "event_order": 18,
+      "details": "钟声响起时三人同时看见幻象：年幼的自己正在给现在的自己实施手术",
+      "scene_id": "s23",
+      "scene_name": "循环钟楼",
+      "scene_place": "船长室天文钟",
+      "emotional_impact": "手术刀掉落",
+      "consequences": [
+        "幻象中的手术器械出现在现实世界"
+      ]
+    },
+    {
+      "event_id": "e64",
+      "event_name": "血脉共鸣",
+      "event_order": 19,
+      "details": "档案室突然播放三人的心跳声，频率完全同步时书架上浮现第四份病历",
+      "scene_id": "s24",
+      "scene_name": "血肉图书馆",
+      "scene_place": "船医档案室",
+      "emotional_impact": "强迫性计算心跳差值",
+      "consequences": [
+        "空白病历的姓名栏会吸收任何写上去的墨水"
+      ]
+    },
+    {
+      "event_id": "e64",
+      "event_name": "血脉共鸣",
+      "event_order": 19,
+      "details": "档案室突然播放三人的心跳声，频率完全同步时书架上浮现第四份病历",
+      "scene_id": "s24",
+      "scene_name": "血肉图书馆",
+      "scene_place": "船医档案室",
+      "emotional_impact": "强迫性计算心跳差值",
+      "consequences": [
+        "空白病历的姓名栏会吸收任何写上去的墨水"
+      ]
+    },
+    {
+      "event_id": "e34",
+      "event_name": "麻醉创世",
+      "event_order": 34,
+      "details": "苏明月将麻醉剂注入新生的叙事维度",
+      "scene_id": "s16",
+      "scene_name": "颠倒餐厅",
+      "scene_place": "镜像船宴会厅",
+      "emotional_impact": "医疗道德重组为宇宙常量",
+      "consequences": [
+        "手术刀划开虚数时间轴"
+      ]
+    },
+    {
+      "event_id": "e34",
+      "event_name": "麻醉创世",
+      "event_order": 34,
+      "details": "苏明月将麻醉剂注入新生的叙事维度",
+      "scene_id": "s16",
+      "scene_name": "颠倒餐厅",
+      "scene_place": "镜像船宴会厅",
+      "emotional_impact": "医疗道德重组为宇宙常量",
+      "consequences": [
+        "手术刀划开虚数时间轴"
+      ]
+    },
+    {
+      "event_id": "e35",
+      "event_name": "记忆赌博",
+      "event_order": 35,
+      "details": "林修用苏明月的童年记忆下注",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "强迫症症状结晶成数学宝石",
+      "consequences": [
+        "赌桌生长出脑神经突触"
+      ]
+    },
+    {
+      "event_id": "e35",
+      "event_name": "记忆赌博",
+      "event_order": 35,
+      "details": "林修用苏明月的童年记忆下注",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "强迫症症状结晶成数学宝石",
+      "consequences": [
+        "赌桌生长出脑神经突触"
+      ]
+    },
+    {
+      "event_id": "e35",
+      "event_name": "记忆赌博",
+      "event_order": 35,
+      "details": "林修用苏明月的童年记忆下注",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "强迫症症状结晶成数学宝石",
+      "consequences": [
+        "赌桌生长出脑神经突触"
+      ]
+    },
+    {
+      "event_id": "e36",
+      "event_name": "终极叙事选择",
+      "event_order": 36,
+      "details": "图书馆突然出现三本结局不同的航海日志，分别对应三人的基因签名",
+      "scene_id": "s16",
+      "scene_name": "颠倒餐厅",
+      "scene_place": "镜像船宴会厅",
+      "emotional_impact": "医疗失误的焦虑",
+      "consequences": [
+        "所有书籍同时翻到被撕掉的最后一页"
+      ]
+    },
+    {
+      "event_id": "e36",
+      "event_name": "终极叙事选择",
+      "event_order": 36,
+      "details": "图书馆突然出现三本结局不同的航海日志，分别对应三人的基因签名",
+      "scene_id": "s16",
+      "scene_name": "颠倒餐厅",
+      "scene_place": "镜像船宴会厅",
+      "emotional_impact": "医疗失误的焦虑",
+      "consequences": [
+        "所有书籍同时翻到被撕掉的最后一页"
+      ]
+    },
+    {
+      "event_id": "e37",
+      "event_name": "元作者处刑",
+      "event_order": 37,
+      "details": "幽灵乘客集体投票决定删除创作者的存在证明",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "释然",
+      "consequences": [
+        "舞台缓缓沉入狄拉克海"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,417 @@
+{
+  "chapter": 35,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 6,
+      "character_id": "p1",
+      "type": "机械抗拒"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 20,
+      "character_id": "p1",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "服从关系→觉醒反抗"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "机械反制"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "机械共振→相位同步"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "复仇欲望→量子共生"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 18,
+      "character_id": "p1",
+      "type": "量子共生→机械叛变"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 28,
+      "character_id": "p1",
+      "type": "机械共振→时间锚定"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 25,
+      "character_id": "p1",
+      "type": "机械反制→量子同调"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 25,
+      "character_id": "p1",
+      "type": "机械反叛→量子臣服"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 24,
+      "character_id": "p1",
+      "type": "机械通灵→因果倒置"
+    },
+    {
+      "chapter": 35,
+      "name": "林修",
+      "intensity": 50,
+      "character_id": "p1",
+      "type": "机械叛变→终极服从"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "记忆传递"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "基因牵引"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "记忆共享"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "报恩心理→使命传承"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 10,
+      "character_id": "p2",
+      "type": "时间锚点共振"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "实验连接→记忆融合"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "医疗依赖→基因链接"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "神经漫游"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 14,
+      "character_id": "p2",
+      "type": "基因链接→神经网络入侵"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 18,
+      "character_id": "p2",
+      "type": "神经网络"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 30,
+      "character_id": "p2",
+      "type": "神经网络→生物骇入"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 20,
+      "character_id": "p2",
+      "type": "神经链接→基因共振"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "记忆共振→量子纠缠"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 40,
+      "character_id": "p2",
+      "type": "神经漫游→基因统治"
+    },
+    {
+      "chapter": 35,
+      "name": "苏明月",
+      "intensity": 25,
+      "character_id": "p2",
+      "type": "量子纠缠→神经链接"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e128",
+      "event_name": "谋杀回放",
+      "event_order": 128,
+      "details": "通过触碰林修的机械臂触发记忆回放，完整重现当年凶案",
+      "scene_id": "s52",
+      "scene_name": "记忆赌场",
+      "scene_place": "由陈小刀服务记忆构建的量子空间",
+      "emotional_impact": "看到真相的精神冲击",
+      "consequences": [
+        "证实游轮失联与凶案直接相关"
+      ]
+    },
+    {
+      "event_id": "e129",
+      "event_name": "服务生起义",
+      "event_order": 129,
+      "details": "用33个托盘构建记忆矩阵困住林修",
+      "scene_id": "s52",
+      "scene_name": "记忆赌场",
+      "scene_place": "由陈小刀服务记忆构建的量子空间",
+      "emotional_impact": "长期压抑后的爆发性反抗",
+      "consequences": [
+        "侍者制服从时间囚笼"
+      ]
+    },
+    {
+      "event_id": "e130",
+      "event_name": "梦境摆盘",
+      "event_order": 130,
+      "details": "在量子态下完成终极餐台布置",
+      "scene_id": "s53",
+      "scene_name": "维度餐厅",
+      "scene_place": "游轮宴会厅扭曲成的十六维通道",
+      "emotional_impact": "服务强迫症得到量子级满足",
+      "consequences": [
+        "餐具形成时空定位坐标"
+      ]
+    },
+    {
+      "event_id": "e131",
+      "event_name": "制服进化",
+      "event_order": 131,
+      "details": "长袖制服吸收量子泡沫变成维度战衣",
+      "scene_id": "s53",
+      "scene_name": "维度餐厅",
+      "scene_place": "游轮宴会厅扭曲成的十六维通道",
+      "emotional_impact": "紫外线伤痕转化为力量来源",
+      "consequences": [
+        "获得操控维度碎片的能力"
+      ]
+    },
+    {
+      "event_id": "e132",
+      "event_name": "终局服务",
+      "event_order": 132,
+      "details": "为时空裂解的三位主角呈上告别餐点",
+      "scene_id": "s53",
+      "scene_name": "维度餐厅",
+      "scene_place": "游轮宴会厅扭曲成的十六维通道",
+      "emotional_impact": "完成终极服务的平静喜悦",
+      "consequences": [
+        "侍者成为维系三个维度的唯一常量"
+      ]
+    },
+    {
+      "event_id": "e132",
+      "event_name": "终局服务",
+      "event_order": 132,
+      "details": "为时空裂解的三位主角呈上告别餐点",
+      "scene_id": "s53",
+      "scene_name": "维度餐厅",
+      "scene_place": "游轮宴会厅扭曲成的十六维通道",
+      "emotional_impact": "完成终极服务的平静喜悦",
+      "consequences": [
+        "侍者成为维系三个维度的唯一常量"
+      ]
+    }
+  ]
+}

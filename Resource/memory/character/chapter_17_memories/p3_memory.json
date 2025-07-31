@@ -1,0 +1,270 @@
+{
+  "chapter": 17,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "记忆传递"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 6,
+      "character_id": "p1",
+      "type": "机械抗拒"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "基因牵引"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "记忆共享"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 17,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "服从关系→觉醒反抗"
+    },
+    {
+      "chapter": 17,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "报恩心理→使命传承"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e55",
+      "event_name": "悖论输血",
+      "event_order": 1,
+      "details": "陈小刀将机械臂接入反向循环的供血系统，流出20年前的存档血浆",
+      "scene_id": "s20",
+      "scene_name": "逆时手术室",
+      "scene_place": "随船体反转180度的医疗舱",
+      "emotional_impact": "看着自己的血液逆流竟产生诡异的安心感",
+      "consequences": [
+        "获得穿越时间薄膜的载体"
+      ]
+    },
+    {
+      "event_id": "e55",
+      "event_name": "悖论输血",
+      "event_order": 1,
+      "details": "陈小刀将机械臂接入反向循环的供血系统，流出20年前的存档血浆",
+      "scene_id": "s20",
+      "scene_name": "逆时手术室",
+      "scene_place": "随船体反转180度的医疗舱",
+      "emotional_impact": "看着自己的血液逆流竟产生诡异的安心感",
+      "consequences": [
+        "获得穿越时间薄膜的载体"
+      ]
+    },
+    {
+      "event_id": "e56",
+      "event_name": "衔尾蛇代码",
+      "event_order": 2,
+      "details": "三人机械部件拼合时，在蒸汽表面浮现自毁程序的莫比乌斯环编码",
+      "scene_id": "s21",
+      "scene_name": "双生锅炉房",
+      "scene_place": "镜像对称的动力核心",
+      "emotional_impact": "突然理解侍者制服密码的真实含义",
+      "consequences": [
+        "激活倒计时47分13秒（船上死亡人数）"
+      ]
+    },
+    {
+      "event_id": "e56",
+      "event_name": "衔尾蛇代码",
+      "event_order": 2,
+      "details": "三人机械部件拼合时，在蒸汽表面浮现自毁程序的莫比乌斯环编码",
+      "scene_id": "s21",
+      "scene_name": "双生锅炉房",
+      "scene_place": "镜像对称的动力核心",
+      "emotional_impact": "突然理解侍者制服密码的真实含义",
+      "consequences": [
+        "激活倒计时47分13秒（船上死亡人数）"
+      ]
+    },
+    {
+      "event_id": "e57",
+      "event_name": "紫外线忏悔",
+      "event_order": 3,
+      "details": "陈小刀故意暴露在医疗紫外线灯下，让过敏反应触发记忆闪回",
+      "scene_id": "s20",
+      "scene_name": "逆时手术室",
+      "scene_place": "随船体反转180度的医疗舱",
+      "emotional_impact": "在全身灼痛中看清自己曾是第一个成功活体实验品",
+      "consequences": [
+        "获得船长权限识别纹"
+      ]
+    },
+    {
+      "event_id": "e59",
+      "event_name": "侍者终局",
+      "event_order": 5,
+      "details": "陈小刀以标准侍酒姿势将血浆倒入反应堆，完成20年前被中断的灭菌程序",
+      "scene_id": "s20",
+      "scene_name": "逆时手术室",
+      "scene_place": "随船体反转180度的医疗舱",
+      "emotional_impact": "职业本能与自我牺牲达成奇妙和谐",
+      "consequences": [
+        "莫比乌斯环出现断裂缺口"
+      ]
+    }
+  ]
+}

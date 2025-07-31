@@ -1,0 +1,182 @@
+{
+    "chapter": 27,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p2",
+            "type": "量子纠缠→细胞共生",
+            "intensity": 15,
+            "awareness": "DNA层面融合",
+            "new_detail": "林修指尖渗出的血珠中含有苏明月的神经突触"
+        },
+        {
+            "from_id": "p2",
+            "to_id": "p3",
+            "type": "机械共生→意识上传",
+            "intensity": 18,
+            "awareness": "记忆云同步",
+            "new_detail": "手术时留下的疤痕自动生成二进制编码"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s7",
+            "name": "奇点手术室",
+            "place": "悬浮在七重时空裂隙中的手术台",
+            "time_period": "时空奇点",
+            "atmosphere": "绝对真空中的量子波动"
+        },
+        {
+            "id": "s8",
+            "name": "记忆回廊",
+            "place": "由乘客记忆构建的莫比乌斯环走廊",
+            "time_period": "非时序存在",
+            "atmosphere": "不断重构的认知迷宫"
+        }
+    ],
+    "events": [
+        {
+            "id": "e16",
+            "name": "细胞暗物质手术",
+            "order": 16,
+            "scene_id": "s7",
+            "details": "苏明月用手术刀切开林修左胸，露出机械心脏里跳动的微型游轮模型",
+            "participants": [
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p1": "解脱",
+                "p2": "神圣感"
+            },
+            "consequences": [
+                "手术刀自动雕刻起搏器上的时空坐标"
+            ]
+        },
+        {
+            "id": "e17",
+            "name": "记忆重组",
+            "order": 17,
+            "scene_id": "s8",
+            "details": "陈小刀的机械眼投射全息影像，在镜面回廊中重构1999年失踪事件",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "数据高潮"
+            },
+            "consequences": [
+                "镜中乘客开始与观察者对话"
+            ]
+        },
+        {
+            "id": "e18",
+            "name": "维度轮盘赌",
+            "order": 18,
+            "scene_id": "s7",
+            "details": "林修将机械心脏抛向量子引擎，七个时空漩涡同时改变旋转方向",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "绝对理性"
+            },
+            "consequences": [
+                "引擎频率与心电图形成克莱因瓶结构"
+            ]
+        },
+        {
+            "id": "e19",
+            "name": "三位一体坍缩",
+            "order": 19,
+            "scene_id": "s8",
+            "details": "三人的倒影在镜中融合成发光体，现实身体开始量子化离散",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "超脱",
+                "p2": "极乐",
+                "p3": "涅槃"
+            },
+            "consequences": [
+                "所有镜面浮现「OBSERVER_END」的视网膜烙印"
+            ]
+        },
+        {
+            "id": "e20",
+            "name": "元叙事湮灭",
+            "order": 20,
+            "scene_id": "s7",
+            "details": "无影灯下手术记录本的字迹开始消失，而读者手中的书页同步泛黄",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "顿悟",
+                "p2": "震撼",
+                "p3": "狂喜"
+            },
+            "consequences": [
+                "现实世界传来游轮汽笛声和翻书声的量子叠加态"
+            ]
+        }
+    ]
+}

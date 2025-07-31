@@ -1,0 +1,253 @@
+{
+  "chapter": 33,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 33,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 33,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 33,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "契约解除/新的羁绊"
+    },
+    {
+      "chapter": 33,
+      "name": "苏明月",
+      "intensity": 15,
+      "character_id": "p2",
+      "type": "量子纠缠→细胞共生"
+    },
+    {
+      "chapter": 33,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "量子纠缠→情感共振"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 12,
+      "character_id": "p3",
+      "type": "量子同步→熵增共振"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 15,
+      "character_id": "p3",
+      "type": "量子共振→机械通灵"
+    },
+    {
+      "chapter": 33,
+      "name": "陈小刀",
+      "intensity": 50,
+      "character_id": "p3",
+      "type": "量子契约"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e101",
+      "event_name": "时间锚定",
+      "event_order": 101,
+      "details": "三人同时触摸各自的时间伤痕",
+      "scene_id": "s41",
+      "scene_name": "终焉之间",
+      "scene_place": "所有维度交汇的奇点",
+      "emotional_impact": "赌徒直觉突破时间维度",
+      "consequences": [
+        "游轮开始逆向熵减"
+      ]
+    },
+    {
+      "event_id": "e101",
+      "event_name": "时间锚定",
+      "event_order": 101,
+      "details": "三人同时触摸各自的时间伤痕",
+      "scene_id": "s41",
+      "scene_name": "终焉之间",
+      "scene_place": "所有维度交汇的奇点",
+      "emotional_impact": "赌徒直觉突破时间维度",
+      "consequences": [
+        "游轮开始逆向熵减"
+      ]
+    },
+    {
+      "event_id": "e103",
+      "event_name": "终极协议",
+      "event_order": 103,
+      "details": "签署跨越维度的救赎契约",
+      "scene_id": "s41",
+      "scene_name": "终焉之间",
+      "scene_place": "所有维度交汇的奇点",
+      "emotional_impact": "用全部平行世界的可能性下注",
+      "consequences": [
+        "太平洋出现永久时空异常区"
+      ]
+    },
+    {
+      "event_id": "e103",
+      "event_name": "终极协议",
+      "event_order": 103,
+      "details": "签署跨越维度的救赎契约",
+      "scene_id": "s41",
+      "scene_name": "终焉之间",
+      "scene_place": "所有维度交汇的奇点",
+      "emotional_impact": "用全部平行世界的可能性下注",
+      "consequences": [
+        "太平洋出现永久时空异常区"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "叙事解构",
+      "event_order": 104,
+      "details": "发现文本之外的创作者痕迹",
+      "scene_id": "s42",
+      "scene_name": "弦外之地",
+      "scene_place": "叙事框架之外",
+      "emotional_impact": "发现更高维存在的战栗",
+      "consequences": [
+        "所有电子设备闪现最终代码"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "叙事解构",
+      "event_order": 104,
+      "details": "发现文本之外的创作者痕迹",
+      "scene_id": "s42",
+      "scene_name": "弦外之地",
+      "scene_place": "叙事框架之外",
+      "emotional_impact": "发现更高维存在的战栗",
+      "consequences": [
+        "所有电子设备闪现最终代码"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "叙事解构",
+      "event_order": 104,
+      "details": "发现文本之外的创作者痕迹",
+      "scene_id": "s42",
+      "scene_name": "弦外之地",
+      "scene_place": "叙事框架之外",
+      "emotional_impact": "发现更高维存在的战栗",
+      "consequences": [
+        "所有电子设备闪现最终代码"
+      ]
+    },
+    {
+      "event_id": "e105",
+      "event_name": "永恒回声",
+      "event_order": 105,
+      "details": "在元维度留下不朽印记",
+      "scene_id": "s42",
+      "scene_name": "弦外之地",
+      "scene_place": "叙事框架之外",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "现实世界持续听见幽灵船汽笛声"
+      ]
+    },
+    {
+      "event_id": "e106",
+      "event_name": "终末选择",
+      "event_order": 106,
+      "details": "在奇点执行最终决策",
+      "scene_id": "s41",
+      "scene_name": "终焉之间",
+      "scene_place": "所有维度交汇的奇点",
+      "emotional_impact": "超越赌博本源的创造欲",
+      "consequences": [
+        "十四维度完成统合"
+      ]
+    }
+  ]
+}

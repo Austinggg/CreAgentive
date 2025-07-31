@@ -1,0 +1,220 @@
+{
+  "chapter": 32,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 32,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 32,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 32,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "契约解除/新的羁绊"
+    },
+    {
+      "chapter": 32,
+      "name": "苏明月",
+      "intensity": 15,
+      "character_id": "p2",
+      "type": "量子纠缠→细胞共生"
+    },
+    {
+      "chapter": 32,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "量子纠缠→情感共振"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 12,
+      "character_id": "p3",
+      "type": "量子同步→熵增共振"
+    },
+    {
+      "chapter": 32,
+      "name": "陈小刀",
+      "intensity": 15,
+      "character_id": "p3",
+      "type": "量子共振→机械通灵"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e86",
+      "event_name": "递归修复",
+      "event_order": 86,
+      "details": "三人在无限走廊里同时修复各自的时间线伤痕",
+      "scene_id": "s35",
+      "scene_name": "递归长廊",
+      "scene_place": "无限延伸的游轮走廊镜像",
+      "emotional_impact": "数学性的愉悦",
+      "consequences": [
+        "游轮的基础程序开始逆熵运行"
+      ]
+    },
+    {
+      "event_id": "e87",
+      "event_name": "悖论注能",
+      "event_order": 87,
+      "details": "苏明月将数出的质数序列注入时间晶体",
+      "scene_id": "s36",
+      "scene_name": "悖论引擎",
+      "scene_place": "游轮核心里的时间晶体",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "所有平行宇宙的游轮开始同步闪烁"
+      ]
+    },
+    {
+      "event_id": "e88",
+      "event_name": "全息轮盘",
+      "event_order": 88,
+      "details": "林修同时与过去/未来的自己对赌",
+      "scene_id": "s36",
+      "scene_name": "悖论引擎",
+      "scene_place": "游轮核心里的时间晶体",
+      "emotional_impact": "跨时空成瘾",
+      "consequences": [
+        "赌桌变成五维结构"
+      ]
+    },
+    {
+      "event_id": "e88",
+      "event_name": "全息轮盘",
+      "event_order": 88,
+      "details": "林修同时与过去/未来的自己对赌",
+      "scene_id": "s36",
+      "scene_name": "悖论引擎",
+      "scene_place": "游轮核心里的时间晶体",
+      "emotional_impact": "跨时空成瘾",
+      "consequences": [
+        "赌桌变成五维结构"
+      ]
+    },
+    {
+      "event_id": "e89",
+      "event_name": "机械涅槃",
+      "event_order": 89,
+      "details": "陈小刀将纳米佛珠重组为量子计算机",
+      "scene_id": "s35",
+      "scene_name": "递归长廊",
+      "scene_place": "无限延伸的游轮走廊镜像",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "开始计算终极救赎方程"
+      ]
+    },
+    {
+      "event_id": "e90",
+      "event_name": "选择永恒",
+      "event_order": 90,
+      "details": "三人共同成为新航海传说的载体",
+      "scene_id": "s36",
+      "scene_name": "悖论引擎",
+      "scene_place": "游轮核心里的时间晶体",
+      "emotional_impact": "赌博转化为创造",
+      "consequences": [
+        "太平洋出现永久性时空异常区"
+      ]
+    },
+    {
+      "event_id": "e90",
+      "event_name": "选择永恒",
+      "event_order": 90,
+      "details": "三人共同成为新航海传说的载体",
+      "scene_id": "s36",
+      "scene_name": "悖论引擎",
+      "scene_place": "游轮核心里的时间晶体",
+      "emotional_impact": "赌博转化为创造",
+      "consequences": [
+        "太平洋出现永久性时空异常区"
+      ]
+    }
+  ]
+}

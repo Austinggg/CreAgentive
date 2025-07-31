@@ -1,0 +1,188 @@
+{
+    "chapter": 9,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "恐惧与复仇",
+            "intensity": 8,
+            "awareness": "单方知晓",
+            "new_detail": "通过机械臂记忆确认林修当年是被操控杀人"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "保护与试探",
+            "intensity": 6,
+            "awareness": "单方知晓",
+            "new_detail": "发现苏明月手术刀上的数字与冷冻舱编号相同"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s45",
+            "name": "中央控制室",
+            "place": "游轮最底层",
+            "time_period": "午夜",
+            "atmosphere": "布满蛛网的控制台闪烁着诡异的红光"
+        },
+        {
+            "id": "s46",
+            "name": "镜像走廊",
+            "place": "实验区通道",
+            "time_period": "黎明",
+            "atmosphere": "镜中倒影与本体行动不同步"
+        }
+    ],
+    "events": [
+        {
+            "id": "e117",
+            "name": "系统激活",
+            "order": 1,
+            "scene_id": "s45",
+            "details": "陈小刀的机械臂意外触发了隐藏控制台，投影出实验计划全貌",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "机械眼首次流出生理泪水"
+            },
+            "consequences": [
+                "显示三人都是实验样本"
+            ]
+        },
+        {
+            "id": "e118",
+            "name": "记忆裂痕",
+            "order": 2,
+            "scene_id": "s46",
+            "details": "经过镜像走廊时，陈小刀在镜中看到自己穿着实验服的样子",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "机械臂不受控制地砸向镜面"
+            },
+            "consequences": [
+                "镜面破碎后浮现加密数据"
+            ]
+        },
+        {
+            "id": "e119",
+            "name": "数据解密",
+            "order": 3,
+            "scene_id": "s45",
+            "details": "三人合力破解控制台，发现游轮是大型实验设施",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "紫外线过敏处开始渗出蓝色液体"
+            },
+            "consequences": [
+                "解锁实验体完整档案"
+            ]
+        },
+        {
+            "id": "e120",
+            "name": "真相碎片",
+            "order": 4,
+            "scene_id": "s45",
+            "details": "陈小刀的机械眼显示出当年实验室的全息记录",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "意识到自己是关键实验对象"
+            },
+            "consequences": []
+        },
+        {
+            "id": "e121",
+            "name": "最终选择",
+            "order": 5,
+            "scene_id": "s45",
+            "details": "系统要求陈小刀选择继续实验或终止程序",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "陷入前所未有的挣扎"
+            },
+            "consequences": [
+                "游轮开始剧烈震动"
+            ]
+        },
+        {
+            "id": "e122",
+            "name": "机械觉醒",
+            "order": 6,
+            "scene_id": "s45",
+            "details": "陈小刀的机械臂突然自主行动，输入终止密码",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "感受到与机械臂的真正连接"
+            },
+            "consequences": [
+                "游轮灯光瞬间熄灭"
+            ]
+        }
+    ]
+}

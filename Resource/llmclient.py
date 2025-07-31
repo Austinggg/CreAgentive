@@ -33,6 +33,22 @@ class LLMClientManager:
                     "json_output": True
                 },
             ),
+            "pro-deepseek-v3": OpenAIChatCompletionClient(
+                model="Pro/deepseek-ai/DeepSeek-V3",
+                base_url="https://api.siliconflow.cn/v1",
+                api_key=siliconflow_api_key,
+                model_info={
+                    "family": "deepseek",
+                    "context_length": 8192,
+                    "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
             "deepseek-r1": OpenAIChatCompletionClient(
                 model="deepseek-ai/DeepSeek-R1",
                 base_url="https://api.siliconflow.cn/v1",

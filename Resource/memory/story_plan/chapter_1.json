@@ -1,0 +1,174 @@
+{
+    "chapter": 1,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "监视关系",
+            "intensity": 5,
+            "awareness": "单方知晓",
+            "new_detail": "发现林修的左手指缝间会渗出黑色液体"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "保护关系",
+            "intensity": 4,
+            "awareness": "单方知晓",
+            "new_detail": "注意到苏明月数质数时有蓝色数字在皮肤下闪动"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s1",
+            "name": "厨房仓库",
+            "place": "游轮后厨储藏室",
+            "time_period": "NIGHT",
+            "atmosphere": "罐头自动旋转形成螺旋图案"
+        },
+        {
+            "id": "s2",
+            "name": "通风管道",
+            "place": "船体维修通道",
+            "time_period": "DAY",
+            "atmosphere": "管壁渗出带有航海日志字迹的黏液"
+        }
+    ],
+    "events": [
+        {
+            "id": "e1",
+            "name": "罐头密码",
+            "order": 1,
+            "scene_id": "s1",
+            "details": "陈小刀发现罐头排列对应摩斯密码，长袖制服的紫外线过敏处开始浮现相同符号",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "隐秘兴奋"
+            },
+            "consequences": [
+                "破译出'全员生还者'字样"
+            ]
+        },
+        {
+            "id": "e2",
+            "name": "黏液追踪",
+            "order": 2,
+            "scene_id": "s2",
+            "details": "攀爬通风管时黏液突然显现苏明月的病历记录，记载她1999年曾在同型号游轮就诊",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "困惑"
+            },
+            "consequences": [
+                "发现苏明月实际年龄异常"
+            ]
+        },
+        {
+            "id": "e3",
+            "name": "手套秘密",
+            "order": 3,
+            "scene_id": "s1",
+            "details": "偷拍林修换药时，闪光灯意外照出其左手没有皮肤，黑色骨架在照片上组成赌局赔率",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "战栗"
+            },
+            "consequences": [
+                "相机留下灵异照片"
+            ]
+        },
+        {
+            "id": "e4",
+            "name": "符号同步",
+            "order": 4,
+            "scene_id": "s2",
+            "details": "紫外线过敏发作时，手臂符号与管道黏液文字同步更新，显示'第三夜收容失败'",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "痛苦与顿悟"
+            },
+            "consequences": [
+                "预知到即将发生的危险"
+            ]
+        },
+        {
+            "id": "e5",
+            "name": "禁忌提醒",
+            "order": 5,
+            "scene_id": "s1",
+            "details": "在厨房留下匿名警告便条，罐头自动重组出'不要相信戴手套的人'",
+            "participants": [
+                "p3",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p3": "矛盾",
+                "p2": "疑虑加深"
+            },
+            "consequences": [
+                "苏明月开始怀疑林修"
+            ]
+        }
+    ]
+}

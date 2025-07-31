@@ -1,0 +1,180 @@
+{
+    "chapter": 30,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械反叛→量子臣服",
+            "intensity": 25,
+            "awareness": "双向认知",
+            "new_detail": "陈小刀的机械眼虹膜出现与林修相同的分形图案"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "神经链接→基因共振",
+            "intensity": 20,
+            "awareness": "无意识同步",
+            "new_detail": "陈小刀的机械臂静脉中流动着苏明月的血型数据"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s23",
+            "name": "机械神龛",
+            "place": "由陈小刀机械臂展开的量子祭坛",
+            "time_period": "计时器归零瞬间",
+            "atmosphere": "数百个齿轮悬浮组成哥德尔不完备定理的立体投影"
+        },
+        {
+            "id": "s24",
+            "name": "克莱因引擎室",
+            "place": "同时存在于船头船尾的悖论空间",
+            "time_period": "所有时钟显示29:29",
+            "atmosphere": "空气中漂浮着凝固的柴油液滴"
+        }
+    ],
+    "events": [
+        {
+            "id": "e58",
+            "name": "义体圣餐",
+            "order": 58,
+            "scene_id": "s23",
+            "details": "陈小刀拆解自己的机械义肢作为祭品，零件自动重组为微型时空引擎",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "在失去机械臂的剧痛中获得通感能力"
+            },
+            "consequences": [
+                "祭坛浮现三个刻有不同年代的手术方案"
+            ]
+        },
+        {
+            "id": "e59",
+            "name": "侍者密码",
+            "order": 59,
+            "scene_id": "s23",
+            "details": "陈小刀用服务生培训的餐巾折叠术，将量子态记忆折叠成克莱因瓶",
+            "participants": [
+                "p3",
+                "p1"
+            ],
+            "emotional_impact": {
+                "p3": "每折叠一次就遗忘一段人类记忆",
+                "p1": "手套下的左手自动镜像折叠动作"
+            },
+            "consequences": [
+                "餐巾渗出1948年的海水"
+            ]
+        },
+        {
+            "id": "e60",
+            "name": "紫外线圣印",
+            "order": 60,
+            "scene_id": "s24",
+            "details": "引擎室紫外线照射将陈小刀伤痕转译为林修的出千算法",
+            "participants": [
+                "p3",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p3": "皮肤灼伤处浮现二进制痛觉",
+                "p2": "通过血型共鸣感知到算法结构"
+            },
+            "consequences": [
+                "伤痕投射出二十九个作弊时间点"
+            ]
+        },
+        {
+            "id": "e61",
+            "name": "终局服务",
+            "order": 61,
+            "scene_id": "s23",
+            "details": "陈小刀以侍应生标准姿势托起时空奇点，完成最后一次客房服务",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "服务动作引发量子退相干效应"
+            },
+            "consequences": [
+                "托盘上出现三杯不同时空的香槟"
+            ]
+        },
+        {
+            "id": "e62",
+            "name": "金属弥撒",
+            "order": 62,
+            "scene_id": "s24",
+            "details": "陈小刀剩余的人类部分开始量子化，与机械臂组成终极观测者",
+            "participants": [
+                "p3",
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p3": "在存在与虚无间保持侍者微笑",
+                "p2": "手术刀自动校准其量子态",
+                "p1": "扑克牌悬浮组成保护矩阵"
+            },
+            "consequences": [
+                "游轮所有镜像出现陈小刀倒影"
+            ]
+        }
+    ]
+}

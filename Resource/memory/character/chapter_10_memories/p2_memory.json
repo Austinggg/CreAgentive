@@ -1,0 +1,72 @@
+{
+  "chapter": 10,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 10,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 10,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 10,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e121",
+      "event_name": "血统认证",
+      "event_order": 2,
+      "details": "苏明月发现核心装置需要输入混合血样，三人伤口渗出的血液在空中形成DNA链投影",
+      "scene_id": "s46",
+      "scene_name": "轮机核心",
+      "scene_place": "游轮底舱第七层",
+      "emotional_impact": "强迫症发作反复核对血型数据",
+      "consequences": [
+        "核心舱启动克隆体销毁程序"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "chapter": 44,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 44,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 44,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 44,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "契约解除/新的羁绊"
+    },
+    {
+      "chapter": 44,
+      "name": "苏明月",
+      "intensity": 15,
+      "character_id": "p2",
+      "type": "量子纠缠→细胞共生"
+    },
+    {
+      "chapter": 44,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "量子纠缠→情感共振"
+    },
+    {
+      "chapter": 44,
+      "name": "苏明月",
+      "intensity": 88,
+      "character_id": "p2",
+      "type": "记忆共振→量子同调"
+    },
+    {
+      "chapter": 44,
+      "name": "苏明月",
+      "intensity": 888,
+      "character_id": "p2",
+      "type": "量子链接→永恒观测"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 12,
+      "character_id": "p3",
+      "type": "量子同步→熵增共振"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 15,
+      "character_id": "p3",
+      "type": "量子共振→机械通灵"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 50,
+      "character_id": "p3",
+      "type": "量子契约"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "机械共振→时间锚点"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 120,
+      "character_id": "p3",
+      "type": "机械飞升→时空契约"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 120,
+      "character_id": "p3",
+      "type": "机械共鸣→时间织造"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 200,
+      "character_id": "p3",
+      "type": "机械共振→认知同化"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 500,
+      "character_id": "p3",
+      "type": "机械飞升→叙事寄生"
+    },
+    {
+      "chapter": 44,
+      "name": "陈小刀",
+      "intensity": 999,
+      "character_id": "p3",
+      "type": "机械共振→时空契约"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e46",
+      "event_name": "终局下注",
+      "event_order": 46,
+      "details": "林修将自身存在概率作为赌注，挑战叙事维度本身",
+      "scene_id": "s19",
+      "scene_name": "永恒赌局",
+      "scene_place": "由叙事裂缝编织的克莱因瓶赌场",
+      "emotional_impact": "绝对冷静",
+      "consequences": [
+        "赌桌显现大爆炸方程式"
+      ]
+    },
+    {
+      "event_id": "e49",
+      "event_name": "叙事冻结",
+      "event_order": 49,
+      "details": "三人在绝对零度状态下完成终极叙事解构",
+      "scene_id": "s19",
+      "scene_name": "永恒赌局",
+      "scene_place": "由叙事裂缝编织的克莱因瓶赌场",
+      "emotional_impact": "量子宁静",
+      "consequences": [
+        "所有平行宇宙同时显示「ABSOLUTE_ZERO」"
+      ]
+    },
+    {
+      "event_id": "e50",
+      "event_name": "终极选择",
+      "event_order": 50,
+      "details": "面对三个终极叙事出口的光门",
+      "scene_id": "s20",
+      "scene_name": "终末医疗舱",
+      "scene_place": "悬浮在叙事件视界边缘的透明手术室",
+      "emotional_impact": "机械犹豫",
+      "consequences": [
+        "手术刀在三个选择之间进行量子叠加"
+      ]
+    },
+    {
+      "event_id": "e50",
+      "event_name": "终极选择",
+      "event_order": 50,
+      "details": "面对三个终极叙事出口的光门",
+      "scene_id": "s20",
+      "scene_name": "终末医疗舱",
+      "scene_place": "悬浮在叙事件视界边缘的透明手术室",
+      "emotional_impact": "机械犹豫",
+      "consequences": [
+        "手术刀在三个选择之间进行量子叠加"
+      ]
+    }
+  ]
+}

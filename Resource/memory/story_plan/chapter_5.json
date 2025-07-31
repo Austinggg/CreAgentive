@@ -1,0 +1,190 @@
+{
+    "chapter": 5,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p3",
+            "type": "机械奴役→金属共鸣",
+            "intensity": 300,
+            "awareness": "单向控制",
+            "new_detail": "林修机械臂的齿轮转速与陈小刀瞳孔收缩频率同步"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "量子观测",
+            "intensity": 150,
+            "awareness": "双向暗流",
+            "new_detail": "陈小刀的紫外线过敏症状在苏明月手术时转为荧光标记能力"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s29",
+            "name": "齿轮教堂",
+            "place": "轮机舱核心",
+            "time_period": "永恒正午",
+            "atmosphere": "无数啮合的巨型齿轮组构成宗教审判庭格局"
+        },
+        {
+            "id": "s30",
+            "name": "概率深渊",
+            "place": "教堂地下",
+            "time_period": "熵减时刻",
+            "atmosphere": "悬浮的扑克牌碎片不断重组为不同概率公式"
+        }
+    ],
+    "events": [
+        {
+            "id": "e77",
+            "name": "金属告解",
+            "order": 32,
+            "scene_id": "s29",
+            "details": "陈小刀的机械臂自动拆解成21个零件，在忏悔室拼出林修的面具",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "认知撕裂"
+            },
+            "consequences": [
+                "面具内侧刻着陈小刀的真实出生日期"
+            ]
+        },
+        {
+            "id": "e78",
+            "name": "侍者觉醒",
+            "order": 33,
+            "scene_id": "s30",
+            "details": "陈小刀端着的餐盘突然浮现量子纠缠方程式，银制餐具组成观测装置",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "侍者职业本能崩溃"
+            },
+            "consequences": [
+                "餐具显示三人存在量子纠缠态"
+            ]
+        },
+        {
+            "id": "e79",
+            "name": "赌局重启",
+            "order": 34,
+            "scene_id": "s29",
+            "details": "齿轮教堂的彩窗突然投射二十一点牌局，陈小刀被迫成为发牌荷官",
+            "participants": [
+                "p1",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "赌徒狂热",
+                "p3": "机械性服从"
+            },
+            "consequences": [
+                "陈小刀发牌时自动读取出牌记忆"
+            ]
+        },
+        {
+            "id": "e80",
+            "name": "制服异变",
+            "order": 35,
+            "scene_id": "s30",
+            "details": "陈小刀的长袖制服突然变成拘束衣，袖口延展出神经探针",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "职业身份认知混乱"
+            },
+            "consequences": [
+                "探针自动收集苏明月手术时的脑电波"
+            ]
+        },
+        {
+            "id": "e81",
+            "name": "机械圣餐",
+            "order": 36,
+            "scene_id": "s29",
+            "details": "陈小刀端着的葡萄酒涌现纳米机械，在杯壁呈现三人基因测序图",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "侍者礼仪崩溃"
+            },
+            "consequences": [
+                "测序图显示共享同一段人工植入基因"
+            ]
+        },
+        {
+            "id": "e82",
+            "name": "量子侍者",
+            "order": 37,
+            "scene_id": "s30",
+            "details": "陈小刀服务时的鞠躬动作触发概率云坍塌，显现出三个时空版本的他",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "存在主义危机"
+            },
+            "consequences": [
+                "三个版本分别穿着不同年代的船员制服"
+            ]
+        }
+    ]
+}

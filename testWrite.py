@@ -14,7 +14,7 @@ async def main():
     chapters_dir = os.path.join("Resource", "memory", "story_plan")
 
     # 获取模型客户端和Neo4j密码
-    llm_client = LLMClientManager().get_client("deepseek-v3")
+    llm_client = LLMClientManager().get_client("pro-deepseek-v3")
     neo4j_password = os.getenv("NEO4J_PASSWORD")
 
     # 初始化并运行工作流

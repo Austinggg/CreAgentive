@@ -1,0 +1,176 @@
+{
+    "chapter": 21,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p2",
+            "type": "契约解除/新的羁绊",
+            "intensity": 8,
+            "awareness": "共鸣觉醒",
+            "new_detail": "医疗费数字化为时空解码器"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械共振→相位同步",
+            "intensity": 7,
+            "awareness": "双向感知",
+            "new_detail": "制服纽扣开始显示倒计时"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s44",
+            "name": "维度甲板",
+            "place": "游轮外延虚空层",
+            "time_period": "概念黎明",
+            "atmosphere": "破碎的欧几里得几何空间"
+        },
+        {
+            "id": "s45",
+            "name": "船长密室",
+            "place": "消失的第13层甲板",
+            "time_period": "被删除的时间",
+            "atmosphere": "凝固的决策瞬间全息投影"
+        }
+    ],
+    "events": [
+        {
+            "id": "e117",
+            "name": "静脉回溯",
+            "order": 12,
+            "scene_id": "s44",
+            "details": "沿着注射器痕迹逆向注射时空粒子",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "强迫性计算快感"
+            },
+            "consequences": [
+                "数学焦虑转化为解码能力"
+            ]
+        },
+        {
+            "id": "e118",
+            "name": "制服觉醒",
+            "order": 13,
+            "scene_id": "s44",
+            "details": "长袖制服自动编织四维经纬度",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "机械性颤栗"
+            },
+            "consequences": [
+                "紫外线过敏纹路变成星图"
+            ]
+        },
+        {
+            "id": "e119",
+            "name": "终极出千",
+            "order": 14,
+            "scene_id": "s45",
+            "details": "用机械义肢修改维度骰子点数",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "职业赌徒的巅峰状态"
+            },
+            "consequences": [
+                "赢得船长权限密钥"
+            ]
+        },
+        {
+            "id": "e120",
+            "name": "债务重构",
+            "order": 15,
+            "scene_id": "s44",
+            "details": "将医疗费数列重写为维度坐标",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "敬畏",
+                "p2": "狂喜",
+                "p3": "顿悟"
+            },
+            "consequences": [
+                "打开第7日逃生通道"
+            ]
+        },
+        {
+            "id": "e121",
+            "name": "制服献祭",
+            "order": 16,
+            "scene_id": "s45",
+            "details": "将纽扣阵列嵌入控制台",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "决绝的平静"
+            },
+            "consequences": [
+                "逆转游轮熵增进程"
+            ]
+        }
+    ]
+}

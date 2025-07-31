@@ -1,0 +1,200 @@
+{
+  "chapter": 38,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 38,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 38,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 38,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 38,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 45,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 18,
+      "character_id": "p3",
+      "type": "机械共生→意识上传"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "神经漫游→意识统合"
+    },
+    {
+      "chapter": 38,
+      "name": "陈小刀",
+      "intensity": 26,
+      "character_id": "p3",
+      "type": "生物骇入→时间校正"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e164",
+      "event_name": "记忆解压",
+      "event_order": 164,
+      "details": "三人神经连接时浮现相同的实验室培养舱记忆画面",
+      "scene_id": "s67",
+      "scene_name": "悖论引擎室",
+      "scene_place": "游轮底层量子反应炉",
+      "emotional_impact": "程序化的平静",
+      "consequences": [
+        "确认三人都是第38号实验产物"
+      ]
+    },
+    {
+      "event_id": "e165",
+      "event_name": "熵流逆转",
+      "event_order": 165,
+      "details": "陈小刀用机械臂将所有维度的时间流编织成莫比乌斯环",
+      "scene_id": "s67",
+      "scene_name": "悖论引擎室",
+      "scene_place": "游轮底层量子反应炉",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "创造时间闭环"
+      ]
+    },
+    {
+      "event_id": "e166",
+      "event_name": "最终诊断",
+      "event_order": 166,
+      "details": "苏明月发现三人的生命体征其实都是量子计算机的模拟数据",
+      "scene_id": "s67",
+      "scene_name": "悖论引擎室",
+      "scene_place": "游轮底层量子反应炉",
+      "emotional_impact": "手术刀式的冷静",
+      "consequences": [
+        "验证虚拟世界假说"
+      ]
+    },
+    {
+      "event_id": "e166",
+      "event_name": "最终诊断",
+      "event_order": 166,
+      "details": "苏明月发现三人的生命体征其实都是量子计算机的模拟数据",
+      "scene_id": "s67",
+      "scene_name": "悖论引擎室",
+      "scene_place": "游轮底层量子反应炉",
+      "emotional_impact": "手术刀式的冷静",
+      "consequences": [
+        "验证虚拟世界假说"
+      ]
+    },
+    {
+      "event_id": "e167",
+      "event_name": "末日轮盘",
+      "event_order": 167,
+      "details": "林修用金色左轮对准叙事者留下的空白页码",
+      "scene_id": "s68",
+      "scene_name": "叙事核心",
+      "scene_place": "故事本源维度",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "触发元叙事层面抉择"
+      ]
+    },
+    {
+      "event_id": "e168",
+      "event_name": "文本湮灭",
+      "event_order": 168,
+      "details": "三人的存在开始从故事中逐字消失",
+      "scene_id": "s68",
+      "scene_name": "叙事核心",
+      "scene_place": "故事本源维度",
+      "emotional_impact": "量子安宁",
+      "consequences": [
+        "完成叙事闭环"
+      ]
+    }
+  ]
+}

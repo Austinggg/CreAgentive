@@ -1,0 +1,173 @@
+{
+  "chapter": 31,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 31,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 31,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 31,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 31,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 31,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 31,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 31,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 31,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 31,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 31,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 31,
+      "name": "陈小刀",
+      "intensity": 18,
+      "character_id": "p3",
+      "type": "机械共生→意识上传"
+    },
+    {
+      "chapter": 31,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "神经漫游→意识统合"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e72",
+      "event_name": "神经嫁接",
+      "event_order": 72,
+      "details": "苏明月将陈小刀的机械神经元接入自己的疼痛感知系统",
+      "scene_id": "s29",
+      "scene_name": "时间手术台",
+      "scene_place": "由记忆碎片重构的四维空间",
+      "emotional_impact": "认知颠覆",
+      "consequences": [
+        "两人记忆开始量子纠缠"
+      ]
+    },
+    {
+      "event_id": "e72",
+      "event_name": "神经嫁接",
+      "event_order": 72,
+      "details": "苏明月将陈小刀的机械神经元接入自己的疼痛感知系统",
+      "scene_id": "s29",
+      "scene_name": "时间手术台",
+      "scene_place": "由记忆碎片重构的四维空间",
+      "emotional_impact": "认知颠覆",
+      "consequences": [
+        "两人记忆开始量子纠缠"
+      ]
+    },
+    {
+      "event_id": "e73",
+      "event_name": "概率解构",
+      "event_order": 73,
+      "details": "林修同时与所有时间线的自己对赌",
+      "scene_id": "s30",
+      "scene_name": "量子赌场",
+      "scene_place": "存在于平行世界夹缝中的金色大厅",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "赌桌开始吞噬现实维度"
+      ]
+    },
+    {
+      "event_id": "e73",
+      "event_name": "概率解构",
+      "event_order": 73,
+      "details": "林修同时与所有时间线的自己对赌",
+      "scene_id": "s30",
+      "scene_name": "量子赌场",
+      "scene_place": "存在于平行世界夹缝中的金色大厅",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "赌桌开始吞噬现实维度"
+      ]
+    },
+    {
+      "event_id": "e74",
+      "event_name": "时空缝合",
+      "event_order": 74,
+      "details": "陈小刀用机械臂将三人伤口缝合为莫比乌斯环",
+      "scene_id": "s29",
+      "scene_name": "时间手术台",
+      "scene_place": "由记忆碎片重构的四维空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "形成封闭时间环"
+      ]
+    }
+  ]
+}

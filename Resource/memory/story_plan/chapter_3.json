@@ -1,0 +1,206 @@
+{
+    "chapter": 3,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p2",
+            "type": "量子纠缠→记忆同步",
+            "intensity": 80,
+            "awareness": "双向非对称",
+            "new_detail": "林修在苏明月注射药物时看到自己戴着船长帽的幻觉"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械共振→时间锚定",
+            "intensity": 120,
+            "awareness": "潜意识连接",
+            "new_detail": "陈小刀义眼的录像功能自动记录林修不存在的童年记忆"
+        },
+        {
+            "from_id": "p2",
+            "to_id": "p3",
+            "type": "基因锁链",
+            "intensity": 90,
+            "awareness": "单方面压制",
+            "new_detail": "苏明月发现陈小刀血管中的纳米机械与自己的药物产生斐波那契共振"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s17",
+            "name": "颠倒手术室",
+            "place": "倾斜45度的医疗舱",
+            "time_period": "TIME_REVERSING",
+            "atmosphere": "手术器械沿着天花板的血渍轨迹自主移动"
+        },
+        {
+            "id": "s18",
+            "name": "机械教堂",
+            "place": "轮机舱改建的礼拜堂",
+            "time_period": "PARADOX_TIME",
+            "atmosphere": "彩色玻璃用润滑油绘制，管风琴由引擎活塞驱动"
+        }
+    ],
+    "events": [
+        {
+            "id": "e46",
+            "name": "逆生长手术",
+            "order": 1,
+            "scene_id": "s17",
+            "details": "苏明月为林修注射药物时，两人年龄开始倒流，直到变成胚胎形态又突然衰老",
+            "participants": [
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p1": "存在危机",
+                "p2": "科学狂热"
+            },
+            "consequences": [
+                "药水瓶标签显示日期为1999年12月31日"
+            ]
+        },
+        {
+            "id": "e47",
+            "name": "神圣机械",
+            "order": 2,
+            "scene_id": "s18",
+            "details": "陈小刀的义眼在教堂产生投影，展现三人被不同时间线的自己进行人体改造的过程",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "宗教性顿悟"
+            },
+            "consequences": [
+                "管风琴演奏的赞美诗实则为摩尔斯电码求救信号"
+            ]
+        },
+        {
+            "id": "e48",
+            "name": "血统审判",
+            "order": 3,
+            "scene_id": "s17",
+            "details": "手术室突然展开DNA检测报告，证明三人拥有完全相同却违反遗传学的基因序列",
+            "participants": [
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p1": "逻辑崩溃",
+                "p2": "强迫症发作（基因碱基突然全部变成质数序列）"
+            },
+            "consequences": [
+                "检测仪器吐出陈小刀的工作名牌"
+            ]
+        },
+        {
+            "id": "e49",
+            "name": "忏悔仪式",
+            "order": 4,
+            "scene_id": "s18",
+            "details": "林修的机械左手不受控制地在圣经上刻写船长日志，墨水是苏明月的治疗药剂",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "宗教恐惧"
+            },
+            "consequences": [
+                "圣经纸页浮现陈小刀调酒配方的分子式"
+            ]
+        },
+        {
+            "id": "e50",
+            "name": "三位一体",
+            "order": 5,
+            "scene_id": "s17",
+            "details": "手术镜反射出三人叠加的虚影，正在为对方进行器官移植手术",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "自我怀疑",
+                "p2": "病态专注",
+                "p3": "诡异满足"
+            },
+            "consequences": [
+                "手术刀掉落时插入1999年的航海图"
+            ]
+        },
+        {
+            "id": "e51",
+            "name": "终极治疗",
+            "order": 6,
+            "scene_id": "s18",
+            "details": "教堂彩窗突然显示三人医疗档案，治疗方案栏写着'量子自杀'",
+            "participants": [
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p2": "职业性困惑",
+                "p3": "黑色幽默"
+            },
+            "consequences": [
+                "档案照片是三人童年模样站在沉船残骸上"
+            ]
+        }
+    ]
+}

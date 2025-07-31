@@ -1,0 +1,188 @@
+{
+  "chapter": 11,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 11,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 11,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 11,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 11,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 11,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 11,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 11,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 11,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e136",
+      "event_name": "疼痛同步",
+      "event_order": 1,
+      "details": "林修与陈小刀同时捂住左眼，机械与血肉互相转化",
+      "scene_id": "s51",
+      "scene_name": "记忆回廊",
+      "scene_place": "游轮消失中的图书馆",
+      "emotional_impact": "短暂恢复味觉尝到血腥",
+      "consequences": [
+        "验证克隆体间的量子纠缠"
+      ]
+    },
+    {
+      "event_id": "e138",
+      "event_name": "锚点献祭",
+      "event_order": 3,
+      "details": "需要有人永久留在循环里维持时空稳定",
+      "scene_id": "s52",
+      "scene_name": "临界甲板",
+      "scene_place": "倾斜45度的船首",
+      "emotional_impact": "机械眼首次流泪",
+      "consequences": [
+        "触发深层记忆中的实验室协议"
+      ]
+    },
+    {
+      "event_id": "e139",
+      "event_name": "三角悖论",
+      "event_order": 4,
+      "details": "三人站在不同颜色警报圈内形成稳定结构",
+      "scene_id": "s52",
+      "scene_name": "临界甲板",
+      "scene_place": "倾斜45度的船首",
+      "emotional_impact": "机械化进度退回初始状态",
+      "consequences": [
+        "游轮开始分维度解体"
+      ]
+    },
+    {
+      "event_id": "e140",
+      "event_name": "晨光刻印",
+      "event_order": 5,
+      "details": "第一缕阳光照射三人投射出实验编号全息图",
+      "scene_id": "s52",
+      "scene_name": "临界甲板",
+      "scene_place": "倾斜45度的船首",
+      "emotional_impact": "人类瞳孔暂时取代机械眼",
+      "consequences": [
+        "证实20年前实验从未停止"
+      ]
+    }
+  ]
+}

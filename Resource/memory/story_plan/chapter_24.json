@@ -1,0 +1,200 @@
+{
+    "chapter": 24,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p3",
+            "type": "量子共振→机械通灵",
+            "intensity": 15,
+            "awareness": "分子级同步",
+            "new_detail": "林修每次眨眼都会引发陈小刀机械关节的量子隧穿效应"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "神经漫游",
+            "intensity": 11,
+            "awareness": "突触级入侵",
+            "new_detail": "陈小刀的机械神经突触在苏明月强迫症发作时接管其运动皮层"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s61",
+            "name": "倒流手术室",
+            "place": "血液逆流进血管的手术舱",
+            "time_period": "NEGATIVE_ENTROPY",
+            "atmosphere": "消毒液气泡向下漂浮的违和感"
+        },
+        {
+            "id": "s62",
+            "name": "囚徒画廊",
+            "place": "用23名乘客视网膜投影构成的展厅",
+            "time_period": "SIMULTANEOUS_ACROSS_DIMENSIONS",
+            "atmosphere": "所有展品都在观测者移开视线时变异"
+        }
+    ],
+    "events": [
+        {
+            "id": "e162",
+            "name": "机械告解",
+            "order": 57,
+            "scene_id": "s61",
+            "details": "林修将二十年罪恶编码成机械病毒的形态",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "义肢生长出带倒刺的忏悔十字架"
+            },
+            "consequences": [
+                "生成反物质级记忆载体"
+            ]
+        },
+        {
+            "id": "e163",
+            "name": "疼痛圣印",
+            "order": 58,
+            "scene_id": "s62",
+            "details": "苏明月用手术刀在三人额头刻下非欧几何图腾",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "强迫症导致伤口呈现分形结构"
+            },
+            "consequences": [
+                "建立疼痛量子纠缠网络"
+            ]
+        },
+        {
+            "id": "e164",
+            "name": "伺服超度",
+            "order": 59,
+            "scene_id": "s61",
+            "details": "陈小刀的机械关节自发形成往生咒齿轮组",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "听见轴承转动声里混合着失踪乘客的耳语"
+            },
+            "consequences": [
+                "启动机械化往生程序"
+            ]
+        },
+        {
+            "id": "e165",
+            "name": "悖论输血",
+            "order": 60,
+            "scene_id": "s62",
+            "details": "三人静脉形成克莱因瓶拓扑结构循环血液",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "输出20年前自己的血液",
+                "p2": "过滤3023年的纳米医疗机器人",
+                "p3": "机械心脏泵出海水与机油的混合物"
+            },
+            "consequences": [
+                "创造非因果的生命维持系统"
+            ]
+        },
+        {
+            "id": "e166",
+            "name": "观测者刑具",
+            "order": 61,
+            "scene_id": "s61",
+            "details": "用读者视线焦点凝聚成穿刺刑具",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "金属刑具呈现小说标点符号形状",
+                "p2": "伤口渗出带油墨味的血液",
+                "p3": "机械骨骼与刑具产生语法共振"
+            },
+            "consequences": [
+                "实现叙事层痛觉反馈"
+            ]
+        },
+        {
+            "id": "e167",
+            "name": "终局纹章",
+            "order": 62,
+            "scene_id": "s62",
+            "details": "三人的伤痕组成完整游轮龙骨投影",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "皮肤下的电路板浮现乘客名单",
+                "p2": "毛细血管构成航行日志",
+                "p3": "机械义眼投射出作者指纹"
+            },
+            "consequences": [
+                "完成元叙事封印仪式"
+            ]
+        }
+    ]
+}

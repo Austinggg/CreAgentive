@@ -1,0 +1,172 @@
+{
+    "chapter": 40,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械共振→时空同调",
+            "intensity": 200,
+            "awareness": "超维感知",
+            "new_detail": "机械臂同步林修的38个平行版本"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "量子纠缠→基因统合",
+            "intensity": 180,
+            "awareness": "生物链接",
+            "new_detail": "紫外线过敏转变为光量子接收器"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s76",
+            "name": "虚数引擎室",
+            "place": "游轮动力舱的虚数投影",
+            "time_period": "非连续时间流",
+            "atmosphere": "钢铁表面漂浮黎曼几何光纹"
+        },
+        {
+            "id": "s77",
+            "name": "终局酒吧",
+            "place": "所有可能性汇聚的克莱因瓶结构",
+            "time_period": "因果律崩坏点",
+            "atmosphere": "鸡尾酒折射平行世界光影"
+        }
+    ],
+    "events": [
+        {
+            "id": "e187",
+            "name": "终极配方",
+            "order": 187,
+            "scene_id": "s77",
+            "details": "陈小刀用机械臂调制包含量子泡沫的鸡尾酒",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "服务生的职业荣光达到极致"
+            },
+            "consequences": [
+                "饮料含叙事坍缩催化剂"
+            ]
+        },
+        {
+            "id": "e188",
+            "name": "光速服务",
+            "order": 188,
+            "scene_id": "s77",
+            "details": "在普朗克时间内完成对38个平行版本的送餐",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "突破时间法则的成就感"
+            },
+            "consequences": [
+                "建立超时空服务协议"
+            ]
+        },
+        {
+            "id": "e189",
+            "name": "制服进化",
+            "order": 189,
+            "scene_id": "s76",
+            "details": "长袖制服融化成第二皮肤，显示所有客人的命运线",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "职业装束带来神性顿悟"
+            },
+            "consequences": [
+                "可视化的因果律网络"
+            ]
+        },
+        {
+            "id": "e190",
+            "name": "永生托盘",
+            "order": 190,
+            "scene_id": "s76",
+            "details": "银质托盘开始自动书写每个原子的历史",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "工具觉醒带来的敬畏"
+            },
+            "consequences": [
+                "物质获得记忆功能"
+            ]
+        },
+        {
+            "id": "e191",
+            "name": "服务终点",
+            "order": 191,
+            "scene_id": "s77",
+            "details": "为叙事本身奉上最后的账单",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "完成终极职责的平静"
+            },
+            "consequences": [
+                "闭环所有服务因果"
+            ]
+        }
+    ]
+}

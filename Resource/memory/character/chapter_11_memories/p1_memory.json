@@ -1,0 +1,125 @@
+{
+  "chapter": 11,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 11,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 11,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 11,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 11,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 11,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 11,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e136",
+      "event_name": "疼痛同步",
+      "event_order": 1,
+      "details": "林修与陈小刀同时捂住左眼，机械与血肉互相转化",
+      "scene_id": "s51",
+      "scene_name": "记忆回廊",
+      "scene_place": "游轮消失中的图书馆",
+      "emotional_impact": "首次体验陈小刀的紫外线过敏",
+      "consequences": [
+        "验证克隆体间的量子纠缠"
+      ]
+    },
+    {
+      "event_id": "e138",
+      "event_name": "锚点献祭",
+      "event_order": 3,
+      "details": "需要有人永久留在循环里维持时空稳定",
+      "scene_id": "s52",
+      "scene_name": "临界甲板",
+      "scene_place": "倾斜45度的船首",
+      "emotional_impact": "扑克牌在指间化为灰烬",
+      "consequences": [
+        "触发深层记忆中的实验室协议"
+      ]
+    },
+    {
+      "event_id": "e139",
+      "event_name": "三角悖论",
+      "event_order": 4,
+      "details": "三人站在不同颜色警报圈内形成稳定结构",
+      "scene_id": "s52",
+      "scene_name": "临界甲板",
+      "scene_place": "倾斜45度的船首",
+      "emotional_impact": "虹膜异色达到最大差异",
+      "consequences": [
+        "游轮开始分维度解体"
+      ]
+    },
+    {
+      "event_id": "e140",
+      "event_name": "晨光刻印",
+      "event_order": 5,
+      "details": "第一缕阳光照射三人投射出实验编号全息图",
+      "scene_id": "s52",
+      "scene_name": "临界甲板",
+      "scene_place": "倾斜45度的船首",
+      "emotional_impact": "用义肢遮挡面部编号",
+      "consequences": [
+        "证实20年前实验从未停止"
+      ]
+    }
+  ]
+}

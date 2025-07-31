@@ -1,0 +1,340 @@
+{
+  "chapter": 8,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 150,
+      "character_id": "p1",
+      "type": "量子观测→债务重构"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 150,
+      "character_id": "p1",
+      "type": "量子赌局"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 45,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 18,
+      "character_id": "p3",
+      "type": "机械共生→意识上传"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "神经漫游→意识统合"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 26,
+      "character_id": "p3",
+      "type": "生物骇入→时间校正"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 100,
+      "character_id": "p3",
+      "type": "基因链接→叙事锚定"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 600,
+      "character_id": "p3",
+      "type": "基因统合→量子污染"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 90,
+      "character_id": "p3",
+      "type": "基因锁链"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 60,
+      "character_id": "p3",
+      "type": "神经链接→痛觉共享"
+    },
+    {
+      "chapter": 8,
+      "name": "陈小刀",
+      "intensity": 150,
+      "character_id": "p3",
+      "type": "基因链接→量子观测"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e128",
+      "event_name": "档案解密",
+      "event_order": 28,
+      "details": "三人发现1999年12月31日的实验日志：『启动第七维度跃迁』",
+      "scene_id": "s44",
+      "scene_name": "全息档案库",
+      "scene_place": "游轮虚影中的资料室",
+      "emotional_impact": "质数计算速度达到每秒100个",
+      "consequences": [
+        "确认游轮是跃迁失败的量子泡沫"
+      ]
+    },
+    {
+      "event_id": "e129",
+      "event_name": "血脉共振",
+      "event_order": 29,
+      "details": "三人DNA同时与钟摆共振，揭示都是实验员的克隆体",
+      "scene_id": "s43",
+      "scene_name": "量子钟摆室",
+      "scene_place": "游轮倒置的机械核心",
+      "emotional_impact": "白发开始逆向生长",
+      "consequences": [
+        "钟摆停滞在最关键的时间点"
+      ]
+    },
+    {
+      "event_id": "e130",
+      "event_name": "机械顿悟",
+      "event_order": 30,
+      "details": "陈小刀意识到自己的机械部件是原始实验舱残骸",
+      "scene_id": "s44",
+      "scene_name": "全息档案库",
+      "scene_place": "游轮虚影中的资料室",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "档案库所有资料同步更新"
+      ]
+    },
+    {
+      "event_id": "e131",
+      "event_name": "终极选择",
+      "event_order": 31,
+      "details": "钟摆给出选择：重置时间线或保留量子记忆",
+      "scene_id": "s43",
+      "scene_name": "量子钟摆室",
+      "scene_place": "游轮倒置的机械核心",
+      "emotional_impact": "白发变成全息投影",
+      "consequences": [
+        "游轮开始坍缩为奇点"
+      ]
+    },
+    {
+      "event_id": "e101",
+      "event_name": "时间锚定",
+      "event_order": 101,
+      "details": "三人同时触摸各自的时间伤痕",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "数学思维解构永恒",
+      "consequences": [
+        "游轮开始逆向熵减"
+      ]
+    },
+    {
+      "event_id": "e102",
+      "event_name": "幽灵具现",
+      "event_order": 102,
+      "details": "20年前的失踪乘客以量子态重现",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "数据流具象化的惊叹",
+      "consequences": [
+        "游轮获得短暂实体化"
+      ]
+    },
+    {
+      "event_id": "e102",
+      "event_name": "幽灵具现",
+      "event_order": 102,
+      "details": "20年前的失踪乘客以量子态重现",
+      "scene_id": "s40",
+      "scene_name": "记忆迷宫",
+      "scene_place": "实验体冷冻舱",
+      "emotional_impact": "数据流具象化的惊叹",
+      "consequences": [
+        "游轮获得短暂实体化"
+      ]
+    },
+    {
+      "event_id": "e102",
+      "event_name": "幽灵具现",
+      "event_order": 102,
+      "details": "20年前的失踪乘客以量子态重现",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "数据流具象化的惊叹",
+      "consequences": [
+        "游轮获得短暂实体化"
+      ]
+    },
+    {
+      "event_id": "e102",
+      "event_name": "幽灵具现",
+      "event_order": 102,
+      "details": "20年前的失踪乘客以量子态重现",
+      "scene_id": "s40",
+      "scene_name": "记忆迷宫",
+      "scene_place": "实验体冷冻舱",
+      "emotional_impact": "数据流具象化的惊叹",
+      "consequences": [
+        "游轮获得短暂实体化"
+      ]
+    },
+    {
+      "event_id": "e103",
+      "event_name": "终极协议",
+      "event_order": 103,
+      "details": "签署跨越维度的救赎契约",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "执行最完美的程序指令",
+      "consequences": [
+        "太平洋出现永久时空异常区"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "叙事解构",
+      "event_order": 104,
+      "details": "发现文本之外的创作者痕迹",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "所有电子设备闪现最终代码"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "叙事解构",
+      "event_order": 104,
+      "details": "发现文本之外的创作者痕迹",
+      "scene_id": "s40",
+      "scene_name": "记忆迷宫",
+      "scene_place": "实验体冷冻舱",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "所有电子设备闪现最终代码"
+      ]
+    },
+    {
+      "event_id": "e105",
+      "event_name": "永恒回声",
+      "event_order": 105,
+      "details": "在元维度留下不朽印记",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "现实世界持续听见幽灵船汽笛声"
+      ]
+    }
+  ]
+}

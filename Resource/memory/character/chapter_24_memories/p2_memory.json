@@ -1,0 +1,146 @@
+{
+  "chapter": 24,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 24,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 24,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 24,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 24,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 24,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 24,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 24,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 24,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 24,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 24,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e163",
+      "event_name": "疼痛圣印",
+      "event_order": 58,
+      "details": "苏明月用手术刀在三人额头刻下非欧几何图腾",
+      "scene_id": "s62",
+      "scene_name": "囚徒画廊",
+      "scene_place": "用23名乘客视网膜投影构成的展厅",
+      "emotional_impact": "强迫症导致伤口呈现分形结构",
+      "consequences": [
+        "建立疼痛量子纠缠网络"
+      ]
+    },
+    {
+      "event_id": "e165",
+      "event_name": "悖论输血",
+      "event_order": 60,
+      "details": "三人静脉形成克莱因瓶拓扑结构循环血液",
+      "scene_id": "s62",
+      "scene_name": "囚徒画廊",
+      "scene_place": "用23名乘客视网膜投影构成的展厅",
+      "emotional_impact": "过滤3023年的纳米医疗机器人",
+      "consequences": [
+        "创造非因果的生命维持系统"
+      ]
+    },
+    {
+      "event_id": "e166",
+      "event_name": "观测者刑具",
+      "event_order": 61,
+      "details": "用读者视线焦点凝聚成穿刺刑具",
+      "scene_id": "s61",
+      "scene_name": "倒流手术室",
+      "scene_place": "血液逆流进血管的手术舱",
+      "emotional_impact": "伤口渗出带油墨味的血液",
+      "consequences": [
+        "实现叙事层痛觉反馈"
+      ]
+    },
+    {
+      "event_id": "e167",
+      "event_name": "终局纹章",
+      "event_order": 62,
+      "details": "三人的伤痕组成完整游轮龙骨投影",
+      "scene_id": "s62",
+      "scene_name": "囚徒画廊",
+      "scene_place": "用23名乘客视网膜投影构成的展厅",
+      "emotional_impact": "毛细血管构成航行日志",
+      "consequences": [
+        "完成元叙事封印仪式"
+      ]
+    }
+  ]
+}

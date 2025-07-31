@@ -1,0 +1,180 @@
+{
+    "chapter": 7,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p3",
+            "type": "机械共振→时间悖论",
+            "intensity": 300,
+            "awareness": "双向同步",
+            "new_detail": "林修可以通过陈小刀的机械臂观测时间分支"
+        },
+        {
+            "from_id": "p2",
+            "to_id": "p1",
+            "type": "量子赌局",
+            "intensity": 150,
+            "awareness": "单向认知",
+            "new_detail": "苏明月发现林修每次赌博都在消耗平行世界的自己"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s37",
+            "name": "倒映引擎室",
+            "place": "船底镜像空间",
+            "time_period": "时空重叠的黎明",
+            "atmosphere": "所有机械都呈现左右相反的运行状态"
+        },
+        {
+            "id": "s38",
+            "name": "概率走廊",
+            "place": "连接各时空的波动通道",
+            "time_period": "无固定时间",
+            "atmosphere": "墙面由无数骰子面组成"
+        }
+    ],
+    "events": [
+        {
+            "id": "e112",
+            "name": "齿轮审判",
+            "order": 12,
+            "scene_id": "s37",
+            "details": "倒映的引擎突然启动，审判三人组当年的罪行",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "扑克牌从手中汽化",
+                "p2": "手术刀开始逆向生长",
+                "p3": "机械臂浮现审判铭文"
+            },
+            "consequences": [
+                "引擎吐出1999年的航海日志"
+            ]
+        },
+        {
+            "id": "e113",
+            "name": "记忆赌博",
+            "order": 13,
+            "scene_id": "s38",
+            "details": "林修用自己的记忆作为赌注与时空对赌",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "首次体验真正恐惧"
+            },
+            "consequences": [
+                "走廊的骰子面开始播放他的记忆片段"
+            ]
+        },
+        {
+            "id": "e114",
+            "name": "机械忏悔",
+            "order": 14,
+            "scene_id": "s37",
+            "details": "陈小刀的机械臂自动拆解成十字架形态",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "电路神经体验宗教顿悟"
+            },
+            "consequences": [
+                "十字架中心出现逃生舱钥匙"
+            ]
+        },
+        {
+            "id": "e115",
+            "name": "量子缝合",
+            "order": 15,
+            "scene_id": "s38",
+            "details": "苏明月用概率走廊的骰子缝合时空裂缝",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "每缝合一次就失去一段记忆"
+            },
+            "consequences": [
+                "骰子点数显示剩余逃生时间"
+            ]
+        },
+        {
+            "id": "e116",
+            "name": "终局镜像",
+            "order": 16,
+            "scene_id": "s37",
+            "details": "三人同时触摸镜像引擎，引发时间坍缩",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "看到自己所有赌局结局",
+                "p2": "强迫症达到量子级精确",
+                "p3": "机械与血肉完全融合"
+            },
+            "consequences": [
+                "引擎室显现出唯一的逃生路线"
+            ]
+        }
+    ]
+}

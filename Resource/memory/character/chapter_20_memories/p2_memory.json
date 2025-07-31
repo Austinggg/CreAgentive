@@ -1,0 +1,152 @@
+{
+  "chapter": 20,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 20,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 20,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 20,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e102",
+      "event_name": "侍者舞步",
+      "event_order": 2,
+      "details": "端着空托盘跳华尔兹触发地板压力传感器",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "强迫性计数舞步",
+      "consequences": [
+        "激活隐藏的时间校对装置"
+      ]
+    },
+    {
+      "event_id": "e102",
+      "event_name": "侍者舞步",
+      "event_order": 2,
+      "details": "端着空托盘跳华尔兹触发地板压力传感器",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "强迫性计数舞步",
+      "consequences": [
+        "激活隐藏的时间校对装置"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "餐叉天线",
+      "event_order": 4,
+      "details": "将镀银餐具改装成量子通讯阵列",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "截获20年前船长最后通讯"
+      ]
+    },
+    {
+      "event_id": "e105",
+      "event_name": "领带绞索",
+      "event_order": 5,
+      "details": "用制服领带测量通风管道时空曲率",
+      "scene_id": "s38",
+      "scene_name": "制服更衣间",
+      "scene_place": "员工舱段的金属衣柜迷宫",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "发现逃生通道的拓扑学漏洞"
+      ]
+    },
+    {
+      "event_id": "e105",
+      "event_name": "领带绞索",
+      "event_order": 5,
+      "details": "用制服领带测量通风管道时空曲率",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "发现逃生通道的拓扑学漏洞"
+      ]
+    }
+  ]
+}

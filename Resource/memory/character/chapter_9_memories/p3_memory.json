@@ -1,0 +1,198 @@
+{
+  "chapter": 9,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e117",
+      "event_name": "系统激活",
+      "event_order": 1,
+      "details": "陈小刀的机械臂意外触发了隐藏控制台，投影出实验计划全貌",
+      "scene_id": "s45",
+      "scene_name": "中央控制室",
+      "scene_place": "游轮最底层",
+      "emotional_impact": "机械眼首次流出生理泪水",
+      "consequences": [
+        "显示三人都是实验样本"
+      ]
+    },
+    {
+      "event_id": "e118",
+      "event_name": "记忆裂痕",
+      "event_order": 2,
+      "details": "经过镜像走廊时，陈小刀在镜中看到自己穿着实验服的样子",
+      "scene_id": "s46",
+      "scene_name": "镜像走廊",
+      "scene_place": "实验区通道",
+      "emotional_impact": "机械臂不受控制地砸向镜面",
+      "consequences": [
+        "镜面破碎后浮现加密数据"
+      ]
+    },
+    {
+      "event_id": "e119",
+      "event_name": "数据解密",
+      "event_order": 3,
+      "details": "三人合力破解控制台，发现游轮是大型实验设施",
+      "scene_id": "s45",
+      "scene_name": "中央控制室",
+      "scene_place": "游轮最底层",
+      "emotional_impact": "紫外线过敏处开始渗出蓝色液体",
+      "consequences": [
+        "解锁实验体完整档案"
+      ]
+    },
+    {
+      "event_id": "e120",
+      "event_name": "真相碎片",
+      "event_order": 4,
+      "details": "陈小刀的机械眼显示出当年实验室的全息记录",
+      "scene_id": "s45",
+      "scene_name": "中央控制室",
+      "scene_place": "游轮最底层",
+      "emotional_impact": "意识到自己是关键实验对象",
+      "consequences": []
+    },
+    {
+      "event_id": "e121",
+      "event_name": "最终选择",
+      "event_order": 5,
+      "details": "系统要求陈小刀选择继续实验或终止程序",
+      "scene_id": "s45",
+      "scene_name": "中央控制室",
+      "scene_place": "游轮最底层",
+      "emotional_impact": "陷入前所未有的挣扎",
+      "consequences": [
+        "游轮开始剧烈震动"
+      ]
+    },
+    {
+      "event_id": "e122",
+      "event_name": "机械觉醒",
+      "event_order": 6,
+      "details": "陈小刀的机械臂突然自主行动，输入终止密码",
+      "scene_id": "s45",
+      "scene_name": "中央控制室",
+      "scene_place": "游轮最底层",
+      "emotional_impact": "感受到与机械臂的真正连接",
+      "consequences": [
+        "游轮灯光瞬间熄灭"
+      ]
+    }
+  ]
+}

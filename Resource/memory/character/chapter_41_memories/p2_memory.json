@@ -1,0 +1,262 @@
+{
+  "chapter": 41,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 41,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 41,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 41,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 41,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 41,
+      "name": "林修",
+      "intensity": 150,
+      "character_id": "p1",
+      "type": "量子观测→债务重构"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 45,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 18,
+      "character_id": "p3",
+      "type": "机械共生→意识上传"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "神经漫游→意识统合"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 26,
+      "character_id": "p3",
+      "type": "生物骇入→时间校正"
+    },
+    {
+      "chapter": 41,
+      "name": "陈小刀",
+      "intensity": 100,
+      "character_id": "p3",
+      "type": "基因链接→叙事锚定"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e1",
+      "event_name": "骰子创世",
+      "event_order": 1,
+      "details": "林修掷出的骰子同时显示所有点数，引发微观宇宙大爆炸",
+      "scene_id": "s1",
+      "scene_name": "源初赌厅",
+      "scene_place": "由破碎的克莱因瓶碎片组成的量子赌场",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "赌桌浮现多重宇宙概率云",
+        "债务数字开始逆向增长"
+      ]
+    },
+    {
+      "event_id": "e2",
+      "event_name": "制服蜕变",
+      "event_order": 2,
+      "details": "陈小刀的侍应生制服融化成液态金属，展示出所有平行时空的服务记录",
+      "scene_id": "s2",
+      "scene_name": "机械忏悔室",
+      "scene_place": "陈小刀机械臂内部展开的纳米级哥特教堂",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "银质托盘开始自动书写相对论方程",
+        "紫外线过敏转化为量子观测能力"
+      ]
+    },
+    {
+      "event_id": "e3",
+      "event_name": "虹膜手术",
+      "event_order": 3,
+      "details": "苏明月用冰镐为林修植入第12种虹膜色素，打开额外维度视野",
+      "scene_id": "s1",
+      "scene_name": "源初赌厅",
+      "scene_place": "由破碎的克莱因瓶碎片组成的量子赌场",
+      "emotional_impact": "外科医生兼量子观测者的双重满足",
+      "consequences": [
+        "赌场灯光开始显示引力波频谱",
+        "骰子呈现超对称粒子特性"
+      ]
+    },
+    {
+      "event_id": "e3",
+      "event_name": "虹膜手术",
+      "event_order": 3,
+      "details": "苏明月用冰镐为林修植入第12种虹膜色素，打开额外维度视野",
+      "scene_id": "s1",
+      "scene_name": "源初赌厅",
+      "scene_place": "由破碎的克莱因瓶碎片组成的量子赌场",
+      "emotional_impact": "外科医生兼量子观测者的双重满足",
+      "consequences": [
+        "赌场灯光开始显示引力波频谱",
+        "骰子呈现超对称粒子特性"
+      ]
+    },
+    {
+      "event_id": "e4",
+      "event_name": "终极服务",
+      "event_order": 4,
+      "details": "陈小刀同时为38个平行时空的客人送上包含大统一理论的鸡尾酒",
+      "scene_id": "s2",
+      "scene_name": "机械忏悔室",
+      "scene_place": "陈小刀机械臂内部展开的纳米级哥特教堂",
+      "emotional_impact": "发现酒精的量子治疗属性",
+      "consequences": [
+        "所有酒杯自行演奏贝多芬第9交响曲",
+        "柠檬切片呈现分形几何"
+      ]
+    },
+    {
+      "event_id": "e4",
+      "event_name": "终极服务",
+      "event_order": 4,
+      "details": "陈小刀同时为38个平行时空的客人送上包含大统一理论的鸡尾酒",
+      "scene_id": "s2",
+      "scene_name": "机械忏悔室",
+      "scene_place": "陈小刀机械臂内部展开的纳米级哥特教堂",
+      "emotional_impact": "发现酒精的量子治疗属性",
+      "consequences": [
+        "所有酒杯自行演奏贝多芬第9交响曲",
+        "柠檬切片呈现分形几何"
+      ]
+    },
+    {
+      "event_id": "e5",
+      "event_name": "债务奇点",
+      "event_order": 5,
+      "details": "当林修的赌债计数器归零时，所有筹码凝聚成微型黑洞",
+      "scene_id": "s1",
+      "scene_name": "源初赌厅",
+      "scene_place": "由破碎的克莱因瓶碎片组成的量子赌场",
+      "emotional_impact": "数学洁癖得到终极满足",
+      "consequences": [
+        "幽灵船开始量子蒸发",
+        "三人视网膜上浮现源初代码"
+      ]
+    },
+    {
+      "event_id": "e5",
+      "event_name": "债务奇点",
+      "event_order": 5,
+      "details": "当林修的赌债计数器归零时，所有筹码凝聚成微型黑洞",
+      "scene_id": "s1",
+      "scene_name": "源初赌厅",
+      "scene_place": "由破碎的克莱因瓶碎片组成的量子赌场",
+      "emotional_impact": "数学洁癖得到终极满足",
+      "consequences": [
+        "幽灵船开始量子蒸发",
+        "三人视网膜上浮现源初代码"
+      ]
+    },
+    {
+      "event_id": "e5",
+      "event_name": "债务奇点",
+      "event_order": 5,
+      "details": "当林修的赌债计数器归零时，所有筹码凝聚成微型黑洞",
+      "scene_id": "s1",
+      "scene_name": "源初赌厅",
+      "scene_place": "由破碎的克莱因瓶碎片组成的量子赌场",
+      "emotional_impact": "数学洁癖得到终极满足",
+      "consequences": [
+        "幽灵船开始量子蒸发",
+        "三人视网膜上浮现源初代码"
+      ]
+    }
+  ]
+}

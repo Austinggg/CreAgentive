@@ -1,0 +1,294 @@
+{
+  "chapter": 6,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 6,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 6,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 6,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 6,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 6,
+      "name": "林修",
+      "intensity": 150,
+      "character_id": "p1",
+      "type": "量子观测→债务重构"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 45,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 18,
+      "character_id": "p3",
+      "type": "机械共生→意识上传"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "神经漫游→意识统合"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 26,
+      "character_id": "p3",
+      "type": "生物骇入→时间校正"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 100,
+      "character_id": "p3",
+      "type": "基因链接→叙事锚定"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 600,
+      "character_id": "p3",
+      "type": "基因统合→量子污染"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 90,
+      "character_id": "p3",
+      "type": "基因锁链"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 60,
+      "character_id": "p3",
+      "type": "神经链接→痛觉共享"
+    },
+    {
+      "chapter": 6,
+      "name": "陈小刀",
+      "intensity": 150,
+      "character_id": "p3",
+      "type": "基因链接→量子观测"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e68",
+      "event_name": "血珠密码",
+      "event_order": 1,
+      "details": "苏明月用试管收集重组血珠，发现构成DNA双螺旋结构的三维密码",
+      "scene_id": "s27",
+      "scene_name": "量子手术台",
+      "scene_place": "悬浮在反应堆上方的金属平台",
+      "emotional_impact": "强迫症式记录所有变异模式",
+      "consequences": [
+        "验证三人基因序列互补"
+      ]
+    },
+    {
+      "event_id": "e70",
+      "event_name": "圣痕显露",
+      "event_order": 1,
+      "details": "陈小刀擦拭餐具时，金属勺面突然映出三人被钉在齿轮十字架上的影像",
+      "scene_id": "s27",
+      "scene_name": "量子手术台",
+      "scene_place": "悬浮在反应堆上方的金属平台",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "解锁量子手术台坐标"
+      ]
+    },
+    {
+      "event_id": "e92",
+      "event_name": "阶梯闪回",
+      "event_order": 2,
+      "details": "苏明月脚下突然出现第47级台阶，触碰后浮现当年手术室全息影像",
+      "scene_id": "s32",
+      "scene_name": "记忆螺旋",
+      "scene_place": "通往下层甲板的楼梯间",
+      "emotional_impact": "无菌手套无端渗出血迹",
+      "consequences": [
+        "确认主刀医生就是未来的自己"
+      ]
+    },
+    {
+      "event_id": "e96",
+      "event_name": "螺旋悖论",
+      "event_order": 6,
+      "details": "三人同时触碰楼梯扶手时，各自的倒影开始走向不同年份",
+      "scene_id": "s32",
+      "scene_name": "记忆螺旋",
+      "scene_place": "通往下层甲板的楼梯间",
+      "emotional_impact": "手术刀浮现锈迹",
+      "consequences": [
+        "时间线出现可见的分裂迹象"
+      ]
+    },
+    {
+      "event_id": "e72",
+      "event_name": "神经嫁接",
+      "event_order": 72,
+      "details": "苏明月将陈小刀的机械神经元接入自己的疼痛感知系统",
+      "scene_id": "s27",
+      "scene_name": "量子手术台",
+      "scene_place": "悬浮在反应堆上方的金属平台",
+      "emotional_impact": "认知颠覆",
+      "consequences": [
+        "两人记忆开始量子纠缠"
+      ]
+    },
+    {
+      "event_id": "e72",
+      "event_name": "神经嫁接",
+      "event_order": 72,
+      "details": "苏明月将陈小刀的机械神经元接入自己的疼痛感知系统",
+      "scene_id": "s27",
+      "scene_name": "量子手术台",
+      "scene_place": "悬浮在反应堆上方的金属平台",
+      "emotional_impact": "认知颠覆",
+      "consequences": [
+        "两人记忆开始量子纠缠"
+      ]
+    },
+    {
+      "event_id": "e73",
+      "event_name": "概率解构",
+      "event_order": 73,
+      "details": "林修同时与所有时间线的自己对赌",
+      "scene_id": "s27",
+      "scene_name": "量子手术台",
+      "scene_place": "悬浮在反应堆上方的金属平台",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "赌桌开始吞噬现实维度"
+      ]
+    },
+    {
+      "event_id": "e73",
+      "event_name": "概率解构",
+      "event_order": 73,
+      "details": "林修同时与所有时间线的自己对赌",
+      "scene_id": "s28",
+      "scene_name": "镜廊",
+      "scene_place": "上层娱乐区",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "赌桌开始吞噬现实维度"
+      ]
+    },
+    {
+      "event_id": "e73",
+      "event_name": "概率解构",
+      "event_order": 73,
+      "details": "林修同时与所有时间线的自己对赌",
+      "scene_id": "s27",
+      "scene_name": "量子手术台",
+      "scene_place": "悬浮在反应堆上方的金属平台",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "赌桌开始吞噬现实维度"
+      ]
+    },
+    {
+      "event_id": "e73",
+      "event_name": "概率解构",
+      "event_order": 73,
+      "details": "林修同时与所有时间线的自己对赌",
+      "scene_id": "s28",
+      "scene_name": "镜廊",
+      "scene_place": "上层娱乐区",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "赌桌开始吞噬现实维度"
+      ]
+    }
+  ]
+}

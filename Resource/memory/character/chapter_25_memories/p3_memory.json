@@ -1,0 +1,333 @@
+{
+  "chapter": 25,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 6,
+      "character_id": "p1",
+      "type": "机械抗拒"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "服从关系→觉醒反抗"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "机械反制"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "机械共振→相位同步"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "复仇欲望→量子共生"
+    },
+    {
+      "chapter": 25,
+      "name": "林修",
+      "intensity": 18,
+      "character_id": "p1",
+      "type": "量子共生→机械叛变"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "记忆传递"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "基因牵引"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "记忆共享"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "报恩心理→使命传承"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 10,
+      "character_id": "p2",
+      "type": "时间锚点共振"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "实验连接→记忆融合"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "医疗依赖→基因链接"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "神经漫游"
+    },
+    {
+      "chapter": 25,
+      "name": "苏明月",
+      "intensity": 14,
+      "character_id": "p2",
+      "type": "基因链接→神经网络入侵"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e179",
+      "event_name": "齿轮顿悟",
+      "event_order": 74,
+      "details": "陈小刀的机械手掌结出电子法印",
+      "scene_id": "s67",
+      "scene_name": "机械禅房",
+      "scene_place": "由伺服电机组成的佛教修炼场",
+      "emotional_impact": "听见伺服电机念诵《金刚经》",
+      "consequences": [
+        "觉醒对抗林修的后门程序"
+      ]
+    },
+    {
+      "event_id": "e180",
+      "event_name": "制服涅槃",
+      "event_order": 75,
+      "details": "长袖制服自动编织成电路网",
+      "scene_id": "s67",
+      "scene_name": "机械禅房",
+      "scene_place": "由伺服电机组成的佛教修炼场",
+      "emotional_impact": "紫外线过敏症转化为量子接收能力",
+      "consequences": [
+        "获得监控全船电磁波的能力"
+      ]
+    },
+    {
+      "event_id": "e181",
+      "event_name": "侍者叛乱",
+      "event_order": 76,
+      "details": "所有自动门锁听从陈小刀指挥",
+      "scene_id": "s68",
+      "scene_name": "因果码头",
+      "scene_place": "连接着20年前沉船残骸的虚拟港口",
+      "emotional_impact": "餐刀在托盘上自发组成攻击阵列",
+      "consequences": [
+        "切断林修对游轮的控制权"
+      ]
+    },
+    {
+      "event_id": "e182",
+      "event_name": "时间锚点",
+      "event_order": 77,
+      "details": "用服务生名牌卡住时空裂缝",
+      "scene_id": "s68",
+      "scene_name": "因果码头",
+      "scene_place": "连接着20年前沉船残骸的虚拟港口",
+      "emotional_impact": "名牌上的入职日期不断往前跳跃",
+      "consequences": [
+        "定位到20年前沉船瞬间"
+      ]
+    },
+    {
+      "event_id": "e183",
+      "event_name": "卑微觉醒",
+      "event_order": 78,
+      "details": "通过擦盘子动作完成摩尔斯电码",
+      "scene_id": "s67",
+      "scene_name": "机械禅房",
+      "scene_place": "由伺服电机组成的佛教修炼场",
+      "emotional_impact": "清洁剂泡沫显示分形几何",
+      "consequences": [
+        "向其他维度发送求救信号"
+      ]
+    },
+    {
+      "event_id": "e184",
+      "event_name": "机械轮回",
+      "event_order": 79,
+      "details": "用电梯轿厢重构时间机器",
+      "scene_id": "s68",
+      "scene_name": "因果码头",
+      "scene_place": "连接着20年前沉船残骸的虚拟港口",
+      "emotional_impact": "制服纽扣变成微型时光机",
+      "consequences": [
+        "创造7分钟的时间闭环"
+      ]
+    }
+  ]
+}

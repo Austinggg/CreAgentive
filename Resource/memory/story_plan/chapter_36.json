@@ -1,0 +1,180 @@
+{
+    "chapter": 36,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械叛变→量子臣服",
+            "intensity": 50,
+            "awareness": "双向深度连接",
+            "new_detail": "陈小刀的制服纤维与林修机械臂形成量子纠缠网络"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "基因链接→生物骇入",
+            "intensity": 30,
+            "awareness": "单向深层控制",
+            "new_detail": "通过紫外线过敏体质反向入侵苏明月的神经系统"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s57",
+            "name": "虚无餐厅",
+            "place": "被撕碎的游轮宴会厅形成的亚空间",
+            "time_period": "时间涡流",
+            "atmosphere": "漂浮的餐具与碎裂的光锥"
+        },
+        {
+            "id": "s58",
+            "name": "终焉甲板",
+            "place": "游轮最上层溶解中的结构",
+            "time_period": "熵增临界点",
+            "atmosphere": "逐渐晶格化的空气与褪色的星光"
+        }
+    ],
+    "events": [
+        {
+            "id": "e140",
+            "name": "维度摆盘",
+            "order": 140,
+            "scene_id": "s57",
+            "details": "陈小刀在十七个维度同时布置最后的晚餐餐桌，每个餐具都是时空坐标",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "终极服务强迫症的满足"
+            },
+            "consequences": [
+                "形成跨越维度的引力异常点"
+            ]
+        },
+        {
+            "id": "e141",
+            "name": "机械献祭",
+            "order": 141,
+            "scene_id": "s57",
+            "details": "林修的机械臂自主分解成333块精密零件，悬浮组成拯救方程式",
+            "participants": [
+                "p1",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "失去肢体的虚无感与解放感",
+                "p3": "量子同步的刺痛"
+            },
+            "consequences": [
+                "解锁幽灵船核心控制权"
+            ]
+        },
+        {
+            "id": "e142",
+            "name": "神经漫游",
+            "order": 142,
+            "scene_id": "s58",
+            "details": "苏明月的意识通过陈小刀的神经网络入侵游轮主控系统",
+            "participants": [
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p2": "强制镇定的医疗专注",
+                "p3": "被入侵的机械快感"
+            },
+            "consequences": [
+                "获取二十年前的全部航行数据"
+            ]
+        },
+        {
+            "id": "e143",
+            "name": "悖论晚宴",
+            "order": 143,
+            "scene_id": "s58",
+            "details": "三人在时间断层中共享记忆餐点，吞食彼此的过往片段",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "赌徒尝到必输结局的滋味",
+                "p2": "医生咽下治不好的病例",
+                "p3": "侍者消化破碎的时间"
+            },
+            "consequences": [
+                "形成稳定的时间闭环"
+            ]
+        },
+        {
+            "id": "e144",
+            "name": "终极服务",
+            "order": 144,
+            "scene_id": "s58",
+            "details": "陈小刀同时呈现三种终局选择：宁静/新生/超越",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "机械心智的绝对平静"
+            },
+            "consequences": [
+                "所有维度开始坍缩为初始质点"
+            ]
+        }
+    ]
+}

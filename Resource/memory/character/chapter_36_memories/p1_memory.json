@@ -1,0 +1,182 @@
+{
+  "chapter": 36,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 36,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 36,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 36,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "契约解除/新的羁绊"
+    },
+    {
+      "chapter": 36,
+      "name": "苏明月",
+      "intensity": 15,
+      "character_id": "p2",
+      "type": "量子纠缠→细胞共生"
+    },
+    {
+      "chapter": 36,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "量子纠缠→情感共振"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 12,
+      "character_id": "p3",
+      "type": "量子同步→熵增共振"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 15,
+      "character_id": "p3",
+      "type": "量子共振→机械通灵"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 50,
+      "character_id": "p3",
+      "type": "量子契约"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "机械共振→时间锚点"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e140",
+      "event_name": "维度摆盘",
+      "event_order": 140,
+      "details": "陈小刀在十七个维度同时布置最后的晚餐餐桌，每个餐具都是时空坐标",
+      "scene_id": "s57",
+      "scene_name": "虚无餐厅",
+      "scene_place": "被撕碎的游轮宴会厅形成的亚空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "形成跨越维度的引力异常点"
+      ]
+    },
+    {
+      "event_id": "e141",
+      "event_name": "机械献祭",
+      "event_order": 141,
+      "details": "林修的机械臂自主分解成333块精密零件，悬浮组成拯救方程式",
+      "scene_id": "s57",
+      "scene_name": "虚无餐厅",
+      "scene_place": "被撕碎的游轮宴会厅形成的亚空间",
+      "emotional_impact": "失去肢体的虚无感与解放感",
+      "consequences": [
+        "解锁幽灵船核心控制权"
+      ]
+    },
+    {
+      "event_id": "e143",
+      "event_name": "悖论晚宴",
+      "event_order": 143,
+      "details": "三人在时间断层中共享记忆餐点，吞食彼此的过往片段",
+      "scene_id": "s58",
+      "scene_name": "终焉甲板",
+      "scene_place": "游轮最上层溶解中的结构",
+      "emotional_impact": "赌徒尝到必输结局的滋味",
+      "consequences": [
+        "形成稳定的时间闭环"
+      ]
+    }
+  ]
+}

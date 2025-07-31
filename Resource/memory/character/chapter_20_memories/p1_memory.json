@@ -1,0 +1,198 @@
+{
+  "chapter": 20,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 20,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 20,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 20,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e101",
+      "event_name": "纽扣阵列",
+      "event_order": 1,
+      "details": "将13枚制服纽扣排成麦克斯韦妖模型",
+      "scene_id": "s38",
+      "scene_name": "制服更衣间",
+      "scene_place": "员工舱段的金属衣柜迷宫",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "局部逆转熵增定律"
+      ]
+    },
+    {
+      "event_id": "e101",
+      "event_name": "纽扣阵列",
+      "event_order": 1,
+      "details": "将13枚制服纽扣排成麦克斯韦妖模型",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "局部逆转熵增定律"
+      ]
+    },
+    {
+      "event_id": "e103",
+      "event_name": "袖口时钟",
+      "event_order": 3,
+      "details": "用油渍在袖口绘制十六进制怀表",
+      "scene_id": "s38",
+      "scene_name": "制服更衣间",
+      "scene_place": "员工舱段的金属衣柜迷宫",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "制服开始自动记录时空褶皱"
+      ]
+    },
+    {
+      "event_id": "e103",
+      "event_name": "袖口时钟",
+      "event_order": 3,
+      "details": "用油渍在袖口绘制十六进制怀表",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "制服开始自动记录时空褶皱"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "餐叉天线",
+      "event_order": 4,
+      "details": "将镀银餐具改装成量子通讯阵列",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "被利用的警觉",
+      "consequences": [
+        "截获20年前船长最后通讯"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "餐叉天线",
+      "event_order": 4,
+      "details": "将镀银餐具改装成量子通讯阵列",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "被利用的警觉",
+      "consequences": [
+        "截获20年前船长最后通讯"
+      ]
+    },
+    {
+      "event_id": "e105",
+      "event_name": "领带绞索",
+      "event_order": 5,
+      "details": "用制服领带测量通风管道时空曲率",
+      "scene_id": "s38",
+      "scene_name": "制服更衣间",
+      "scene_place": "员工舱段的金属衣柜迷宫",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "发现逃生通道的拓扑学漏洞"
+      ]
+    },
+    {
+      "event_id": "e105",
+      "event_name": "领带绞索",
+      "event_order": 5,
+      "details": "用制服领带测量通风管道时空曲率",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "发现逃生通道的拓扑学漏洞"
+      ]
+    }
+  ]
+}

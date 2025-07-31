@@ -1,0 +1,106 @@
+{
+  "chapter": 14,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 14,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 14,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 14,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 14,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 14,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 14,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 14,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 14,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e8",
+      "event_name": "月光共振",
+      "event_order": 8,
+      "details": "当新月光芒透过舷窗照射时，陈小刀的皮肤与苏明月手术刀产生量子隧穿效应",
+      "scene_id": "s3",
+      "scene_name": "幽蓝反应炉",
+      "scene_place": "引擎室深处的密封舱",
+      "emotional_impact": "科学狂热",
+      "consequences": [
+        "两人短暂共享记忆片段"
+      ]
+    },
+    {
+      "event_id": "e9",
+      "event_name": "献祭悖论",
+      "event_order": 9,
+      "details": "幽灵船长要求复制当年仪式：必须有个体主动跳进反应炉，但三人都是克隆体不具备'原创性'",
+      "scene_id": "s4",
+      "scene_name": "船长卧舱",
+      "scene_place": "四壁贴满陈旧航海日志的舱房",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "触发克隆伦理困境"
+      ]
+    }
+  ]
+}

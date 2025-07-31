@@ -1,0 +1,133 @@
+{
+  "chapter": 16,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 16,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 16,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 16,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 16,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 16,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 16,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 16,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 16,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 16,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 16,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e41",
+      "event_name": "伤痕论证",
+      "event_order": 2,
+      "details": "三人将手术疤痕拼合，组成完整的海德拉标志",
+      "scene_id": "s17",
+      "scene_name": "量子锚点室",
+      "scene_place": "两船核心连接处",
+      "emotional_impact": "偏执狂式的验证快感",
+      "consequences": [
+        "疤痕发出生物荧光指向锚点控制器"
+      ]
+    },
+    {
+      "event_id": "e43",
+      "event_name": "疼痛桥接",
+      "event_order": 4,
+      "details": "林修故意伤害自己左手，同时陈小刀右手出现相同伤口",
+      "scene_id": "s17",
+      "scene_name": "量子锚点室",
+      "scene_place": "两船核心连接处",
+      "emotional_impact": "冷酷的实验心态",
+      "consequences": [
+        "确认量子纠缠已达分子级别"
+      ]
+    },
+    {
+      "event_id": "e45",
+      "event_name": "机械圣餐",
+      "event_order": 6,
+      "details": "三人将机械部位浸入液态量子，形成微型虫洞",
+      "scene_id": "s17",
+      "scene_name": "量子锚点室",
+      "scene_place": "两船核心连接处",
+      "emotional_impact": "近乎宗教狂热的专注",
+      "consequences": [
+        "虫洞中出现制造者的全息影像"
+      ]
+    }
+  ]
+}

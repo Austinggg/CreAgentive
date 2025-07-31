@@ -1,0 +1,184 @@
+{
+    "chapter": 8,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械飞升→时间锚定",
+            "intensity": 300,
+            "awareness": "单向压制→双向觉醒",
+            "new_detail": "陈小刀的纳米佛珠开始同步林修左手的时间跃迁频率"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "基因统合→记忆回溯",
+            "intensity": 180,
+            "awareness": "潜意识共振",
+            "new_detail": "陈小刀的机械臂浮现苏明月童年的质数运算记录"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s43",
+            "name": "量子钟摆室",
+            "place": "游轮倒置的机械核心",
+            "time_period": "ENTROPY_SUSPENDED",
+            "atmosphere": "巨大钟摆的每次摆动都引发时空涟漪"
+        },
+        {
+            "id": "s44",
+            "name": "全息档案库",
+            "place": "游轮虚影中的资料室",
+            "time_period": "NON_LOCAL",
+            "atmosphere": "文件柜里的实验报告在不断重写"
+        }
+    ],
+    "events": [
+        {
+            "id": "e127",
+            "name": "时间涟漪观测",
+            "order": 27,
+            "scene_id": "s43",
+            "details": "陈小刀用机械臂调整量子钟摆，显示20年前实验影像",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "机械神经元首次感受到恐惧"
+            },
+            "consequences": [
+                "钟摆表面浮现'7D'标记"
+            ]
+        },
+        {
+            "id": "e128",
+            "name": "档案解密",
+            "order": 28,
+            "scene_id": "s44",
+            "details": "三人发现1999年12月31日的实验日志：『启动第七维度跃迁』",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "左手开始不受控制地颤抖",
+                "p2": "质数计算速度达到每秒100个",
+                "p3": "纳米佛珠组成实验舱模型"
+            },
+            "consequences": [
+                "确认游轮是跃迁失败的量子泡沫"
+            ]
+        },
+        {
+            "id": "e129",
+            "name": "血脉共振",
+            "order": 29,
+            "scene_id": "s43",
+            "details": "三人DNA同时与钟摆共振，揭示都是实验员的克隆体",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "面部出现短暂数据流",
+                "p2": "白发开始逆向生长",
+                "p3": "佛珠显示克隆编号"
+            },
+            "consequences": [
+                "钟摆停滞在最关键的时间点"
+            ]
+        },
+        {
+            "id": "e130",
+            "name": "机械顿悟",
+            "order": 30,
+            "scene_id": "s44",
+            "details": "陈小刀意识到自己的机械部件是原始实验舱残骸",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "首次体验到完整的自我认知"
+            },
+            "consequences": [
+                "档案库所有资料同步更新"
+            ]
+        },
+        {
+            "id": "e131",
+            "name": "终极选择",
+            "order": 31,
+            "scene_id": "s43",
+            "details": "钟摆给出选择：重置时间线或保留量子记忆",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "左手凝聚出时间晶体",
+                "p2": "白发变成全息投影",
+                "p3": "佛珠组成抉择方程"
+            },
+            "consequences": [
+                "游轮开始坍缩为奇点"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,202 @@
+{
+    "chapter": 11,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p3",
+            "type": "克隆觉醒",
+            "intensity": 9,
+            "awareness": "双向确认",
+            "new_detail": "两人手臂上的实验编号组成完整公式"
+        },
+        {
+            "from_id": "p2",
+            "to_id": "p3",
+            "type": "医疗监控",
+            "intensity": 7,
+            "awareness": "单向知晓",
+            "new_detail": "苏明月发现陈小刀机械化正在反向退化"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s51",
+            "name": "记忆回廊",
+            "place": "游轮消失中的图书馆",
+            "time_period": "TWILIGHT",
+            "atmosphere": "书页飘浮构成dna螺旋"
+        },
+        {
+            "id": "s52",
+            "name": "临界甲板",
+            "place": "倾斜45度的船首",
+            "time_period": "DAWN",
+            "atmosphere": "海水违反重力向上蒸发"
+        }
+    ],
+    "events": [
+        {
+            "id": "e136",
+            "name": "疼痛同步",
+            "order": 1,
+            "scene_id": "s51",
+            "details": "林修与陈小刀同时捂住左眼，机械与血肉互相转化",
+            "participants": [
+                "p1",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "首次体验陈小刀的紫外线过敏",
+                "p3": "短暂恢复味觉尝到血腥"
+            },
+            "consequences": [
+                "验证克隆体间的量子纠缠"
+            ]
+        },
+        {
+            "id": "e137",
+            "name": "病历暴走",
+            "order": 2,
+            "scene_id": "s51",
+            "details": "苏明月的医疗PDA自动生成三份交叉病历",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "医用口罩下咬破嘴唇"
+            },
+            "consequences": [
+                "发现三个人都是不同批次的实验体"
+            ]
+        },
+        {
+            "id": "e138",
+            "name": "锚点献祭",
+            "order": 3,
+            "scene_id": "s52",
+            "details": "需要有人永久留在循环里维持时空稳定",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "扑克牌在指间化为灰烬",
+                "p2": "手术刀刺入手掌保持清醒",
+                "p3": "机械眼首次流泪"
+            },
+            "consequences": [
+                "触发深层记忆中的实验室协议"
+            ]
+        },
+        {
+            "id": "e139",
+            "name": "三角悖论",
+            "order": 4,
+            "scene_id": "s52",
+            "details": "三人站在不同颜色警报圈内形成稳定结构",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "虹膜异色达到最大差异",
+                "p2": "强迫症完美对应质数分布",
+                "p3": "机械化进度退回初始状态"
+            },
+            "consequences": [
+                "游轮开始分维度解体"
+            ]
+        },
+        {
+            "id": "e140",
+            "name": "晨光刻印",
+            "order": 5,
+            "scene_id": "s52",
+            "details": "第一缕阳光照射三人投射出实验编号全息图",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "用义肢遮挡面部编号",
+                "p2": "撕碎病历却又拼回",
+                "p3": "人类瞳孔暂时取代机械眼"
+            },
+            "consequences": [
+                "证实20年前实验从未停止"
+            ]
+        },
+        {
+            "id": "e141",
+            "name": "观测坠落",
+            "order": 6,
+            "scene_id": "s52",
+            "details": "在完全消失前拍下最后一张多重曝光照片",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "发现镜头里还有第四个模糊人影"
+            },
+            "consequences": [
+                "相片将在现实世界逐渐显影"
+            ]
+        }
+    ]
+}

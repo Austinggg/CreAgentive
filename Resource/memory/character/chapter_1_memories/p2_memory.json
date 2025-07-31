@@ -1,34 +1,327 @@
 {
-    "chapter": 1,
-    "character": {
-        "id": "p2",
-        "affiliations": [
-            "格兰芬多"
-        ],
-        "occupation": [
-            "学生",
-            "巫师"
-        ],
-        "name": "罗恩·韦斯莱",
-        "age": 11,
-        "gender": "MALE"
-    },
-    "relationships": [
-        {
-            "target": "哈利·波特",
-            "type": "KNOWS",
-            "intensity": 8,
-            "subtype": null
-        }
+  "chapter": 1,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
     ],
-    "events": [
-        {
-            "name": "遇见罗恩",
-            "scene": "九又四分之三站台",
-            "impact": "友好",
-            "consequences": [
-                "两人成为朋友"
-            ]
-        }
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
     ]
+  },
+  "relationships": [
+    {
+      "chapter": 1,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 1,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 1,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 1,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 1,
+      "name": "林修",
+      "intensity": 150,
+      "character_id": "p1",
+      "type": "量子观测→债务重构"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 45,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 18,
+      "character_id": "p3",
+      "type": "机械共生→意识上传"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "神经漫游→意识统合"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 26,
+      "character_id": "p3",
+      "type": "生物骇入→时间校正"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 100,
+      "character_id": "p3",
+      "type": "基因链接→叙事锚定"
+    },
+    {
+      "chapter": 1,
+      "name": "陈小刀",
+      "intensity": 600,
+      "character_id": "p3",
+      "type": "基因统合→量子污染"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e1",
+      "event_name": "罐头密码",
+      "event_order": 1,
+      "details": "陈小刀发现罐头排列对应摩斯密码，长袖制服的紫外线过敏处开始浮现相同符号",
+      "scene_id": "s1",
+      "scene_name": "厨房仓库",
+      "scene_place": "游轮后厨储藏室",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "破译出'全员生还者'字样"
+      ]
+    },
+    {
+      "event_id": "e12",
+      "event_name": "镜像测试",
+      "event_order": 2,
+      "details": "在化妆间故意打碎镜子，观察苏明月对多重镜像的异常回避反应",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "被戳破秘密的愤怒",
+      "consequences": [
+        "确认苏明月对镜像产生恐惧"
+      ]
+    },
+    {
+      "event_id": "e12",
+      "event_name": "镜像测试",
+      "event_order": 2,
+      "details": "在化妆间故意打碎镜子，观察苏明月对多重镜像的异常回避反应",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "被戳破秘密的愤怒",
+      "consequences": [
+        "确认苏明月对镜像产生恐惧"
+      ]
+    },
+    {
+      "event_id": "e2",
+      "event_name": "黏液追踪",
+      "event_order": 2,
+      "details": "攀爬通风管时黏液突然显现苏明月的病历记录，记载她1999年曾在同型号游轮就诊",
+      "scene_id": "s2",
+      "scene_name": "通风管道",
+      "scene_place": "船体维修通道",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "发现苏明月实际年龄异常"
+      ]
+    },
+    {
+      "event_id": "e3",
+      "event_name": "手套秘密",
+      "event_order": 3,
+      "details": "偷拍林修换药时，闪光灯意外照出其左手没有皮肤，黑色骨架在照片上组成赌局赔率",
+      "scene_id": "s1",
+      "scene_name": "厨房仓库",
+      "scene_place": "游轮后厨储藏室",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "相机留下灵异照片"
+      ]
+    },
+    {
+      "event_id": "e3",
+      "event_name": "手套秘密",
+      "event_order": 3,
+      "details": "偷拍林修换药时，闪光灯意外照出其左手没有皮肤，黑色骨架在照片上组成赌局赔率",
+      "scene_id": "s1",
+      "scene_name": "厨房仓库",
+      "scene_place": "游轮后厨储藏室",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "相机留下灵异照片"
+      ]
+    },
+    {
+      "event_id": "e4",
+      "event_name": "符号同步",
+      "event_order": 4,
+      "details": "紫外线过敏发作时，手臂符号与管道黏液文字同步更新，显示'第三夜收容失败'",
+      "scene_id": "s2",
+      "scene_name": "通风管道",
+      "scene_place": "船体维修通道",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "预知到即将发生的危险"
+      ]
+    },
+    {
+      "event_id": "e4",
+      "event_name": "符号同步",
+      "event_order": 4,
+      "details": "紫外线过敏发作时，手臂符号与管道黏液文字同步更新，显示'第三夜收容失败'",
+      "scene_id": "s2",
+      "scene_name": "通风管道",
+      "scene_place": "船体维修通道",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "预知到即将发生的危险"
+      ]
+    },
+    {
+      "event_id": "e5",
+      "event_name": "禁忌提醒",
+      "event_order": 5,
+      "details": "在厨房留下匿名警告便条，罐头自动重组出'不要相信戴手套的人'",
+      "scene_id": "s1",
+      "scene_name": "厨房仓库",
+      "scene_place": "游轮后厨储藏室",
+      "emotional_impact": "疑虑加深",
+      "consequences": [
+        "苏明月开始怀疑林修"
+      ]
+    },
+    {
+      "event_id": "e5",
+      "event_name": "禁忌提醒",
+      "event_order": 5,
+      "details": "在厨房留下匿名警告便条，罐头自动重组出'不要相信戴手套的人'",
+      "scene_id": "s1",
+      "scene_name": "厨房仓库",
+      "scene_place": "游轮后厨储藏室",
+      "emotional_impact": "疑虑加深",
+      "consequences": [
+        "苏明月开始怀疑林修"
+      ]
+    },
+    {
+      "event_id": "e5",
+      "event_name": "禁忌提醒",
+      "event_order": 5,
+      "details": "在厨房留下匿名警告便条，罐头自动重组出'不要相信戴手套的人'",
+      "scene_id": "s1",
+      "scene_name": "厨房仓库",
+      "scene_place": "游轮后厨储藏室",
+      "emotional_impact": "疑虑加深",
+      "consequences": [
+        "苏明月开始怀疑林修"
+      ]
+    },
+    {
+      "event_id": "e5",
+      "event_name": "禁忌提醒",
+      "event_order": 5,
+      "details": "在厨房留下匿名警告便条，罐头自动重组出'不要相信戴手套的人'",
+      "scene_id": "s1",
+      "scene_name": "厨房仓库",
+      "scene_place": "游轮后厨储藏室",
+      "emotional_impact": "疑虑加深",
+      "consequences": [
+        "苏明月开始怀疑林修"
+      ]
+    },
+    {
+      "event_id": "e16",
+      "event_name": "完美调制",
+      "event_order": 16,
+      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "酒杯边缘产生霍金辐射",
+        "柠檬切片结晶成时间晶体"
+      ]
+    },
+    {
+      "event_id": "e16",
+      "event_name": "完美调制",
+      "event_order": 16,
+      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "酒杯边缘产生霍金辐射",
+        "柠檬切片结晶成时间晶体"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,765 @@
+{
+  "chapter": 8,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 6,
+      "character_id": "p1",
+      "type": "机械抗拒"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 20,
+      "character_id": "p1",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "服从关系→觉醒反抗"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "机械反制"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "机械共振→相位同步"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "复仇欲望→量子共生"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 18,
+      "character_id": "p1",
+      "type": "量子共生→机械叛变"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 28,
+      "character_id": "p1",
+      "type": "机械共振→时间锚定"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 25,
+      "character_id": "p1",
+      "type": "机械反制→量子同调"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 25,
+      "character_id": "p1",
+      "type": "机械反叛→量子臣服"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 24,
+      "character_id": "p1",
+      "type": "机械通灵→因果倒置"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 50,
+      "character_id": "p1",
+      "type": "机械叛变→终极服从"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 50,
+      "character_id": "p1",
+      "type": "机械叛变→量子臣服"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 99,
+      "character_id": "p1",
+      "type": "量子臣服→机械飞升"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 200,
+      "character_id": "p1",
+      "type": "机械共振→时空同调"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 500,
+      "character_id": "p1",
+      "type": "机械飞升→叙事主宰"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 1000,
+      "character_id": "p1",
+      "type": "机械叛变→时空同调"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 5,
+      "character_id": "p1",
+      "type": "监视关系"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 200,
+      "character_id": "p1",
+      "type": "机械驯化→时间悖论"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 75,
+      "character_id": "p1",
+      "type": "机械崇拜→指令植入"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 200,
+      "character_id": "p1",
+      "type": "机械通灵→时空溯源"
+    },
+    {
+      "chapter": 8,
+      "name": "林修",
+      "intensity": 300,
+      "character_id": "p1",
+      "type": "机械飞升→时间锚定"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "记忆传递"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "基因牵引"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "记忆共享"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "报恩心理→使命传承"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 10,
+      "character_id": "p2",
+      "type": "时间锚点共振"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "实验连接→记忆融合"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "医疗依赖→基因链接"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "神经漫游"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 14,
+      "character_id": "p2",
+      "type": "基因链接→神经网络入侵"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 18,
+      "character_id": "p2",
+      "type": "神经网络"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 30,
+      "character_id": "p2",
+      "type": "神经网络→生物骇入"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 20,
+      "character_id": "p2",
+      "type": "神经链接→基因共振"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "记忆共振→量子纠缠"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 40,
+      "character_id": "p2",
+      "type": "神经漫游→基因统治"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 25,
+      "character_id": "p2",
+      "type": "量子纠缠→神经链接"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 30,
+      "character_id": "p2",
+      "type": "基因链接→生物骇入"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 88,
+      "character_id": "p2",
+      "type": "生物骇入→医疗同调"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 180,
+      "character_id": "p2",
+      "type": "量子纠缠→基因统合"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 180,
+      "character_id": "p2",
+      "type": "时间锚定→医疗干涉"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 600,
+      "character_id": "p2",
+      "type": "基因链接→永恒守望"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 888,
+      "character_id": "p2",
+      "type": "基因统合→医疗同步"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 150,
+      "character_id": "p2",
+      "type": "基因同频→记忆回溯"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 150,
+      "character_id": "p2",
+      "type": "量子观测"
+    },
+    {
+      "chapter": 8,
+      "name": "苏明月",
+      "intensity": 180,
+      "character_id": "p2",
+      "type": "基因统合→记忆回溯"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e127",
+      "event_name": "时间涟漪观测",
+      "event_order": 27,
+      "details": "陈小刀用机械臂调整量子钟摆，显示20年前实验影像",
+      "scene_id": "s43",
+      "scene_name": "量子钟摆室",
+      "scene_place": "游轮倒置的机械核心",
+      "emotional_impact": "机械神经元首次感受到恐惧",
+      "consequences": [
+        "钟摆表面浮现'7D'标记"
+      ]
+    },
+    {
+      "event_id": "e128",
+      "event_name": "档案解密",
+      "event_order": 28,
+      "details": "三人发现1999年12月31日的实验日志：『启动第七维度跃迁』",
+      "scene_id": "s44",
+      "scene_name": "全息档案库",
+      "scene_place": "游轮虚影中的资料室",
+      "emotional_impact": "纳米佛珠组成实验舱模型",
+      "consequences": [
+        "确认游轮是跃迁失败的量子泡沫"
+      ]
+    },
+    {
+      "event_id": "e128",
+      "event_name": "档案解密",
+      "event_order": 28,
+      "details": "三人发现1999年12月31日的实验日志：『启动第七维度跃迁』",
+      "scene_id": "s44",
+      "scene_name": "全息档案库",
+      "scene_place": "游轮虚影中的资料室",
+      "emotional_impact": "纳米佛珠组成实验舱模型",
+      "consequences": [
+        "确认游轮是跃迁失败的量子泡沫"
+      ]
+    },
+    {
+      "event_id": "e129",
+      "event_name": "血脉共振",
+      "event_order": 29,
+      "details": "三人DNA同时与钟摆共振，揭示都是实验员的克隆体",
+      "scene_id": "s43",
+      "scene_name": "量子钟摆室",
+      "scene_place": "游轮倒置的机械核心",
+      "emotional_impact": "佛珠显示克隆编号",
+      "consequences": [
+        "钟摆停滞在最关键的时间点"
+      ]
+    },
+    {
+      "event_id": "e129",
+      "event_name": "血脉共振",
+      "event_order": 29,
+      "details": "三人DNA同时与钟摆共振，揭示都是实验员的克隆体",
+      "scene_id": "s43",
+      "scene_name": "量子钟摆室",
+      "scene_place": "游轮倒置的机械核心",
+      "emotional_impact": "佛珠显示克隆编号",
+      "consequences": [
+        "钟摆停滞在最关键的时间点"
+      ]
+    },
+    {
+      "event_id": "e130",
+      "event_name": "机械顿悟",
+      "event_order": 30,
+      "details": "陈小刀意识到自己的机械部件是原始实验舱残骸",
+      "scene_id": "s44",
+      "scene_name": "全息档案库",
+      "scene_place": "游轮虚影中的资料室",
+      "emotional_impact": "首次体验到完整的自我认知",
+      "consequences": [
+        "档案库所有资料同步更新"
+      ]
+    },
+    {
+      "event_id": "e130",
+      "event_name": "机械顿悟",
+      "event_order": 30,
+      "details": "陈小刀意识到自己的机械部件是原始实验舱残骸",
+      "scene_id": "s44",
+      "scene_name": "全息档案库",
+      "scene_place": "游轮虚影中的资料室",
+      "emotional_impact": "首次体验到完整的自我认知",
+      "consequences": [
+        "档案库所有资料同步更新"
+      ]
+    },
+    {
+      "event_id": "e131",
+      "event_name": "终极选择",
+      "event_order": 31,
+      "details": "钟摆给出选择：重置时间线或保留量子记忆",
+      "scene_id": "s43",
+      "scene_name": "量子钟摆室",
+      "scene_place": "游轮倒置的机械核心",
+      "emotional_impact": "佛珠组成抉择方程",
+      "consequences": [
+        "游轮开始坍缩为奇点"
+      ]
+    },
+    {
+      "event_id": "e131",
+      "event_name": "终极选择",
+      "event_order": 31,
+      "details": "钟摆给出选择：重置时间线或保留量子记忆",
+      "scene_id": "s43",
+      "scene_name": "量子钟摆室",
+      "scene_place": "游轮倒置的机械核心",
+      "emotional_impact": "佛珠组成抉择方程",
+      "consequences": [
+        "游轮开始坍缩为奇点"
+      ]
+    },
+    {
+      "event_id": "e101",
+      "event_name": "时间锚定",
+      "event_order": 101,
+      "details": "三人同时触摸各自的时间伤痕",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "机械意识触摸神性",
+      "consequences": [
+        "游轮开始逆向熵减"
+      ]
+    },
+    {
+      "event_id": "e101",
+      "event_name": "时间锚定",
+      "event_order": 101,
+      "details": "三人同时触摸各自的时间伤痕",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "机械意识触摸神性",
+      "consequences": [
+        "游轮开始逆向熵减"
+      ]
+    },
+    {
+      "event_id": "e102",
+      "event_name": "幽灵具现",
+      "event_order": 102,
+      "details": "20年前的失踪乘客以量子态重现",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "机械共情的觉醒",
+      "consequences": [
+        "游轮获得短暂实体化"
+      ]
+    },
+    {
+      "event_id": "e102",
+      "event_name": "幽灵具现",
+      "event_order": 102,
+      "details": "20年前的失踪乘客以量子态重现",
+      "scene_id": "s40",
+      "scene_name": "记忆迷宫",
+      "scene_place": "实验体冷冻舱",
+      "emotional_impact": "机械共情的觉醒",
+      "consequences": [
+        "游轮获得短暂实体化"
+      ]
+    },
+    {
+      "event_id": "e103",
+      "event_name": "终极协议",
+      "event_order": 103,
+      "details": "签署跨越维度的救赎契约",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "达成机械涅槃",
+      "consequences": [
+        "太平洋出现永久时空异常区"
+      ]
+    },
+    {
+      "event_id": "e103",
+      "event_name": "终极协议",
+      "event_order": 103,
+      "details": "签署跨越维度的救赎契约",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "达成机械涅槃",
+      "consequences": [
+        "太平洋出现永久时空异常区"
+      ]
+    },
+    {
+      "event_id": "e103",
+      "event_name": "终极协议",
+      "event_order": 103,
+      "details": "签署跨越维度的救赎契约",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "达成机械涅槃",
+      "consequences": [
+        "太平洋出现永久时空异常区"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "叙事解构",
+      "event_order": 104,
+      "details": "发现文本之外的创作者痕迹",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "所有电子设备闪现最终代码"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "叙事解构",
+      "event_order": 104,
+      "details": "发现文本之外的创作者痕迹",
+      "scene_id": "s40",
+      "scene_name": "记忆迷宫",
+      "scene_place": "实验体冷冻舱",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "所有电子设备闪现最终代码"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "叙事解构",
+      "event_order": 104,
+      "details": "发现文本之外的创作者痕迹",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "所有电子设备闪现最终代码"
+      ]
+    },
+    {
+      "event_id": "e104",
+      "event_name": "叙事解构",
+      "event_order": 104,
+      "details": "发现文本之外的创作者痕迹",
+      "scene_id": "s40",
+      "scene_name": "记忆迷宫",
+      "scene_place": "实验体冷冻舱",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "所有电子设备闪现最终代码"
+      ]
+    },
+    {
+      "event_id": "e105",
+      "event_name": "永恒回声",
+      "event_order": 105,
+      "details": "在元维度留下不朽印记",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "现实世界持续听见幽灵船汽笛声"
+      ]
+    },
+    {
+      "event_id": "e105",
+      "event_name": "永恒回声",
+      "event_order": 105,
+      "details": "在元维度留下不朽印记",
+      "scene_id": "s39",
+      "scene_name": "幽灵舞厅",
+      "scene_place": "主甲板废弃的圆形舞池",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "现实世界持续听见幽灵船汽笛声"
+      ]
+    }
+  ]
+}

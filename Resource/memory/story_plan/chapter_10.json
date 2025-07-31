@@ -1,0 +1,179 @@
+{
+    "chapter": 10,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械共鸣",
+            "intensity": 9,
+            "awareness": "单向认知",
+            "new_detail": "发现林修的机械义肢与自己的芯片同源"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "实验连接",
+            "intensity": 7,
+            "awareness": "双向确认",
+            "new_detail": "意识到苏明月的医疗ID与实验编号吻合"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s46",
+            "name": "轮机核心",
+            "place": "游轮底舱第七层",
+            "time_period": "NIGHT",
+            "atmosphere": "布满血管状管道的球形空间，中控台漂浮着棱形晶体"
+        },
+        {
+            "id": "s47",
+            "name": "逃生通道",
+            "place": "通风井与紧急楼梯",
+            "time_period": "NIGHT",
+            "atmosphere": "被红色应急灯照亮的狭长通道，墙壁渗出蓝色黏液"
+        }
+    ],
+    "events": [
+        {
+            "id": "e120",
+            "name": "芯片共鸣",
+            "order": 1,
+            "scene_id": "s46",
+            "details": "陈小刀的机械眼突然投影出轮机舱结构图，与林修的义肢产生电流共振",
+            "participants": [
+                "p1",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "义肢不受控制地指向特定方位",
+                "p3": "机械瞳孔第一次完全扩张"
+            },
+            "consequences": [
+                "锁定核心位于游轮质量中心"
+            ]
+        },
+        {
+            "id": "e121",
+            "name": "血统认证",
+            "order": 2,
+            "scene_id": "s46",
+            "details": "苏明月发现核心装置需要输入混合血样，三人伤口渗出的血液在空中形成DNA链投影",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p2": "强迫症发作反复核对血型数据",
+                "p3": "看到投影显示自己与林修基因组99%匹配"
+            },
+            "consequences": [
+                "核心舱启动克隆体销毁程序"
+            ]
+        },
+        {
+            "id": "e122",
+            "name": "记忆闪回",
+            "order": 3,
+            "scene_id": "s46",
+            "details": "装置激活后陈小刀突然说出二十年前的实验室密码，被紫外线灼伤的皮肤浮现条形码",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "机械与生物记忆首次完全同步"
+            },
+            "consequences": [
+                "解锁核心自毁协议"
+            ]
+        },
+        {
+            "id": "e123",
+            "name": "义肢献祭",
+            "order": 4,
+            "scene_id": "s46",
+            "details": "林修将机械义肢插入核心接口，陈小刀被迫用机械眼球确认生物认证",
+            "participants": [
+                "p1",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "切断神经连接时赌徒直觉第一次失灵",
+                "p3": "感受到机械眼与核心的量子纠缠"
+            },
+            "consequences": [
+                "游轮开始分子级解体"
+            ]
+        },
+        {
+            "id": "e124",
+            "name": "数字重生",
+            "order": 5,
+            "scene_id": "s47",
+            "details": "逃亡途中陈小刀的机械眼自动记录游轮消失过程，保存了完整的实验数据",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "意识到自己成为活的实验档案"
+            },
+            "consequences": [
+                "三人乘坐的救生艇突然出现在现代港口"
+            ]
+        }
+    ]
+}

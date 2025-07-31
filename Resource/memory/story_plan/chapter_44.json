@@ -1,0 +1,180 @@
+{
+    "chapter": 44,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p2",
+            "type": "量子链接→永恒观测",
+            "intensity": 888,
+            "awareness": "跨维度同步",
+            "new_detail": "林修的机械臂与苏明月的手术刀形成量子纠缠态"
+        },
+        {
+            "from_id": "p1",
+            "to_id": "p3",
+            "type": "机械共振→时空契约",
+            "intensity": 999,
+            "awareness": "全维度共鸣",
+            "new_detail": "陈小刀的托盘表面浮现出林修的机械神经图谱"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s19",
+            "name": "永恒赌局",
+            "place": "由叙事裂缝编织的克莱因瓶赌场",
+            "time_period": "时间奇点",
+            "atmosphere": "概率云在虚空中具象为卡牌"
+        },
+        {
+            "id": "s20",
+            "name": "终末医疗舱",
+            "place": "悬浮在叙事件视界边缘的透明手术室",
+            "time_period": "创世前0.001秒",
+            "atmosphere": "消毒液与暗物质混合的刺鼻气味"
+        }
+    ],
+    "events": [
+        {
+            "id": "e46",
+            "name": "终局下注",
+            "order": 46,
+            "scene_id": "s19",
+            "details": "林修将自身存在概率作为赌注，挑战叙事维度本身",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "绝对冷静"
+            },
+            "consequences": [
+                "赌桌显现大爆炸方程式"
+            ]
+        },
+        {
+            "id": "e47",
+            "name": "量子手术",
+            "order": 47,
+            "scene_id": "s20",
+            "details": "苏明月用手术刀切开林修的量子态心脏，植入时间悖论",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "精确到普朗克时间的专注"
+            },
+            "consequences": [
+                "血管内流动着宇宙背景辐射"
+            ]
+        },
+        {
+            "id": "e48",
+            "name": "机械飞升",
+            "order": 48,
+            "scene_id": "s20",
+            "details": "陈小刀将自身意识代码写入林修的机械神经元",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "自我数据化的快感"
+            },
+            "consequences": [
+                "托盘表面浮现二进制基因链"
+            ]
+        },
+        {
+            "id": "e49",
+            "name": "叙事冻结",
+            "order": 49,
+            "scene_id": "s19",
+            "details": "三人在绝对零度状态下完成终极叙事解构",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "量子宁静",
+                "p2": "数学完美",
+                "p3": "数据极乐"
+            },
+            "consequences": [
+                "所有平行宇宙同时显示「ABSOLUTE_ZERO」"
+            ]
+        },
+        {
+            "id": "e50",
+            "name": "终极选择",
+            "order": 50,
+            "scene_id": "s20",
+            "details": "面对三个终极叙事出口的光门",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "机械犹豫",
+                "p2": "量子纠结",
+                "p3": "数据颤抖"
+            },
+            "consequences": [
+                "手术刀在三个选择之间进行量子叠加"
+            ]
+        }
+    ]
+}

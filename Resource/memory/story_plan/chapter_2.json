@@ -1,0 +1,200 @@
+{
+    "chapter": 2,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "机械驯化→时间悖论",
+            "intensity": 200,
+            "awareness": "单向觉醒",
+            "new_detail": "陈小刀手臂上的紫外线符号与林修的机械骨骼产生时间悖论共鸣"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "基因同频→记忆回溯",
+            "intensity": 150,
+            "awareness": "双向同步",
+            "new_detail": "两人在相同坐标的淤青处浮现完全一致的航海坐标纹身"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s11",
+            "name": "量子引擎室",
+            "place": "游轮动力核心",
+            "time_period": "NIGHT",
+            "atmosphere": "悬浮在空气中的油滴组成克莱因瓶动态模型"
+        },
+        {
+            "id": "s12",
+            "name": "船长保险箱",
+            "place": "船首像内部",
+            "time_period": "DAWN",
+            "atmosphere": "青铜箱表面的海藻自动排列成墨菲定律公式"
+        }
+    ],
+    "events": [
+        {
+            "id": "e27",
+            "name": "引擎低语",
+            "order": 1,
+            "scene_id": "s11",
+            "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "宿命感"
+            },
+            "consequences": [
+                "义眼记录下引擎核心的奇异物质"
+            ]
+        },
+        {
+            "id": "e28",
+            "name": "血统验证",
+            "order": 2,
+            "scene_id": "s12",
+            "details": "保险箱只吸收苏明月的眼泪作为生物密钥，开启后出现三份盖着相同指纹的船员合同",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "自我怀疑"
+            },
+            "consequences": [
+                "合同签署日期显示三人本该死于20年前"
+            ]
+        },
+        {
+            "id": "e29",
+            "name": "悖论雕刻",
+            "order": 3,
+            "scene_id": "s11",
+            "details": "林修的机械左手失控地在引擎外壳刻写公式，证明当前游轮存在于概率小于0.001%的平行时空",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "狂躁"
+            },
+            "consequences": [
+                "公式引发局部时间倒流10秒"
+            ]
+        },
+        {
+            "id": "e30",
+            "name": "记忆共振",
+            "order": 4,
+            "scene_id": "s12",
+            "details": "三人同时触碰保险箱内的怀表，表盘倒转出各自童年记忆——但背景都是同艘游轮的不同的灾难现场",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "暴怒",
+                "p2": "崩溃",
+                "p3": "冷静"
+            },
+            "consequences": [
+                "怀表指针停止时指向今日日期"
+            ]
+        },
+        {
+            "id": "e31",
+            "name": "终极航海图",
+            "order": 5,
+            "scene_id": "s11",
+            "details": "引擎室地面渗出黑色原油，自动绘制出包含所有时间线分支的第五维度航海图",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "惊恐",
+                "p2": "绝望",
+                "p3": "释然"
+            },
+            "consequences": [
+                "航海图显示沉船是唯一逃生方式"
+            ]
+        },
+        {
+            "id": "e32",
+            "name": "量子签名",
+            "order": 6,
+            "scene_id": "s12",
+            "details": "保险箱最底层出现需要三人同步签名的时空契约，墨水瓶里的液体是1999年的海水",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "抗拒",
+                "p2": "犹豫",
+                "p3": "坚决"
+            },
+            "consequences": [
+                "签名笔由陈小刀的机械义眼部件改造而成"
+            ]
+        }
+    ]
+}

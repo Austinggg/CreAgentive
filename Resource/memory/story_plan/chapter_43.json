@@ -1,0 +1,158 @@
+{
+    "chapter": 43,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p3",
+            "type": "机械飞升→叙事寄生",
+            "intensity": 500,
+            "awareness": "跨维度侵蚀",
+            "new_detail": "林修的赌术程序开始改写陈小刀的机械臂底层代码"
+        },
+        {
+            "from_id": "p2",
+            "to_id": "p3",
+            "type": "基因统合→量子污染",
+            "intensity": 600,
+            "awareness": "生物信息战",
+            "new_detail": "苏明月的细胞记忆在陈小刀的金属关节处培育新器官"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s13",
+            "name": "叙事手术台",
+            "place": "由七个未完成故事搭建的高维手术室",
+            "time_period": "所有时间线汇聚的瞬间",
+            "atmosphere": "止血钳夹着正在坍缩的平行宇宙"
+        },
+        {
+            "id": "s14",
+            "name": "终极轮盘",
+            "place": "用42个宇宙的死亡数据铸造的赌桌",
+            "time_period": "大爆炸前的绝对真空",
+            "atmosphere": "筹码在真空中自发形成狄拉克海"
+        }
+    ],
+    "events": [
+        {
+            "id": "e32",
+            "name": "概念截肢",
+            "order": 32,
+            "scene_id": "s13",
+            "details": "陈小刀将自己的服务生身份从时间线上切除",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "职业焦虑升维为叙事权限"
+            },
+            "consequences": [
+                "托盘开始分泌新的物理定律"
+            ]
+        },
+        {
+            "id": "e33",
+            "name": "概率移植",
+            "order": 33,
+            "scene_id": "s14",
+            "details": "林修将42%胜率移植给正在坍塌的宇宙",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "赌徒直觉固化为时空参数"
+            },
+            "consequences": [
+                "发牌轨迹显现弦论方程"
+            ]
+        },
+        {
+            "id": "e34",
+            "name": "麻醉创世",
+            "order": 34,
+            "scene_id": "s13",
+            "details": "苏明月将麻醉剂注入新生的叙事维度",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "医疗道德重组为宇宙常量"
+            },
+            "consequences": [
+                "手术刀划开虚数时间轴"
+            ]
+        },
+        {
+            "id": "e35",
+            "name": "记忆赌博",
+            "order": 35,
+            "scene_id": "s14",
+            "details": "林修用苏明月的童年记忆下注",
+            "participants": [
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p1": "出千手法进化为维度编辑",
+                "p2": "强迫症症状结晶成数学宝石"
+            },
+            "consequences": [
+                "赌桌生长出脑神经突触"
+            ]
+        }
+    ]
+}

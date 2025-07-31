@@ -1,0 +1,174 @@
+{
+  "chapter": 36,
+  "properties": {
+    "id": "p2",
+    "affiliations": [
+      "上海市第一医院"
+    ],
+    "occupation": [
+      "急诊科医生"
+    ],
+    "name": "苏明月",
+    "age": 29,
+    "gender": "FEMALE",
+    "health_status": "对麻醉剂免疫",
+    "personality": "强迫症患者，会不自主数质数",
+    "aliases": [
+      "医生小姐"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 36,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "职业厌恶（苏明月反感赌博成瘾者）"
+    },
+    {
+      "chapter": 36,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "实验监督"
+    },
+    {
+      "chapter": 36,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "致命医疗"
+    },
+    {
+      "chapter": 36,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "医疗监控→时空锚定"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 2,
+      "character_id": "p3",
+      "type": "医患关系（曾为陈小刀做过紧急手术）"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "实验关系"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 45,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 6,
+      "character_id": "p3",
+      "type": "治疗依赖"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "医疗监控"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 18,
+      "character_id": "p3",
+      "type": "机械共生→意识上传"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "神经漫游→意识统合"
+    },
+    {
+      "chapter": 36,
+      "name": "陈小刀",
+      "intensity": 26,
+      "character_id": "p3",
+      "type": "生物骇入→时间校正"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e140",
+      "event_name": "维度摆盘",
+      "event_order": 140,
+      "details": "陈小刀在十七个维度同时布置最后的晚餐餐桌，每个餐具都是时空坐标",
+      "scene_id": "s57",
+      "scene_name": "虚无餐厅",
+      "scene_place": "被撕碎的游轮宴会厅形成的亚空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "形成跨越维度的引力异常点"
+      ]
+    },
+    {
+      "event_id": "e141",
+      "event_name": "机械献祭",
+      "event_order": 141,
+      "details": "林修的机械臂自主分解成333块精密零件，悬浮组成拯救方程式",
+      "scene_id": "s57",
+      "scene_name": "虚无餐厅",
+      "scene_place": "被撕碎的游轮宴会厅形成的亚空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "解锁幽灵船核心控制权"
+      ]
+    },
+    {
+      "event_id": "e142",
+      "event_name": "神经漫游",
+      "event_order": 142,
+      "details": "苏明月的意识通过陈小刀的神经网络入侵游轮主控系统",
+      "scene_id": "s58",
+      "scene_name": "终焉甲板",
+      "scene_place": "游轮最上层溶解中的结构",
+      "emotional_impact": "强制镇定的医疗专注",
+      "consequences": [
+        "获取二十年前的全部航行数据"
+      ]
+    },
+    {
+      "event_id": "e143",
+      "event_name": "悖论晚宴",
+      "event_order": 143,
+      "details": "三人在时间断层中共享记忆餐点，吞食彼此的过往片段",
+      "scene_id": "s58",
+      "scene_name": "终焉甲板",
+      "scene_place": "游轮最上层溶解中的结构",
+      "emotional_impact": "医生咽下治不好的病例",
+      "consequences": [
+        "形成稳定的时间闭环"
+      ]
+    }
+  ]
+}

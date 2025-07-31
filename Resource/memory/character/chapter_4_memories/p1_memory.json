@@ -1,0 +1,401 @@
+{
+  "chapter": 4,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 4,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 4,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 4,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "契约解除/新的羁绊"
+    },
+    {
+      "chapter": 4,
+      "name": "苏明月",
+      "intensity": 15,
+      "character_id": "p2",
+      "type": "量子纠缠→细胞共生"
+    },
+    {
+      "chapter": 4,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "量子纠缠→情感共振"
+    },
+    {
+      "chapter": 4,
+      "name": "苏明月",
+      "intensity": 88,
+      "character_id": "p2",
+      "type": "记忆共振→量子同调"
+    },
+    {
+      "chapter": 4,
+      "name": "苏明月",
+      "intensity": 888,
+      "character_id": "p2",
+      "type": "量子链接→永恒观测"
+    },
+    {
+      "chapter": 4,
+      "name": "苏明月",
+      "intensity": 80,
+      "character_id": "p2",
+      "type": "量子纠缠→记忆同步"
+    },
+    {
+      "chapter": 4,
+      "name": "苏明月",
+      "intensity": 55,
+      "character_id": "p2",
+      "type": "量子纠缠→意识融合"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 12,
+      "character_id": "p3",
+      "type": "量子同步→熵增共振"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 15,
+      "character_id": "p3",
+      "type": "量子共振→机械通灵"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 50,
+      "character_id": "p3",
+      "type": "量子契约"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "机械共振→时间锚点"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 120,
+      "character_id": "p3",
+      "type": "机械飞升→时空契约"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 120,
+      "character_id": "p3",
+      "type": "机械共鸣→时间织造"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 200,
+      "character_id": "p3",
+      "type": "机械共振→认知同化"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 500,
+      "character_id": "p3",
+      "type": "机械飞升→叙事寄生"
+    },
+    {
+      "chapter": 4,
+      "name": "陈小刀",
+      "intensity": 999,
+      "character_id": "p3",
+      "type": "机械共振→时空契约"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e61",
+      "event_name": "时间刻痕",
+      "event_order": 16,
+      "details": "天文钟的齿轮突然咬住林修的机械手，在金属表面刻下'第7次校正失败'的印记",
+      "scene_id": "s23",
+      "scene_name": "循环钟楼",
+      "scene_place": "船长室天文钟",
+      "emotional_impact": "机械性恐惧（首次出现对自身改造的排斥）",
+      "consequences": [
+        "齿轮间掉落1999年的船员值班表"
+      ]
+    },
+    {
+      "event_id": "e62",
+      "event_name": "活体档案",
+      "event_order": 17,
+      "details": "当苏明月触碰病历架时，整个档案室的纸质开始生长血肉组织",
+      "scene_id": "s24",
+      "scene_name": "血肉图书馆",
+      "scene_place": "船医档案室",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "新生的组织构成三人小时候的指纹"
+      ]
+    },
+    {
+      "event_id": "e62",
+      "event_name": "活体档案",
+      "event_order": 17,
+      "details": "当苏明月触碰病历架时，整个档案室的纸质开始生长血肉组织",
+      "scene_id": "s24",
+      "scene_name": "血肉图书馆",
+      "scene_place": "船医档案室",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "新生的组织构成三人小时候的指纹"
+      ]
+    },
+    {
+      "event_id": "e63",
+      "event_name": "记忆闪回",
+      "event_order": 18,
+      "details": "钟声响起时三人同时看见幻象：年幼的自己正在给现在的自己实施手术",
+      "scene_id": "s23",
+      "scene_name": "循环钟楼",
+      "scene_place": "船长室天文钟",
+      "emotional_impact": "机械臂抽搐",
+      "consequences": [
+        "幻象中的手术器械出现在现实世界"
+      ]
+    },
+    {
+      "event_id": "e64",
+      "event_name": "血脉共鸣",
+      "event_order": 19,
+      "details": "档案室突然播放三人的心跳声，频率完全同步时书架上浮现第四份病历",
+      "scene_id": "s24",
+      "scene_name": "血肉图书馆",
+      "scene_place": "船医档案室",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "空白病历的姓名栏会吸收任何写上去的墨水"
+      ]
+    },
+    {
+      "event_id": "e65",
+      "event_name": "机械神谕",
+      "event_order": 20,
+      "details": "林修的机械手突然拆解天文钟，用零件拼出海德拉号的微缩模型",
+      "scene_id": "s23",
+      "scene_name": "循环钟楼",
+      "scene_place": "船长室天文钟",
+      "emotional_impact": "宗教性狂喜",
+      "consequences": [
+        "模型显示的沉船日期是三天后的正午"
+      ]
+    },
+    {
+      "event_id": "e33",
+      "event_name": "概率移植",
+      "event_order": 33,
+      "details": "林修将42%胜率移植给正在坍塌的宇宙",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "赌徒直觉固化为时空参数",
+      "consequences": [
+        "发牌轨迹显现弦论方程"
+      ]
+    },
+    {
+      "event_id": "e33",
+      "event_name": "概率移植",
+      "event_order": 33,
+      "details": "林修将42%胜率移植给正在坍塌的宇宙",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "赌徒直觉固化为时空参数",
+      "consequences": [
+        "发牌轨迹显现弦论方程"
+      ]
+    },
+    {
+      "event_id": "e33",
+      "event_name": "概率移植",
+      "event_order": 33,
+      "details": "林修将42%胜率移植给正在坍塌的宇宙",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "赌徒直觉固化为时空参数",
+      "consequences": [
+        "发牌轨迹显现弦论方程"
+      ]
+    },
+    {
+      "event_id": "e34",
+      "event_name": "麻醉创世",
+      "event_order": 34,
+      "details": "苏明月将麻醉剂注入新生的叙事维度",
+      "scene_id": "s16",
+      "scene_name": "颠倒餐厅",
+      "scene_place": "镜像船宴会厅",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "手术刀划开虚数时间轴"
+      ]
+    },
+    {
+      "event_id": "e35",
+      "event_name": "记忆赌博",
+      "event_order": 35,
+      "details": "林修用苏明月的童年记忆下注",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "出千手法进化为维度编辑",
+      "consequences": [
+        "赌桌生长出脑神经突触"
+      ]
+    },
+    {
+      "event_id": "e35",
+      "event_name": "记忆赌博",
+      "event_order": 35,
+      "details": "林修用苏明月的童年记忆下注",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "出千手法进化为维度编辑",
+      "consequences": [
+        "赌桌生长出脑神经突触"
+      ]
+    },
+    {
+      "event_id": "e35",
+      "event_name": "记忆赌博",
+      "event_order": 35,
+      "details": "林修用苏明月的童年记忆下注",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "出千手法进化为维度编辑",
+      "consequences": [
+        "赌桌生长出脑神经突触"
+      ]
+    },
+    {
+      "event_id": "e36",
+      "event_name": "终极叙事选择",
+      "event_order": 36,
+      "details": "图书馆突然出现三本结局不同的航海日志，分别对应三人的基因签名",
+      "scene_id": "s16",
+      "scene_name": "颠倒餐厅",
+      "scene_place": "镜像船宴会厅",
+      "emotional_impact": "出千被抓的恐惧",
+      "consequences": [
+        "所有书籍同时翻到被撕掉的最后一页"
+      ]
+    },
+    {
+      "event_id": "e37",
+      "event_name": "元作者处刑",
+      "event_order": 37,
+      "details": "幽灵乘客集体投票决定删除创作者的存在证明",
+      "scene_id": "s15",
+      "scene_name": "导航室",
+      "scene_place": "船桥后方",
+      "emotional_impact": "解脱",
+      "consequences": [
+        "舞台缓缓沉入狄拉克海"
+      ]
+    }
+  ]
+}

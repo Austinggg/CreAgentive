@@ -1,0 +1,297 @@
+{
+  "chapter": 42,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 42,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 42,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 42,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "契约解除/新的羁绊"
+    },
+    {
+      "chapter": 42,
+      "name": "苏明月",
+      "intensity": 15,
+      "character_id": "p2",
+      "type": "量子纠缠→细胞共生"
+    },
+    {
+      "chapter": 42,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "量子纠缠→情感共振"
+    },
+    {
+      "chapter": 42,
+      "name": "苏明月",
+      "intensity": 88,
+      "character_id": "p2",
+      "type": "记忆共振→量子同调"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 12,
+      "character_id": "p3",
+      "type": "量子同步→熵增共振"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 15,
+      "character_id": "p3",
+      "type": "量子共振→机械通灵"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 50,
+      "character_id": "p3",
+      "type": "量子契约"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "机械共振→时间锚点"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 120,
+      "character_id": "p3",
+      "type": "机械飞升→时空契约"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 120,
+      "character_id": "p3",
+      "type": "机械共鸣→时间织造"
+    },
+    {
+      "chapter": 42,
+      "name": "陈小刀",
+      "intensity": 200,
+      "character_id": "p3",
+      "type": "机械共振→认知同化"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e16",
+      "event_name": "完美调制",
+      "event_order": 16,
+      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
+      "scene_id": "s7",
+      "scene_name": "无限酒吧",
+      "scene_place": "由所有维度鸡尾酒蒸发形成的叠加态空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "酒杯边缘产生霍金辐射",
+        "柠檬切片结晶成时间晶体"
+      ]
+    },
+    {
+      "event_id": "e17",
+      "event_name": "托盘奇点",
+      "event_order": 17,
+      "details": "银质托盘表面生成微型宇宙大爆炸模型",
+      "scene_id": "s7",
+      "scene_name": "无限酒吧",
+      "scene_place": "由所有维度鸡尾酒蒸发形成的叠加态空间",
+      "emotional_impact": "在概率云中看见服务生制服图案",
+      "consequences": [
+        "餐巾纸纤维显现超导特性",
+        "吸管弯曲成闭合时空环"
+      ]
+    },
+    {
+      "event_id": "e17",
+      "event_name": "托盘奇点",
+      "event_order": 17,
+      "details": "银质托盘表面生成微型宇宙大爆炸模型",
+      "scene_id": "s8",
+      "scene_name": "终末指挥台",
+      "scene_place": "游轮消失前最后1纳秒的驾驶舱镜像",
+      "emotional_impact": "在概率云中看见服务生制服图案",
+      "consequences": [
+        "餐巾纸纤维显现超导特性",
+        "吸管弯曲成闭合时空环"
+      ]
+    },
+    {
+      "event_id": "e18",
+      "event_name": "机械圣餐",
+      "event_order": 18,
+      "details": "陈小刀的机械臂分解成纳米级圣杯阵列",
+      "scene_id": "s8",
+      "scene_name": "终末指挥台",
+      "scene_place": "游轮消失前最后1纳秒的驾驶舱镜像",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "制服纽扣蜕变为白矮星物质",
+        "领结呈现宇宙微波背景辐射图"
+      ]
+    },
+    {
+      "event_id": "e18",
+      "event_name": "机械圣餐",
+      "event_order": 18,
+      "details": "陈小刀的机械臂分解成纳米级圣杯阵列",
+      "scene_id": "s7",
+      "scene_name": "无限酒吧",
+      "scene_place": "由所有维度鸡尾酒蒸发形成的叠加态空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "制服纽扣蜕变为白矮星物质",
+        "领结呈现宇宙微波背景辐射图"
+      ]
+    },
+    {
+      "event_id": "e19",
+      "event_name": "终局服务",
+      "event_order": 19,
+      "details": "在叙事崩塌瞬间完成对两位客人的完美服务",
+      "scene_id": "s8",
+      "scene_name": "终末指挥台",
+      "scene_place": "游轮消失前最后1纳秒的驾驶舱镜像",
+      "emotional_impact": "债务转化为服务满意度",
+      "consequences": [
+        "服务铃声中涌现新宇宙常数",
+        "小费数额坍缩成普朗克长度"
+      ]
+    },
+    {
+      "event_id": "e19",
+      "event_name": "终局服务",
+      "event_order": 19,
+      "details": "在叙事崩塌瞬间完成对两位客人的完美服务",
+      "scene_id": "s8",
+      "scene_name": "终末指挥台",
+      "scene_place": "游轮消失前最后1纳秒的驾驶舱镜像",
+      "emotional_impact": "债务转化为服务满意度",
+      "consequences": [
+        "服务铃声中涌现新宇宙常数",
+        "小费数额坍缩成普朗克长度"
+      ]
+    },
+    {
+      "event_id": "e20",
+      "event_name": "侍者涅槃",
+      "event_order": 20,
+      "details": "当游轮完全蒸发时展现服务生的终极形态",
+      "scene_id": "s8",
+      "scene_name": "终末指挥台",
+      "scene_place": "游轮消失前最后1纳秒的驾驶舱镜像",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "制服演化成狄拉克海面料",
+        "机械臂原子排列成服务业黄金比例"
+      ]
+    },
+    {
+      "event_id": "e20",
+      "event_name": "侍者涅槃",
+      "event_order": 20,
+      "details": "当游轮完全蒸发时展现服务生的终极形态",
+      "scene_id": "s7",
+      "scene_name": "无限酒吧",
+      "scene_place": "由所有维度鸡尾酒蒸发形成的叠加态空间",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "制服演化成狄拉克海面料",
+        "机械臂原子排列成服务业黄金比例"
+      ]
+    }
+  ]
+}

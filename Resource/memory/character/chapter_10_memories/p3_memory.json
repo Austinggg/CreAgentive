@@ -1,0 +1,240 @@
+{
+  "chapter": 10,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 10,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 10,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 10,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 10,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 10,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 10,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 10,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 10,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 10,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e120",
+      "event_name": "芯片共鸣",
+      "event_order": 1,
+      "details": "陈小刀的机械眼突然投影出轮机舱结构图，与林修的义肢产生电流共振",
+      "scene_id": "s46",
+      "scene_name": "轮机核心",
+      "scene_place": "游轮底舱第七层",
+      "emotional_impact": "机械瞳孔第一次完全扩张",
+      "consequences": [
+        "锁定核心位于游轮质量中心"
+      ]
+    },
+    {
+      "event_id": "e120",
+      "event_name": "芯片共鸣",
+      "event_order": 1,
+      "details": "陈小刀的机械眼突然投影出轮机舱结构图，与林修的义肢产生电流共振",
+      "scene_id": "s46",
+      "scene_name": "轮机核心",
+      "scene_place": "游轮底舱第七层",
+      "emotional_impact": "机械瞳孔第一次完全扩张",
+      "consequences": [
+        "锁定核心位于游轮质量中心"
+      ]
+    },
+    {
+      "event_id": "e121",
+      "event_name": "血统认证",
+      "event_order": 2,
+      "details": "苏明月发现核心装置需要输入混合血样，三人伤口渗出的血液在空中形成DNA链投影",
+      "scene_id": "s46",
+      "scene_name": "轮机核心",
+      "scene_place": "游轮底舱第七层",
+      "emotional_impact": "看到投影显示自己与林修基因组99%匹配",
+      "consequences": [
+        "核心舱启动克隆体销毁程序"
+      ]
+    },
+    {
+      "event_id": "e121",
+      "event_name": "血统认证",
+      "event_order": 2,
+      "details": "苏明月发现核心装置需要输入混合血样，三人伤口渗出的血液在空中形成DNA链投影",
+      "scene_id": "s46",
+      "scene_name": "轮机核心",
+      "scene_place": "游轮底舱第七层",
+      "emotional_impact": "看到投影显示自己与林修基因组99%匹配",
+      "consequences": [
+        "核心舱启动克隆体销毁程序"
+      ]
+    },
+    {
+      "event_id": "e122",
+      "event_name": "记忆闪回",
+      "event_order": 3,
+      "details": "装置激活后陈小刀突然说出二十年前的实验室密码，被紫外线灼伤的皮肤浮现条形码",
+      "scene_id": "s46",
+      "scene_name": "轮机核心",
+      "scene_place": "游轮底舱第七层",
+      "emotional_impact": "机械与生物记忆首次完全同步",
+      "consequences": [
+        "解锁核心自毁协议"
+      ]
+    },
+    {
+      "event_id": "e122",
+      "event_name": "记忆闪回",
+      "event_order": 3,
+      "details": "装置激活后陈小刀突然说出二十年前的实验室密码，被紫外线灼伤的皮肤浮现条形码",
+      "scene_id": "s46",
+      "scene_name": "轮机核心",
+      "scene_place": "游轮底舱第七层",
+      "emotional_impact": "机械与生物记忆首次完全同步",
+      "consequences": [
+        "解锁核心自毁协议"
+      ]
+    },
+    {
+      "event_id": "e123",
+      "event_name": "义肢献祭",
+      "event_order": 4,
+      "details": "林修将机械义肢插入核心接口，陈小刀被迫用机械眼球确认生物认证",
+      "scene_id": "s46",
+      "scene_name": "轮机核心",
+      "scene_place": "游轮底舱第七层",
+      "emotional_impact": "感受到机械眼与核心的量子纠缠",
+      "consequences": [
+        "游轮开始分子级解体"
+      ]
+    },
+    {
+      "event_id": "e124",
+      "event_name": "数字重生",
+      "event_order": 5,
+      "details": "逃亡途中陈小刀的机械眼自动记录游轮消失过程，保存了完整的实验数据",
+      "scene_id": "s47",
+      "scene_name": "逃生通道",
+      "scene_place": "通风井与紧急楼梯",
+      "emotional_impact": "意识到自己成为活的实验档案",
+      "consequences": [
+        "三人乘坐的救生艇突然出现在现代港口"
+      ]
+    }
+  ]
+}

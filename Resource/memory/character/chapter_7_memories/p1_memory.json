@@ -1,0 +1,389 @@
+{
+  "chapter": 7,
+  "properties": {
+    "id": "p1",
+    "affiliations": [
+      "澳门金城赌场"
+    ],
+    "occupation": [
+      "职业扑克选手"
+    ],
+    "name": "林修",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "虹膜异色症（左眼金色右眼褐色）",
+    "personality": "擅长心理操控，左手永远戴着手套",
+    "aliases": [
+      "赌徒"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 7,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "债务关系（林修欠苏明月巨额医疗费）"
+    },
+    {
+      "chapter": 7,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "恐惧敬畏"
+    },
+    {
+      "chapter": 7,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "契约解除/新的羁绊"
+    },
+    {
+      "chapter": 7,
+      "name": "苏明月",
+      "intensity": 15,
+      "character_id": "p2",
+      "type": "量子纠缠→细胞共生"
+    },
+    {
+      "chapter": 7,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "量子纠缠→情感共振"
+    },
+    {
+      "chapter": 7,
+      "name": "苏明月",
+      "intensity": 88,
+      "character_id": "p2",
+      "type": "记忆共振→量子同调"
+    },
+    {
+      "chapter": 7,
+      "name": "苏明月",
+      "intensity": 888,
+      "character_id": "p2",
+      "type": "量子链接→永恒观测"
+    },
+    {
+      "chapter": 7,
+      "name": "苏明月",
+      "intensity": 80,
+      "character_id": "p2",
+      "type": "量子纠缠→记忆同步"
+    },
+    {
+      "chapter": 7,
+      "name": "苏明月",
+      "intensity": 55,
+      "character_id": "p2",
+      "type": "量子纠缠→意识融合"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 5,
+      "character_id": "p3",
+      "type": "利用关系（林修知道陈小刀的真实身份）"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 7,
+      "character_id": "p3",
+      "type": "控制关系"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "基因共鸣"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 8,
+      "character_id": "p3",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "克隆觉醒"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "操控关系"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 10,
+      "character_id": "p3",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 9,
+      "character_id": "p3",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 12,
+      "character_id": "p3",
+      "type": "量子同步→熵增共振"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 15,
+      "character_id": "p3",
+      "type": "量子共振→机械通灵"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 50,
+      "character_id": "p3",
+      "type": "量子契约"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 30,
+      "character_id": "p3",
+      "type": "机械共振→时间锚点"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 120,
+      "character_id": "p3",
+      "type": "机械飞升→时空契约"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 120,
+      "character_id": "p3",
+      "type": "机械共鸣→时间织造"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 200,
+      "character_id": "p3",
+      "type": "机械共振→认知同化"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 500,
+      "character_id": "p3",
+      "type": "机械飞升→叙事寄生"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 999,
+      "character_id": "p3",
+      "type": "机械共振→时空契约"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 300,
+      "character_id": "p3",
+      "type": "机械奴役→金属共鸣"
+    },
+    {
+      "chapter": 7,
+      "name": "陈小刀",
+      "intensity": 300,
+      "character_id": "p3",
+      "type": "机械共振→时间悖论"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e112",
+      "event_name": "齿轮审判",
+      "event_order": 12,
+      "details": "倒映的引擎突然启动，审判三人组当年的罪行",
+      "scene_id": "s37",
+      "scene_name": "倒映引擎室",
+      "scene_place": "船底镜像空间",
+      "emotional_impact": "扑克牌从手中汽化",
+      "consequences": [
+        "引擎吐出1999年的航海日志"
+      ]
+    },
+    {
+      "event_id": "e113",
+      "event_name": "记忆赌博",
+      "event_order": 13,
+      "details": "林修用自己的记忆作为赌注与时空对赌",
+      "scene_id": "s38",
+      "scene_name": "概率走廊",
+      "scene_place": "连接各时空的波动通道",
+      "emotional_impact": "首次体验真正恐惧",
+      "consequences": [
+        "走廊的骰子面开始播放他的记忆片段"
+      ]
+    },
+    {
+      "event_id": "e116",
+      "event_name": "终局镜像",
+      "event_order": 16,
+      "details": "三人同时触摸镜像引擎，引发时间坍缩",
+      "scene_id": "s37",
+      "scene_name": "倒映引擎室",
+      "scene_place": "船底镜像空间",
+      "emotional_impact": "看到自己所有赌局结局",
+      "consequences": [
+        "引擎室显现出唯一的逃生路线"
+      ]
+    },
+    {
+      "event_id": "e86",
+      "event_name": "递归修复",
+      "event_order": 86,
+      "details": "三人在无限走廊里同时修复各自的时间线伤痕",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "数学性的愉悦",
+      "consequences": [
+        "游轮的基础程序开始逆熵运行"
+      ]
+    },
+    {
+      "event_id": "e86",
+      "event_name": "递归修复",
+      "event_order": 86,
+      "details": "三人在无限走廊里同时修复各自的时间线伤痕",
+      "scene_id": "s34",
+      "scene_name": "冷冻舱室",
+      "scene_place": "船尾秘密仓库",
+      "emotional_impact": "数学性的愉悦",
+      "consequences": [
+        "游轮的基础程序开始逆熵运行"
+      ]
+    },
+    {
+      "event_id": "e87",
+      "event_name": "悖论注能",
+      "event_order": 87,
+      "details": "苏明月将数出的质数序列注入时间晶体",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "所有平行宇宙的游轮开始同步闪烁"
+      ]
+    },
+    {
+      "event_id": "e88",
+      "event_name": "全息轮盘",
+      "event_order": 88,
+      "details": "林修同时与过去/未来的自己对赌",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "跨时空成瘾",
+      "consequences": [
+        "赌桌变成五维结构"
+      ]
+    },
+    {
+      "event_id": "e88",
+      "event_name": "全息轮盘",
+      "event_order": 88,
+      "details": "林修同时与过去/未来的自己对赌",
+      "scene_id": "s34",
+      "scene_name": "冷冻舱室",
+      "scene_place": "船尾秘密仓库",
+      "emotional_impact": "跨时空成瘾",
+      "consequences": [
+        "赌桌变成五维结构"
+      ]
+    },
+    {
+      "event_id": "e88",
+      "event_name": "全息轮盘",
+      "event_order": 88,
+      "details": "林修同时与过去/未来的自己对赌",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "跨时空成瘾",
+      "consequences": [
+        "赌桌变成五维结构"
+      ]
+    },
+    {
+      "event_id": "e88",
+      "event_name": "全息轮盘",
+      "event_order": 88,
+      "details": "林修同时与过去/未来的自己对赌",
+      "scene_id": "s34",
+      "scene_name": "冷冻舱室",
+      "scene_place": "船尾秘密仓库",
+      "emotional_impact": "跨时空成瘾",
+      "consequences": [
+        "赌桌变成五维结构"
+      ]
+    },
+    {
+      "event_id": "e89",
+      "event_name": "机械涅槃",
+      "event_order": 89,
+      "details": "陈小刀将纳米佛珠重组为量子计算机",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "开始计算终极救赎方程"
+      ]
+    },
+    {
+      "event_id": "e90",
+      "event_name": "选择永恒",
+      "event_order": 90,
+      "details": "三人共同成为新航海传说的载体",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "赌博转化为创造",
+      "consequences": [
+        "太平洋出现永久性时空异常区"
+      ]
+    },
+    {
+      "event_id": "e90",
+      "event_name": "选择永恒",
+      "event_order": 90,
+      "details": "三人共同成为新航海传说的载体",
+      "scene_id": "s33",
+      "scene_name": "记忆回响室",
+      "scene_place": "引擎舱下层的声音共振舱",
+      "emotional_impact": "赌博转化为创造",
+      "consequences": [
+        "太平洋出现永久性时空异常区"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+    "chapter": 41,
+    "characters": [
+        {
+            "id": "p1",
+            "name": "林修",
+            "aliases": [
+                "赌徒"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "职业扑克选手"
+            ],
+            "affiliations": [
+                "澳门金城赌场"
+            ],
+            "personality": "擅长心理操控，左手永远戴着手套",
+            "health_status": "虹膜异色症（左眼金色右眼褐色）"
+        },
+        {
+            "id": "p2",
+            "name": "苏明月",
+            "aliases": [
+                "医生小姐"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "急诊科医生"
+            ],
+            "affiliations": [
+                "上海市第一医院"
+            ],
+            "personality": "强迫症患者，会不自主数质数",
+            "health_status": "对麻醉剂免疫"
+        },
+        {
+            "id": "p3",
+            "name": "陈小刀",
+            "aliases": [
+                "侍应生"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "游轮服务生"
+            ],
+            "affiliations": [
+                "皇家加勒比邮轮公司"
+            ],
+            "personality": "看似懦弱实则观察力惊人",
+            "health_status": "紫外线过敏（长袖制服）"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p1",
+            "to_id": "p3",
+            "type": "机械共振→认知同化",
+            "intensity": 200,
+            "awareness": "量子纠缠态",
+            "new_detail": "林修的左手与陈小刀的机械臂产生普朗克尺度的同步震颤"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "时间锚定→医疗干涉",
+            "intensity": 180,
+            "awareness": "维度重叠",
+            "new_detail": "陈小刀的制服袖口渗出苏明月20年前的手术报告墨迹"
+        },
+        {
+            "from_id": "p2",
+            "to_id": "p1",
+            "type": "量子观测→债务重构",
+            "intensity": 150,
+            "awareness": "因果逆转",
+            "new_detail": "苏明月发现林修的赌债其实是维持时空平衡的量子计量单位"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s1",
+            "name": "源初赌厅",
+            "place": "由破碎的克莱因瓶碎片组成的量子赌场",
+            "time_period": "时间奇点",
+            "atmosphere": "骰子悬浮在叠加态中，扑克牌呈现波函数坍缩的蓝光"
+        },
+        {
+            "id": "s2",
+            "name": "机械忏悔室",
+            "place": "陈小刀机械臂内部展开的纳米级哥特教堂",
+            "time_period": "绝对静止参照系",
+            "atmosphere": "齿轮运转声与量子佛经以4/4拍节奏共鸣"
+        }
+    ],
+    "events": [
+        {
+            "id": "e1",
+            "name": "骰子创世",
+            "order": 1,
+            "scene_id": "s1",
+            "details": "林修掷出的骰子同时显示所有点数，引发微观宇宙大爆炸",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "赌徒首次体验零风险快感"
+            },
+            "consequences": [
+                "赌桌浮现多重宇宙概率云",
+                "债务数字开始逆向增长"
+            ]
+        },
+        {
+            "id": "e2",
+            "name": "制服蜕变",
+            "order": 2,
+            "scene_id": "s2",
+            "details": "陈小刀的侍应生制服融化成液态金属，展示出所有平行时空的服务记录",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "职业荣誉感升华为创世冲动"
+            },
+            "consequences": [
+                "银质托盘开始自动书写相对论方程",
+                "紫外线过敏转化为量子观测能力"
+            ]
+        },
+        {
+            "id": "e3",
+            "name": "虹膜手术",
+            "order": 3,
+            "scene_id": "s1",
+            "details": "苏明月用冰镐为林修植入第12种虹膜色素，打开额外维度视野",
+            "participants": [
+                "p2",
+                "p1"
+            ],
+            "emotional_impact": {
+                "p2": "外科医生兼量子观测者的双重满足",
+                "p1": "疼痛转化为高维愉悦"
+            },
+            "consequences": [
+                "赌场灯光开始显示引力波频谱",
+                "骰子呈现超对称粒子特性"
+            ]
+        },
+        {
+            "id": "e4",
+            "name": "终极服务",
+            "order": 4,
+            "scene_id": "s2",
+            "details": "陈小刀同时为38个平行时空的客人送上包含大统一理论的鸡尾酒",
+            "participants": [
+                "p3",
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p3": "突破时空限制的职业巅峰体验",
+                "p1": "见证绝对完美的震撼",
+                "p2": "发现酒精的量子治疗属性"
+            },
+            "consequences": [
+                "所有酒杯自行演奏贝多芬第9交响曲",
+                "柠檬切片呈现分形几何"
+            ]
+        },
+        {
+            "id": "e5",
+            "name": "债务奇点",
+            "order": 5,
+            "scene_id": "s1",
+            "details": "当林修的赌债计数器归零时，所有筹码凝聚成微型黑洞",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "面对绝对零值的宗教性战栗",
+                "p2": "数学洁癖得到终极满足",
+                "p3": "机械与有机体界限消失的狂喜"
+            },
+            "consequences": [
+                "幽灵船开始量子蒸发",
+                "三人视网膜上浮现源初代码"
+            ]
+        }
+    ]
+}

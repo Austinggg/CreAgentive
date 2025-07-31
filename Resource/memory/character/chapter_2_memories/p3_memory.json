@@ -1,28 +1,892 @@
 {
-    "chapter": 2,
-    "character": {
-        "id": "p3",
-        "affiliations": [
-            "格兰芬多"
-        ],
-        "occupation": [
-            "学生",
-            "巫师"
-        ],
-        "name": "赫敏·格兰杰",
-        "age": 11,
-        "gender": "FEMALE"
-    },
-    "relationships": [],
-    "events": [
-        {
-            "name": "分院仪式",
-            "scene": "霍格沃茨礼堂",
-            "impact": "自豪",
-            "consequences": [
-                "三人成为同院同学",
-                "哈利与德拉科对立"
-            ]
-        }
+  "chapter": 2,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
     ]
+  },
+  "relationships": [
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 6,
+      "character_id": "p1",
+      "type": "机械抗拒"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 20,
+      "character_id": "p1",
+      "type": "机械共振"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "服从关系→觉醒反抗"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 10,
+      "character_id": "p1",
+      "type": "机械反制"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "机械共振→相位同步"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 12,
+      "character_id": "p1",
+      "type": "复仇欲望→量子共生"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 18,
+      "character_id": "p1",
+      "type": "量子共生→机械叛变"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 28,
+      "character_id": "p1",
+      "type": "机械共振→时间锚定"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 25,
+      "character_id": "p1",
+      "type": "机械反制→量子同调"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 25,
+      "character_id": "p1",
+      "type": "机械反叛→量子臣服"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 24,
+      "character_id": "p1",
+      "type": "机械通灵→因果倒置"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 50,
+      "character_id": "p1",
+      "type": "机械叛变→终极服从"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 50,
+      "character_id": "p1",
+      "type": "机械叛变→量子臣服"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 99,
+      "character_id": "p1",
+      "type": "量子臣服→机械飞升"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 200,
+      "character_id": "p1",
+      "type": "机械共振→时空同调"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 500,
+      "character_id": "p1",
+      "type": "机械飞升→叙事主宰"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 1000,
+      "character_id": "p1",
+      "type": "机械叛变→时空同调"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 5,
+      "character_id": "p1",
+      "type": "监视关系"
+    },
+    {
+      "chapter": 2,
+      "name": "林修",
+      "intensity": 200,
+      "character_id": "p1",
+      "type": "机械驯化→时间悖论"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "保护关系"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "记忆传递"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "基因牵引"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "记忆共享"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "镜像同步"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "报恩心理→使命传承"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 10,
+      "character_id": "p2",
+      "type": "时间锚点共振"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "实验连接→记忆融合"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "医疗依赖→基因链接"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 11,
+      "character_id": "p2",
+      "type": "神经漫游"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 14,
+      "character_id": "p2",
+      "type": "基因链接→神经网络入侵"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 18,
+      "character_id": "p2",
+      "type": "神经网络"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 30,
+      "character_id": "p2",
+      "type": "神经网络→生物骇入"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 20,
+      "character_id": "p2",
+      "type": "神经链接→基因共振"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 28,
+      "character_id": "p2",
+      "type": "记忆共振→量子纠缠"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 40,
+      "character_id": "p2",
+      "type": "神经漫游→基因统治"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 25,
+      "character_id": "p2",
+      "type": "量子纠缠→神经链接"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 30,
+      "character_id": "p2",
+      "type": "基因链接→生物骇入"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 88,
+      "character_id": "p2",
+      "type": "生物骇入→医疗同调"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 180,
+      "character_id": "p2",
+      "type": "量子纠缠→基因统合"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 180,
+      "character_id": "p2",
+      "type": "时间锚定→医疗干涉"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 600,
+      "character_id": "p2",
+      "type": "基因链接→永恒守望"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 888,
+      "character_id": "p2",
+      "type": "基因统合→医疗同步"
+    },
+    {
+      "chapter": 2,
+      "name": "苏明月",
+      "intensity": 150,
+      "character_id": "p2",
+      "type": "基因同频→记忆回溯"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e27",
+      "event_name": "引擎低语",
+      "event_order": 1,
+      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
+      "scene_id": "s11",
+      "scene_name": "量子引擎室",
+      "scene_place": "游轮动力核心",
+      "emotional_impact": "宿命感",
+      "consequences": [
+        "义眼记录下引擎核心的奇异物质"
+      ]
+    },
+    {
+      "event_id": "e27",
+      "event_name": "引擎低语",
+      "event_order": 1,
+      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
+      "scene_id": "s12",
+      "scene_name": "船长保险箱",
+      "scene_place": "船首像内部",
+      "emotional_impact": "宿命感",
+      "consequences": [
+        "义眼记录下引擎核心的奇异物质"
+      ]
+    },
+    {
+      "event_id": "e27",
+      "event_name": "引擎低语",
+      "event_order": 1,
+      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
+      "scene_id": "s11",
+      "scene_name": "量子引擎室",
+      "scene_place": "游轮动力核心",
+      "emotional_impact": "宿命感",
+      "consequences": [
+        "义眼记录下引擎核心的奇异物质"
+      ]
+    },
+    {
+      "event_id": "e27",
+      "event_name": "引擎低语",
+      "event_order": 1,
+      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
+      "scene_id": "s12",
+      "scene_name": "船长保险箱",
+      "scene_place": "船首像内部",
+      "emotional_impact": "宿命感",
+      "consequences": [
+        "义眼记录下引擎核心的奇异物质"
+      ]
+    },
+    {
+      "event_id": "e11",
+      "event_name": "染血制服的秘密",
+      "event_order": 1,
+      "details": "处理送洗衣物时，发现某件制服袖口有会蠕动的血渍",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "既恐惧又兴奋的战栗",
+      "consequences": [
+        "用紫外线灯照射后血渍显出指纹"
+      ]
+    },
+    {
+      "event_id": "e27",
+      "event_name": "引擎低语",
+      "event_order": 1,
+      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
+      "scene_id": "s11",
+      "scene_name": "量子引擎室",
+      "scene_place": "游轮动力核心",
+      "emotional_impact": "宿命感",
+      "consequences": [
+        "义眼记录下引擎核心的奇异物质"
+      ]
+    },
+    {
+      "event_id": "e27",
+      "event_name": "引擎低语",
+      "event_order": 1,
+      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
+      "scene_id": "s12",
+      "scene_name": "船长保险箱",
+      "scene_place": "船首像内部",
+      "emotional_impact": "宿命感",
+      "consequences": [
+        "义眼记录下引擎核心的奇异物质"
+      ]
+    },
+    {
+      "event_id": "e12",
+      "event_name": "镜像测试",
+      "event_order": 2,
+      "details": "在化妆间故意打碎镜子，观察苏明月对多重镜像的异常回避反应",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "阴谋得逞的快感",
+      "consequences": [
+        "确认苏明月对镜像产生恐惧"
+      ]
+    },
+    {
+      "event_id": "e12",
+      "event_name": "镜像测试",
+      "event_order": 2,
+      "details": "在化妆间故意打碎镜子，观察苏明月对多重镜像的异常回避反应",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "阴谋得逞的快感",
+      "consequences": [
+        "确认苏明月对镜像产生恐惧"
+      ]
+    },
+    {
+      "event_id": "e12",
+      "event_name": "镜像测试",
+      "event_order": 2,
+      "details": "在化妆间故意打碎镜子，观察苏明月对多重镜像的异常回避反应",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "阴谋得逞的快感",
+      "consequences": [
+        "确认苏明月对镜像产生恐惧"
+      ]
+    },
+    {
+      "event_id": "e12",
+      "event_name": "镜像测试",
+      "event_order": 2,
+      "details": "在化妆间故意打碎镜子，观察苏明月对多重镜像的异常回避反应",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "阴谋得逞的快感",
+      "consequences": [
+        "确认苏明月对镜像产生恐惧"
+      ]
+    },
+    {
+      "event_id": "e28",
+      "event_name": "血统验证",
+      "event_order": 2,
+      "details": "保险箱只吸收苏明月的眼泪作为生物密钥，开启后出现三份盖着相同指纹的船员合同",
+      "scene_id": "s12",
+      "scene_name": "船长保险箱",
+      "scene_place": "船首像内部",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "合同签署日期显示三人本该死于20年前"
+      ]
+    },
+    {
+      "event_id": "e13",
+      "event_name": "通风管窃听",
+      "event_order": 3,
+      "details": "利用服务生身份躲进通风管，记录到林修与神秘人的加密对话",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "发现被利用的震怒",
+      "consequences": [
+        "听见自己的名字被频繁提及"
+      ]
+    },
+    {
+      "event_id": "e13",
+      "event_name": "通风管窃听",
+      "event_order": 3,
+      "details": "利用服务生身份躲进通风管，记录到林修与神秘人的加密对话",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "发现被利用的震怒",
+      "consequences": [
+        "听见自己的名字被频繁提及"
+      ]
+    },
+    {
+      "event_id": "e29",
+      "event_name": "悖论雕刻",
+      "event_order": 3,
+      "details": "林修的机械左手失控地在引擎外壳刻写公式，证明当前游轮存在于概率小于0.001%的平行时空",
+      "scene_id": "s11",
+      "scene_name": "量子引擎室",
+      "scene_place": "游轮动力核心",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "公式引发局部时间倒流10秒"
+      ]
+    },
+    {
+      "event_id": "e30",
+      "event_name": "记忆共振",
+      "event_order": 4,
+      "details": "三人同时触碰保险箱内的怀表，表盘倒转出各自童年记忆——但背景都是同艘游轮的不同的灾难现场",
+      "scene_id": "s12",
+      "scene_name": "船长保险箱",
+      "scene_place": "船首像内部",
+      "emotional_impact": "冷静",
+      "consequences": [
+        "怀表指针停止时指向今日日期"
+      ]
+    },
+    {
+      "event_id": "e14",
+      "event_name": "冷冻库密码",
+      "event_order": 4,
+      "details": "在待洗衣物口袋发现写有冷冻库密码的纸条，字迹与自己相似",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "自我认知混乱",
+      "consequences": [
+        "纸条背面印着13号舱舱门图案"
+      ]
+    },
+    {
+      "event_id": "e14",
+      "event_name": "冷冻库密码",
+      "event_order": 4,
+      "details": "在待洗衣物口袋发现写有冷冻库密码的纸条，字迹与自己相似",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "自我认知混乱",
+      "consequences": [
+        "纸条背面印着13号舱舱门图案"
+      ]
+    },
+    {
+      "event_id": "e14",
+      "event_name": "冷冻库密码",
+      "event_order": 4,
+      "details": "在待洗衣物口袋发现写有冷冻库密码的纸条，字迹与自己相似",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "自我认知混乱",
+      "consequences": [
+        "纸条背面印着13号舱舱门图案"
+      ]
+    },
+    {
+      "event_id": "e14",
+      "event_name": "冷冻库密码",
+      "event_order": 4,
+      "details": "在待洗衣物口袋发现写有冷冻库密码的纸条，字迹与自己相似",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "自我认知混乱",
+      "consequences": [
+        "纸条背面印着13号舱舱门图案"
+      ]
+    },
+    {
+      "event_id": "e30",
+      "event_name": "记忆共振",
+      "event_order": 4,
+      "details": "三人同时触碰保险箱内的怀表，表盘倒转出各自童年记忆——但背景都是同艘游轮的不同的灾难现场",
+      "scene_id": "s12",
+      "scene_name": "船长保险箱",
+      "scene_place": "船首像内部",
+      "emotional_impact": "冷静",
+      "consequences": [
+        "怀表指针停止时指向今日日期"
+      ]
+    },
+    {
+      "event_id": "e31",
+      "event_name": "终极航海图",
+      "event_order": 5,
+      "details": "引擎室地面渗出黑色原油，自动绘制出包含所有时间线分支的第五维度航海图",
+      "scene_id": "s11",
+      "scene_name": "量子引擎室",
+      "scene_place": "游轮动力核心",
+      "emotional_impact": "释然",
+      "consequences": [
+        "航海图显示沉船是唯一逃生方式"
+      ]
+    },
+    {
+      "event_id": "e15",
+      "event_name": "锡纸陷阱",
+      "event_order": 5,
+      "details": "在剧院布置反光锡纸装置，诱使苏明月暴露在强光下",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "病态的实验欲",
+      "consequences": [
+        "录下苏明月皮肤浮现鳞状纹路的画面"
+      ]
+    },
+    {
+      "event_id": "e15",
+      "event_name": "锡纸陷阱",
+      "event_order": 5,
+      "details": "在剧院布置反光锡纸装置，诱使苏明月暴露在强光下",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "病态的实验欲",
+      "consequences": [
+        "录下苏明月皮肤浮现鳞状纹路的画面"
+      ]
+    },
+    {
+      "event_id": "e15",
+      "event_name": "锡纸陷阱",
+      "event_order": 5,
+      "details": "在剧院布置反光锡纸装置，诱使苏明月暴露在强光下",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "病态的实验欲",
+      "consequences": [
+        "录下苏明月皮肤浮现鳞状纹路的画面"
+      ]
+    },
+    {
+      "event_id": "e15",
+      "event_name": "锡纸陷阱",
+      "event_order": 5,
+      "details": "在剧院布置反光锡纸装置，诱使苏明月暴露在强光下",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "病态的实验欲",
+      "consequences": [
+        "录下苏明月皮肤浮现鳞状纹路的画面"
+      ]
+    },
+    {
+      "event_id": "e32",
+      "event_name": "量子签名",
+      "event_order": 6,
+      "details": "保险箱最底层出现需要三人同步签名的时空契约，墨水瓶里的液体是1999年的海水",
+      "scene_id": "s12",
+      "scene_name": "船长保险箱",
+      "scene_place": "船首像内部",
+      "emotional_impact": "坚决",
+      "consequences": [
+        "签名笔由陈小刀的机械义眼部件改造而成"
+      ]
+    },
+    {
+      "event_id": "e32",
+      "event_name": "量子签名",
+      "event_order": 6,
+      "details": "保险箱最底层出现需要三人同步签名的时空契约，墨水瓶里的液体是1999年的海水",
+      "scene_id": "s12",
+      "scene_name": "船长保险箱",
+      "scene_place": "船首像内部",
+      "emotional_impact": "坚决",
+      "consequences": [
+        "签名笔由陈小刀的机械义眼部件改造而成"
+      ]
+    },
+    {
+      "event_id": "e16",
+      "event_name": "完美调制",
+      "event_order": 16,
+      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "紫外线过敏转化为创世级审美快感",
+      "consequences": [
+        "酒杯边缘产生霍金辐射",
+        "柠檬切片结晶成时间晶体"
+      ]
+    },
+    {
+      "event_id": "e16",
+      "event_name": "完美调制",
+      "event_order": 16,
+      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "紫外线过敏转化为创世级审美快感",
+      "consequences": [
+        "酒杯边缘产生霍金辐射",
+        "柠檬切片结晶成时间晶体"
+      ]
+    },
+    {
+      "event_id": "e16",
+      "event_name": "完美调制",
+      "event_order": 16,
+      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "紫外线过敏转化为创世级审美快感",
+      "consequences": [
+        "酒杯边缘产生霍金辐射",
+        "柠檬切片结晶成时间晶体"
+      ]
+    },
+    {
+      "event_id": "e16",
+      "event_name": "完美调制",
+      "event_order": 16,
+      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "紫外线过敏转化为创世级审美快感",
+      "consequences": [
+        "酒杯边缘产生霍金辐射",
+        "柠檬切片结晶成时间晶体"
+      ]
+    },
+    {
+      "event_id": "e16",
+      "event_name": "完美调制",
+      "event_order": 16,
+      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
+      "scene_id": "s6",
+      "scene_name": "废弃剧院后台",
+      "scene_place": "布满蜘蛛网的化妆间",
+      "emotional_impact": "紫外线过敏转化为创世级审美快感",
+      "consequences": [
+        "酒杯边缘产生霍金辐射",
+        "柠檬切片结晶成时间晶体"
+      ]
+    },
+    {
+      "event_id": "e16",
+      "event_name": "完美调制",
+      "event_order": 16,
+      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
+      "scene_id": "s5",
+      "scene_name": "洗衣房密室",
+      "scene_place": "蒸汽弥漫的洗衣间",
+      "emotional_impact": "紫外线过敏转化为创世级审美快感",
+      "consequences": [
+        "酒杯边缘产生霍金辐射",
+        "柠檬切片结晶成时间晶体"
+      ]
+    }
+  ]
 }

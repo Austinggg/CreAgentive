@@ -1,0 +1,281 @@
+{
+  "chapter": 15,
+  "properties": {
+    "id": "p3",
+    "affiliations": [
+      "皇家加勒比邮轮公司"
+    ],
+    "occupation": [
+      "游轮服务生"
+    ],
+    "name": "陈小刀",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "紫外线过敏（长袖制服）",
+    "personality": "看似懦弱实则观察力惊人",
+    "aliases": [
+      "侍应生"
+    ]
+  },
+  "relationships": [
+    {
+      "chapter": 15,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 3,
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
+    },
+    {
+      "chapter": 15,
+      "name": "林修",
+      "intensity": 3,
+      "character_id": "p1",
+      "type": "信息交易"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 4,
+      "character_id": "p2",
+      "type": "暗中观察"
+    },
+    {
+      "chapter": 15,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "利益同盟→提防"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "暗中观察→主动试探"
+    },
+    {
+      "chapter": 15,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "伪装服从"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "单向保护"
+    },
+    {
+      "chapter": 15,
+      "name": "林修",
+      "intensity": 4,
+      "character_id": "p1",
+      "type": "服从关系"
+    },
+    {
+      "chapter": 15,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "复仇欲望"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 5,
+      "character_id": "p2",
+      "type": "实验共鸣"
+    },
+    {
+      "chapter": 15,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "机械共鸣"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "报恩心理"
+    },
+    {
+      "chapter": 15,
+      "name": "林修",
+      "intensity": 8,
+      "character_id": "p1",
+      "type": "恐惧与复仇"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 6,
+      "character_id": "p2",
+      "type": "保护与试探"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "实验连接"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 9,
+      "character_id": "p2",
+      "type": "记忆传递"
+    },
+    {
+      "chapter": 15,
+      "name": "林修",
+      "intensity": 6,
+      "character_id": "p1",
+      "type": "机械抗拒"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "基因牵引"
+    },
+    {
+      "chapter": 15,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "记忆共享"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e22",
+      "event_name": "龙骨刻印",
+      "event_order": 2,
+      "details": "陈小刀用金属手臂在船体裂缝刻下海德拉符号",
+      "scene_id": "s10",
+      "scene_name": "龙骨裂缝",
+      "scene_place": "船底断裂带",
+      "emotional_impact": "仪式感与恐惧交织",
+      "consequences": [
+        "裂缝渗出蓝色流体"
+      ]
+    },
+    {
+      "event_id": "e24",
+      "event_name": "三位一体",
+      "event_order": 4,
+      "details": "三人同时触碰各自机械部位形成能量三角，皮肤浮现相同编号",
+      "scene_id": "s11",
+      "scene_name": "量子泡沫层",
+      "scene_place": "锚点核心区域",
+      "emotional_impact": "释然",
+      "consequences": [
+        "证实三者为同批次克隆体"
+      ]
+    },
+    {
+      "event_id": "e25",
+      "event_name": "终局悖论",
+      "event_order": 5,
+      "details": "在海水倒灌瞬间，陈小刀将量子流体注入林修机械骨骼",
+      "scene_id": "s10",
+      "scene_name": "龙骨裂缝",
+      "scene_place": "船底断裂带",
+      "emotional_impact": "赎罪感",
+      "consequences": [
+        "形成量子黑洞吞噬锚点"
+      ]
+    },
+    {
+      "event_id": "e26",
+      "event_name": "幽灵频段",
+      "event_order": 6,
+      "details": "沉没前收音机突然清晰播放：欢迎乘坐下一次海德拉号航班",
+      "scene_id": "s9",
+      "scene_name": "船钟塔",
+      "scene_place": "游轮最高处的钟楼",
+      "emotional_impact": "泪水结晶",
+      "consequences": [
+        "新游轮在风暴中显现轮廓"
+      ]
+    },
+    {
+      "event_id": "e26",
+      "event_name": "幽灵频段",
+      "event_order": 6,
+      "details": "沉没前收音机突然清晰播放：欢迎乘坐下一次海德拉号航班",
+      "scene_id": "s11",
+      "scene_name": "量子泡沫层",
+      "scene_place": "锚点核心区域",
+      "emotional_impact": "泪水结晶",
+      "consequences": [
+        "新游轮在风暴中显现轮廓"
+      ]
+    },
+    {
+      "event_id": "e26",
+      "event_name": "幽灵频段",
+      "event_order": 6,
+      "details": "沉没前收音机突然清晰播放：欢迎乘坐下一次海德拉号航班",
+      "scene_id": "s9",
+      "scene_name": "船钟塔",
+      "scene_place": "游轮最高处的钟楼",
+      "emotional_impact": "泪水结晶",
+      "consequences": [
+        "新游轮在风暴中显现轮廓"
+      ]
+    },
+    {
+      "event_id": "e26",
+      "event_name": "幽灵频段",
+      "event_order": 6,
+      "details": "沉没前收音机突然清晰播放：欢迎乘坐下一次海德拉号航班",
+      "scene_id": "s11",
+      "scene_name": "量子泡沫层",
+      "scene_place": "锚点核心区域",
+      "emotional_impact": "泪水结晶",
+      "consequences": [
+        "新游轮在风暴中显现轮廓"
+      ]
+    },
+    {
+      "event_id": "e27",
+      "event_name": "金属朝霭",
+      "event_order": 7,
+      "details": "晨光中三人的机械部位汽化成量子云，覆盖整片海域",
+      "scene_id": "s11",
+      "scene_name": "量子泡沫层",
+      "scene_place": "锚点核心区域",
+      "emotional_impact": "彻底解脱",
+      "consequences": [
+        "形成新的时空褶皱"
+      ]
+    },
+    {
+      "event_id": "e27",
+      "event_name": "金属朝霭",
+      "event_order": 7,
+      "details": "晨光中三人的机械部位汽化成量子云，覆盖整片海域",
+      "scene_id": "s11",
+      "scene_name": "量子泡沫层",
+      "scene_place": "锚点核心区域",
+      "emotional_impact": "彻底解脱",
+      "consequences": [
+        "形成新的时空褶皱"
+      ]
+    }
+  ]
+}
