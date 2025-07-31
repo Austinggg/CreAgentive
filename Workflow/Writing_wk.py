@@ -22,6 +22,7 @@ class WritingWorkflow:
         self.chapters_dir = os.path.join("Resource", "memory", "story_plan")
         self.save_dir = os.path.join("Resource", "story")
         self.current_chapter = 0
+        self.chapter_count = 0
         self.memory_agent = MemoryAgent()
 
         # 智能体初始化标记
@@ -48,12 +49,7 @@ class WritingWorkflow:
         self.agents_initialized = True
         print("✅ 所有智能体初始化完成")
 
-    def _load_init_data(self):
-        """专门加载初始化数据"""
-        init_path = os.path.join(self.chapters_dir, "chapter_0.json")
-        return read_json(init_path) if os.path.exists(init_path) else None
-
-    def _validate_article_type(self, article_type="novel"):
+    def _validate_article_type(self, article_type):
         """
         验证写作类型合法性
 
@@ -64,7 +60,6 @@ class WritingWorkflow:
         article_type = article_type.lower()
         assert article_type in ["novel", "script"], "文章类型必须为 'novel' 或 'script'"
         return article_type
-
 
     def _load_current_chapter(self, current_chapter_file):
         """
@@ -79,45 +74,7 @@ class WritingWorkflow:
 
         return data
 
-    def _get_sorted_chapter_files(self):
-        """获取按章节顺序排序的所有章节文件"""
-        all_files = [
-            f for f in os.listdir(self.chapters_dir)
-            if f.endswith('.json') and f.startswith(('chapter', 'Chapter'))
-        ]
-        # 按章节数字排序（假设文件名格式为chapterX.json）
-        return sorted(all_files, key=lambda x: int(re.search(r'(\d+)', x).group(1)))
-
-    def _query_neo4j_event(self, event_id):
-        """
-        增强版Neo4j查询，获取事件所有属性
-        
-        Args:
-            event_id (str): 事件ID，用于在Neo4j中匹配对应的Event节点
-            
-        Returns:
-            dict: 包含事件所有属性的字典，如果未找到事件或查询失败则返回None
-        """
-        # 检查Neo4j驱动是否已初始化
-        if not self.neo4j_driver:
-            return None
-
-        try:
-            # 执行Neo4j查询，获取指定ID的事件节点的所有属性
-            with self.neo4j_driver.session() as session:
-                result = session.run(
-                    """
-                    MATCH (e:Event {id: $event_id})
-                    RETURN properties(e) AS event_data
-                    """,
-                    event_id=event_id
-                ).single()
-                return result["event_data"] if result else None
-        except Exception as e:
-            print(f"⚠️ Neo4j查询失败: {str(e)}")
-            return None
-
-    async def _need_recall_and_load(self, current_data, current_chapter_file):
+    async def _need_recall_and_load(self, current_data):
         print("\n" + "=" * 50)
         print("🔍 开始分人物回忆检索流程")
 
@@ -134,8 +91,8 @@ class WritingWorkflow:
                 character_id=char_id,
                 current_chapter=current_data["chapter"]
             )
-            print(f"<UNK> <UNK>: {prev_events}")
-            print(f"<UNK> <UNK>: {len(prev_events)}")
+            print(f"prev_events: {prev_events}")
+            print(f"prev_events数量: {len(prev_events)}")
 
             if not prev_events:
                 print(f"⚠️ 人物 {character.get('name')} 无前序章节事件")
@@ -150,40 +107,36 @@ class WritingWorkflow:
                 ],
                 "past_events": prev_events
             }
+            print(f"input_data: {input_data}")
 
             # 调用回忆Agent
             recall_result = await self.recallAgent.a_run(task=input_data)
             raw_output = extract_llm_content(recall_result)
+            print(f"raw_output: {raw_output}")
 
             try:
                 recall_resp = json.loads(strip_markdown_codeblock(raw_output))
                 if recall_resp.get("need_recall") == "Yes":
                     print(f"✅ 需要为 {character.get('name')} 添加回忆:")
                     for pos in recall_resp.get("positions", []):
-                        event_details = self._query_neo4j_event(pos["id"])
+                        event_details = self.memory_agent.get_event(pos["id"])
                         if event_details:
                             event_details["related_character"] = char_id
+                            event_details["recall_reason"] = pos["reason"]
                             all_recall_events.append(event_details)
             except Exception as e:
                 print(f"❌ 处理人物 {character.get('name')} 回忆失败: {str(e)}")
 
         return {"need_recall": "Yes" if all_recall_events else "No"}, all_recall_events
 
-    async def _need_dig_and_load(self, current_data, current_chapter_file):
+    async def _need_dig_and_load(self, current_data):
         print("\n" + "=" * 50)
         print("🔮 开始伏笔事件检索流程")
-
-        # 获取所有章节文件并排除chapter_0.json
-        all_files = [
-            f for f in os.listdir(self.chapters_dir)
-            if f.endswith('.json')
-               and f != "chapter_0.json"  # 更宽松的条件
-        ]
 
         # 获取所有后续章节事件（不限定人物）
         next_events = self.memory_agent.get_next_chapters_events(
             current_chapter=current_data["chapter"],
-            end_chapter=len(all_files)  # 查看后续5章
+            end_chapter=self.chapter_count  # 查看后续5章
         )
         print("next_events:", next_events)
 
@@ -206,7 +159,7 @@ class WritingWorkflow:
             dig_events = []
             if dig_resp.get("need_dig") == "Yes":
                 for pos in dig_resp.get("positions", []):
-                    event_details = self._query_neo4j_event(pos["id"])
+                    event_details = self.memory_agent.get_event(pos["id"])
                     if event_details:
                         dig_events.append(event_details)
             return dig_resp, dig_events
@@ -382,8 +335,8 @@ class WritingWorkflow:
         chapter_num = current_data.get("chapter", "unknown")
 
         # 2. 伏笔和回忆分析
-        dig_resp, dig_data = await self._need_dig_and_load(current_data, chapter_file)
-        recall_resp, recall_data = await self._need_recall_and_load(current_data, chapter_file)
+        dig_resp, dig_data = await self._need_dig_and_load(current_data)
+        recall_resp, recall_data = await self._need_recall_and_load(current_data)
         print(dig_resp)
         print(dig_data)
         print(recall_resp)
@@ -405,6 +358,7 @@ class WritingWorkflow:
         """
         print(f"检查目录: {self.chapters_dir}")
         print(f"目录内容: {os.listdir(self.chapters_dir)}")
+
         # 获取所有章节文件并排除chapter_0.json
         all_files = [
             f for f in os.listdir(self.chapters_dir)
@@ -415,8 +369,10 @@ class WritingWorkflow:
         # 按章节数字排序（假设文件名格式为chapterX.json）
         all_files = sorted(all_files, key=lambda x: int(re.search(r'(\d+)', x).group(1)))
 
+        self.chapter_count = len(all_files)
         print(f"📑 共发现 {len(all_files)} 个章节文件（跳过chapter_0.json），开始批量处理...")
         for i, chapter_file in enumerate(all_files, 1):
+            self.current_chapter = i
             print(f"\n===== 处理第{i}/{len(all_files)}章: {chapter_file} =====")
             await self.run_single_chapter(chapter_file, article_type)
 
