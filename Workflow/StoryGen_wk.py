@@ -27,6 +27,7 @@ class StoryGenWorkflow:
         self.model_client = model_client  #设置模型客户端
         self.maxround = int(maxround)  #设置模型最大轮次参数, 所有角色智能体参与一次对话为一轮
         self.memory_agent = MemoryAgent()  # 初始化知识图谱连接
+        self.memory_agent.clear_all_chapter_data() # 清空知识图谱数据
         self.current_chapter = 0  # 添加章节计数器(从0开始)
 
         # 加载初始数据（直接使用原始chapter_0.json）
@@ -419,6 +420,8 @@ class StoryGenWorkflow:
         
         # .run 需要加入参数，调通阶段，暂时不加参数
         response = await self.longgoal_agent.run()
+        # 清空上下文
+        await self.longgoal_agent.model_context.clear()
         result = response if isinstance(response, str) else str(response)
 
         # 判断是否实现长期目标，实现则返回 True，否则返回 False
@@ -457,7 +460,12 @@ class StoryGenWorkflow:
         print("初始化完毕\n")
 
         # === 2. 章节生成主循环 ===
-        while True:
+        max_chapters = 10
+        chapter_count = 0
+        while chapter_count < max_chapters:
+            chapter_count += 1
+            
+        # while True:
             chapter_num = self._get_next_chapter_number()
             print(f"\n📖 开始生成第 {chapter_num} 章...")
 
@@ -495,6 +503,8 @@ class StoryGenWorkflow:
 
                 # 调用短期目标智能体（直接await异步调用）
                 short_goal = await self.shortgoal_agent.run(task=shortgoal_prompt)
+                # 清空上下文
+                await self.shortgoal_agent.model_context.clear()
 
                 # 打印短期目标
                 print(f"短期目标：\n{short_goal}")
