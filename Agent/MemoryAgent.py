@@ -122,6 +122,42 @@ class MemoryAgent:
             error_msg = f"获取事件属性失败: {str(e)}"
             logger.error(error_msg)
             return {"error": error_msg}
+        
+    def get_event_details(self, event_id: str) -> Dict:
+        """
+        获取指定事件的details属性内容
+
+        通过事件ID查询事件节点，返回该事件的details属性
+
+        参数:
+            event_id (str): 要查询的事件ID
+
+        返回:
+            Dict: 包含事件details属性的字典，如果事件不存在或没有details属性则返回错误信息
+        """
+        query = """
+        MATCH (e:Event {id: $event_id})
+        RETURN e.details as event_details
+        """
+        params = {"event_id": event_id}
+
+        try:
+            result = self.connector.execute_query(query, params)
+            if not result:
+                return {"error": f"事件ID {event_id} 不存在"}
+
+            # 检查details属性是否存在
+            event_details = result[0].get("event_details")
+            if event_details is None:
+                return {"error": f"事件ID {event_id} 没有details属性"}
+
+            logger.info(f"成功获取事件 {event_id} 的details属性")
+            return {"details": event_details}
+
+        except Exception as e:
+            error_msg = f"获取事件details属性失败: {str(e)}"
+            logger.error(error_msg)
+            return {"error": error_msg}
 
     def get_character_memory(self, character_id: str, chapter: int) -> Dict:
         """
@@ -180,8 +216,11 @@ class MemoryAgent:
         """
         previous_events = []
 
+        # 限制事件数量
+        limit = 2
+
         # 确定查询范围
-        start_chapter = max(1, current_chapter - 5)
+        start_chapter = max(1, current_chapter - 2)
         end_chapter = current_chapter - 1
 
         # 遍历范围内的每一章
@@ -200,12 +239,20 @@ class MemoryAgent:
 
         # 按章节和事件顺序排序
         previous_events.sort(key=lambda x: (x["chapter_num"], x.get("event_order", 0)))
+
+        # 如果设置了限制数量，则返回限制数量的事件
+        if limit is not None:
+            previous_events = previous_events[:limit]
+
         return previous_events
 
     def get_next_chapters_events(self, current_chapter: int, end_chapter: int):
         """
         获取当前章节后最多5章中的所有事件（增强兼容性版本）
         """
+        # 限制事件数量
+        limit = 2
+
         if current_chapter >= end_chapter:
             return []
 
@@ -226,12 +273,17 @@ class MemoryAgent:
         """
         params = {
             "current_chapter": current_chapter,
-            "max_chapter": min(current_chapter + 5, end_chapter)
+            "max_chapter": min(current_chapter + 2, end_chapter)
         }
 
         try:
             result = self.connector.execute_query(query, params)
             logger.info(f"查询第{current_chapter}章后事件: 条件{params} 结果{len(result)}条")
+
+            # 如果设置了限制数量，则返回限制数量的事件
+            if limit is not None:
+                result = result[:limit]
+
             return result
         except Exception as e:
             logger.error(f"查询后续章节事件失败: {str(e)}")
