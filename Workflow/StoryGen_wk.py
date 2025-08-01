@@ -42,6 +42,10 @@ class StoryGenWorkflow:
         # 直接调用MemoryAgent加载初始化人物和关系，保存至知识图谱
         self.memory_agent.load_initial_data(init_file)
 
+
+        # 存储上一章节的方案
+        self.last_plan = None
+
         logging.info(
             f"初始化完成 - 标题: {self.title}, "
             f"角色数: {len(self.initial_data['characters'])}, "
@@ -382,11 +386,7 @@ class StoryGenWorkflow:
 
         try:
             if isinstance(plan, str):
-                try:
-                    plan_data = json.loads(plan)
-                except json.JSONDecodeError:
-                    logging.error("最佳方案不是有效的JSON字符串")
-                    raise
+                plan_data = json.loads(plan)
             elif isinstance(plan, dict):
                 plan_data = plan
             else:
@@ -464,16 +464,37 @@ class StoryGenWorkflow:
             # -- 2.1 生成短期目标 --
             try:
                 # 构造短期目标生成提示（包含长期目标和当前环境）
-                prompt = (
+                shortgoal_prompt = (
                     f"长期目标: {self.longgoal}\n"
                     f"当前环境: {json.dumps(self.background, ensure_ascii=False)}\n"
-                    f"请生成第 {chapter_num} 章的短期目标"
+                    f"上一章的方案事件: {json.dumps(self.last_plan, ensure_ascii=False) if self.last_plan else '无'}\n"
+                    f"请生成第 {chapter_num} 章的短期目标\n"
+                    "输出必须是完整JSON对象，使用指定键值对：chapter_goal, chapter_title。"
+                    "内容全部用中文描述，禁止使用标点或空格以外任何符号。"
+                    """请严格遵循以下规则生成第 {chapter_num} 章的短期目标：
+                    1. 【核心要求】
+                       - chapter_goal必须≤20字，直接解决上一章的遗留问题或延续动机
+                       - chapter_title必须≤10字且与chapter_goal强关联
+                       - 必须推动长期目标「{self.longgoal}」的进展
+    
+                    2. 【内容规范】
+                       - 禁止添加解释性文本
+                       - 仅输出如下JSON格式：
+                    {
+                      "chapter_goal": "例如：揭露叛徒身份或逃离废墟城市",
+                      "chapter_title": "例如：背叛者或生死逃亡"
+                    }
+    
+                    3. 【设计原则】
+                       - 从当前环境提取关键冲突元素
+                       - 确保目标可执行（明确动作+对象）
+                       - 必须包含1个创新悬念点"""
                 )
 
-                print(f"短期目标生成提示：\n{prompt}")
+                print(f"短期目标生成提示：\n{shortgoal_prompt}")
 
                 # 调用短期目标智能体（直接await异步调用）
-                short_goal = await self.shortgoal_agent.run(task=prompt)
+                short_goal = await self.shortgoal_agent.run(task=shortgoal_prompt)
 
                 # 打印短期目标
                 print(f"短期目标：\n{short_goal}")
@@ -549,6 +570,7 @@ class StoryGenWorkflow:
 
                 # 保存章节数据+更新知识图谱
                 self._save_chapter(best_plan)
+                self.last_plan = best_plan  # 保存当前章节作为下一章的"上一章"
 
                 # self.memory_agent.build_graph_from_json(best_plan)
             except Exception as e:
