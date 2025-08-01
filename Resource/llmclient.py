@@ -54,7 +54,7 @@ class LLMClientManager:
                 base_url="https://api.siliconflow.cn/v1",
                 api_key=siliconflow_api_key,
                 model_info={
-                    "family": "deepseek",
+                    "family": "r1",
                     "context_length": 8192,
                     "max_output_tokens": 2048,
                     "tool_choice_supported": True,
@@ -70,7 +70,7 @@ class LLMClientManager:
                 base_url="https://api.siliconflow.cn/v1",
                 api_key=siliconflow_api_key,
                 model_info={
-                    "family": "glm",
+                    "family": "qwen3",
                     "context_length": 8192,
                     "max_output_tokens": 2048,
                     "tool_choice_supported": True,
@@ -81,14 +81,14 @@ class LLMClientManager:
                     "json_output": True
                 },
             ),
-            "glm4": OpenAIChatCompletionClient(
-                model="THUDM/GLM-4-32B-0414",
+            "glm4.5-air": OpenAIChatCompletionClient(
+                model="zai-org/GLM-4.5-Air",
                 base_url="https://api.siliconflow.cn/v1",
                 api_key=siliconflow_api_key,
                 model_info={
-                    "family": "glm",
-                    "context_length": 8192,
-                    "max_output_tokens": 2048,
+                    "family": "glm4.5",
+                    "context_length": 120000,
+                    "max_output_tokens": 8192,
                     "tool_choice_supported": True,
                     "tool_choice_required": False,
                     "structured_output": True,
@@ -102,9 +102,25 @@ class LLMClientManager:
                 base_url="https://openrouter.ai/api/v1",
                 api_key=openrouter_api_key,
                 model_info={
-                    "family": "glm",
+                    "family": "4o",
                     "context_length": 8192,
                     "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
+            "gpt-4.1-mini": OpenAIChatCompletionClient(
+                model="openai/gpt-4.1-mini",
+                base_url="https://openrouter.ai/api/v1",
+                api_key=openrouter_api_key,
+                model_info={
+                    "family": "gpt-41",
+                    "context_length": 120000,
+                    "max_output_tokens": 8192,
                     "tool_choice_supported": True,
                     "tool_choice_required": False,
                     "structured_output": True,
@@ -118,7 +134,7 @@ class LLMClientManager:
                 base_url="https://openrouter.ai/api/v1",
                 api_key=openrouter_api_key,
                 model_info={
-                    "family": "glm",
+                    "family": "4o",
                     "context_length": 8192,
                     "max_output_tokens": 2048,
                     "tool_choice_supported": True,
@@ -134,7 +150,7 @@ class LLMClientManager:
                 base_url="https://openrouter.ai/api/v1",
                 api_key=openrouter_api_key,
                 model_info={
-                    "family": "glm",
+                    "family": "llama4",
                     "context_length": 8192,
                     "max_output_tokens": 2048,
                     "tool_choice_supported": True,
@@ -150,9 +166,41 @@ class LLMClientManager:
                 base_url="https://openrouter.ai/api/v1",
                 api_key=openrouter_api_key,
                 model_info={
-                    "family": "glm",
+                    "family": "llama",
                     "context_length": 8192,
                     "max_output_tokens": 2048,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
+            "gemini-2.5-flash": OpenAIChatCompletionClient(
+                model="google/gemini-2.5-flash",
+                base_url="https://openrouter.ai/api/v1",
+                api_key=openrouter_api_key,
+                model_info={
+                    "family": "gemini-2.5-flash",
+                    "context_length": 120000,
+                    "max_output_tokens": 8192,
+                    "tool_choice_supported": True,
+                    "tool_choice_required": False,
+                    "structured_output": True,
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True
+                },
+            ),
+            "grok-3-mini": OpenAIChatCompletionClient(
+                model="x-ai/grok-3-mini",
+                base_url="https://openrouter.ai/api/v1",
+                api_key=openrouter_api_key,
+                model_info={
+                    "family": "gork",
+                    "context_length": 120000,
+                    "max_output_tokens": 8192,
                     "tool_choice_supported": True,
                     "tool_choice_required": False,
                     "structured_output": True,
