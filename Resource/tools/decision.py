@@ -52,6 +52,7 @@ async def score_plan(plan, model_client):
     score_output = await scoreAgent.run(
         task=TextMessage(content=f"请按模板对下面方案评分：\n\n{plan}",source="user")
     )
+    await scoreAgent.model_context.clear()
 
     print("逻辑原子评分结果：")
     print(score_output)
