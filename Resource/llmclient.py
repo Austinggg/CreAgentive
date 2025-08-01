@@ -39,8 +39,8 @@ class LLMClientManager:
                 api_key=siliconflow_api_key,
                 model_info={
                     "family": "deepseek",
-                    "context_length": 8192,
-                    "max_output_tokens": 2048,
+                    "context_length": 128000,
+                    "max_output_tokens": 8192,
                     "tool_choice_supported": True,
                     "tool_choice_required": False,
                     "structured_output": True,
