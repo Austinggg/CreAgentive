@@ -3,8 +3,11 @@ import json
 from Resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
 from Agent.WriteAgent import create_agents
 from Resource.tools.extract_llm_content import extract_llm_content
+from autogen_agentchat.agents import AssistantAgent
+from autogen_core.model_context import UnboundedChatCompletionContext
 from Agent.MemoryAgent import MemoryAgent
 from Resource.tools.read_json import read_json
+
 import re
 
 class WritingWorkflow:
@@ -111,6 +114,8 @@ class WritingWorkflow:
 
             # 调用回忆Agent
             recall_result = await self.recallAgent.a_run(task=input_data)
+            # 清空 recallAgent 的上下文
+            self.recallAgent.model_context.clear()
             raw_output = extract_llm_content(recall_result)
             print(f"raw_output: {raw_output}")
 
@@ -119,7 +124,7 @@ class WritingWorkflow:
                 if recall_resp.get("need_recall") == "Yes":
                     print(f"✅ 需要为 {character.get('name')} 添加回忆:")
                     for pos in recall_resp.get("positions", []):
-                        event_details = self.memory_agent.get_event(pos["id"])
+                        event_details = self.memory_agent.get_event_details(pos["id"])
                         if event_details:
                             event_details["related_character"] = char_id
                             event_details["recall_reason"] = pos["reason"]
@@ -152,6 +157,8 @@ class WritingWorkflow:
 
         # 调用伏笔Agent
         dig_result = await self.diggerAgent.a_run(task=input_data)
+        # 清空 diggerAgent 上下文
+        self.diggerAgent.model_context.clear()
         raw_output = extract_llm_content(dig_result)
 
         try:
@@ -159,7 +166,7 @@ class WritingWorkflow:
             dig_events = []
             if dig_resp.get("need_dig") == "Yes":
                 for pos in dig_resp.get("positions", []):
-                    event_details = self.memory_agent.get_event(pos["id"])
+                    event_details = self.memory_agent.get_event_details(pos["id"])
                     if event_details:
                         dig_events.append(event_details)
             return dig_resp, dig_events
@@ -252,13 +259,19 @@ class WritingWorkflow:
             print(f"{exists} {field}: {type(data.get(field))}")
 
     async def _write_and_save(self, combined_data, chapter_num, article_type):
+        
+        # 选择
         writer = self.novel_writer if article_type == "novel" else self.script_writer
         print(f"✍️ 开始生成第{chapter_num}章 {article_type}...")
 
         try:
-            # 调用写作智能体
-            # write_result = await writer.run(task=combined_data)
+            # 根据文章体裁调用对应类别的写作智能体
             write_result = await writer.a_run(task=combined_data)
+            # 调用完成后要求清空该 agent 的上下文
+            await self.novel_writer.model_context.clear()
+            await self.script_writer.model_context.clear()
+
+
             # print(write_result.messages)
             print("\n======================\n")
             print(f"✍️ 第{chapter_num}章 {article_type}生成完成")

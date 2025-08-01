@@ -19,11 +19,9 @@ async def main():
 
     # 初始化并运行工作流
     workflow = WritingWorkflow(
-        model_client=llm_client,
-        chapters_dir=chapters_dir,
-        neo4j_password=neo4j_password
+        model_client=llm_client
     )
-    await workflow.run(article_type="script")  # 可切换为"script"
+    await workflow.run(article_type="novel")  # 可切换为"script"
 
 
 asyncio.run(main())
