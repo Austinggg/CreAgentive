@@ -1,6 +1,5 @@
 from autogen_agentchat.agents import AssistantAgent
 from Resource.template.storygen_prompt.decision import decision_prompt_template
-from Resource.tools.extract_last_content import extract_last_text_content
 from Resource.tools.extract_llm_content import extract_llm_content
 from Resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
 from autogen_agentchat.messages import TextMessage
