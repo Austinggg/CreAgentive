@@ -115,7 +115,7 @@ class WritingWorkflow:
             # 调用回忆Agent
             recall_result = await self.recallAgent.a_run(task=input_data)
             # 清空 recallAgent 的上下文
-            self.recallAgent.model_context.clear()
+            await self.recallAgent.model_context.clear()
             raw_output = extract_llm_content(recall_result)
             print(f"raw_output: {raw_output}")
 
@@ -158,7 +158,7 @@ class WritingWorkflow:
         # 调用伏笔Agent
         dig_result = await self.diggerAgent.a_run(task=input_data)
         # 清空 diggerAgent 上下文
-        self.diggerAgent.model_context.clear()
+        await self.diggerAgent.model_context.clear()
         raw_output = extract_llm_content(dig_result)
 
         try:
@@ -284,9 +284,14 @@ class WritingWorkflow:
             print("\n💡 写作Agent原始输出:")
             print(raw_output)
 
+
+
             # 移除Markdown代码块
             output_text = strip_markdown_codeblock(raw_output)
             output_text = output_text.strip()  # 清理首尾空白
+
+            chapter_title = combined_data.get("chapter_title", f"第{chapter_num}章")
+            output_text = f"{chapter_title}\n\n{output_text}"  # 在生成内容前添加标题
 
             # 验证提取结果（增加明确长度检查）
             if not output_text or len(output_text) < 10:  # 避免极短无效内容

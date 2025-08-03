@@ -27,7 +27,7 @@ class StoryGenWorkflow:
         self.model_client = model_client  #设置模型客户端
         self.maxround = int(maxround)  #设置模型最大轮次参数, 所有角色智能体参与一次对话为一轮
         self.memory_agent = MemoryAgent()  # 初始化知识图谱连接
-        self.memory_agent.clear_all_chapter_data() # 清空知识图谱数据
+        self.memory_agent.clear_all_chapter_data()
         self.current_chapter = 0  # 添加章节计数器(从0开始)
 
         # 加载初始数据（直接使用原始chapter_0.json）
@@ -420,7 +420,6 @@ class StoryGenWorkflow:
         
         # .run 需要加入参数，调通阶段，暂时不加参数
         response = await self.longgoal_agent.run()
-        # 清空上下文
         await self.longgoal_agent.model_context.clear()
         result = response if isinstance(response, str) else str(response)
 
@@ -460,12 +459,8 @@ class StoryGenWorkflow:
         print("初始化完毕\n")
 
         # === 2. 章节生成主循环 ===
-        max_chapters = 10
-        chapter_count = 0
-        while chapter_count < max_chapters:
-            chapter_count += 1
-            
         # while True:
+        while self.current_chapter < 10:
             chapter_num = self._get_next_chapter_number()
             print(f"\n📖 开始生成第 {chapter_num} 章...")
 
@@ -503,7 +498,6 @@ class StoryGenWorkflow:
 
                 # 调用短期目标智能体（直接await异步调用）
                 short_goal = await self.shortgoal_agent.run(task=shortgoal_prompt)
-                # 清空上下文
                 await self.shortgoal_agent.model_context.clear()
 
                 # 打印短期目标
@@ -511,9 +505,15 @@ class StoryGenWorkflow:
 
                 # 需从 autogen 的输出中剥离 shortgoal，并且要去掉 Markdown 语法
                 short_goal = strip_markdown_codeblock(extract_llm_content(short_goal))
+                try:
+                    short_goal = json.loads(short_goal)  # 解析为JSON
+                    chapter_title = short_goal.get("chapter_title", f"第{chapter_num}章")
+                    chapter_goal = short_goal.get("chapter_goal", "")
+                except json.JSONDecodeError:
+                    chapter_title = f"第{chapter_num}章"
+                    chapter_goal = ""
                 print(f"短期目标的类型: {type(short_goal)}")
                 print(f"短期目标,优化后：\n{short_goal}")
-
 
                 # 确保返回值为字符串（智能体可能返回不同格式）
                 if not isinstance(short_goal, str):
@@ -567,8 +567,6 @@ class StoryGenWorkflow:
                 continue
 
             print("🚀 开始评估方案")
-            # print(round_plans)
-            # print(type(round_plans))
 
             try:
                 # 评分并选择最佳方案
@@ -578,11 +576,18 @@ class StoryGenWorkflow:
                 print(f"✅ 最佳方案评分: {best_score}")
                 print(f"✅ 最佳方案: {best_plan}")
 
-                # 保存章节数据+更新知识图谱
-                self._save_chapter(best_plan)
-                self.last_plan = best_plan  # 保存当前章节作为下一章的"上一章"
+                # 创建新的有序字典，将章节标题和目标放在最前面
+                ordered_plan = {
+                    "chapter": self.current_chapter,
+                    "chapter_title": chapter_title,
+                    "chapter_goal": chapter_goal,
+                    **{k: v for k, v in best_plan.items() if k not in ["chapter", "chapter_title", "chapter_goal"]}
+                }
 
-                # self.memory_agent.build_graph_from_json(best_plan)
+                # 保存章节数据+更新知识图谱
+                self._save_chapter(ordered_plan)
+                self.last_plan = ordered_plan  # 保存当前章节作为下一章的"上一章"
+
             except Exception as e:
                 print(f"⚠️ 方案保存失败: {str(e)}")
                 continue
