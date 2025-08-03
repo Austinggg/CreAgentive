@@ -86,7 +86,7 @@ class LLMClientManager:
                 base_url="https://api.siliconflow.cn/v1",
                 api_key=siliconflow_api_key,
                 model_info={
-                    "family": "glm4.5",
+                    "family": "glm",
                     "context_length": 120000,
                     "max_output_tokens": 8192,
                     "tool_choice_supported": True,
@@ -119,7 +119,7 @@ class LLMClientManager:
                 api_key=openrouter_api_key,
                 model_info={
                     "family": "gpt-41",
-                    "context_length": 120000,
+                    "context_length": 128000,
                     "max_output_tokens": 8192,
                     "tool_choice_supported": True,
                     "tool_choice_required": False,
