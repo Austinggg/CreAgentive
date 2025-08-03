@@ -14,13 +14,11 @@ async def main():
     chapters_dir = os.path.join("Resource", "memory", "story_plan")
 
     # 获取模型客户端和Neo4j密码
-    llm_client = LLMClientManager().get_client("pro-deepseek-v3")
+    llm_client = LLMClientManager().get_client("grok-3-mini")
     neo4j_password = os.getenv("NEO4J_PASSWORD")
 
     # 初始化并运行工作流
-    workflow = WritingWorkflow(
-        model_client=llm_client
-    )
+    workflow = WritingWorkflow(model_client=llm_client)
     await workflow.run(article_type="novel")  # 可切换为"script"
 
 
