@@ -1,24 +1,23 @@
-import logger
-from Agent.InitializeAgent import create_agents
+# 标准库
 import os
 import json
 import asyncio
-from Agent.MemoryAgent import MemoryAgent
-from Resource.tools.customJSONEncoder import CustomJSONEncoder
+import logging
+from pathlib import Path
+# autogen
 from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.teams import RoundRobinGroupChat
+# 项目模块
+from Agent.MemoryAgent import MemoryAgent
 from Agent.StoryGenAgent import create_agents
-from Resource.tools.extract_last_content import extract_last_text_content
-from Resource.tools.read_json import read_json, read_max_index_file
-from Resource.tools.decision import score_plan,evaluate_plan
-from Resource.template.story_template import story_plan_template, story_plan_example
-from Resource.tools.extract_last_content import extract_last_text_content
+from Resource.tools.customJSONEncoder import CustomJSONEncoder
+from Resource.tools.read_json import read_max_index_file
+from Resource.tools.decision import evaluate_plan
 from Resource.tools.extract_llm_content import extract_llm_content
 from Resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
 from Resource.tools.to_valid_identifier import to_valid_identifier
-
-import logging
-from pathlib import Path
+from Resource.template.storygen_prompt.shortgoal import SHORTGOAL_PROMPT_TEMPLATE
+from Resource.template.storygen_prompt.role_prompt import ROLE_PROMPT_TEMPLATE
 
 
 class StoryGenWorkflow:
@@ -31,7 +30,8 @@ class StoryGenWorkflow:
         self.current_chapter = 0  # 添加章节计数器(从0开始)
 
         # 加载初始数据（直接使用原始chapter_0.json）
-        init_file = "Resource/memory/story_plan/chapter_0.json"
+        # 使用Path对象处理路径
+        init_file = Path("Resource") / "memory" / "story_plan" / "chapter_0.json"
         self.initial_data = self._load_initial_data(init_file)
 
         # 静态数据存储
@@ -54,6 +54,22 @@ class StoryGenWorkflow:
         )
 
     def _load_initial_data(self, file_path: str) -> dict:
+        """
+        加载初始数据文件
+        
+        从指定路径加载JSON格式的初始数据文件，并验证数据完整性
+        
+        参数:
+            file_path (str): 数据文件的路径
+            
+        返回:
+            dict: 包含初始数据的字典
+            
+        异常:
+            FileNotFoundError: 当数据文件不存在时抛出
+            json.JSONDecodeError: 当文件格式不是有效JSON时抛出
+            ValueError: 当数据缺少必要字段时抛出
+        """
         path = Path(file_path)
         if not path.exists():
             raise FileNotFoundError(f"初始数据文件不存在: {file_path}")
@@ -76,6 +92,7 @@ class StoryGenWorkflow:
         return data
 
     def _get_next_chapter_number(self):
+        """获取下一个章节编号"""
         self.current_chapter += 1
         return self.current_chapter
 
@@ -190,39 +207,23 @@ class StoryGenWorkflow:
 
 
     def _create_role_prompt(self, role_relation, role_events, role_identity, short_goal):
-        """创建角色智能体的系统提示词"""
-        # 将模板和示例转换为格式化的JSON字符串
-        template_str = json.dumps(story_plan_template, ensure_ascii=False, indent=2)
-        example_str = json.dumps(story_plan_example, ensure_ascii=False, indent=2)
+        """创建角色智能体的系统提示词
+        
+        Args:
+            role_relation (str): 角色的关系网络信息
+            role_events (str): 上一章发生的事件
+            role_identity (str): 角色的身份背景
+            short_goal (str): 当前章节的短期目标
+            
+        Returns:
+            str: 格式化后的角色提示词字符串，包含角色背景、目标和生成要求
+        """
 
-        role_prompt = (
-            "# 你是小说中的一个角色\n"
-            "## 角色基本信息\n"
-            f"身份: {role_identity}\n"
-            f"关系网: {role_relation}\n"
-            f"在上一章中所参与的历史事件: {role_events}\n\n"
-            "## 任务要求\n"
-            "1. 根据以上信息生成符合角色特征的接下来一章节方案\n"
-            f"2. 你生成的方案需要依据当前章节的短期目标: {short_goal}\n"
-            "3. 方案需要生成5-10个有序事件\n"
-            "4. 方案可以考虑将人物关系进行适当变化\n"
-            "5. 每次生成均是对上一方案进行优化迭代\n\n"
-            "## 输出格式\n"
-            "### 模板结构:\n"
-            f"{template_str}\n\n"
-            "### 示例参考(仅学习其格式，不学习具体内容）:\n"
-            f"{example_str}\n\n"
-            "### 只需生成以下三个部分：\n"
-            "1. relationships: 角色关系变化\n"
-            "2. scenes: 新场景(2-3个)\n"
-            "3. events: 事件序列(5-10个)\n\n"
-            "### 禁止生成\n"
-            "- chapter/characters等固定字段\n"
-            "## 注意事项\n"
-            "- 输出纯JSON格式，不要包含Markdown或```json等其他格式化标记\n"
-            "- 确保所有字段完整且类型正确\n"
-            "- 情感状态需符合角色性格\n"
-            "- 事件顺序需保持时间线连贯"
+        role_prompt = ROLE_PROMPT_TEMPLATE.format(
+            role_identity=role_identity,
+            role_relation=role_relation,
+            role_events=role_events,
+            short_goal=short_goal
         )
         return role_prompt
 
@@ -262,10 +263,6 @@ class StoryGenWorkflow:
         返回:
             tuple: (user_proxy, group_chat_manager) 可用于启动对话。
         """
-
-        # goal_data = self.longgoal
-
-        # 新增调试用
         # 如果 agents_config 里有字符串，就把它当成 id 和 role_name 包装成 dict
         fixed = []
         for raw in self.agents_config:
@@ -276,42 +273,15 @@ class StoryGenWorkflow:
         agents_config = fixed
         # —— 到此结束 —— 
 
-        # print("envinfo =================================\n")
-        print("agents_config ==============================\n")
-        print(self.agents_config)
-        print(f"agent_config的类型:{type(self.agents_config)}")
-        print("agents_config ==============================\n")
-
-        
-        # # 问题在于 提示词中的 .get() , 根本问题在于 ENVINFO 是一个字符串，需要核对传入的 envinfo
-        # # 1. 创建环境信息Agent (优化后的提示词)
-        # env_prompt = (
-        #     "## 环境信息管理员\n"
-        #     "你负责维护当前章节的环境上下文，包括但不限于:\n"
-        #     f"- 章节目标: {goal_data.get('chapter_goal', '未设定')}\n"
-        #     f"- 关键任务: {', '.join(goal_data.get('key_tasks', []))}\n"
-        #     f"- 新增冲突: {goal_data.get('new_conflicts', '无')}\n"
-        #     f"- 预期结果: {goal_data.get('expected_outcomes', '未设定')}\n\n"
-        #     "你的职责:\n"
-        #     "1. 当角色偏离主线时提供环境提示\n"
-        #     "2. 解答关于场景规则的询问\n"
-        #     "3. 不主动参与角色决策\n"
-        #     "4. 确保讨论不超出当前章节范围"
-        # )
-        #
-        # env_agent = AssistantAgent(
-        #     name="Env_Agent",
-        #     description="用于提供环境信息，不作为角色进行对话",
-        #     model_client=self.model_client,
-        #     system_message=env_prompt,
-        # )
-        # print(f"{env_agent.name} 创建成功")
+        # print("agents_config ==============================\n")
+        # print(self.agents_config)
+        # print(f"agent_config的类型:{type(self.agents_config)}")
+        # print("agents_config ==============================\n")
 
         # 2. 动态创建角色 agent
         role_agents = []
-        for agent_config in self.agents_config:
+        for agent_config in agents_config:
             # 构建每个 角色 agent 的 prompt
-            # TODO： 需要根据具体的角色信息文件的格式进行调整
             role_relation = self._get_role_relation(agent_config) # 读取角色在上一章节的关系
             print(f"{role_relation}")
             role_events = self._get_role_events(agent_config) # 读取角色在上一章节所发生的事件
@@ -338,9 +308,8 @@ class StoryGenWorkflow:
             participants=role_agents, # 组合所有将参与对话的 agent 包含 环境智能体 + 角色智能体
             max_turns=len(role_agents) * self.maxround
         )
-        # 
-        print(f"DEBUG - maxround类型: {type(self.maxround)}, 值: {self.maxround}")
 
+        # print(f"DEBUG - maxround类型: {type(self.maxround)}, 值: {self.maxround}")
 
         # 返回 智能体对话集群
         return chat_team
@@ -364,24 +333,10 @@ class StoryGenWorkflow:
             - events: 事件列表
         """
 
-        # plan["chapter"] = self.current_chapter  # 直接使用当前章节号
-
-        # Plan 保存路径
-        folder_path = Path("Resource/memory/story_plan")
+        # story_plan 保存路径
+        folder_path = Path(__file__).parent.parent / "Resource" / "memory" / "story_plan"
         folder_path.mkdir(parents=True, exist_ok=True)
-
-        # 获取当前最大编号文件
-        try:
-            latest_plan = read_max_index_file(str(folder_path))
-            current_max_chapter = latest_plan.get("chapter", 0) if isinstance(latest_plan, dict) else 0
-
-        except Exception as e:
-            logging.warning(f"获取最大章节号失败，将从头开始: {str(e)}")
-            current_max_chapter = 0
-
-        # 新章节编号 = 最大编号 + 1
-        # new_chapter_num = current_max_chapter + 1
-        # new_file_name = f"chapter_{new_chapter_num}.json"
+        # 生成文件名和路径
         new_file_name = f"chapter_{self.current_chapter}.json"
         new_file_path = folder_path / new_file_name
 
@@ -444,9 +399,9 @@ class StoryGenWorkflow:
 
         try:
             # 静态环境数据已在__init__中加载，此处仅验证
-            print(f"故事标题: {self.title}")
-            print(f"长期目标: {self.longgoal}")
-            print(f"初始角色数: {len(self.initial_data['characters'])}")
+            # print(f"故事标题: {self.title}")
+            # print(f"长期目标: {self.longgoal}")
+            # print(f"初始角色数: {len(self.initial_data['characters'])}")
 
             # 验证必要数据是否存在
             if not all([self.title, self.longgoal, self.background]):
@@ -459,46 +414,27 @@ class StoryGenWorkflow:
         print("初始化完毕\n")
 
         # === 2. 章节生成主循环 ===
-        # while True:
-        while self.current_chapter < 10:
+        
+        # while self.current_chapter < 10: # 生成固定章节数，测试用
+        while True:
             chapter_num = self._get_next_chapter_number()
             print(f"\n📖 开始生成第 {chapter_num} 章...")
 
             # -- 2.1 生成短期目标 --
             try:
                 # 构造短期目标生成提示（包含长期目标和当前环境）
-                shortgoal_prompt = (
-                    f"长期目标: {self.longgoal}\n"
-                    f"当前环境: {json.dumps(self.background, ensure_ascii=False)}\n"
-                    f"上一章的方案事件: {json.dumps(self.last_plan, ensure_ascii=False) if self.last_plan else '无'}\n"
-                    f"请生成第 {chapter_num} 章的短期目标\n"
-                    "输出必须是完整JSON对象，使用指定键值对：chapter_goal, chapter_title。"
-                    "内容全部用中文描述，禁止使用标点或空格以外任何符号。"
-                    """请严格遵循以下规则生成第 {chapter_num} 章的短期目标：
-                    1. 【核心要求】
-                       - chapter_goal必须≤20字，直接解决上一章的遗留问题或延续动机
-                       - chapter_title必须≤10字且与chapter_goal强关联
-                       - 必须推动长期目标「{self.longgoal}」的进展
-    
-                    2. 【内容规范】
-                       - 禁止添加解释性文本
-                       - 仅输出如下JSON格式：
-                    {
-                      "chapter_goal": "例如：揭露叛徒身份或逃离废墟城市",
-                      "chapter_title": "例如：背叛者或生死逃亡"
-                    }
-    
-                    3. 【设计原则】
-                       - 从当前环境提取关键冲突元素
-                       - 确保目标可执行（明确动作+对象）
-                       - 必须包含1个创新悬念点"""
+                shortgoal_prompt = SHORTGOAL_PROMPT_TEMPLATE.format(
+                    longgoal=self.longgoal,
+                    background=json.dumps(self.background, ensure_ascii=False),
+                    last_plan=json.dumps(self.last_plan, ensure_ascii=False) if self.last_plan else '无',
+                    chapter_num=chapter_num
                 )
-
+                
                 print(f"短期目标生成提示：\n{shortgoal_prompt}")
 
                 # 调用短期目标智能体（直接await异步调用）
-                short_goal = await self.shortgoal_agent.run(task=shortgoal_prompt)
-                await self.shortgoal_agent.model_context.clear()
+                short_goal = await self.shortgoal_agent.run(task=shortgoal_prompt) # 获取短期目标 智能体的system prompt 的变量是否正确获取？
+                await self.shortgoal_agent.model_context.clear() # 清楚短期目标智能体的记忆
 
                 # 打印短期目标
                 print(f"短期目标：\n{short_goal}")
@@ -555,7 +491,7 @@ class StoryGenWorkflow:
                     round_plans.append(final_content)
                     print(f"团队讨论结果\n{final_content}")
                     print(round_plans)
-                    print(f"  第 {round_num} 轮方案已保存")
+                    print(f"第 {round_num} 轮方案已保存")
 
                 except Exception as e:
                     print(f"⚠️ 第 {round_num} 轮生成失败: {str(e)}")

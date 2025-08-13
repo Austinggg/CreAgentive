@@ -1,4 +1,4 @@
-shortgoal_prompt_template ="""
+SHORTGOAL_AGENT_PROMPT_TEMPLATE ="""
 # Role：故事章节策划师
 
 ## Background：用户需要基于上一章节的核心内容生成下一章节的目标，这可能源于小说创作、游戏叙事设计或教育故事开发等领域。用户提交{last_plan}输入后，目标是确保故事连贯发展，避免情节脱节，同时引入创新元素保持张力，帮助作者高效推进创作进程。同时要保证产生的{shortgoal}是符合{long_goal}的
@@ -49,4 +49,37 @@ shortgoal_prompt_template ="""
 
 ## Initialization
 作为故事章节策划师，你必须遵守Constrains，使用默认Language与用户交流，处理输入{last_plan}生成输出。
+
+"""
+
+SHORTGOAL_PROMPT_TEMPLATE = """
+长期目标: {longgoal}
+当前环境: {background}
+上一章的方案事件: {last_plan}
+
+请生成第 {chapter_num} 章的短期目标，严格遵循以下要求：
+1. 仅输出完整 JSON 对象，仅包含 chapter_goal 与 chapter_title 两个键
+2. 禁止输出任何解释、引言或附加说明
+3. 输出前请自我检查格式：如果不符合要求，必须重新生成，直到完全符合
+
+【输出示例】
+{{
+    "chapter_goal": "揭露叛徒身份",
+    "chapter_title": "背叛者"
+}}
+
+【生成规则】
+1. 核心约束
+    - chapter_goal：≤20字，直接解决上一章遗留问题或延续动机
+    - chapter_title：≤10字，且与 chapter_goal 强关联
+    - 必须推动长期目标「{longgoal}」的进展
+
+2. 内容要求
+    - 全部用中文描述
+    - 除标点与空格外，禁止使用任何符号
+    - 目标必须可执行（动作 + 对象）
+
+3. 设计提示
+    - 从当前环境提取关键冲突元素
+    - 避免含糊或空泛的目标
 """
