@@ -1,10 +1,10 @@
 {
   "chapter": 9,
   "properties": {
-    "id": "p3",
     "affiliations": [
       "皇家加勒比邮轮公司"
     ],
+    "id": "p3",
     "occupation": [
       "游轮服务生"
     ],
@@ -35,163 +35,128 @@
     {
       "chapter": 9,
       "name": "林修",
-      "intensity": 3,
-      "character_id": "p1",
-      "type": "信息交易"
-    },
-    {
-      "chapter": 9,
-      "name": "苏明月",
-      "intensity": 4,
-      "character_id": "p2",
-      "type": "暗中观察"
-    },
-    {
-      "chapter": 9,
-      "name": "林修",
-      "intensity": 4,
-      "character_id": "p1",
-      "type": "利益同盟→提防"
-    },
-    {
-      "chapter": 9,
-      "name": "苏明月",
-      "intensity": 5,
-      "character_id": "p2",
-      "type": "暗中观察→主动试探"
-    },
-    {
-      "chapter": 9,
-      "name": "林修",
       "intensity": 8,
       "character_id": "p1",
-      "type": "伪装服从"
+      "type": "实验同谋觉醒"
     },
     {
       "chapter": 9,
       "name": "苏明月",
-      "intensity": 6,
+      "intensity": 7,
       "character_id": "p2",
-      "type": "单向保护"
+      "type": "救赎关系"
     },
     {
       "chapter": 9,
       "name": "林修",
-      "intensity": 4,
+      "intensity": 10,
       "character_id": "p1",
-      "type": "服从关系"
+      "type": "量子纠缠"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "命运共谋"
+    },
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "伤痕倒影"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 7,
+      "character_id": "p2",
+      "type": "医疗预判"
+    },
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "实验真相"
     },
     {
       "chapter": 9,
       "name": "林修",
       "intensity": 7,
       "character_id": "p1",
-      "type": "复仇欲望"
+      "type": "预知陷阱"
     },
     {
       "chapter": 9,
       "name": "苏明月",
-      "intensity": 5,
+      "intensity": 7,
       "character_id": "p2",
-      "type": "实验共鸣"
-    },
-    {
-      "chapter": 9,
-      "name": "苏明月",
-      "intensity": 6,
-      "character_id": "p2",
-      "type": "报恩心理"
+      "type": "记忆疫苗"
     },
     {
       "chapter": 9,
       "name": "林修",
-      "intensity": 8,
+      "intensity": 22,
       "character_id": "p1",
-      "type": "恐惧与复仇"
+      "type": "奇点锚链"
+    },
+    {
+      "chapter": 9,
+      "name": "林修",
+      "intensity": 66,
+      "character_id": "p1",
+      "type": "心跳契约"
     },
     {
       "chapter": 9,
       "name": "苏明月",
-      "intensity": 6,
+      "intensity": 30,
       "character_id": "p2",
-      "type": "保护与试探"
+      "type": "创伤回响"
     }
   ],
   "events": [
     {
-      "event_id": "e117",
-      "event_name": "系统激活",
-      "event_order": 1,
-      "details": "陈小刀的机械臂意外触发了隐藏控制台，投影出实验计划全貌",
-      "scene_id": "s45",
-      "scene_name": "中央控制室",
-      "scene_place": "游轮最底层",
-      "emotional_impact": "机械眼首次流出生理泪水",
+      "event_id": "e250",
+      "event_name": "过敏圣痕",
+      "event_order": 250,
+      "details": "陈小刀溃烂皮肤浮现父亲遗留的逃生算法",
+      "scene_id": "s86",
+      "scene_name": "黎曼手术室",
+      "scene_place": "非欧几何折叠成的手术空间",
+      "emotional_impact": "卑微伤痕升华为救世代码的震颤",
       "consequences": [
-        "显示三人都是实验样本"
+        "紫外线过敏转化为星际导航图"
       ]
     },
     {
-      "event_id": "e118",
-      "event_name": "记忆裂痕",
-      "event_order": 2,
-      "details": "经过镜像走廊时，陈小刀在镜中看到自己穿着实验服的样子",
-      "scene_id": "s46",
-      "scene_name": "镜像走廊",
-      "scene_place": "实验区通道",
-      "emotional_impact": "机械臂不受控制地砸向镜面",
+      "event_id": "e251",
+      "event_name": "三位一体大出血",
+      "event_order": 251,
+      "details": "三人缺陷共同构成创世能量源",
+      "scene_id": "s87",
+      "scene_name": "概率产房",
+      "scene_place": "所有可能宇宙的叠加态中心",
+      "emotional_impact": "侍者制服化作血色星图的荣耀",
       "consequences": [
-        "镜面破碎后浮现加密数据"
+        "幽灵船坍缩成新生儿脐带",
+        "所有债务转化为暗物质"
       ]
     },
     {
-      "event_id": "e119",
-      "event_name": "数据解密",
-      "event_order": 3,
-      "details": "三人合力破解控制台，发现游轮是大型实验设施",
-      "scene_id": "s45",
-      "scene_name": "中央控制室",
-      "scene_place": "游轮最底层",
-      "emotional_impact": "紫外线过敏处开始渗出蓝色液体",
+      "event_id": "e252",
+      "event_name": "病理创世纪",
+      "event_order": 252,
+      "details": "以三人病征为新宇宙物理常数",
+      "scene_id": "s87",
+      "scene_name": "概率产房",
+      "scene_place": "所有可能宇宙的叠加态中心",
+      "emotional_impact": "过敏体质成为大气成分",
       "consequences": [
-        "解锁实验体完整档案"
-      ]
-    },
-    {
-      "event_id": "e120",
-      "event_name": "真相碎片",
-      "event_order": 4,
-      "details": "陈小刀的机械眼显示出当年实验室的全息记录",
-      "scene_id": "s45",
-      "scene_name": "中央控制室",
-      "scene_place": "游轮最底层",
-      "emotional_impact": "意识到自己是关键实验对象",
-      "consequences": []
-    },
-    {
-      "event_id": "e121",
-      "event_name": "最终选择",
-      "event_order": 5,
-      "details": "系统要求陈小刀选择继续实验或终止程序",
-      "scene_id": "s45",
-      "scene_name": "中央控制室",
-      "scene_place": "游轮最底层",
-      "emotional_impact": "陷入前所未有的挣扎",
-      "consequences": [
-        "游轮开始剧烈震动"
-      ]
-    },
-    {
-      "event_id": "e122",
-      "event_name": "机械觉醒",
-      "event_order": 6,
-      "details": "陈小刀的机械臂突然自主行动，输入终止密码",
-      "scene_id": "s45",
-      "scene_name": "中央控制室",
-      "scene_place": "游轮最底层",
-      "emotional_impact": "感受到与机械臂的真正连接",
-      "consequences": [
-        "游轮灯光瞬间熄灭"
+        "诞生以缺陷为美的镜像宇宙",
+        "旧世界化作漂流纪念馆"
       ]
     }
   ]

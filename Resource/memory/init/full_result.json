@@ -1,67 +1,80 @@
 {
   "__metadata__": {
     "description": "完整多智能体执行结果",
-    "saved_at": "2025-07-16 18:09:56",
+    "saved_at": "2025-08-12 05:24:27",
     "version": "1.0"
   },
   "data": {
     "messages": [
       {
-        "id": "33e8e15e-3212-4511-9982-794454d797a3",
+        "id": "8567a816-a7d2-49b3-a3a3-0047da3f622a",
         "source": "user_input",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-16T10:09:12.111784+00:00"
+        "created_at": "2025-08-11T21:24:10.145260+00:00"
       },
       {
-        "id": "b9e43899-dd33-4b2f-aab8-7b637d4d4de4",
+        "id": "d11b62b8-788a-4fd5-bb2c-e487ac161094",
         "source": "user_input",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-16T10:09:12.114930+00:00"
+        "created_at": "2025-08-11T21:24:10.152207+00:00"
       },
       {
-        "id": "9a0278fd-6c88-4598-a808-b68dbec392e7",
-        "source": "extractor",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-16T10:09:38.549400+00:00"
-      },
-      {
-        "id": "201a28d6-4179-4fcb-ba50-2ebf8ea25de4",
+        "id": "dde2c293-fe78-4abb-b123-ee0e0efe06c3",
         "source": "extractor",
         "models_usage": {
           "prompt_tokens": 896,
-          "completion_tokens": 451
+          "completion_tokens": 48
         },
         "metadata": {},
-        "created_at": "2025-07-16T10:09:38.550399+00:00"
+        "created_at": "2025-08-11T21:24:15.288498+00:00"
       },
       {
-        "id": "d25e84e1-8606-40bc-ba69-3a60eb4db484",
-        "source": "validator",
-        "models_usage": null,
-        "metadata": {},
-        "created_at": "2025-07-16T10:09:56.365655+00:00"
-      },
-      {
-        "id": "df8c349b-122b-48bc-ab0a-9c1cab160f87",
+        "id": "30b5b3a5-0fa9-4ba6-b561-6cc0c8d5131b",
         "source": "validator",
         "models_usage": {
-          "prompt_tokens": 673,
-          "completion_tokens": 293
+          "prompt_tokens": 545,
+          "completion_tokens": 50
         },
         "metadata": {},
-        "created_at": "2025-07-16T10:09:56.365655+00:00"
+        "created_at": "2025-08-11T21:24:18.919228+00:00"
       },
       {
-        "id": "2a660c80-96fd-413a-8598-42c3ec560442",
-        "source": "DiGraphStopAgent",
+        "id": "40c30550-dda0-4bf2-b2de-fdef1a09f46e",
+        "source": "user_input",
         "models_usage": null,
         "metadata": {},
-        "created_at": "2025-07-16T10:09:56.370293+00:00"
+        "created_at": "2025-08-11T21:24:18.924270+00:00"
+      },
+      {
+        "id": "df353c19-a1f1-4d96-a470-a0db9cae6f78",
+        "source": "user_input",
+        "models_usage": null,
+        "metadata": {},
+        "created_at": "2025-08-11T21:24:18.925278+00:00"
+      },
+      {
+        "id": "4084d4f9-c4ed-4f18-98e4-f10f19cffa81",
+        "source": "extractor",
+        "models_usage": {
+          "prompt_tokens": 1016,
+          "completion_tokens": 59
+        },
+        "metadata": {},
+        "created_at": "2025-08-11T21:24:23.235707+00:00"
+      },
+      {
+        "id": "e3604ac1-ac55-4120-bdd3-b23e2c9dc25e",
+        "source": "validator",
+        "models_usage": {
+          "prompt_tokens": 676,
+          "completion_tokens": 59
+        },
+        "metadata": {},
+        "created_at": "2025-08-11T21:24:27.289013+00:00"
       }
     ],
-    "stop_reason": "Stop message received"
+    "stop_reason": "Maximum number of turns 6 reached."
   }
 }

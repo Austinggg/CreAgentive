@@ -1,10 +1,10 @@
 {
   "chapter": 6,
   "properties": {
-    "id": "p1",
     "affiliations": [
       "澳门金城赌场"
     ],
+    "id": "p1",
     "occupation": [
       "职业扑克选手"
     ],
@@ -27,62 +27,6 @@
     },
     {
       "chapter": 6,
-      "name": "苏明月",
-      "intensity": 4,
-      "character_id": "p2",
-      "type": "恐惧敬畏"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 8,
-      "character_id": "p2",
-      "type": "契约解除/新的羁绊"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 15,
-      "character_id": "p2",
-      "type": "量子纠缠→细胞共生"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 28,
-      "character_id": "p2",
-      "type": "量子纠缠→情感共振"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 88,
-      "character_id": "p2",
-      "type": "记忆共振→量子同调"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 888,
-      "character_id": "p2",
-      "type": "量子链接→永恒观测"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 80,
-      "character_id": "p2",
-      "type": "量子纠缠→记忆同步"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 55,
-      "character_id": "p2",
-      "type": "量子纠缠→意识融合"
-    },
-    {
-      "chapter": 6,
       "name": "陈小刀",
       "intensity": 5,
       "character_id": "p3",
@@ -90,292 +34,83 @@
     },
     {
       "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 7,
-      "character_id": "p3",
-      "type": "控制关系"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "基因共鸣"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 8,
-      "character_id": "p3",
-      "type": "机械共鸣"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "克隆觉醒"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "操控关系"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
+      "name": "苏明月",
       "intensity": 10,
-      "character_id": "p3",
-      "type": "量子纠缠"
+      "character_id": "p2",
+      "type": "救赎转化"
     },
     {
       "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "机械共振"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 12,
-      "character_id": "p3",
-      "type": "量子同步→熵增共振"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 15,
-      "character_id": "p3",
-      "type": "量子共振→机械通灵"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 50,
-      "character_id": "p3",
-      "type": "量子契约"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 30,
-      "character_id": "p3",
-      "type": "机械共振→时间锚点"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 120,
-      "character_id": "p3",
-      "type": "机械飞升→时空契约"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 120,
-      "character_id": "p3",
-      "type": "机械共鸣→时间织造"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 200,
-      "character_id": "p3",
-      "type": "机械共振→认知同化"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 500,
-      "character_id": "p3",
-      "type": "机械飞升→叙事寄生"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 999,
-      "character_id": "p3",
-      "type": "机械共振→时空契约"
-    },
-    {
-      "chapter": 6,
-      "name": "陈小刀",
-      "intensity": 300,
-      "character_id": "p3",
-      "type": "机械奴役→金属共鸣"
+      "name": "苏明月",
+      "intensity": 13,
+      "character_id": "p2",
+      "type": "量子共犯"
     }
   ],
   "events": [
     {
-      "event_id": "e70",
-      "event_name": "圣痕显露",
-      "event_order": 1,
-      "details": "陈小刀擦拭餐具时，金属勺面突然映出三人被钉在齿轮十字架上的影像",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "无记录",
+      "event_id": "e98",
+      "event_name": "快乐切除",
+      "event_order": 98,
+      "details": "苏明月精准切除林修对赌博的快感反射区",
+      "scene_id": "s35",
+      "scene_name": "奖赏手术室",
+      "scene_place": "在林修多巴胺系统搭建的禁区",
+      "emotional_impact": "被剥夺本能的空虚",
       "consequences": [
-        "解锁量子手术台坐标"
+        "建立神经级制裁手段"
       ]
     },
     {
-      "event_id": "e71",
-      "event_name": "机械圣餐",
-      "event_order": 2,
-      "details": "林修将机械左手插入反应堆，输出能量形成发光的量子面包与酒",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "赌徒特有的癫狂虔诚状态",
+      "event_id": "e98",
+      "event_name": "快乐切除",
+      "event_order": 98,
+      "details": "苏明月精准切除林修对赌博的快感反射区",
+      "scene_id": "s36",
+      "scene_name": "免疫档案室",
+      "scene_place": "由医疗记录转化的防御工事",
+      "emotional_impact": "被剥夺本能的空虚",
       "consequences": [
-        "产生可供穿越的时间薄膜"
+        "建立神经级制裁手段"
       ]
     },
     {
-      "event_id": "e71",
-      "event_name": "机械圣餐",
-      "event_order": 2,
-      "details": "林修将机械左手插入反应堆，输出能量形成发光的量子面包与酒",
-      "scene_id": "s28",
-      "scene_name": "镜廊",
-      "scene_place": "上层娱乐区",
-      "emotional_impact": "赌徒特有的癫狂虔诚状态",
+      "event_id": "e100",
+      "event_name": "病理暴乱",
+      "event_order": 100,
+      "details": "林修的神经系统突然变异出抗手术机制",
+      "scene_id": "s35",
+      "scene_name": "奖赏手术室",
+      "scene_place": "在林修多巴胺系统搭建的禁区",
+      "emotional_impact": "生物本能的胜利快感",
       "consequences": [
-        "产生可供穿越的时间薄膜"
+        "证明伤痕具有进化能力"
       ]
     },
     {
-      "event_id": "e71",
-      "event_name": "机械圣餐",
-      "event_order": 2,
-      "details": "林修将机械左手插入反应堆，输出能量形成发光的量子面包与酒",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "赌徒特有的癫狂虔诚状态",
+      "event_id": "e100",
+      "event_name": "病理暴乱",
+      "event_order": 100,
+      "details": "林修的神经系统突然变异出抗手术机制",
+      "scene_id": "s36",
+      "scene_name": "免疫档案室",
+      "scene_place": "由医疗记录转化的防御工事",
+      "emotional_impact": "生物本能的胜利快感",
       "consequences": [
-        "产生可供穿越的时间薄膜"
+        "证明伤痕具有进化能力"
       ]
     },
     {
-      "event_id": "e71",
-      "event_name": "机械圣餐",
-      "event_order": 2,
-      "details": "林修将机械左手插入反应堆，输出能量形成发光的量子面包与酒",
-      "scene_id": "s28",
-      "scene_name": "镜廊",
-      "scene_place": "上层娱乐区",
-      "emotional_impact": "赌徒特有的癫狂虔诚状态",
+      "event_id": "e102",
+      "event_name": "记忆叛乱",
+      "event_order": 102,
+      "details": "灭活疫苗在神经突触发动反向感染",
+      "scene_id": "s35",
+      "scene_name": "奖赏手术室",
+      "scene_place": "在林修多巴胺系统搭建的禁区",
+      "emotional_impact": "被记忆反噬的错愕",
       "consequences": [
-        "产生可供穿越的时间薄膜"
-      ]
-    },
-    {
-      "event_id": "e93",
-      "event_name": "扑克骨牌",
-      "event_order": 3,
-      "details": "林修打出的黑桃A触发年轮地板翻转，露出铺满整个大厅的骨牌机关",
-      "scene_id": "s31",
-      "scene_name": "年轮大厅",
-      "scene_place": "船体龙骨中枢",
-      "emotional_impact": "听到20年前自己的惨叫声",
-      "consequences": [
-        "每张骨牌都记录着事故不同时间节点的影像"
-      ]
-    },
-    {
-      "event_id": "e95",
-      "event_name": "双重签名",
-      "event_order": 5,
-      "details": "在船长日志最后页，同时出现林修1999年和现在的笔迹签名",
-      "scene_id": "s31",
-      "scene_name": "年轮大厅",
-      "scene_place": "船体龙骨中枢",
-      "emotional_impact": "墨迹未干的错觉",
-      "consequences": [
-        "证明他当时已预知现在的情况"
-      ]
-    },
-    {
-      "event_id": "e96",
-      "event_name": "螺旋悖论",
-      "event_order": 6,
-      "details": "三人同时触碰楼梯扶手时，各自的倒影开始走向不同年份",
-      "scene_id": "s32",
-      "scene_name": "记忆螺旋",
-      "scene_place": "通往下层甲板的楼梯间",
-      "emotional_impact": "怀表秒针开始倒转",
-      "consequences": [
-        "时间线出现可见的分裂迹象"
-      ]
-    },
-    {
-      "event_id": "e72",
-      "event_name": "神经嫁接",
-      "event_order": 72,
-      "details": "苏明月将陈小刀的机械神经元接入自己的疼痛感知系统",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "两人记忆开始量子纠缠"
-      ]
-    },
-    {
-      "event_id": "e73",
-      "event_name": "概率解构",
-      "event_order": 73,
-      "details": "林修同时与所有时间线的自己对赌",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "多维快感",
-      "consequences": [
-        "赌桌开始吞噬现实维度"
-      ]
-    },
-    {
-      "event_id": "e73",
-      "event_name": "概率解构",
-      "event_order": 73,
-      "details": "林修同时与所有时间线的自己对赌",
-      "scene_id": "s28",
-      "scene_name": "镜廊",
-      "scene_place": "上层娱乐区",
-      "emotional_impact": "多维快感",
-      "consequences": [
-        "赌桌开始吞噬现实维度"
-      ]
-    },
-    {
-      "event_id": "e73",
-      "event_name": "概率解构",
-      "event_order": 73,
-      "details": "林修同时与所有时间线的自己对赌",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "多维快感",
-      "consequences": [
-        "赌桌开始吞噬现实维度"
-      ]
-    },
-    {
-      "event_id": "e73",
-      "event_name": "概率解构",
-      "event_order": 73,
-      "details": "林修同时与所有时间线的自己对赌",
-      "scene_id": "s28",
-      "scene_name": "镜廊",
-      "scene_place": "上层娱乐区",
-      "emotional_impact": "多维快感",
-      "consequences": [
-        "赌桌开始吞噬现实维度"
+        "造成意识级生化危机"
       ]
     }
   ]

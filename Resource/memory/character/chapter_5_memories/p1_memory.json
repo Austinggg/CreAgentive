@@ -1,10 +1,10 @@
 {
   "chapter": 5,
   "properties": {
-    "id": "p1",
     "affiliations": [
       "澳门金城赌场"
     ],
+    "id": "p1",
     "occupation": [
       "职业扑克选手"
     ],
@@ -21,65 +21,16 @@
     {
       "chapter": 5,
       "name": "苏明月",
+      "intensity": 13,
+      "character_id": "p2",
+      "type": "量子共犯"
+    },
+    {
+      "chapter": 5,
+      "name": "苏明月",
       "intensity": 4,
       "character_id": "p2",
       "type": "债务关系（林修欠苏明月巨额医疗费）"
-    },
-    {
-      "chapter": 5,
-      "name": "苏明月",
-      "intensity": 4,
-      "character_id": "p2",
-      "type": "恐惧敬畏"
-    },
-    {
-      "chapter": 5,
-      "name": "苏明月",
-      "intensity": 8,
-      "character_id": "p2",
-      "type": "契约解除/新的羁绊"
-    },
-    {
-      "chapter": 5,
-      "name": "苏明月",
-      "intensity": 15,
-      "character_id": "p2",
-      "type": "量子纠缠→细胞共生"
-    },
-    {
-      "chapter": 5,
-      "name": "苏明月",
-      "intensity": 28,
-      "character_id": "p2",
-      "type": "量子纠缠→情感共振"
-    },
-    {
-      "chapter": 5,
-      "name": "苏明月",
-      "intensity": 88,
-      "character_id": "p2",
-      "type": "记忆共振→量子同调"
-    },
-    {
-      "chapter": 5,
-      "name": "苏明月",
-      "intensity": 888,
-      "character_id": "p2",
-      "type": "量子链接→永恒观测"
-    },
-    {
-      "chapter": 5,
-      "name": "苏明月",
-      "intensity": 80,
-      "character_id": "p2",
-      "type": "量子纠缠→记忆同步"
-    },
-    {
-      "chapter": 5,
-      "name": "苏明月",
-      "intensity": 55,
-      "character_id": "p2",
-      "type": "量子纠缠→意识融合"
     },
     {
       "chapter": 5,
@@ -90,214 +41,89 @@
     },
     {
       "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 7,
-      "character_id": "p3",
-      "type": "控制关系"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "基因共鸣"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 8,
-      "character_id": "p3",
-      "type": "机械共鸣"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "克隆觉醒"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "操控关系"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
+      "name": "苏明月",
       "intensity": 10,
-      "character_id": "p3",
-      "type": "量子纠缠"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "机械共振"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 12,
-      "character_id": "p3",
-      "type": "量子同步→熵增共振"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 15,
-      "character_id": "p3",
-      "type": "量子共振→机械通灵"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 50,
-      "character_id": "p3",
-      "type": "量子契约"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 30,
-      "character_id": "p3",
-      "type": "机械共振→时间锚点"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 120,
-      "character_id": "p3",
-      "type": "机械飞升→时空契约"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 120,
-      "character_id": "p3",
-      "type": "机械共鸣→时间织造"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 200,
-      "character_id": "p3",
-      "type": "机械共振→认知同化"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 500,
-      "character_id": "p3",
-      "type": "机械飞升→叙事寄生"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 999,
-      "character_id": "p3",
-      "type": "机械共振→时空契约"
-    },
-    {
-      "chapter": 5,
-      "name": "陈小刀",
-      "intensity": 300,
-      "character_id": "p3",
-      "type": "机械奴役→金属共鸣"
+      "character_id": "p2",
+      "type": "救赎转化"
     }
   ],
   "events": [
     {
-      "event_id": "e56",
-      "event_name": "衔尾蛇代码",
-      "event_order": 2,
-      "details": "三人机械部件拼合时，在蒸汽表面浮现自毁程序的莫比乌斯环编码",
-      "scene_id": "s21",
-      "scene_name": "双生锅炉房",
-      "scene_place": "镜像对称的动力核心",
-      "emotional_impact": "识别出这是自己当年设定的赌博式后门",
+      "event_id": "e41",
+      "event_name": "终极出千",
+      "event_order": 41,
+      "details": "林修用伤痕的量子态改变扑克牌面，苏明月同步计算所有可能性分支",
+      "scene_id": "s17",
+      "scene_name": "反概率赌场",
+      "scene_place": "在量子泡沫中时隐时现的圆形空间",
+      "emotional_impact": "艺术般的愉悦",
       "consequences": [
-        "激活倒计时47分13秒（船上死亡人数）"
+        "创造绝对胜率"
       ]
     },
     {
-      "event_id": "e56",
-      "event_name": "衔尾蛇代码",
-      "event_order": 2,
-      "details": "三人机械部件拼合时，在蒸汽表面浮现自毁程序的莫比乌斯环编码",
-      "scene_id": "s22",
-      "scene_name": "锚链舱",
-      "scene_place": "船首最底部",
-      "emotional_impact": "识别出这是自己当年设定的赌博式后门",
+      "event_id": "e43",
+      "event_name": "虹膜做空",
+      "event_order": 43,
+      "details": "林修将异色瞳信息拆分为衍生金融产品大量抛售",
+      "scene_id": "s17",
+      "scene_name": "反概率赌场",
+      "scene_place": "在量子泡沫中时隐时现的圆形空间",
+      "emotional_impact": "自毁的快感",
       "consequences": [
-        "激活倒计时47分13秒（船上死亡人数）"
+        "导致整个观测系统贬值"
       ]
     },
     {
-      "event_id": "e56",
-      "event_name": "衔尾蛇代码",
-      "event_order": 2,
-      "details": "三人机械部件拼合时，在蒸汽表面浮现自毁程序的莫比乌斯环编码",
-      "scene_id": "s21",
-      "scene_name": "双生锅炉房",
-      "scene_place": "镜像对称的动力核心",
-      "emotional_impact": "识别出这是自己当年设定的赌博式后门",
+      "event_id": "e44",
+      "event_name": "伤痕清算",
+      "event_order": 44,
+      "details": "三人的伤痕突然开始反向吸收焚化炉中的记忆灰烬",
+      "scene_id": "s18",
+      "scene_name": "记忆焚化炉",
+      "scene_place": "游轮核心裂解舱",
+      "emotional_impact": "饱食感",
       "consequences": [
-        "激活倒计时47分13秒（船上死亡人数）"
+        "伤痕变异为自主意识体"
       ]
     },
     {
-      "event_id": "e56",
-      "event_name": "衔尾蛇代码",
-      "event_order": 2,
-      "details": "三人机械部件拼合时，在蒸汽表面浮现自毁程序的莫比乌斯环编码",
-      "scene_id": "s22",
-      "scene_name": "锚链舱",
-      "scene_place": "船首最底部",
-      "emotional_impact": "识别出这是自己当年设定的赌博式后门",
+      "event_id": "e44",
+      "event_name": "伤痕清算",
+      "event_order": 44,
+      "details": "三人的伤痕突然开始反向吸收焚化炉中的记忆灰烬",
+      "scene_id": "s18",
+      "scene_name": "记忆焚化炉",
+      "scene_place": "游轮核心裂解舱",
+      "emotional_impact": "饱食感",
       "consequences": [
-        "激活倒计时47分13秒（船上死亡人数）"
+        "伤痕变异为自主意识体"
       ]
     },
     {
-      "event_id": "e53",
-      "event_name": "锚链密码",
-      "event_order": 3,
-      "details": "三人根据血图找到锚链舱，发现逃生通道被三十吨重的锚链封锁",
-      "scene_id": "s22",
-      "scene_name": "锚链舱",
-      "scene_place": "船首最底部",
-      "emotional_impact": "机械性思考解决方案",
+      "event_id": "e45",
+      "event_name": "概率坍缩",
+      "event_order": 45,
+      "details": "当赌局进行到31局时，整个反概率空间突然向内塌陷",
+      "scene_id": "s17",
+      "scene_name": "反概率赌场",
+      "scene_place": "在量子泡沫中时隐时现的圆形空间",
+      "emotional_impact": "狂喜",
       "consequences": [
-        "需要同时操作三个分散的控制台"
+        "验证三人实为同一概率波的观测面"
       ]
     },
     {
-      "event_id": "e79",
-      "event_name": "赌局重启",
-      "event_order": 34,
-      "details": "齿轮教堂的彩窗突然投射二十一点牌局，陈小刀被迫成为发牌荷官",
-      "scene_id": "s29",
-      "scene_name": "齿轮教堂",
-      "scene_place": "轮机舱核心",
-      "emotional_impact": "赌徒狂热",
+      "event_id": "e45",
+      "event_name": "概率坍缩",
+      "event_order": 45,
+      "details": "当赌局进行到31局时，整个反概率空间突然向内塌陷",
+      "scene_id": "s18",
+      "scene_name": "记忆焚化炉",
+      "scene_place": "游轮核心裂解舱",
+      "emotional_impact": "狂喜",
       "consequences": [
-        "陈小刀发牌时自动读取出牌记忆"
-      ]
-    },
-    {
-      "event_id": "e52",
-      "event_name": "休止符实体化",
-      "event_order": 52,
-      "details": "三人用合并的指纹密钥启动引擎，陈小刀的机械臂化作第29号船票的金属材质",
-      "scene_id": "s21",
-      "scene_name": "双生锅炉房",
-      "scene_place": "镜像对称的动力核心",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "太平洋上出现持续3纳秒的完整游轮虚影"
+        "验证三人实为同一概率波的观测面"
       ]
     }
   ]

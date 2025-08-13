@@ -123,13 +123,3 @@ GLOBAL_PROMPT = """
 - 输出的内容不要有任何markdowm格式的字符标识，请严格遵守输出格式。
 
 """
-def get_local_prompt(*,prev_plot,object_condition,next_content):
-	return LOCAL_PROMPT_TEMPLATE.format(
-		prev_plot = prev_plot,
-		object_condition = object_condition,
-		next_content = next_content
-	)
-def get_global_prompt(*,global_features):
-	return GLOBAL_PROMPT_TEMPLATE.format(
-		global_features = global_features
-	)

@@ -18,10 +18,15 @@ class KnowledgeGraphBuilder:
     以及处理人物之间的关系。
     """
 
+    # 设置一个函数，其功能是将属性字典中的None值转换为空字符串
+  
     def __init__(self, connector: Neo4jConnector):
         """
         初始化函数，设置Neo4j连接器，并在初始化时执行数据清理和约束设置。
-
+        这个函数会在实例化时自动调用，确保数据库的初始状态是干净的。实例化时会清理重复数据并设置必要的约束。
+        实例代码:
+        builder = KnowledgeGraphBuilder(connector)
+        :param json_file: 包含初始数据的JSON文件
         :param connector: Neo4j数据库连接器实例，用于执行数据库操作。
          """
         self.connector = connector
@@ -34,7 +39,7 @@ class KnowledgeGraphBuilder:
         """
         清空Neo4j数据库中的所有数据
         """
-        query = "MATCH (n) DETACH DELETE n"
+        query="MATCH (n) DETACH DELETE n"
         try:
             self.connector.execute_query(query,write=True)
             logger.info("✅ 所有数据已成功清空")
@@ -132,8 +137,8 @@ class KnowledgeGraphBuilder:
                 logger.warning(f"清理重复数据时出错: {e}")
 
     def _setup_constraints(self):
-        """创建必要的约束
-
+        """
+        创建必要的约束
         此函数负责在数据库中设置必要的唯一性约束，以确保Character、Scene和Event标签的id属性的唯一性
         这对于维护数据的一致性和完整性至关重要
         """

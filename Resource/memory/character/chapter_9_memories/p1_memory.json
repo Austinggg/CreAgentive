@@ -1,10 +1,10 @@
 {
   "chapter": 9,
   "properties": {
-    "id": "p1",
     "affiliations": [
       "澳门金城赌场"
     ],
+    "id": "p1",
     "occupation": [
       "职业扑克选手"
     ],
@@ -34,45 +34,73 @@
     },
     {
       "chapter": 9,
-      "name": "陈小刀",
-      "intensity": 7,
-      "character_id": "p3",
-      "type": "控制关系"
-    },
-    {
-      "chapter": 9,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "基因共鸣"
-    },
-    {
-      "chapter": 9,
-      "name": "陈小刀",
-      "intensity": 8,
-      "character_id": "p3",
-      "type": "机械共鸣"
+      "name": "苏明月",
+      "intensity": 10,
+      "character_id": "p2",
+      "type": "救赎转化"
     },
     {
       "chapter": 9,
       "name": "苏明月",
-      "intensity": 4,
+      "intensity": 13,
       "character_id": "p2",
-      "type": "恐惧敬畏"
+      "type": "量子共犯"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 42,
+      "character_id": "p2",
+      "type": "Ω级共生体"
+    },
+    {
+      "chapter": 9,
+      "name": "苏明月",
+      "intensity": 777,
+      "character_id": "p2",
+      "type": "因果倒置"
     }
   ],
   "events": [
     {
-      "event_id": "e119",
-      "event_name": "数据解密",
-      "event_order": 3,
-      "details": "三人合力破解控制台，发现游轮是大型实验设施",
-      "scene_id": "s45",
-      "scene_name": "中央控制室",
-      "scene_place": "游轮最底层",
-      "emotional_impact": "无记录",
+      "event_id": "e249",
+      "event_name": "庄家剖腹产",
+      "event_order": 249,
+      "details": "林修用机械手指为概率宇宙接生",
+      "scene_id": "s87",
+      "scene_name": "概率产房",
+      "scene_place": "所有可能宇宙的叠加态中心",
+      "emotional_impact": "赌场暴君蜕变为助产士的神性体验",
       "consequences": [
-        "解锁实验体完整档案"
+        "新生宇宙继承赌博法则"
+      ]
+    },
+    {
+      "event_id": "e251",
+      "event_name": "三位一体大出血",
+      "event_order": 251,
+      "details": "三人缺陷共同构成创世能量源",
+      "scene_id": "s87",
+      "scene_name": "概率产房",
+      "scene_place": "所有可能宇宙的叠加态中心",
+      "emotional_impact": "赌徒快感与失血眩晕的量子叠加",
+      "consequences": [
+        "幽灵船坍缩成新生儿脐带",
+        "所有债务转化为暗物质"
+      ]
+    },
+    {
+      "event_id": "e252",
+      "event_name": "病理创世纪",
+      "event_order": 252,
+      "details": "以三人病征为新宇宙物理常数",
+      "scene_id": "s87",
+      "scene_name": "概率产房",
+      "scene_place": "所有可能宇宙的叠加态中心",
+      "emotional_impact": "机械义肢开始书写万物法则",
+      "consequences": [
+        "诞生以缺陷为美的镜像宇宙",
+        "旧世界化作漂流纪念馆"
       ]
     }
   ]

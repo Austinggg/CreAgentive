@@ -1,10 +1,10 @@
 {
   "chapter": 2,
   "properties": {
-    "id": "p2",
     "affiliations": [
       "上海市第一医院"
     ],
+    "id": "p2",
     "occupation": [
       "急诊科医生"
     ],
@@ -27,287 +27,24 @@
     },
     {
       "chapter": 2,
-      "name": "林修",
-      "intensity": 8,
-      "character_id": "p1",
-      "type": "实验监督"
-    },
-    {
-      "chapter": 2,
-      "name": "林修",
-      "intensity": 8,
-      "character_id": "p1",
-      "type": "致命医疗"
-    },
-    {
-      "chapter": 2,
-      "name": "林修",
-      "intensity": 10,
-      "character_id": "p1",
-      "type": "医疗监控→时空锚定"
-    },
-    {
-      "chapter": 2,
-      "name": "林修",
-      "intensity": 150,
-      "character_id": "p1",
-      "type": "量子观测→债务重构"
-    },
-    {
-      "chapter": 2,
       "name": "陈小刀",
       "intensity": 2,
       "character_id": "p3",
       "type": "医患关系（曾为陈小刀做过紧急手术）"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 7,
-      "character_id": "p3",
-      "type": "保护关系"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 5,
-      "character_id": "p3",
-      "type": "实验关系"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 45,
-      "character_id": "p3",
-      "type": "基因共鸣"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 6,
-      "character_id": "p3",
-      "type": "治疗依赖"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 7,
-      "character_id": "p3",
-      "type": "医疗监控"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 9,
-      "character_id": "p3",
-      "type": "镜像同步"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 18,
-      "character_id": "p3",
-      "type": "机械共生→意识上传"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 30,
-      "character_id": "p3",
-      "type": "神经漫游→意识统合"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 26,
-      "character_id": "p3",
-      "type": "生物骇入→时间校正"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 100,
-      "character_id": "p3",
-      "type": "基因链接→叙事锚定"
-    },
-    {
-      "chapter": 2,
-      "name": "陈小刀",
-      "intensity": 600,
-      "character_id": "p3",
-      "type": "基因统合→量子污染"
     }
   ],
   "events": [
     {
-      "event_id": "e27",
-      "event_name": "引擎低语",
-      "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s11",
-      "scene_name": "量子引擎室",
-      "scene_place": "游轮动力核心",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "义眼记录下引擎核心的奇异物质"
-      ]
-    },
-    {
-      "event_id": "e27",
-      "event_name": "引擎低语",
-      "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "义眼记录下引擎核心的奇异物质"
-      ]
-    },
-    {
-      "event_id": "e27",
-      "event_name": "引擎低语",
-      "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s11",
-      "scene_name": "量子引擎室",
-      "scene_place": "游轮动力核心",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "义眼记录下引擎核心的奇异物质"
-      ]
-    },
-    {
-      "event_id": "e27",
-      "event_name": "引擎低语",
-      "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "义眼记录下引擎核心的奇异物质"
-      ]
-    },
-    {
-      "event_id": "e12",
-      "event_name": "镜像测试",
+      "event_id": "e2",
+      "event_name": "创伤治疗",
       "event_order": 2,
-      "details": "在化妆间故意打碎镜子，观察苏明月对多重镜像的异常回避反应",
-      "scene_id": "s6",
-      "scene_name": "废弃剧院后台",
-      "scene_place": "布满蜘蛛网的化妆间",
-      "emotional_impact": "被戳破秘密的愤怒",
+      "details": "苏明月使用特制紫外线仪治疗时，发现伤痕在特定波段下会投射出游轮结构图投影",
+      "scene_id": "s2",
+      "scene_name": "医务室暗间",
+      "scene_place": "游轮医务室隐藏的紫外线治疗室",
+      "emotional_impact": "发现真相的震撼",
       "consequences": [
-        "确认苏明月对镜像产生恐惧"
-      ]
-    },
-    {
-      "event_id": "e12",
-      "event_name": "镜像测试",
-      "event_order": 2,
-      "details": "在化妆间故意打碎镜子，观察苏明月对多重镜像的异常回避反应",
-      "scene_id": "s5",
-      "scene_name": "洗衣房密室",
-      "scene_place": "蒸汽弥漫的洗衣间",
-      "emotional_impact": "被戳破秘密的愤怒",
-      "consequences": [
-        "确认苏明月对镜像产生恐惧"
-      ]
-    },
-    {
-      "event_id": "e28",
-      "event_name": "血统验证",
-      "event_order": 2,
-      "details": "保险箱只吸收苏明月的眼泪作为生物密钥，开启后出现三份盖着相同指纹的船员合同",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "自我怀疑",
-      "consequences": [
-        "合同签署日期显示三人本该死于20年前"
-      ]
-    },
-    {
-      "event_id": "e30",
-      "event_name": "记忆共振",
-      "event_order": 4,
-      "details": "三人同时触碰保险箱内的怀表，表盘倒转出各自童年记忆——但背景都是同艘游轮的不同的灾难现场",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "崩溃",
-      "consequences": [
-        "怀表指针停止时指向今日日期"
-      ]
-    },
-    {
-      "event_id": "e31",
-      "event_name": "终极航海图",
-      "event_order": 5,
-      "details": "引擎室地面渗出黑色原油，自动绘制出包含所有时间线分支的第五维度航海图",
-      "scene_id": "s11",
-      "scene_name": "量子引擎室",
-      "scene_place": "游轮动力核心",
-      "emotional_impact": "绝望",
-      "consequences": [
-        "航海图显示沉船是唯一逃生方式"
-      ]
-    },
-    {
-      "event_id": "e32",
-      "event_name": "量子签名",
-      "event_order": 6,
-      "details": "保险箱最底层出现需要三人同步签名的时空契约，墨水瓶里的液体是1999年的海水",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "犹豫",
-      "consequences": [
-        "签名笔由陈小刀的机械义眼部件改造而成"
-      ]
-    },
-    {
-      "event_id": "e32",
-      "event_name": "量子签名",
-      "event_order": 6,
-      "details": "保险箱最底层出现需要三人同步签名的时空契约，墨水瓶里的液体是1999年的海水",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "犹豫",
-      "consequences": [
-        "签名笔由陈小刀的机械义眼部件改造而成"
-      ]
-    },
-    {
-      "event_id": "e16",
-      "event_name": "完美调制",
-      "event_order": 16,
-      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
-      "scene_id": "s6",
-      "scene_name": "废弃剧院后台",
-      "scene_place": "布满蜘蛛网的化妆间",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "酒杯边缘产生霍金辐射",
-        "柠檬切片结晶成时间晶体"
-      ]
-    },
-    {
-      "event_id": "e16",
-      "event_name": "完美调制",
-      "event_order": 16,
-      "details": "陈小刀同时为42个维度态的自己递送湮灭鸡尾酒",
-      "scene_id": "s5",
-      "scene_name": "洗衣房密室",
-      "scene_place": "蒸汽弥漫的洗衣间",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "酒杯边缘产生霍金辐射",
-        "柠檬切片结晶成时间晶体"
+        "首次获取完整游轮立体结构"
       ]
     }
   ]

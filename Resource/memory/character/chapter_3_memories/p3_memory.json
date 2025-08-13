@@ -1,10 +1,10 @@
 {
   "chapter": 3,
   "properties": {
-    "id": "p3",
     "affiliations": [
       "皇家加勒比邮轮公司"
     ],
+    "id": "p3",
     "occupation": [
       "游轮服务生"
     ],
@@ -21,58 +21,23 @@
     {
       "chapter": 3,
       "name": "林修",
-      "intensity": 4,
-      "character_id": "p1",
-      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 3,
-      "character_id": "p1",
-      "type": "信息交易"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 4,
-      "character_id": "p1",
-      "type": "利益同盟→提防"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
       "intensity": 8,
       "character_id": "p1",
-      "type": "伪装服从"
+      "type": "实验同谋觉醒"
     },
     {
       "chapter": 3,
-      "name": "林修",
-      "intensity": 4,
-      "character_id": "p1",
-      "type": "服从关系"
+      "name": "苏明月",
+      "intensity": 8,
+      "character_id": "p2",
+      "type": "命运共谋"
     },
     {
       "chapter": 3,
-      "name": "林修",
+      "name": "苏明月",
       "intensity": 7,
-      "character_id": "p1",
-      "type": "复仇欲望"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 9,
-      "character_id": "p1",
-      "type": "机械共鸣"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 8,
-      "character_id": "p1",
-      "type": "恐惧与复仇"
+      "character_id": "p2",
+      "type": "救赎关系"
     },
     {
       "chapter": 3,
@@ -84,135 +49,23 @@
     {
       "chapter": 3,
       "name": "林修",
-      "intensity": 6,
+      "intensity": 9,
       "character_id": "p1",
-      "type": "机械抗拒"
+      "type": "伤痕倒影"
     },
     {
       "chapter": 3,
       "name": "林修",
-      "intensity": 20,
+      "intensity": 4,
       "character_id": "p1",
-      "type": "机械共振"
+      "type": "恐惧敬畏（陈小刀见过林修出千杀人）"
     },
     {
       "chapter": 3,
-      "name": "林修",
-      "intensity": 12,
-      "character_id": "p1",
-      "type": "服从关系→觉醒反抗"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 10,
-      "character_id": "p1",
-      "type": "机械反制"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
+      "name": "苏明月",
       "intensity": 7,
-      "character_id": "p1",
-      "type": "机械共振→相位同步"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 12,
-      "character_id": "p1",
-      "type": "复仇欲望→量子共生"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 18,
-      "character_id": "p1",
-      "type": "量子共生→机械叛变"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 120,
-      "character_id": "p1",
-      "type": "机械共振→时间锚定"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 25,
-      "character_id": "p1",
-      "type": "机械反制→量子同调"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 25,
-      "character_id": "p1",
-      "type": "机械反叛→量子臣服"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 24,
-      "character_id": "p1",
-      "type": "机械通灵→因果倒置"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 50,
-      "character_id": "p1",
-      "type": "机械叛变→终极服从"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 50,
-      "character_id": "p1",
-      "type": "机械叛变→量子臣服"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 99,
-      "character_id": "p1",
-      "type": "量子臣服→机械飞升"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 200,
-      "character_id": "p1",
-      "type": "机械共振→时空同调"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 500,
-      "character_id": "p1",
-      "type": "机械飞升→叙事主宰"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 1000,
-      "character_id": "p1",
-      "type": "机械叛变→时空同调"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 5,
-      "character_id": "p1",
-      "type": "监视关系"
-    },
-    {
-      "chapter": 3,
-      "name": "林修",
-      "intensity": 200,
-      "character_id": "p1",
-      "type": "机械驯化→时间悖论"
+      "character_id": "p2",
+      "type": "医疗预判"
     },
     {
       "chapter": 3,
@@ -220,523 +73,72 @@
       "intensity": 3,
       "character_id": "p2",
       "type": "报恩心理（陈小刀暗中保护苏明月）"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 4,
-      "character_id": "p2",
-      "type": "保护关系"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 4,
-      "character_id": "p2",
-      "type": "暗中观察"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 5,
-      "character_id": "p2",
-      "type": "暗中观察→主动试探"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 6,
-      "character_id": "p2",
-      "type": "单向保护"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 5,
-      "character_id": "p2",
-      "type": "实验共鸣"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 6,
-      "character_id": "p2",
-      "type": "报恩心理"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 6,
-      "character_id": "p2",
-      "type": "保护与试探"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 7,
-      "character_id": "p2",
-      "type": "实验连接"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 9,
-      "character_id": "p2",
-      "type": "记忆传递"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 7,
-      "character_id": "p2",
-      "type": "基因牵引"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 7,
-      "character_id": "p2",
-      "type": "记忆共享"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 8,
-      "character_id": "p2",
-      "type": "镜像同步"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 9,
-      "character_id": "p2",
-      "type": "报恩心理→使命传承"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 10,
-      "character_id": "p2",
-      "type": "时间锚点共振"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 11,
-      "character_id": "p2",
-      "type": "实验连接→记忆融合"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 8,
-      "character_id": "p2",
-      "type": "医疗依赖→基因链接"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 11,
-      "character_id": "p2",
-      "type": "神经漫游"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 14,
-      "character_id": "p2",
-      "type": "基因链接→神经网络入侵"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 18,
-      "character_id": "p2",
-      "type": "神经网络"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 30,
-      "character_id": "p2",
-      "type": "神经网络→生物骇入"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 20,
-      "character_id": "p2",
-      "type": "神经链接→基因共振"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 28,
-      "character_id": "p2",
-      "type": "记忆共振→量子纠缠"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 40,
-      "character_id": "p2",
-      "type": "神经漫游→基因统治"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 25,
-      "character_id": "p2",
-      "type": "量子纠缠→神经链接"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 30,
-      "character_id": "p2",
-      "type": "基因链接→生物骇入"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 88,
-      "character_id": "p2",
-      "type": "生物骇入→医疗同调"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 180,
-      "character_id": "p2",
-      "type": "量子纠缠→基因统合"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 180,
-      "character_id": "p2",
-      "type": "时间锚定→医疗干涉"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 600,
-      "character_id": "p2",
-      "type": "基因链接→永恒守望"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 888,
-      "character_id": "p2",
-      "type": "基因统合→医疗同步"
-    },
-    {
-      "chapter": 3,
-      "name": "苏明月",
-      "intensity": 150,
-      "character_id": "p2",
-      "type": "基因同频→记忆回溯"
     }
   ],
   "events": [
     {
-      "event_id": "e27",
-      "event_name": "引擎低语",
+      "event_id": "e117",
+      "event_name": "金属过敏",
       "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s11",
-      "scene_name": "量子引擎室",
-      "scene_place": "游轮动力核心",
-      "emotional_impact": "宿命感",
+      "details": "陈小刀发现自己的紫外线伤痕开始析出和林修左手相同的钛合金微粒",
+      "scene_id": "s43",
+      "scene_name": "伤痕图书馆",
+      "scene_place": "游轮底层货舱",
+      "emotional_impact": "肉体被改造的恐惧",
       "consequences": [
-        "义眼记录下引擎核心的奇异物质"
+        "确认三人的量子纠缠已达分子级"
       ]
     },
     {
-      "event_id": "e27",
-      "event_name": "引擎低语",
-      "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "宿命感",
-      "consequences": [
-        "义眼记录下引擎核心的奇异物质"
-      ]
-    },
-    {
-      "event_id": "e27",
-      "event_name": "引擎低语",
-      "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s11",
-      "scene_name": "量子引擎室",
-      "scene_place": "游轮动力核心",
-      "emotional_impact": "宿命感",
-      "consequences": [
-        "义眼记录下引擎核心的奇异物质"
-      ]
-    },
-    {
-      "event_id": "e27",
-      "event_name": "引擎低语",
-      "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "宿命感",
-      "consequences": [
-        "义眼记录下引擎核心的奇异物质"
-      ]
-    },
-    {
-      "event_id": "e27",
-      "event_name": "引擎低语",
-      "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s11",
-      "scene_name": "量子引擎室",
-      "scene_place": "游轮动力核心",
-      "emotional_impact": "宿命感",
-      "consequences": [
-        "义眼记录下引擎核心的奇异物质"
-      ]
-    },
-    {
-      "event_id": "e27",
-      "event_name": "引擎低语",
-      "event_order": 1,
-      "details": "量子引擎的辐射使陈小刀的机械义眼透视出二十年前三位船长的全息影像——正与如今三人容貌相同",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "宿命感",
-      "consequences": [
-        "义眼记录下引擎核心的奇异物质"
-      ]
-    },
-    {
-      "event_id": "e47",
-      "event_name": "神圣机械",
+      "event_id": "e118",
+      "event_name": "数字预判",
       "event_order": 2,
-      "details": "陈小刀的义眼在教堂产生投影，展现三人被不同时间线的自己进行人体改造的过程",
-      "scene_id": "s18",
-      "scene_name": "机械教堂",
-      "scene_place": "轮机舱改建的礼拜堂",
-      "emotional_impact": "宗教性顿悟",
+      "details": "在苏明月念出数字前，伤痕疼痛提前7秒预警即将出现的质数",
+      "scene_id": "s43",
+      "scene_name": "伤痕图书馆",
+      "scene_place": "游轮底层货舱",
+      "emotional_impact": "获得未知能力的惶惑",
       "consequences": [
-        "管风琴演奏的赞美诗实则为摩尔斯电码求救信号"
+        "建立起三人之间的时间缓冲带"
       ]
     },
     {
-      "event_id": "e28",
-      "event_name": "血统验证",
-      "event_order": 2,
-      "details": "保险箱只吸收苏明月的眼泪作为生物密钥，开启后出现三份盖着相同指纹的船员合同",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "合同签署日期显示三人本该死于20年前"
-      ]
-    },
-    {
-      "event_id": "e48",
-      "event_name": "血统审判",
+      "event_id": "e119",
+      "event_name": "筹码移植",
       "event_order": 3,
-      "details": "手术室突然展开DNA检测报告，证明三人拥有完全相同却违反遗传学的基因序列",
-      "scene_id": "s17",
-      "scene_name": "颠倒手术室",
-      "scene_place": "倾斜45度的医疗舱",
-      "emotional_impact": "无记录",
+      "details": "将赌场筹码嵌入自己伤痕，形成生物电路接口",
+      "scene_id": "s44",
+      "scene_name": "逆光赌场",
+      "scene_place": "游轮顶层大厅",
+      "emotional_impact": "自体实验的麻木感",
       "consequences": [
-        "检测仪器吐出陈小刀的工作名牌"
+        "获得操纵游轮照明系统的能力"
       ]
     },
     {
-      "event_id": "e48",
-      "event_name": "血统审判",
-      "event_order": 3,
-      "details": "手术室突然展开DNA检测报告，证明三人拥有完全相同却违反遗传学的基因序列",
-      "scene_id": "s17",
-      "scene_name": "颠倒手术室",
-      "scene_place": "倾斜45度的医疗舱",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "检测仪器吐出陈小刀的工作名牌"
-      ]
-    },
-    {
-      "event_id": "e29",
-      "event_name": "悖论雕刻",
-      "event_order": 3,
-      "details": "林修的机械左手失控地在引擎外壳刻写公式，证明当前游轮存在于概率小于0.001%的平行时空",
-      "scene_id": "s11",
-      "scene_name": "量子引擎室",
-      "scene_place": "游轮动力核心",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "公式引发局部时间倒流10秒"
-      ]
-    },
-    {
-      "event_id": "e30",
-      "event_name": "记忆共振",
+      "event_id": "e120",
+      "event_name": "光痕导航",
       "event_order": 4,
-      "details": "三人同时触碰保险箱内的怀表，表盘倒转出各自童年记忆——但背景都是同艘游轮的不同的灾难现场",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "冷静",
+      "details": "用紫外线照射伤痕，在甲板上投射出通往实验舱的逃生路线",
+      "scene_id": "s44",
+      "scene_name": "逆光赌场",
+      "scene_place": "游轮顶层大厅",
+      "emotional_impact": "皮肤灼烧产生的异样清醒",
       "consequences": [
-        "怀表指针停止时指向今日日期"
+        "激活所有被困实验体的伤痕导航系统"
       ]
     },
     {
-      "event_id": "e49",
-      "event_name": "忏悔仪式",
-      "event_order": 4,
-      "details": "林修的机械左手不受控制地在圣经上刻写船长日志，墨水是苏明月的治疗药剂",
-      "scene_id": "s18",
-      "scene_name": "机械教堂",
-      "scene_place": "轮机舱改建的礼拜堂",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "圣经纸页浮现陈小刀调酒配方的分子式"
-      ]
-    },
-    {
-      "event_id": "e49",
-      "event_name": "忏悔仪式",
-      "event_order": 4,
-      "details": "林修的机械左手不受控制地在圣经上刻写船长日志，墨水是苏明月的治疗药剂",
-      "scene_id": "s18",
-      "scene_name": "机械教堂",
-      "scene_place": "轮机舱改建的礼拜堂",
-      "emotional_impact": "无记录",
-      "consequences": [
-        "圣经纸页浮现陈小刀调酒配方的分子式"
-      ]
-    },
-    {
-      "event_id": "e30",
-      "event_name": "记忆共振",
-      "event_order": 4,
-      "details": "三人同时触碰保险箱内的怀表，表盘倒转出各自童年记忆——但背景都是同艘游轮的不同的灾难现场",
-      "scene_id": "s12",
-      "scene_name": "船长保险箱",
-      "scene_place": "船首像内部",
-      "emotional_impact": "冷静",
-      "consequences": [
-        "怀表指针停止时指向今日日期"
-      ]
-    },
-    {
-      "event_id": "e50",
-      "event_name": "三位一体",
+      "event_id": "e121",
+      "event_name": "终极过敏",
       "event_order": 5,
-      "details": "手术镜反射出三人叠加的虚影，正在为对方进行器官移植手术",
-      "scene_id": "s17",
-      "scene_name": "颠倒手术室",
-      "scene_place": "倾斜45度的医疗舱",
-      "emotional_impact": "诡异满足",
+      "details": "故意引发全身过敏反应，使皮肤变成半透明量子计算机界面",
+      "scene_id": "s44",
+      "scene_name": "逆光赌场",
+      "scene_place": "游轮顶层大厅",
+      "emotional_impact": "放弃人类形态的决然",
       "consequences": [
-        "手术刀掉落时插入1999年的航海图"
-      ]
-    },
-    {
-      "event_id": "e50",
-      "event_name": "三位一体",
-      "event_order": 5,
-      "details": "手术镜反射出三人叠加的虚影，正在为对方进行器官移植手术",
-      "scene_id": "s17",
-      "scene_name": "颠倒手术室",
-      "scene_place": "倾斜45度的医疗舱",
-      "emotional_impact": "诡异满足",
-      "consequences": [
-        "手术刀掉落时插入1999年的航海图"
-      ]
-    },
-    {
-      "event_id": "e50",
-      "event_name": "三位一体",
-      "event_order": 5,
-      "details": "手术镜反射出三人叠加的虚影，正在为对方进行器官移植手术",
-      "scene_id": "s17",
-      "scene_name": "颠倒手术室",
-      "scene_place": "倾斜45度的医疗舱",
-      "emotional_impact": "诡异满足",
-      "consequences": [
-        "手术刀掉落时插入1999年的航海图"
-      ]
-    },
-    {
-      "event_id": "e51",
-      "event_name": "终极治疗",
-      "event_order": 6,
-      "details": "教堂彩窗突然显示三人医疗档案，治疗方案栏写着'量子自杀'",
-      "scene_id": "s18",
-      "scene_name": "机械教堂",
-      "scene_place": "轮机舱改建的礼拜堂",
-      "emotional_impact": "黑色幽默",
-      "consequences": [
-        "档案照片是三人童年模样站在沉船残骸上"
-      ]
-    },
-    {
-      "event_id": "e51",
-      "event_name": "终极治疗",
-      "event_order": 6,
-      "details": "教堂彩窗突然显示三人医疗档案，治疗方案栏写着'量子自杀'",
-      "scene_id": "s18",
-      "scene_name": "机械教堂",
-      "scene_place": "轮机舱改建的礼拜堂",
-      "emotional_impact": "黑色幽默",
-      "consequences": [
-        "档案照片是三人童年模样站在沉船残骸上"
-      ]
-    },
-    {
-      "event_id": "e26",
-      "event_name": "幽灵频段",
-      "event_order": 6,
-      "details": "沉没前收音机突然清晰播放：欢迎乘坐下一次海德拉号航班",
-      "scene_id": "s11",
-      "scene_name": "量子引擎室",
-      "scene_place": "游轮动力核心",
-      "emotional_impact": "泪水结晶",
-      "consequences": [
-        "新游轮在风暴中显现轮廓"
-      ]
-    },
-    {
-      "event_id": "e51",
-      "event_name": "终极治疗",
-      "event_order": 6,
-      "details": "教堂彩窗突然显示三人医疗档案，治疗方案栏写着'量子自杀'",
-      "scene_id": "s18",
-      "scene_name": "机械教堂",
-      "scene_place": "轮机舱改建的礼拜堂",
-      "emotional_impact": "黑色幽默",
-      "consequences": [
-        "档案照片是三人童年模样站在沉船残骸上"
-      ]
-    },
-    {
-      "event_id": "e26",
-      "event_name": "幽灵频段",
-      "event_order": 6,
-      "details": "沉没前收音机突然清晰播放：欢迎乘坐下一次海德拉号航班",
-      "scene_id": "s11",
-      "scene_name": "量子引擎室",
-      "scene_place": "游轮动力核心",
-      "emotional_impact": "泪水结晶",
-      "consequences": [
-        "新游轮在风暴中显现轮廓"
+        "强行接入主控系统释放所有实验体"
       ]
     }
   ]

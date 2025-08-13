@@ -1,10 +1,10 @@
 {
   "chapter": 10,
   "properties": {
-    "id": "p2",
     "affiliations": [
       "上海市第一医院"
     ],
+    "id": "p2",
     "occupation": [
       "急诊科医生"
     ],
@@ -35,37 +35,30 @@
     {
       "chapter": 10,
       "name": "陈小刀",
-      "intensity": 5,
+      "intensity": 8,
       "character_id": "p3",
-      "type": "实验关系"
+      "type": "数据同步"
     },
     {
       "chapter": 10,
       "name": "林修",
-      "intensity": 8,
+      "intensity": 10,
       "character_id": "p1",
-      "type": "实验监督"
-    },
-    {
-      "chapter": 10,
-      "name": "陈小刀",
-      "intensity": 6,
-      "character_id": "p3",
-      "type": "治疗依赖"
+      "type": "神经复仇"
     }
   ],
   "events": [
     {
-      "event_id": "e121",
-      "event_name": "血统认证",
-      "event_order": 2,
-      "details": "苏明月发现核心装置需要输入混合血样，三人伤口渗出的血液在空中形成DNA链投影",
-      "scene_id": "s46",
-      "scene_name": "轮机核心",
-      "scene_place": "游轮底舱第七层",
-      "emotional_impact": "强迫症发作反复核对血型数据",
+      "event_id": "e280",
+      "event_name": "时间助产术",
+      "event_order": 280,
+      "details": "苏明月为尚未诞生的新宇宙执行因果律剖宫产",
+      "scene_id": "s105",
+      "scene_name": "时间剖腹产室",
+      "scene_place": "因果律尚未生效的四维空间",
+      "emotional_impact": "打破医学常识的震撼与狂喜",
       "consequences": [
-        "核心舱启动克隆体销毁程序"
+        "新生宇宙获得逆时间发展能力"
       ]
     }
   ]

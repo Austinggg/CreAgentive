@@ -1,10 +1,10 @@
 {
   "chapter": 6,
   "properties": {
-    "id": "p3",
     "affiliations": [
       "皇家加勒比邮轮公司"
     ],
+    "id": "p3",
     "occupation": [
       "游轮服务生"
     ],
@@ -27,52 +27,24 @@
     },
     {
       "chapter": 6,
-      "name": "林修",
+      "name": "苏明月",
       "intensity": 3,
-      "character_id": "p1",
-      "type": "信息交易"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 4,
-      "character_id": "p1",
-      "type": "利益同盟→提防"
+      "character_id": "p2",
+      "type": "报恩心理（陈小刀暗中保护苏明月）"
     },
     {
       "chapter": 6,
       "name": "林修",
       "intensity": 8,
       "character_id": "p1",
-      "type": "伪装服从"
+      "type": "实验同谋觉醒"
     },
     {
       "chapter": 6,
-      "name": "林修",
-      "intensity": 4,
-      "character_id": "p1",
-      "type": "服从关系"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
+      "name": "苏明月",
       "intensity": 7,
-      "character_id": "p1",
-      "type": "复仇欲望"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 9,
-      "character_id": "p1",
-      "type": "机械共鸣"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 8,
-      "character_id": "p1",
-      "type": "恐惧与复仇"
+      "character_id": "p2",
+      "type": "救赎关系"
     },
     {
       "chapter": 6,
@@ -83,525 +55,189 @@
     },
     {
       "chapter": 6,
-      "name": "林修",
-      "intensity": 6,
-      "character_id": "p1",
-      "type": "机械抗拒"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 20,
-      "character_id": "p1",
-      "type": "机械共振"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 12,
-      "character_id": "p1",
-      "type": "服从关系→觉醒反抗"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 10,
-      "character_id": "p1",
-      "type": "机械反制"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 7,
-      "character_id": "p1",
-      "type": "机械共振→相位同步"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 12,
-      "character_id": "p1",
-      "type": "复仇欲望→量子共生"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 18,
-      "character_id": "p1",
-      "type": "量子共生→机械叛变"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 28,
-      "character_id": "p1",
-      "type": "机械共振→时间锚定"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 25,
-      "character_id": "p1",
-      "type": "机械反制→量子同调"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 25,
-      "character_id": "p1",
-      "type": "机械反叛→量子臣服"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 24,
-      "character_id": "p1",
-      "type": "机械通灵→因果倒置"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 50,
-      "character_id": "p1",
-      "type": "机械叛变→终极服从"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 50,
-      "character_id": "p1",
-      "type": "机械叛变→量子臣服"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 99,
-      "character_id": "p1",
-      "type": "量子臣服→机械飞升"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 200,
-      "character_id": "p1",
-      "type": "机械共振→时空同调"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 500,
-      "character_id": "p1",
-      "type": "机械飞升→叙事主宰"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 1000,
-      "character_id": "p1",
-      "type": "机械叛变→时空同调"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 5,
-      "character_id": "p1",
-      "type": "监视关系"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 200,
-      "character_id": "p1",
-      "type": "机械驯化→时间悖论"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 75,
-      "character_id": "p1",
-      "type": "机械崇拜→指令植入"
-    },
-    {
-      "chapter": 6,
-      "name": "林修",
-      "intensity": 200,
-      "character_id": "p1",
-      "type": "机械通灵→时空溯源"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 3,
-      "character_id": "p2",
-      "type": "报恩心理（陈小刀暗中保护苏明月）"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 4,
-      "character_id": "p2",
-      "type": "保护关系"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 4,
-      "character_id": "p2",
-      "type": "暗中观察"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 5,
-      "character_id": "p2",
-      "type": "暗中观察→主动试探"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 6,
-      "character_id": "p2",
-      "type": "单向保护"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 5,
-      "character_id": "p2",
-      "type": "实验共鸣"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 6,
-      "character_id": "p2",
-      "type": "报恩心理"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 6,
-      "character_id": "p2",
-      "type": "保护与试探"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 7,
-      "character_id": "p2",
-      "type": "实验连接"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 9,
-      "character_id": "p2",
-      "type": "记忆传递"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 7,
-      "character_id": "p2",
-      "type": "基因牵引"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 7,
-      "character_id": "p2",
-      "type": "记忆共享"
-    },
-    {
-      "chapter": 6,
       "name": "苏明月",
       "intensity": 8,
       "character_id": "p2",
-      "type": "镜像同步"
+      "type": "命运共谋"
     },
     {
       "chapter": 6,
-      "name": "苏明月",
+      "name": "林修",
       "intensity": 9,
-      "character_id": "p2",
-      "type": "报恩心理→使命传承"
+      "character_id": "p1",
+      "type": "伤痕倒影"
     },
     {
       "chapter": 6,
       "name": "苏明月",
-      "intensity": 10,
+      "intensity": 7,
       "character_id": "p2",
-      "type": "时间锚点共振"
+      "type": "医疗预判"
+    },
+    {
+      "chapter": 6,
+      "name": "林修",
+      "intensity": 9,
+      "character_id": "p1",
+      "type": "实验真相"
+    },
+    {
+      "chapter": 6,
+      "name": "林修",
+      "intensity": 7,
+      "character_id": "p1",
+      "type": "预知陷阱"
     },
     {
       "chapter": 6,
       "name": "苏明月",
-      "intensity": 11,
+      "intensity": 7,
       "character_id": "p2",
-      "type": "实验连接→记忆融合"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 8,
-      "character_id": "p2",
-      "type": "医疗依赖→基因链接"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 11,
-      "character_id": "p2",
-      "type": "神经漫游"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 14,
-      "character_id": "p2",
-      "type": "基因链接→神经网络入侵"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 18,
-      "character_id": "p2",
-      "type": "神经网络"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 30,
-      "character_id": "p2",
-      "type": "神经网络→生物骇入"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 20,
-      "character_id": "p2",
-      "type": "神经链接→基因共振"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 28,
-      "character_id": "p2",
-      "type": "记忆共振→量子纠缠"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 40,
-      "character_id": "p2",
-      "type": "神经漫游→基因统治"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 25,
-      "character_id": "p2",
-      "type": "量子纠缠→神经链接"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 30,
-      "character_id": "p2",
-      "type": "基因链接→生物骇入"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 88,
-      "character_id": "p2",
-      "type": "生物骇入→医疗同调"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 180,
-      "character_id": "p2",
-      "type": "量子纠缠→基因统合"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 180,
-      "character_id": "p2",
-      "type": "时间锚定→医疗干涉"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 600,
-      "character_id": "p2",
-      "type": "基因链接→永恒守望"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 888,
-      "character_id": "p2",
-      "type": "基因统合→医疗同步"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 150,
-      "character_id": "p2",
-      "type": "基因同频→记忆回溯"
-    },
-    {
-      "chapter": 6,
-      "name": "苏明月",
-      "intensity": 150,
-      "character_id": "p2",
-      "type": "量子观测"
+      "type": "记忆疫苗"
     }
   ],
   "events": [
     {
-      "event_id": "e91",
-      "event_name": "年轮解码",
-      "event_order": 1,
-      "details": "陈小刀机械臂刺入第7圈年轮，流出的松脂凝固成1999年船员名单",
-      "scene_id": "s31",
-      "scene_name": "年轮大厅",
-      "scene_place": "船体龙骨中枢",
-      "emotional_impact": "液压油变成琥珀色",
-      "consequences": [
-        "发现名单上三人的证件照是现在模样"
-      ]
-    },
-    {
-      "event_id": "e70",
-      "event_name": "圣痕显露",
-      "event_order": 1,
-      "details": "陈小刀擦拭餐具时，金属勺面突然映出三人被钉在齿轮十字架上的影像",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "条件反射摆出标准侍餐姿势对抗恐惧",
-      "consequences": [
-        "解锁量子手术台坐标"
-      ]
-    },
-    {
-      "event_id": "e70",
-      "event_name": "圣痕显露",
-      "event_order": 1,
-      "details": "陈小刀擦拭餐具时，金属勺面突然映出三人被钉在齿轮十字架上的影像",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "条件反射摆出标准侍餐姿势对抗恐惧",
-      "consequences": [
-        "解锁量子手术台坐标"
-      ]
-    },
-    {
-      "event_id": "e69",
-      "event_name": "镜像实验",
-      "event_order": 2,
-      "details": "陈小刀在镜中看到自己穿着拘束服，被二十年前的苏明月注射药剂",
-      "scene_id": "s28",
-      "scene_name": "镜廊",
-      "scene_place": "上层娱乐区",
-      "emotional_impact": "恐惧引发T-307编号剧烈发光",
-      "consequences": [
-        "镜面出现裂缝渗出蓝色液体"
-      ]
-    },
-    {
-      "event_id": "e94",
-      "event_name": "齿轮噬主",
-      "event_order": 4,
-      "details": "陈小刀右臂突然绞住自己喉咙，齿轮组拼出\"不要改变过去\"的摩斯密码",
-      "scene_id": "s32",
-      "scene_name": "记忆螺旋",
-      "scene_place": "通往下层甲板的楼梯间",
-      "emotional_impact": "第一次对机械产生恐惧",
-      "consequences": [
-        "体内机械意识开始反抗人类思维"
-      ]
-    },
-    {
-      "event_id": "e96",
-      "event_name": "螺旋悖论",
-      "event_order": 6,
-      "details": "三人同时触碰楼梯扶手时，各自的倒影开始走向不同年份",
-      "scene_id": "s32",
-      "scene_name": "记忆螺旋",
-      "scene_place": "通往下层甲板的楼梯间",
-      "emotional_impact": "齿轮生长出血肉组织",
-      "consequences": [
-        "时间线出现可见的分裂迹象"
-      ]
-    },
-    {
-      "event_id": "e72",
-      "event_name": "神经嫁接",
-      "event_order": 72,
-      "details": "苏明月将陈小刀的机械神经元接入自己的疼痛感知系统",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "机械震颤",
-      "consequences": [
-        "两人记忆开始量子纠缠"
-      ]
-    },
-    {
-      "event_id": "e72",
-      "event_name": "神经嫁接",
-      "event_order": 72,
-      "details": "苏明月将陈小刀的机械神经元接入自己的疼痛感知系统",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "机械震颤",
-      "consequences": [
-        "两人记忆开始量子纠缠"
-      ]
-    },
-    {
-      "event_id": "e72",
-      "event_name": "神经嫁接",
-      "event_order": 72,
-      "details": "苏明月将陈小刀的机械神经元接入自己的疼痛感知系统",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
-      "emotional_impact": "机械震颤",
-      "consequences": [
-        "两人记忆开始量子纠缠"
-      ]
-    },
-    {
-      "event_id": "e73",
-      "event_name": "概率解构",
-      "event_order": 73,
-      "details": "林修同时与所有时间线的自己对赌",
-      "scene_id": "s27",
-      "scene_name": "量子手术台",
-      "scene_place": "悬浮在反应堆上方的金属平台",
+      "event_id": "e98",
+      "event_name": "快乐切除",
+      "event_order": 98,
+      "details": "苏明月精准切除林修对赌博的快感反射区",
+      "scene_id": "s35",
+      "scene_name": "奖赏手术室",
+      "scene_place": "在林修多巴胺系统搭建的禁区",
       "emotional_impact": "无记录",
       "consequences": [
-        "赌桌开始吞噬现实维度"
+        "建立神经级制裁手段"
       ]
     },
     {
-      "event_id": "e73",
-      "event_name": "概率解构",
-      "event_order": 73,
-      "details": "林修同时与所有时间线的自己对赌",
-      "scene_id": "s28",
-      "scene_name": "镜廊",
-      "scene_place": "上层娱乐区",
+      "event_id": "e98",
+      "event_name": "快乐切除",
+      "event_order": 98,
+      "details": "苏明月精准切除林修对赌博的快感反射区",
+      "scene_id": "s36",
+      "scene_name": "免疫档案室",
+      "scene_place": "由医疗记录转化的防御工事",
       "emotional_impact": "无记录",
       "consequences": [
-        "赌桌开始吞噬现实维度"
+        "建立神经级制裁手段"
+      ]
+    },
+    {
+      "event_id": "e99",
+      "event_name": "记忆灭活",
+      "event_order": 99,
+      "details": "陈小刀将关键记忆转化为灭活疫苗",
+      "scene_id": "s36",
+      "scene_name": "免疫档案室",
+      "scene_place": "由医疗记录转化的防御工事",
+      "emotional_impact": "自我改造的镇痛",
+      "consequences": [
+        "创造意识防御武器"
+      ]
+    },
+    {
+      "event_id": "e99",
+      "event_name": "记忆灭活",
+      "event_order": 99,
+      "details": "陈小刀将关键记忆转化为灭活疫苗",
+      "scene_id": "s35",
+      "scene_name": "奖赏手术室",
+      "scene_place": "在林修多巴胺系统搭建的禁区",
+      "emotional_impact": "自我改造的镇痛",
+      "consequences": [
+        "创造意识防御武器"
+      ]
+    },
+    {
+      "event_id": "e99",
+      "event_name": "记忆灭活",
+      "event_order": 99,
+      "details": "陈小刀将关键记忆转化为灭活疫苗",
+      "scene_id": "s36",
+      "scene_name": "免疫档案室",
+      "scene_place": "由医疗记录转化的防御工事",
+      "emotional_impact": "自我改造的镇痛",
+      "consequences": [
+        "创造意识防御武器"
+      ]
+    },
+    {
+      "event_id": "e99",
+      "event_name": "记忆灭活",
+      "event_order": 99,
+      "details": "陈小刀将关键记忆转化为灭活疫苗",
+      "scene_id": "s35",
+      "scene_name": "奖赏手术室",
+      "scene_place": "在林修多巴胺系统搭建的禁区",
+      "emotional_impact": "自我改造的镇痛",
+      "consequences": [
+        "创造意识防御武器"
+      ]
+    },
+    {
+      "event_id": "e100",
+      "event_name": "病理暴乱",
+      "event_order": 100,
+      "details": "林修的神经系统突然变异出抗手术机制",
+      "scene_id": "s35",
+      "scene_name": "奖赏手术室",
+      "scene_place": "在林修多巴胺系统搭建的禁区",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "证明伤痕具有进化能力"
+      ]
+    },
+    {
+      "event_id": "e100",
+      "event_name": "病理暴乱",
+      "event_order": 100,
+      "details": "林修的神经系统突然变异出抗手术机制",
+      "scene_id": "s36",
+      "scene_name": "免疫档案室",
+      "scene_place": "由医疗记录转化的防御工事",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "证明伤痕具有进化能力"
+      ]
+    },
+    {
+      "event_id": "e101",
+      "event_name": "医疗独裁",
+      "event_order": 101,
+      "details": "苏明月用病历本编写绝对医疗律令",
+      "scene_id": "s36",
+      "scene_name": "免疫档案室",
+      "scene_place": "由医疗记录转化的防御工事",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "暂时冻结伤痕30%功能"
+      ]
+    },
+    {
+      "event_id": "e101",
+      "event_name": "医疗独裁",
+      "event_order": 101,
+      "details": "苏明月用病历本编写绝对医疗律令",
+      "scene_id": "s35",
+      "scene_name": "奖赏手术室",
+      "scene_place": "在林修多巴胺系统搭建的禁区",
+      "emotional_impact": "无记录",
+      "consequences": [
+        "暂时冻结伤痕30%功能"
+      ]
+    },
+    {
+      "event_id": "e102",
+      "event_name": "记忆叛乱",
+      "event_order": 102,
+      "details": "灭活疫苗在神经突触发动反向感染",
+      "scene_id": "s35",
+      "scene_name": "奖赏手术室",
+      "scene_place": "在林修多巴胺系统搭建的禁区",
+      "emotional_impact": "武器失控的恐惧",
+      "consequences": [
+        "造成意识级生化危机"
       ]
     }
   ]

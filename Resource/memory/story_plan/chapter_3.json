@@ -1,5 +1,7 @@
 {
     "chapter": 3,
+    "chapter_title": "时间赦免令",
+    "chapter_goal": "利用7秒权限解救实验体",
     "characters": [
         {
             "id": "p1",
@@ -55,151 +57,117 @@
     ],
     "relationships": [
         {
-            "from_id": "p1",
-            "to_id": "p2",
-            "type": "量子纠缠→记忆同步",
-            "intensity": 80,
-            "awareness": "双向非对称",
-            "new_detail": "林修在苏明月注射药物时看到自己戴着船长帽的幻觉"
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "伤痕倒影",
+            "intensity": 9,
+            "awareness": "量子同步",
+            "new_detail": "陈小刀过敏伤痕的分泌物具有林修左手金属颗粒的相同成分"
         },
         {
             "from_id": "p3",
-            "to_id": "p1",
-            "type": "机械共振→时间锚定",
-            "intensity": 120,
-            "awareness": "潜意识连接",
-            "new_detail": "陈小刀义眼的录像功能自动记录林修不存在的童年记忆"
-        },
-        {
-            "from_id": "p2",
-            "to_id": "p3",
-            "type": "基因锁链",
-            "intensity": 90,
-            "awareness": "单方面压制",
-            "new_detail": "苏明月发现陈小刀血管中的纳米机械与自己的药物产生斐波那契共振"
+            "to_id": "p2",
+            "type": "医疗预判",
+            "intensity": 7,
+            "awareness": "单向感知",
+            "new_detail": "陈小刀能提前7秒预知苏明月强迫症发作时的数字序列"
         }
     ],
     "scenes": [
         {
-            "id": "s17",
-            "name": "颠倒手术室",
-            "place": "倾斜45度的医疗舱",
-            "time_period": "TIME_REVERSING",
-            "atmosphere": "手术器械沿着天花板的血渍轨迹自主移动"
+            "id": "s43",
+            "name": "伤痕图书馆",
+            "place": "游轮底层货舱",
+            "time_period": "时间褶皱点",
+            "atmosphere": "数千个玻璃罐装着发光伤痕标本，组成莫比乌斯环阵列"
         },
         {
-            "id": "s18",
-            "name": "机械教堂",
-            "place": "轮机舱改建的礼拜堂",
-            "time_period": "PARADOX_TIME",
-            "atmosphere": "彩色玻璃用润滑油绘制，管风琴由引擎活塞驱动"
+            "id": "s44",
+            "name": "逆光赌场",
+            "place": "游轮顶层大厅",
+            "time_period": "负7秒循环",
+            "atmosphere": "赌桌在紫外线照射下透明化，筹码显露出内部神经网络结构"
         }
     ],
     "events": [
         {
-            "id": "e46",
-            "name": "逆生长手术",
+            "id": "e117",
+            "name": "金属过敏",
             "order": 1,
-            "scene_id": "s17",
-            "details": "苏明月为林修注射药物时，两人年龄开始倒流，直到变成胚胎形态又突然衰老",
+            "scene_id": "s43",
+            "details": "陈小刀发现自己的紫外线伤痕开始析出和林修左手相同的钛合金微粒",
             "participants": [
-                "p1",
-                "p2"
+                "p3"
             ],
             "emotional_impact": {
-                "p1": "存在危机",
-                "p2": "科学狂热"
+                "p3": "肉体被改造的恐惧"
             },
             "consequences": [
-                "药水瓶标签显示日期为1999年12月31日"
+                "确认三人的量子纠缠已达分子级"
             ]
         },
         {
-            "id": "e47",
-            "name": "神圣机械",
+            "id": "e118",
+            "name": "数字预判",
             "order": 2,
-            "scene_id": "s18",
-            "details": "陈小刀的义眼在教堂产生投影，展现三人被不同时间线的自己进行人体改造的过程",
+            "scene_id": "s43",
+            "details": "在苏明月念出数字前，伤痕疼痛提前7秒预警即将出现的质数",
             "participants": [
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "宗教性顿悟"
+                "p3": "获得未知能力的惶惑"
             },
             "consequences": [
-                "管风琴演奏的赞美诗实则为摩尔斯电码求救信号"
+                "建立起三人之间的时间缓冲带"
             ]
         },
         {
-            "id": "e48",
-            "name": "血统审判",
+            "id": "e119",
+            "name": "筹码移植",
             "order": 3,
-            "scene_id": "s17",
-            "details": "手术室突然展开DNA检测报告，证明三人拥有完全相同却违反遗传学的基因序列",
+            "scene_id": "s44",
+            "details": "将赌场筹码嵌入自己伤痕，形成生物电路接口",
             "participants": [
-                "p1",
-                "p2"
+                "p3"
             ],
             "emotional_impact": {
-                "p1": "逻辑崩溃",
-                "p2": "强迫症发作（基因碱基突然全部变成质数序列）"
+                "p3": "自体实验的麻木感"
             },
             "consequences": [
-                "检测仪器吐出陈小刀的工作名牌"
+                "获得操纵游轮照明系统的能力"
             ]
         },
         {
-            "id": "e49",
-            "name": "忏悔仪式",
+            "id": "e120",
+            "name": "光痕导航",
             "order": 4,
-            "scene_id": "s18",
-            "details": "林修的机械左手不受控制地在圣经上刻写船长日志，墨水是苏明月的治疗药剂",
+            "scene_id": "s44",
+            "details": "用紫外线照射伤痕，在甲板上投射出通往实验舱的逃生路线",
             "participants": [
-                "p1"
+                "p3"
             ],
             "emotional_impact": {
-                "p1": "宗教恐惧"
+                "p3": "皮肤灼烧产生的异样清醒"
             },
             "consequences": [
-                "圣经纸页浮现陈小刀调酒配方的分子式"
+                "激活所有被困实验体的伤痕导航系统"
             ]
         },
         {
-            "id": "e50",
-            "name": "三位一体",
+            "id": "e121",
+            "name": "终极过敏",
             "order": 5,
-            "scene_id": "s17",
-            "details": "手术镜反射出三人叠加的虚影，正在为对方进行器官移植手术",
+            "scene_id": "s44",
+            "details": "故意引发全身过敏反应，使皮肤变成半透明量子计算机界面",
             "participants": [
-                "p1",
-                "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p1": "自我怀疑",
-                "p2": "病态专注",
-                "p3": "诡异满足"
+                "p3": "放弃人类形态的决然"
             },
             "consequences": [
-                "手术刀掉落时插入1999年的航海图"
-            ]
-        },
-        {
-            "id": "e51",
-            "name": "终极治疗",
-            "order": 6,
-            "scene_id": "s18",
-            "details": "教堂彩窗突然显示三人医疗档案，治疗方案栏写着'量子自杀'",
-            "participants": [
-                "p2",
-                "p3"
-            ],
-            "emotional_impact": {
-                "p2": "职业性困惑",
-                "p3": "黑色幽默"
-            },
-            "consequences": [
-                "档案照片是三人童年模样站在沉船残骸上"
+                "强行接入主控系统释放所有实验体"
             ]
         }
     ]

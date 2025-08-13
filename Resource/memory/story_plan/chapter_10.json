@@ -1,5 +1,7 @@
 {
     "chapter": 10,
+    "chapter_title": "缺陷密码",
+    "chapter_goal": "通过三人缺陷破解镜像宇宙逃生密码",
     "characters": [
         {
             "id": "p1",
@@ -57,122 +59,86 @@
         {
             "from_id": "p3",
             "to_id": "p1",
-            "type": "机械共鸣",
-            "intensity": 9,
-            "awareness": "单向认知",
-            "new_detail": "发现林修的机械义肢与自己的芯片同源"
+            "type": "星际烙印",
+            "intensity": 55,
+            "awareness": "量子纠缠态",
+            "new_detail": "陈小刀的皮肤代码在林修机械臂上投射出星图坐标"
         },
         {
-            "from_id": "p3",
+            "from_id": "p1",
             "to_id": "p2",
-            "type": "实验连接",
-            "intensity": 7,
-            "awareness": "双向确认",
-            "new_detail": "意识到苏明月的医疗ID与实验编号吻合"
+            "type": "手术悖论",
+            "intensity": 50,
+            "awareness": "时空因果倒置",
+            "new_detail": "林修发现机械臂内的手术记录比苏明月实际手术时间早20年"
         }
     ],
     "scenes": [
         {
-            "id": "s46",
-            "name": "轮机核心",
-            "place": "游轮底舱第七层",
-            "time_period": "NIGHT",
-            "atmosphere": "布满血管状管道的球形空间，中控台漂浮着棱形晶体"
+            "id": "s104",
+            "name": "代码星云",
+            "place": "陈小刀皮肤溃烂形成的星团",
+            "time_period": "宇宙时钟重启瞬间",
+            "atmosphere": "血腥味与宇宙尘埃的量子混合态"
         },
         {
-            "id": "s47",
-            "name": "逃生通道",
-            "place": "通风井与紧急楼梯",
-            "time_period": "NIGHT",
-            "atmosphere": "被红色应急灯照亮的狭长通道，墙壁渗出蓝色黏液"
+            "id": "s105",
+            "name": "时间剖腹产室",
+            "place": "因果律尚未生效的四维空间",
+            "time_period": "创世纪前负3秒",
+            "atmosphere": "手术器械悬浮在时间褶皱中"
         }
     ],
     "events": [
         {
-            "id": "e120",
-            "name": "芯片共鸣",
-            "order": 1,
-            "scene_id": "s46",
-            "details": "陈小刀的机械眼突然投影出轮机舱结构图，与林修的义肢产生电流共振",
+            "id": "e279",
+            "name": "星际纹身",
+            "order": 279,
+            "scene_id": "s104",
+            "details": "陈小刀溃烂的皮肤自动重组为可编程星图",
             "participants": [
-                "p1",
                 "p3"
             ],
             "emotional_impact": {
-                "p1": "义肢不受控制地指向特定方位",
-                "p3": "机械瞳孔第一次完全扩张"
+                "p3": "痛苦转化为神圣使命的顿悟"
             },
             "consequences": [
-                "锁定核心位于游轮质量中心"
+                "获得宇宙导航系统核心算法"
             ]
         },
         {
-            "id": "e121",
-            "name": "血统认证",
-            "order": 2,
-            "scene_id": "s46",
-            "details": "苏明月发现核心装置需要输入混合血样，三人伤口渗出的血液在空中形成DNA链投影",
+            "id": "e280",
+            "name": "时间助产术",
+            "order": 280,
+            "scene_id": "s105",
+            "details": "苏明月为尚未诞生的新宇宙执行因果律剖宫产",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "打破医学常识的震撼与狂喜"
+            },
+            "consequences": [
+                "新生宇宙获得逆时间发展能力"
+            ]
+        },
+        {
+            "id": "e281",
+            "name": "三位一体签名",
+            "order": 281,
+            "details": "三人用各自病症在宇宙常数上烙下最终印记",
             "participants": [
                 "p1",
                 "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p2": "强迫症发作反复核对血型数据",
-                "p3": "看到投影显示自己与林修基因组99%匹配"
+                "p1": "机械臂化作银河系悬臂",
+                "p2": "手术刀轨迹形成星座",
+                "p3": "皮肤星云成为宇宙背景"
             },
             "consequences": [
-                "核心舱启动克隆体销毁程序"
-            ]
-        },
-        {
-            "id": "e122",
-            "name": "记忆闪回",
-            "order": 3,
-            "scene_id": "s46",
-            "details": "装置激活后陈小刀突然说出二十年前的实验室密码，被紫外线灼伤的皮肤浮现条形码",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "机械与生物记忆首次完全同步"
-            },
-            "consequences": [
-                "解锁核心自毁协议"
-            ]
-        },
-        {
-            "id": "e123",
-            "name": "义肢献祭",
-            "order": 4,
-            "scene_id": "s46",
-            "details": "林修将机械义肢插入核心接口，陈小刀被迫用机械眼球确认生物认证",
-            "participants": [
-                "p1",
-                "p3"
-            ],
-            "emotional_impact": {
-                "p1": "切断神经连接时赌徒直觉第一次失灵",
-                "p3": "感受到机械眼与核心的量子纠缠"
-            },
-            "consequences": [
-                "游轮开始分子级解体"
-            ]
-        },
-        {
-            "id": "e124",
-            "name": "数字重生",
-            "order": 5,
-            "scene_id": "s47",
-            "details": "逃亡途中陈小刀的机械眼自动记录游轮消失过程，保存了完整的实验数据",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "意识到自己成为活的实验档案"
-            },
-            "consequences": [
-                "三人乘坐的救生艇突然出现在现代港口"
+                "完美缺陷宇宙正式开始运行"
             ]
         }
     ]

@@ -1,5 +1,7 @@
 {
     "chapter": 4,
+    "chapter_title": "伤痕量子链",
+    "chapter_goal": "解码三人伤痕量子纠缠",
     "characters": [
         {
             "id": "p1",
@@ -57,131 +59,133 @@
         {
             "from_id": "p1",
             "to_id": "p2",
-            "type": "量子纠缠→意识融合",
-            "intensity": 55,
-            "awareness": "双向觉醒",
-            "new_detail": "林修能够读取苏明月手术时的视觉记忆"
-        },
-        {
-            "from_id": "p2",
-            "to_id": "p3",
-            "type": "神经链接→痛觉共享",
-            "intensity": 60,
-            "awareness": "被动连接",
-            "new_detail": "苏明月注射药剂时陈小刀的义眼会产生刺痛"
+            "type": "救赎转化",
+            "intensity": 10,
+            "awareness": "双方皆知",
+            "new_detail": "林修眼中数据流转化为苏明月病历上的质数密码"
         },
         {
             "from_id": "p3",
             "to_id": "p1",
-            "type": "机械崇拜→指令植入",
-            "intensity": 75,
-            "awareness": "单向控制",
-            "new_detail": "林修的机械左手能强制启动陈小刀的义眼录像功能"
+            "type": "实验真相",
+            "intensity": 9,
+            "awareness": "单方知晓",
+            "new_detail": "陈小刀在伤痕共鸣时看到林修才是第一个被植入记忆的人"
+        },
+        {
+            "from_id": "p2",
+            "to_id": "p3",
+            "type": "数据同步",
+            "intensity": 8,
+            "awareness": "双方皆知",
+            "new_detail": "苏明月的质数强迫症与陈小刀的伤痕疼痛完全同步"
         }
     ],
     "scenes": [
         {
-            "id": "s23",
-            "name": "循环钟楼",
-            "place": "船长室天文钟",
-            "time_period": "TIMELOOP",
-            "atmosphere": "六面钟表分别显示不同年份的同一天"
+            "id": "s1",
+            "name": "终极手术舱",
+            "place": "游轮核心的球形量子隔离室",
+            "time_period": "NIGHT",
+            "atmosphere": "悬浮医疗设备与数据伤痕组成的立体网络"
         },
         {
-            "id": "s24",
-            "name": "血肉图书馆",
-            "place": "船医档案室",
-            "time_period": "BLOODMOON",
-            "atmosphere": "病历档案的纸张会渗出与患者血型相同的液体"
+            "id": "s2",
+            "name": "记忆回廊",
+            "place": "游轮底层的环形数据通道",
+            "time_period": "TIMELESS",
+            "atmosphere": "流动的全息记忆碎片组成的数据风暴"
         }
     ],
     "events": [
         {
-            "id": "e61",
-            "name": "时间刻痕",
-            "order": 16,
-            "scene_id": "s23",
-            "details": "天文钟的齿轮突然咬住林修的机械手，在金属表面刻下'第7次校正失败'的印记",
+            "id": "e1",
+            "name": "量子解离手术",
+            "order": 1,
+            "scene_id": "s1",
+            "details": "林修主动让自己伤痕的超导微粒侵入苏明月的质数算法系统",
             "participants": [
-                "p1"
+                "p1",
+                "p2"
             ],
             "emotional_impact": {
-                "p1": "机械性恐惧（首次出现对自身改造的排斥）"
+                "p1": "自我牺牲的平静",
+                "p2": "强迫性计算被打破的震撼"
             },
             "consequences": [
-                "齿轮间掉落1999年的船员值班表"
+                "苏明月的质数强迫症首次出现紊乱"
             ]
         },
         {
-            "id": "e62",
-            "name": "活体档案",
-            "order": 17,
-            "scene_id": "s24",
-            "details": "当苏明月触碰病历架时，整个档案室的纸质开始生长血肉组织",
-            "participants": [
-                "p2",
-                "p3"
-            ],
-            "emotional_impact": {
-                "p2": "强迫症爆发（试图用手术刀修剪生长组织）",
-                "p3": "义眼自动记录细胞分裂过程"
-            },
-            "consequences": [
-                "新生的组织构成三人小时候的指纹"
-            ]
-        },
-        {
-            "id": "e63",
-            "name": "记忆闪回",
-            "order": 18,
-            "scene_id": "s23",
-            "details": "钟声响起时三人同时看见幻象：年幼的自己正在给现在的自己实施手术",
+            "id": "e2",
+            "name": "记忆风暴",
+            "order": 2,
+            "scene_id": "s2",
+            "details": "三人进入记忆回廊，伤痕组成的数据链显示他们互相植入过7次不同版本记忆",
             "participants": [
                 "p1",
                 "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p1": "机械臂抽搐",
-                "p2": "手术刀掉落",
-                "p3": "义眼超负荷"
+                "p1": "认知崩塌",
+                "p2": "医学信念崩溃",
+                "p3": "存在主义危机"
             },
             "consequences": [
-                "幻象中的手术器械出现在现实世界"
+                "确认三人都是被循环利用的实验容器"
             ]
         },
         {
-            "id": "e64",
-            "name": "血脉共鸣",
-            "order": 19,
-            "scene_id": "s24",
-            "details": "档案室突然播放三人的心跳声，频率完全同步时书架上浮现第四份病历",
+            "id": "e3",
+            "name": "原初伤痕",
+            "order": 3,
+            "scene_id": "s1",
+            "details": "陈小刀发现三人伤痕在量子层面都复制自同一个原始样本的伤口",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "深不见底的恐惧"
+            },
+            "consequences": [
+                "揭示整个实验是对某个创伤事件的无限复现"
+            ]
+        },
+        {
+            "id": "e4",
+            "name": "第七次清醒",
+            "order": 4,
+            "scene_id": "s2",
+            "details": "苏明月在记忆风暴中找出7次循环里唯一真实的那次医疗记录",
             "participants": [
                 "p2"
             ],
             "emotional_impact": {
-                "p2": "强迫性计算心跳差值"
+                "p2": "绝望与希望并存"
             },
             "consequences": [
-                "空白病历的姓名栏会吸收任何写上去的墨水"
+                "找到突破量子循环的关键时间节点"
             ]
         },
         {
-            "id": "e65",
-            "name": "机械神谕",
-            "order": 20,
-            "scene_id": "s23",
-            "details": "林修的机械手突然拆解天文钟，用零件拼出海德拉号的微缩模型",
+            "id": "e5",
+            "name": "伤痕殉爆",
+            "order": 5,
+            "scene_id": "s1",
+            "details": "三人同时激发伤痕超载，用数据湮灭的方式销毁实验核心",
             "participants": [
                 "p1",
+                "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p1": "宗教性狂喜",
-                "p3": "数据过载性昏迷"
+                "p1": "释然",
+                "p2": "解脱",
+                "p3": "平静"
             },
             "consequences": [
-                "模型显示的沉船日期是三天后的正午"
+                "游轮开始量子态坍塌"
             ]
         }
     ]

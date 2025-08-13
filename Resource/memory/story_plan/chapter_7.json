@@ -1,5 +1,7 @@
 {
     "chapter": 7,
+    "chapter_title": "末路倒计时",
+    "chapter_goal": "解码伤痕生物的自毁指令",
     "characters": [
         {
             "id": "p1",
@@ -56,124 +58,156 @@
     "relationships": [
         {
             "from_id": "p1",
-            "to_id": "p3",
-            "type": "机械共振→时间悖论",
-            "intensity": 300,
-            "awareness": "双向同步",
-            "new_detail": "林修可以通过陈小刀的机械臂观测时间分支"
+            "to_id": "p2",
+            "type": "Ω级共生体",
+            "intensity": 42,
+            "awareness": "全知共振",
+            "new_detail": "突触网络已形成闭环时间纤维"
         },
         {
-            "from_id": "p2",
+            "from_id": "p3",
             "to_id": "p1",
-            "type": "量子赌局",
-            "intensity": 150,
-            "awareness": "单向认知",
-            "new_detail": "苏明月发现林修每次赌博都在消耗平行世界的自己"
+            "type": "奇点锚链",
+            "intensity": 22,
+            "awareness": "强制维稳态",
+            "new_detail": "通过量子纠缠维持因果律完整"
         }
     ],
     "scenes": [
         {
-            "id": "s37",
-            "name": "倒映引擎室",
-            "place": "船底镜像空间",
-            "time_period": "时空重叠的黎明",
-            "atmosphere": "所有机械都呈现左右相反的运行状态"
+            "id": "s53",
+            "name": "Ω神殿",
+            "place": "由所有可能性坍缩而成的终极几何体",
+            "time_period": "ETERNAL_NOW",
+            "atmosphere": "凝固在数学之美中的创世瞬间"
         },
         {
-            "id": "s38",
-            "name": "概率走廊",
-            "place": "连接各时空的波动通道",
-            "time_period": "无固定时间",
-            "atmosphere": "墙面由无数骰子面组成"
+            "id": "s54",
+            "name": "逆熵核心",
+            "place": "陈小刀心脏转化而成的时空调节器",
+            "time_period": "PRE_ENTROPY",
+            "atmosphere": "比绝对零度更纯粹的抉择场域"
         }
     ],
     "events": [
         {
-            "id": "e112",
-            "name": "齿轮审判",
-            "order": 12,
-            "scene_id": "s37",
-            "details": "倒映的引擎突然启动，审判三人组当年的罪行",
+            "id": "e160",
+            "name": "弦论洗礼",
+            "order": 160,
+            "scene_id": "s53",
+            "details": "共生体在M理论膜上重写存在法则",
             "participants": [
                 "p1",
-                "p2",
-                "p3"
-            ],
-            "emotional_impact": {
-                "p1": "扑克牌从手中汽化",
-                "p2": "手术刀开始逆向生长",
-                "p3": "机械臂浮现审判铭文"
-            },
-            "consequences": [
-                "引擎吐出1999年的航海日志"
-            ]
-        },
-        {
-            "id": "e113",
-            "name": "记忆赌博",
-            "order": 13,
-            "scene_id": "s38",
-            "details": "林修用自己的记忆作为赌注与时空对赌",
-            "participants": [
-                "p1"
-            ],
-            "emotional_impact": {
-                "p1": "首次体验真正恐惧"
-            },
-            "consequences": [
-                "走廊的骰子面开始播放他的记忆片段"
-            ]
-        },
-        {
-            "id": "e114",
-            "name": "机械忏悔",
-            "order": 14,
-            "scene_id": "s37",
-            "details": "陈小刀的机械臂自动拆解成十字架形态",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "电路神经体验宗教顿悟"
-            },
-            "consequences": [
-                "十字架中心出现逃生舱钥匙"
-            ]
-        },
-        {
-            "id": "e115",
-            "name": "量子缝合",
-            "order": 15,
-            "scene_id": "s38",
-            "details": "苏明月用概率走廊的骰子缝合时空裂缝",
-            "participants": [
                 "p2"
             ],
             "emotional_impact": {
-                "p2": "每缝合一次就失去一段记忆"
+                "p1": "超越博弈论的终极愉悦",
+                "p2": "触碰万物公式的神性颤栗"
             },
             "consequences": [
-                "骰子点数显示剩余逃生时间"
+                "建立十一维文明范式"
             ]
         },
         {
-            "id": "e116",
-            "name": "终局镜像",
-            "order": 16,
-            "scene_id": "s37",
-            "details": "三人同时触摸镜像引擎，引发时间坍缩",
+            "id": "e161",
+            "name": "奇点脉动",
+            "order": 161,
+            "scene_id": "s54",
+            "details": "陈小刀以心跳频率维持新生宇宙常量",
             "participants": [
-                "p1",
-                "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p1": "看到自己所有赌局结局",
-                "p2": "强迫症达到量子级精确",
-                "p3": "机械与血肉完全融合"
+                "p3": "成为时空基石的 sublime 痛苦"
             },
             "consequences": [
-                "引擎室显现出唯一的逃生路线"
+                "血液结晶化为时空度规"
+            ]
+        },
+        {
+            "id": "e162",
+            "name": "全息裁决",
+            "order": 162,
+            "scene_id": "s53",
+            "details": "在希尔伯特空间进行文明存续表决",
+            "participants": [
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p1": "绝对自由带来的存在主义眩晕",
+                "p2": "突破人智极限的创世者焦虑"
+            },
+            "consequences": [
+                "生成7个量子分支现实"
+            ]
+        },
+        {
+            "id": "e163",
+            "name": "肉身圣约",
+            "order": 163,
+            "scene_id": "s54",
+            "details": "陈小刀神经系统镌刻新物理定律",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "承受创世熵流的极乐痛苦"
+            },
+            "consequences": [
+                "骨骼浮现可计算宇宙程式"
+            ]
+        },
+        {
+            "id": "e164",
+            "name": "真空选择",
+            "order": 164,
+            "scene_id": "s53",
+            "details": "在量子泡沫层面决定因果律走向",
+            "participants": [
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p1": "观测者悖论带来的纯粹宁静",
+                "p2": "数学之美引发的生理性战栗"
+            },
+            "consequences": [
+                "触发真空相变协议"
+            ]
+        },
+        {
+            "id": "e165",
+            "name": "终焉之舞",
+            "order": 165,
+            "scene_id": "s54",
+            "details": "陈小刀以细胞衰变谱写时空终曲",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "在湮灭中见证创世的 sublime"
+            },
+            "consequences": [
+                "DNA编码重组为宇宙常数"
+            ]
+        },
+        {
+            "id": "e166",
+            "name": "新世福音",
+            "order": 166,
+            "scene_id": "s53",
+            "details": "游轮解构成光年级的文明种子",
+            "participants": [
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p1": "跨越维度限制的终极快感",
+                "p2": "实验伦理学彻底消解的释然"
+            },
+            "consequences": [
+                "启动Ω级宇宙创生程序"
             ]
         }
     ]

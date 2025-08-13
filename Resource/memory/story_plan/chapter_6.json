@@ -1,5 +1,7 @@
 {
     "chapter": 6,
+    "chapter_title": "意识觉醒",
+    "chapter_goal": "探索伤痕变异体的自主意识",
     "characters": [
         {
             "id": "p1",
@@ -55,137 +57,137 @@
     ],
     "relationships": [
         {
-            "from_id": "p3",
+            "from_id": "p2",
             "to_id": "p1",
-            "type": "机械通灵→时空溯源",
-            "intensity": 200,
-            "awareness": "双向觉醒",
-            "new_detail": "陈小刀的齿轮开始反向旋转，与林修怀表的震动频率形成共振"
+            "type": "神经复仇",
+            "intensity": 10,
+            "awareness": "双向同步",
+            "new_detail": "苏明月将手术刀植入林修的神经奖赏回路"
         },
         {
-            "from_id": "p2",
-            "to_id": "p3",
-            "type": "基因链接→量子观测",
-            "intensity": 150,
-            "awareness": "潜意识连接",
-            "new_detail": "苏明月手术刀在陈小齿轮表面刻下DNA拓扑结构"
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "记忆疫苗",
+            "intensity": 7,
+            "awareness": "单向保护",
+            "new_detail": "陈小刀用净化记忆构建医疗防火墙"
         }
     ],
     "scenes": [
         {
-            "id": "s31",
-            "name": "年轮大厅",
-            "place": "船体龙骨中枢",
-            "time_period": "时间漩涡中",
-            "atmosphere": "木质墙壁的断截面显示20个同心圆年轮"
+            "id": "s35",
+            "name": "奖赏手术室",
+            "place": "在林修多巴胺系统搭建的禁区",
+            "time_period": "戒断反应期",
+            "atmosphere": "神经突触爆发出赌局般的信息风暴"
         },
         {
-            "id": "s32",
-            "name": "记忆螺旋",
-            "place": "通往下层甲板的楼梯间",
-            "time_period": "永恒午夜",
-            "atmosphere": "台阶随脚步亮起不同年份的光斑"
+            "id": "s36",
+            "name": "免疫档案室",
+            "place": "由医疗记录转化的防御工事",
+            "time_period": "永恒病例时间",
+            "atmosphere": "漂浮的病历本自动书写保护协议"
         }
     ],
     "events": [
         {
-            "id": "e91",
-            "name": "年轮解码",
-            "order": 1,
-            "scene_id": "s31",
-            "details": "陈小刀机械臂刺入第7圈年轮，流出的松脂凝固成1999年船员名单",
+            "id": "e98",
+            "name": "快乐切除",
+            "order": 98,
+            "scene_id": "s35",
+            "details": "苏明月精准切除林修对赌博的快感反射区",
+            "participants": [
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p1": "被剥夺本能的空虚",
+                "p2": "逾越医德界限的战栗"
+            },
+            "consequences": [
+                "建立神经级制裁手段"
+            ]
+        },
+        {
+            "id": "e99",
+            "name": "记忆灭活",
+            "order": 99,
+            "scene_id": "s36",
+            "details": "陈小刀将关键记忆转化为灭活疫苗",
             "participants": [
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "液压油变成琥珀色"
+                "p3": "自我改造的镇痛"
             },
             "consequences": [
-                "发现名单上三人的证件照是现在模样"
+                "创造意识防御武器"
             ]
         },
         {
-            "id": "e92",
-            "name": "阶梯闪回",
-            "order": 2,
-            "scene_id": "s32",
-            "details": "苏明月脚下突然出现第47级台阶，触碰后浮现当年手术室全息影像",
+            "id": "e100",
+            "name": "病理暴乱",
+            "order": 100,
+            "scene_id": "s35",
+            "details": "林修的神经系统突然变异出抗手术机制",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "生物本能的胜利快感"
+            },
+            "consequences": [
+                "证明伤痕具有进化能力"
+            ]
+        },
+        {
+            "id": "e101",
+            "name": "医疗独裁",
+            "order": 101,
+            "scene_id": "s36",
+            "details": "苏明月用病历本编写绝对医疗律令",
             "participants": [
                 "p2"
             ],
             "emotional_impact": {
-                "p2": "无菌手套无端渗出血迹"
+                "p2": "掌握生杀大权的晕眩"
             },
             "consequences": [
-                "确认主刀医生就是未来的自己"
+                "暂时冻结伤痕30%功能"
             ]
         },
         {
-            "id": "e93",
-            "name": "扑克骨牌",
-            "order": 3,
-            "scene_id": "s31",
-            "details": "林修打出的黑桃A触发年轮地板翻转，露出铺满整个大厅的骨牌机关",
-            "participants": [
-                "p1"
-            ],
-            "emotional_impact": {
-                "p1": "听到20年前自己的惨叫声"
-            },
-            "consequences": [
-                "每张骨牌都记录着事故不同时间节点的影像"
-            ]
-        },
-        {
-            "id": "e94",
-            "name": "齿轮噬主",
-            "order": 4,
-            "scene_id": "s32",
-            "details": "陈小刀右臂突然绞住自己喉咙，齿轮组拼出\"不要改变过去\"的摩斯密码",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "第一次对机械产生恐惧"
-            },
-            "consequences": [
-                "体内机械意识开始反抗人类思维"
-            ]
-        },
-        {
-            "id": "e95",
-            "name": "双重签名",
-            "order": 5,
-            "scene_id": "s31",
-            "details": "在船长日志最后页，同时出现林修1999年和现在的笔迹签名",
-            "participants": [
-                "p1"
-            ],
-            "emotional_impact": {
-                "p1": "墨迹未干的错觉"
-            },
-            "consequences": [
-                "证明他当时已预知现在的情况"
-            ]
-        },
-        {
-            "id": "e96",
-            "name": "螺旋悖论",
-            "order": 6,
-            "scene_id": "s32",
-            "details": "三人同时触碰楼梯扶手时，各自的倒影开始走向不同年份",
+            "id": "e102",
+            "name": "记忆叛乱",
+            "order": 102,
+            "scene_id": "s35",
+            "details": "灭活疫苗在神经突触发动反向感染",
             "participants": [
                 "p1",
-                "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p1": "怀表秒针开始倒转",
-                "p2": "手术刀浮现锈迹",
-                "p3": "齿轮生长出血肉组织"
+                "p1": "被记忆反噬的错愕",
+                "p3": "武器失控的恐惧"
             },
             "consequences": [
-                "时间线出现可见的分裂迹象"
+                "造成意识级生化危机"
+            ]
+        },
+        {
+            "id": "e103",
+            "name": "终极医嘱",
+            "order": 103,
+            "scene_id": "s36",
+            "details": "苏明月签署停止一切医疗干预的禁令",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "自我限制的职业顿悟"
+            },
+            "consequences": [
+                "伤痕系统恢复平衡"
             ]
         }
     ]

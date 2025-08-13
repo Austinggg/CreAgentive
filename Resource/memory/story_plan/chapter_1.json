@@ -1,5 +1,7 @@
 {
     "chapter": 1,
+    "chapter_title": "幽灵船首探",
+    "chapter_goal": "探索幽灵游轮寻找可用线索",
     "characters": [
         {
             "id": "p1",
@@ -57,117 +59,115 @@
         {
             "from_id": "p3",
             "to_id": "p1",
-            "type": "监视关系",
-            "intensity": 5,
-            "awareness": "单方知晓",
-            "new_detail": "发现林修的左手指缝间会渗出黑色液体"
+            "type": "被迫服从",
+            "intensity": 7,
+            "awareness": "双方皆知",
+            "new_detail": "因曾目击杀人现场被要挟"
         },
         {
             "from_id": "p3",
             "to_id": "p2",
-            "type": "保护关系",
+            "type": "暗中保护",
             "intensity": 4,
             "awareness": "单方知晓",
-            "new_detail": "注意到苏明月数质数时有蓝色数字在皮肤下闪动"
+            "new_detail": "发现医生在调查危险区域"
         }
     ],
     "scenes": [
         {
-            "id": "s1",
-            "name": "厨房仓库",
-            "place": "游轮后厨储藏室",
+            "id": "s5",
+            "name": "员工通道",
+            "place": "游轮下层维修走廊",
             "time_period": "NIGHT",
-            "atmosphere": "罐头自动旋转形成螺旋图案"
+            "atmosphere": "锈蚀的管道间漂浮着不明雾气"
         },
         {
-            "id": "s2",
-            "name": "通风管道",
-            "place": "船体维修通道",
-            "time_period": "DAY",
-            "atmosphere": "管壁渗出带有航海日志字迹的黏液"
+            "id": "s6",
+            "name": "监控室",
+            "place": "游轮安保中心",
+            "time_period": "NIGHT",
+            "atmosphere": "雪花屏监视器映着诡异人影"
         }
     ],
     "events": [
         {
-            "id": "e1",
-            "name": "罐头密码",
+            "id": "e13",
+            "name": "通风口偷听",
             "order": 1,
-            "scene_id": "s1",
-            "details": "陈小刀发现罐头排列对应摩斯密码，长袖制服的紫外线过敏处开始浮现相同符号",
+            "scene_id": "s5",
+            "details": "利用服务生身份潜入通风管道，记录关键对话",
             "participants": [
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "隐秘兴奋"
+                "p3": "紧张但专注"
             },
             "consequences": [
-                "破译出'全员生还者'字样"
+                "获知今晚赌局阴谋"
             ]
         },
         {
-            "id": "e2",
-            "name": "黏液追踪",
+            "id": "e14",
+            "name": "紫外线伤痕",
             "order": 2,
-            "scene_id": "s2",
-            "details": "攀爬通风管时黏液突然显现苏明月的病历记录，记载她1999年曾在同型号游轮就诊",
+            "scene_id": "s5",
+            "details": "制服下的过敏疤痕在游轮紫光下突然发光",
             "participants": [
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "困惑"
+                "p3": "惊骇莫名"
             },
             "consequences": [
-                "发现苏明月实际年龄异常"
+                "怀疑与自己身世有关"
             ]
         },
         {
-            "id": "e3",
-            "name": "手套秘密",
+            "id": "e15",
+            "name": "监控盲区",
             "order": 3,
-            "scene_id": "s1",
-            "details": "偷拍林修换药时，闪光灯意外照出其左手没有皮肤，黑色骨架在照片上组成赌局赔率",
+            "scene_id": "s6",
+            "details": "发现某客房监控画面永远停留在20年前",
             "participants": [
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "战栗"
+                "p3": "毛骨悚然"
             },
             "consequences": [
-                "相机留下灵异照片"
+                "锁定时空异常点"
             ]
         },
         {
-            "id": "e4",
-            "name": "符号同步",
+            "id": "e16",
+            "name": "保护行动",
             "order": 4,
-            "scene_id": "s2",
-            "details": "紫外线过敏发作时，手臂符号与管道黏液文字同步更新，显示'第三夜收容失败'",
+            "scene_id": "s5",
+            "details": "提前破坏苏明月要走的走廊照明",
             "participants": [
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "痛苦与顿悟"
+                "p3": "自我牺牲快感"
             },
             "consequences": [
-                "预知到即将发生的危险"
+                "意外导致医生发现暗门"
             ]
         },
         {
-            "id": "e5",
-            "name": "禁忌提醒",
+            "id": "e17",
+            "name": "数据拷贝",
             "order": 5,
-            "scene_id": "s1",
-            "details": "在厨房留下匿名警告便条，罐头自动重组出'不要相信戴手套的人'",
+            "scene_id": "s6",
+            "details": "用特制绝缘手套接触短路的主机",
             "participants": [
-                "p3",
-                "p2"
+                "p3"
             ],
             "emotional_impact": {
-                "p3": "矛盾",
-                "p2": "疑虑加深"
+                "p3": "极限专注"
             },
             "consequences": [
-                "苏明月开始怀疑林修"
+                "获取被删日志片段"
             ]
         }
     ]

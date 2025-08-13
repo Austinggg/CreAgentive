@@ -1,5 +1,7 @@
 {
     "chapter": 9,
+    "chapter_title": "法则启航",
+    "chapter_goal": "运用新宇宙定律启动逃生程序",
     "characters": [
         {
             "id": "p1",
@@ -55,133 +57,127 @@
     ],
     "relationships": [
         {
-            "from_id": "p3",
-            "to_id": "p1",
-            "type": "恐惧与复仇",
-            "intensity": 8,
-            "awareness": "单方知晓",
-            "new_detail": "通过机械臂记忆确认林修当年是被操控杀人"
+            "from_id": "p1",
+            "to_id": "p2",
+            "type": "因果倒置",
+            "intensity": 777,
+            "awareness": "双向觉醒",
+            "new_detail": "林修的每个赌局结果都成为苏明月过去手术的因"
         },
         {
             "from_id": "p3",
-            "to_id": "p2",
-            "type": "保护与试探",
-            "intensity": 6,
-            "awareness": "单方知晓",
-            "new_detail": "发现苏明月手术刀上的数字与冷冻舱编号相同"
+            "to_id": "p1",
+            "type": "心跳契约",
+            "intensity": 66,
+            "awareness": "单方献祭",
+            "new_detail": "每分钟心跳自动扣除为林修的赌资"
         }
     ],
     "scenes": [
         {
-            "id": "s45",
-            "name": "中央控制室",
-            "place": "游轮最底层",
-            "time_period": "午夜",
-            "atmosphere": "布满蛛网的控制台闪烁着诡异的红光"
+            "id": "s86",
+            "name": "黎曼手术室",
+            "place": "非欧几何折叠成的手术空间",
+            "time_period": "拓扑稳定的奇点",
+            "atmosphere": "墙壁流淌着克莱因瓶的莫比乌斯血"
         },
         {
-            "id": "s46",
-            "name": "镜像走廊",
-            "place": "实验区通道",
-            "time_period": "黎明",
-            "atmosphere": "镜中倒影与本体行动不同步"
+            "id": "s87",
+            "name": "概率产房",
+            "place": "所有可能宇宙的叠加态中心",
+            "time_period": "量子叠加的永恒分娩中",
+            "atmosphere": "漂浮着薛定谔猫的胎心监护仪"
         }
     ],
     "events": [
         {
-            "id": "e117",
-            "name": "系统激活",
-            "order": 1,
-            "scene_id": "s45",
-            "details": "陈小刀的机械臂意外触发了隐藏控制台，投影出实验计划全貌",
+            "id": "e248",
+            "name": "债务羊水穿刺",
+            "order": 248,
+            "scene_id": "s86",
+            "details": "苏明月用手术刀提取医疗欠条中的记忆DNA",
+            "participants": [
+                "p2"
+            ],
+            "emotional_impact": {
+                "p2": "二十年执念化作基因链的顿悟"
+            },
+            "consequences": [
+                "获得操纵因果律的医疗技术"
+            ]
+        },
+        {
+            "id": "e249",
+            "name": "庄家剖腹产",
+            "order": 249,
+            "scene_id": "s87",
+            "details": "林修用机械手指为概率宇宙接生",
+            "participants": [
+                "p1"
+            ],
+            "emotional_impact": {
+                "p1": "赌场暴君蜕变为助产士的神性体验"
+            },
+            "consequences": [
+                "新生宇宙继承赌博法则"
+            ]
+        },
+        {
+            "id": "e250",
+            "name": "过敏圣痕",
+            "order": 250,
+            "scene_id": "s86",
+            "details": "陈小刀溃烂皮肤浮现父亲遗留的逃生算法",
             "participants": [
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "机械眼首次流出生理泪水"
+                "p3": "卑微伤痕升华为救世代码的震颤"
             },
             "consequences": [
-                "显示三人都是实验样本"
+                "紫外线过敏转化为星际导航图"
             ]
         },
         {
-            "id": "e118",
-            "name": "记忆裂痕",
-            "order": 2,
-            "scene_id": "s46",
-            "details": "经过镜像走廊时，陈小刀在镜中看到自己穿着实验服的样子",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "机械臂不受控制地砸向镜面"
-            },
-            "consequences": [
-                "镜面破碎后浮现加密数据"
-            ]
-        },
-        {
-            "id": "e119",
-            "name": "数据解密",
-            "order": 3,
-            "scene_id": "s45",
-            "details": "三人合力破解控制台，发现游轮是大型实验设施",
+            "id": "e251",
+            "name": "三位一体大出血",
+            "order": 251,
+            "scene_id": "s87",
+            "details": "三人缺陷共同构成创世能量源",
             "participants": [
                 "p1",
                 "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "紫外线过敏处开始渗出蓝色液体"
+                "p1": "赌徒快感与失血眩晕的量子叠加",
+                "p2": "手术刀染上自己鲜血的仪式感",
+                "p3": "侍者制服化作血色星图的荣耀"
             },
             "consequences": [
-                "解锁实验体完整档案"
+                "幽灵船坍缩成新生儿脐带",
+                "所有债务转化为暗物质"
             ]
         },
         {
-            "id": "e120",
-            "name": "真相碎片",
-            "order": 4,
-            "scene_id": "s45",
-            "details": "陈小刀的机械眼显示出当年实验室的全息记录",
+            "id": "e252",
+            "name": "病理创世纪",
+            "order": 252,
+            "scene_id": "s87",
+            "details": "以三人病征为新宇宙物理常数",
             "participants": [
+                "p1",
+                "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "意识到自己是关键实验对象"
-            },
-            "consequences": []
-        },
-        {
-            "id": "e121",
-            "name": "最终选择",
-            "order": 5,
-            "scene_id": "s45",
-            "details": "系统要求陈小刀选择继续实验或终止程序",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "陷入前所未有的挣扎"
+                "p1": "机械义肢开始书写万物法则",
+                "p2": "手术强迫症具现为时空结构",
+                "p3": "过敏体质成为大气成分"
             },
             "consequences": [
-                "游轮开始剧烈震动"
-            ]
-        },
-        {
-            "id": "e122",
-            "name": "机械觉醒",
-            "order": 6,
-            "scene_id": "s45",
-            "details": "陈小刀的机械臂突然自主行动，输入终止密码",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "感受到与机械臂的真正连接"
-            },
-            "consequences": [
-                "游轮灯光瞬间熄灭"
+                "诞生以缺陷为美的镜像宇宙",
+                "旧世界化作漂流纪念馆"
             ]
         }
     ]

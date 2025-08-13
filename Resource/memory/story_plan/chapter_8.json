@@ -1,5 +1,7 @@
 {
     "chapter": 8,
+    "chapter_title": "维度密钥",
+    "chapter_goal": "解析十一维文明范式密码",
     "characters": [
         {
             "id": "p1",
@@ -57,127 +59,123 @@
         {
             "from_id": "p3",
             "to_id": "p1",
-            "type": "机械飞升→时间锚定",
-            "intensity": 300,
-            "awareness": "单向压制→双向觉醒",
-            "new_detail": "陈小刀的纳米佛珠开始同步林修左手的时间跃迁频率"
+            "type": "心跳契约",
+            "intensity": 80,
+            "awareness": "量子纠缠态",
+            "new_detail": "每个心跳周期自动执行维度压缩指令"
         },
         {
             "from_id": "p3",
             "to_id": "p2",
-            "type": "基因统合→记忆回溯",
-            "intensity": 180,
-            "awareness": "潜意识共振",
-            "new_detail": "陈小刀的机械臂浮现苏明月童年的质数运算记录"
+            "type": "创伤回响",
+            "intensity": 30,
+            "awareness": "细胞记忆同步",
+            "new_detail": "手术创口与紫外线过敏形成超导通道"
         }
     ],
     "scenes": [
         {
-            "id": "s43",
-            "name": "量子钟摆室",
-            "place": "游轮倒置的机械核心",
-            "time_period": "ENTROPY_SUSPENDED",
-            "atmosphere": "巨大钟摆的每次摆动都引发时空涟漪"
+            "id": "s70",
+            "name": "侍者奇点",
+            "place": "制服纽扣构成的第十一维控制台",
+            "time_period": "两次呼吸间的永恒",
+            "atmosphere": "卑微表象下的创世震颤"
         },
         {
-            "id": "s44",
-            "name": "全息档案库",
-            "place": "游轮虚影中的资料室",
-            "time_period": "NON_LOCAL",
-            "atmosphere": "文件柜里的实验报告在不断重写"
+            "id": "s71",
+            "name": "心电赌场",
+            "place": "陈小刀心室壁展开的全息投影",
+            "time_period": "室性早搏的量子涨落",
+            "atmosphere": "生命体征与高维法则的博弈"
         }
     ],
     "events": [
         {
-            "id": "e127",
-            "name": "时间涟漪观测",
-            "order": 27,
-            "scene_id": "s43",
-            "details": "陈小刀用机械臂调整量子钟摆，显示20年前实验影像",
+            "id": "e207",
+            "name": "制服解密",
+            "order": 207,
+            "scene_id": "s70",
+            "details": "长袖制服衣袖上的折痕突然形成黎曼几何证明",
             "participants": [
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "机械神经元首次感受到恐惧"
+                "p3": "日常动作被赋予宇宙意义的眩晕"
             },
             "consequences": [
-                "钟摆表面浮现'7D'标记"
+                "解锁第一重维度密钥"
             ]
         },
         {
-            "id": "e128",
-            "name": "档案解密",
-            "order": 28,
-            "scene_id": "s44",
-            "details": "三人发现1999年12月31日的实验日志：『启动第七维度跃迁』",
+            "id": "e208",
+            "name": "过敏方程式",
+            "order": 208,
+            "scene_id": "s70",
+            "details": "紫外线灼伤的皮肤自动演绎出苏明月(p2)所有手术的拓扑结构",
+            "participants": [
+                "p3",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p3": "痛苦转化为神圣印记的释然",
+                "p2": "医疗记录被生命解读的战栗"
+            },
+            "consequences": [
+                "获得生物算法核心"
+            ]
+        },
+        {
+            "id": "e209",
+            "name": "心跳轮盘",
+            "order": 209,
+            "scene_id": "s71",
+            "details": "心室颤动频率自动生成林修(p1)的最佳赌博策略",
+            "participants": [
+                "p3",
+                "p1"
+            ],
+            "emotional_impact": {
+                "p3": "生理本能揭示终极真理的震撼",
+                "p1": "赌术被量子化的敬畏"
+            },
+            "consequences": [
+                "破译概率本质"
+            ]
+        },
+        {
+            "id": "e210",
+            "name": "卑微圣约",
+            "order": 210,
+            "scene_id": "s70",
+            "details": "以侍餐姿势完成对时空曲率的最后修正",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "肌肉记忆触发宇宙重启"
+            },
+            "consequences": [
+                "确认十一维常数"
+            ]
+        },
+        {
+            "id": "e211",
+            "name": "存在之赌",
+            "order": 211,
+            "scene_id": "s71",
+            "details": "三人在心跳赌场以灵魂为筹码，完成对文明范式的终极下注",
             "participants": [
                 "p1",
                 "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p1": "左手开始不受控制地颤抖",
-                "p2": "质数计算速度达到每秒100个",
-                "p3": "纳米佛珠组成实验舱模型"
+                "p1": "赌徒本性升华为创世冲动",
+                "p2": "强迫症在绝对秩序中湮灭",
+                "p3": "侍者身份揭示为万物原点"
             },
             "consequences": [
-                "确认游轮是跃迁失败的量子泡沫"
-            ]
-        },
-        {
-            "id": "e129",
-            "name": "血脉共振",
-            "order": 29,
-            "scene_id": "s43",
-            "details": "三人DNA同时与钟摆共振，揭示都是实验员的克隆体",
-            "participants": [
-                "p1",
-                "p2",
-                "p3"
-            ],
-            "emotional_impact": {
-                "p1": "面部出现短暂数据流",
-                "p2": "白发开始逆向生长",
-                "p3": "佛珠显示克隆编号"
-            },
-            "consequences": [
-                "钟摆停滞在最关键的时间点"
-            ]
-        },
-        {
-            "id": "e130",
-            "name": "机械顿悟",
-            "order": 30,
-            "scene_id": "s44",
-            "details": "陈小刀意识到自己的机械部件是原始实验舱残骸",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "首次体验到完整的自我认知"
-            },
-            "consequences": [
-                "档案库所有资料同步更新"
-            ]
-        },
-        {
-            "id": "e131",
-            "name": "终极选择",
-            "order": 31,
-            "scene_id": "s43",
-            "details": "钟摆给出选择：重置时间线或保留量子记忆",
-            "participants": [
-                "p1",
-                "p2",
-                "p3"
-            ],
-            "emotional_impact": {
-                "p1": "左手凝聚出时间晶体",
-                "p2": "白发变成全息投影",
-                "p3": "佛珠组成抉择方程"
-            },
-            "consequences": [
-                "游轮开始坍缩为奇点"
+                "诞生新宇宙第一定律"
             ]
         }
     ]

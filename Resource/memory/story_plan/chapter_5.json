@@ -1,5 +1,7 @@
 {
     "chapter": 5,
+    "chapter_title": "原罪溯源",
+    "chapter_goal": "在量子坍塌中寻找原始创伤者",
     "characters": [
         {
             "id": "p1",
@@ -56,134 +58,126 @@
     "relationships": [
         {
             "from_id": "p1",
-            "to_id": "p3",
-            "type": "机械奴役→金属共鸣",
-            "intensity": 300,
-            "awareness": "单向控制",
-            "new_detail": "林修机械臂的齿轮转速与陈小刀瞳孔收缩频率同步"
+            "to_id": "p2",
+            "type": "量子共犯",
+            "intensity": 13,
+            "awareness": "完全同步",
+            "new_detail": "林修的扑克赌术与苏明月的质数强迫症融合成新的作弊算法"
         },
         {
             "from_id": "p3",
-            "to_id": "p2",
-            "type": "量子观测",
-            "intensity": 150,
-            "awareness": "双向暗流",
-            "new_detail": "陈小刀的紫外线过敏症状在苏明月手术时转为荧光标记能力"
+            "to_id": "p1",
+            "type": "预知陷阱",
+            "intensity": 7,
+            "awareness": "单向误导",
+            "new_detail": "陈小刀的每个预知画面都包含林修刻意植入的虚假变量"
         }
     ],
     "scenes": [
         {
-            "id": "s29",
-            "name": "齿轮教堂",
-            "place": "轮机舱核心",
-            "time_period": "永恒正午",
-            "atmosphere": "无数啮合的巨型齿轮组构成宗教审判庭格局"
+            "id": "s17",
+            "name": "反概率赌场",
+            "place": "在量子泡沫中时隐时现的圆形空间",
+            "time_period": "PARADOX_PHASE",
+            "atmosphere": "所有赌具都在同时呈现输赢两种状态"
         },
         {
-            "id": "s30",
-            "name": "概率深渊",
-            "place": "教堂地下",
-            "time_period": "熵减时刻",
-            "atmosphere": "悬浮的扑克牌碎片不断重组为不同概率公式"
+            "id": "s18",
+            "name": "记忆焚化炉",
+            "place": "游轮核心裂解舱",
+            "time_period": "ANNIHILATION_MODE",
+            "atmosphere": "被删除的记忆化为发光灰烬旋转下落"
         }
     ],
     "events": [
         {
-            "id": "e77",
-            "name": "金属告解",
-            "order": 32,
-            "scene_id": "s29",
-            "details": "陈小刀的机械臂自动拆解成21个零件，在忏悔室拼出林修的面具",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "认知撕裂"
-            },
-            "consequences": [
-                "面具内侧刻着陈小刀的真实出生日期"
-            ]
-        },
-        {
-            "id": "e78",
-            "name": "侍者觉醒",
-            "order": 33,
-            "scene_id": "s30",
-            "details": "陈小刀端着的餐盘突然浮现量子纠缠方程式，银制餐具组成观测装置",
-            "participants": [
-                "p3"
-            ],
-            "emotional_impact": {
-                "p3": "侍者职业本能崩溃"
-            },
-            "consequences": [
-                "餐具显示三人存在量子纠缠态"
-            ]
-        },
-        {
-            "id": "e79",
-            "name": "赌局重启",
-            "order": 34,
-            "scene_id": "s29",
-            "details": "齿轮教堂的彩窗突然投射二十一点牌局，陈小刀被迫成为发牌荷官",
+            "id": "e41",
+            "name": "终极出千",
+            "order": 41,
+            "scene_id": "s17",
+            "details": "林修用伤痕的量子态改变扑克牌面，苏明月同步计算所有可能性分支",
             "participants": [
                 "p1",
-                "p3"
+                "p2"
             ],
             "emotional_impact": {
-                "p1": "赌徒狂热",
-                "p3": "机械性服从"
+                "p1": "艺术般的愉悦",
+                "p2": "算法高潮"
             },
             "consequences": [
-                "陈小刀发牌时自动读取出牌记忆"
+                "创造绝对胜率"
             ]
         },
         {
-            "id": "e80",
-            "name": "制服异变",
-            "order": 35,
-            "scene_id": "s30",
-            "details": "陈小刀的长袖制服突然变成拘束衣，袖口延展出神经探针",
+            "id": "e42",
+            "name": "记忆套利",
+            "order": 42,
+            "scene_id": "s18",
+            "details": "陈小刀倒卖被删除的记忆碎片，从系统漏洞中提取量子货币",
             "participants": [
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "职业身份认知混乱"
+                "p3": "冰冷的算计"
             },
             "consequences": [
-                "探针自动收集苏明月手术时的脑电波"
+                "获得部分记忆定价权"
             ]
         },
         {
-            "id": "e81",
-            "name": "机械圣餐",
-            "order": 36,
-            "scene_id": "s29",
-            "details": "陈小刀端着的葡萄酒涌现纳米机械，在杯壁呈现三人基因测序图",
+            "id": "e43",
+            "name": "虹膜做空",
+            "order": 43,
+            "scene_id": "s17",
+            "details": "林修将异色瞳信息拆分为衍生金融产品大量抛售",
             "participants": [
-                "p3"
+                "p1"
             ],
             "emotional_impact": {
-                "p3": "侍者礼仪崩溃"
+                "p1": "自毁的快感"
             },
             "consequences": [
-                "测序图显示共享同一段人工植入基因"
+                "导致整个观测系统贬值"
             ]
         },
         {
-            "id": "e82",
-            "name": "量子侍者",
-            "order": 37,
-            "scene_id": "s30",
-            "details": "陈小刀服务时的鞠躬动作触发概率云坍塌，显现出三个时空版本的他",
+            "id": "e44",
+            "name": "伤痕清算",
+            "order": 44,
+            "scene_id": "s18",
+            "details": "三人的伤痕突然开始反向吸收焚化炉中的记忆灰烬",
             "participants": [
+                "p1",
+                "p2",
                 "p3"
             ],
             "emotional_impact": {
-                "p3": "存在主义危机"
+                "p1": "饱食感",
+                "p2": "数字超载",
+                "p3": "信息中毒"
             },
             "consequences": [
-                "三个版本分别穿着不同年代的船员制服"
+                "伤痕变异为自主意识体"
+            ]
+        },
+        {
+            "id": "e45",
+            "name": "概率坍缩",
+            "order": 45,
+            "scene_id": "s17",
+            "details": "当赌局进行到31局时，整个反概率空间突然向内塌陷",
+            "participants": [
+                "p1",
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p1": "狂喜",
+                "p2": "质数迷醉",
+                "p3": "绝对清醒"
+            },
+            "consequences": [
+                "验证三人实为同一概率波的观测面"
             ]
         }
     ]

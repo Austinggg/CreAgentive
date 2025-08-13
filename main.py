@@ -1,9 +1,11 @@
+import asyncio
+
 from Workflow.Init_wk import InitialWorkflow
 from Workflow.Writing_wk import WritingWorkflow
 from Workflow.StoryGen_wk import StoryGenWorkflow
 from Resource.llmclient import LLMClientManager
 from collections import deque # 用于测试输入队列
-
+from Workflow.Accessment_wk import AccessmentWorkflow
 # 初始化模型客户端
 model_client = LLMClientManager().get_client("deepseek-v3")
 
@@ -23,17 +25,25 @@ test_inputs = deque([
 initialworkflow = InitialWorkflow(model_client, test_inputs) # 初始化工作流
 storygenworkflow = StoryGenWorkflow(model_client) # 故事生成工作流
 writingworkflow = WritingWorkflow(model_client) # 写作工作流
-
+# accessmentworkflow = AccessmentWorkflow(model_client)
 
 # ============================================================================
 # ================================= 运行工作流 ================================
 # ============================================================================
 
-# 运行初始化工作流
-init_result = initialworkflow.run()
-#
-# # 运行故事生成工作流
-storygenworkflow.run(init_result)
+async def main():
+    # 运行初始化工作流
+    init_result = await initialworkflow.run()
+    # # 运行故事生成工作流
+    await storygenworkflow.run()
 
-# 运行写作工作流
-writingworkflow.run()
+    # 运行写作工作流
+    await writingworkflow.run()
+
+    # await accessmentworkflow.run()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+

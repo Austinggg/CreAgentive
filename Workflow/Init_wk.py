@@ -62,10 +62,11 @@ class InitialWorkflow:
                 self.structurer,
                 self.initializer
             ],
-            graph=self.graph
+            graph=self.graph,
+            max_turns = 6
         )
 
-    def run(self, save_dir="./Resource/memory/init"):
+    async def run(self, save_dir="./Resource/memory/init"):
         """运行整个工作流并保存结果"""
         os.makedirs(save_dir, exist_ok=True)
 
@@ -80,7 +81,7 @@ class InitialWorkflow:
 
         # 执行流程
         print("🎬 正在执行 GraphFlow...")
-        result = asyncio.run(self.graph_flow.run())
+        result = await self.graph_flow.run()
 
         print(result)
 
