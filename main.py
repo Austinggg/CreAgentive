@@ -5,7 +5,7 @@ from Resource.llmclient import LLMClientManager
 from collections import deque # 用于测试输入队列
 
 # 初始化模型客户端
-model_client = LLMClientManager().get_client("pro-deepseek-v3")
+model_client = LLMClientManager().get_client("deepseek-v3")
 
 # 测试输入队列
 test_inputs = deque([
@@ -30,10 +30,10 @@ writingworkflow = WritingWorkflow(model_client) # 写作工作流
 # ============================================================================
 
 # 运行初始化工作流
-# init_result = initialworkflow.run()
-
-# 运行故事生成工作流
-# storygenworkflow.run(init_result)
+init_result = initialworkflow.run()
+#
+# # 运行故事生成工作流
+storygenworkflow.run(init_result)
 
 # 运行写作工作流
 writingworkflow.run()
