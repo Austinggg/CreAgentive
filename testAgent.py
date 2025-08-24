@@ -8,6 +8,7 @@ def test_memory_agent_with_files():
     # 初始化MemoryAgent
     agent = MemoryAgent()
     try:
+        agent.clear_all_chapter_data()
         # 配置测试文件路径（跨平台兼容）
         CHAPTERS_PATH = os.path.join("Resource", "memory", "story_plan")
         chapters_dir = Path(CHAPTERS_PATH)
@@ -26,6 +27,7 @@ def test_memory_agent_with_files():
 
         if initial_file.exists():
             load_success = agent.load_initial_data(str(initial_file))
+            agent.builder.check_chapter_relationships(0)
             print(f"加载chapter_0.json: {'成功' if load_success else '失败'} (预期: 成功)")
         else:
             print(f"警告: 未找到初始化文件 {initial_file}")
@@ -40,16 +42,22 @@ def test_memory_agent_with_files():
         if chapter1_file.exists():
             # 加载第一章
             chapter_load_success1 = agent.load_chapter(str(chapter1_file))
+            agent.builder.check_chapter_relationships(1)
             print(f"加载chapter_1.json: {'成功' if chapter_load_success1 else '失败'} (预期: 成功)")
             print(f"当前章节更新: {agent.current_chapter} (预期: 1)")
+
             chapter_load_success2 = agent.load_chapter(str(chapter2_file))
+            agent.builder.check_chapter_relationships(2)
             print(f"加载chapter_2.json: {'成功' if chapter_load_success2 else '失败'} (预期: 成功)")
             print(f"当前章节更新: {agent.current_chapter} (预期: 2)")
+
             chapter_load_success3 = agent.load_chapter(str(chapter3_file))
+            agent.builder.check_chapter_relationships(3)
             print(f"加载chapter_3.json: {'成功' if chapter_load_success3 else '失败'} (预期: 成功)")
             print(f"当前章节更新: {agent.current_chapter} (预期: 3)")
+
         else:
-            print(f"警告: 未找到章节文件 {chapter1_file}")
+            print(f"警告: 未找到章节文件 {chapter1_file} {chapter2_file}")
             return  # 章节文件不存在则终止测试
 
         # 4. 测试保存角色记忆 (保存到当前目录)
@@ -67,8 +75,24 @@ def test_memory_agent_with_files():
                 print(f"生成记忆文件数量: {len(mem_files)} (预期: 根据chapter_1中的角色数量)")
             else:
                 print("警告: 未找到记忆文件目录")
+        # except Exception as e:
+        #     print(f"保存记忆失败: {str(e)}")
+
+            # 保存到章节目录的同级目录
+            save_path = chapters_dir.parent / "character"
+            agent.save_character_memories(2, str(save_path))
+            print(f"角色记忆已保存到: {save_path}")
+
+            # 检查记忆文件是否生成
+            mem_dir = Path(save_path) / "chapter_2_memories"
+            if mem_dir.exists():
+                mem_files = list(mem_dir.glob("*.json"))
+                print(f"生成记忆文件数量: {len(mem_files)} (预期: 根据chapter_2中的角色数量)")
+            else:
+                print("警告: 未找到记忆文件目录")
         except Exception as e:
             print(f"保存记忆失败: {str(e)}")
+
 
         # 5.测试获取存在的角色记忆
         print("\n=== 测试获取存在的角色记忆 ===")
