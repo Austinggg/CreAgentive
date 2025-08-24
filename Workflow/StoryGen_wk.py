@@ -18,6 +18,8 @@ from Resource.tools.strip_markdown_codeblock import strip_markdown_codeblock
 from Resource.tools.to_valid_identifier import to_valid_identifier
 from Resource.template.storygen_prompt.shortgoal import SHORTGOAL_PROMPT_TEMPLATE
 from Resource.template.storygen_prompt.role_prompt import ROLE_PROMPT_TEMPLATE
+from Resource.template.story_template import story_plan_template, story_plan_example
+
 
 
 class StoryGenWorkflow:
@@ -219,11 +221,16 @@ class StoryGenWorkflow:
             str: 格式化后的角色提示词字符串，包含角色背景、目标和生成要求
         """
 
+        template_str = json.dumps(story_plan_template, ensure_ascii=False, indent=2)
+        example_str = json.dumps(story_plan_example, ensure_ascii=False, indent=2)
+
         role_prompt = ROLE_PROMPT_TEMPLATE.format(
             role_identity=role_identity,
             role_relation=role_relation,
             role_events=role_events,
-            short_goal=short_goal
+            short_goal=short_goal,
+            template_str=template_str,
+            example_str=example_str
         )
         return role_prompt
 
@@ -517,7 +524,8 @@ class StoryGenWorkflow:
                     "chapter": self.current_chapter,
                     "chapter_title": chapter_title,
                     "chapter_goal": chapter_goal,
-                    **{k: v for k, v in best_plan.items() if k not in ["chapter", "chapter_title", "chapter_goal"]}
+                    "characters": self.agents_config,
+                    **{k: v for k, v in best_plan.items() if k not in ["chapter", "chapter_title", "chapter_goal","characters","agents_config"]}
                 }
 
                 # 保存章节数据+更新知识图谱
