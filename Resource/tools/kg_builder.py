@@ -18,15 +18,10 @@ class KnowledgeGraphBuilder:
     以及处理人物之间的关系。
     """
 
-    # 设置一个函数，其功能是将属性字典中的None值转换为空字符串
-  
     def __init__(self, connector: Neo4jConnector):
         """
         初始化函数，设置Neo4j连接器，并在初始化时执行数据清理和约束设置。
-        这个函数会在实例化时自动调用，确保数据库的初始状态是干净的。实例化时会清理重复数据并设置必要的约束。
-        实例代码:
-        builder = KnowledgeGraphBuilder(connector)
-        :param json_file: 包含初始数据的JSON文件
+
         :param connector: Neo4j数据库连接器实例，用于执行数据库操作。
          """
         self.connector = connector
@@ -39,7 +34,7 @@ class KnowledgeGraphBuilder:
         """
         清空Neo4j数据库中的所有数据
         """
-        query="MATCH (n) DETACH DELETE n"
+        query = "MATCH (n) DETACH DELETE n"
         try:
             self.connector.execute_query(query,write=True)
             logger.info("✅ 所有数据已成功清空")
@@ -137,8 +132,8 @@ class KnowledgeGraphBuilder:
                 logger.warning(f"清理重复数据时出错: {e}")
 
     def _setup_constraints(self):
-        """
-        创建必要的约束
+        """创建必要的约束
+
         此函数负责在数据库中设置必要的唯一性约束，以确保Character、Scene和Event标签的id属性的唯一性
         这对于维护数据的一致性和完整性至关重要
         """
@@ -273,73 +268,210 @@ class KnowledgeGraphBuilder:
 
     # 更新关系节点
     def _update_relationships(self, chapter: int):
-        """简化版关系更新：完全按照from_id/to_id匹配覆盖"""
+        """关系更新：复制前一章节关系到当前章节，然后用本章关系覆盖"""
+
         # 1. 如果是第0章，直接使用初始关系
         if chapter == 0:
             rels_to_update = list(self._relationship_cache.values())
         else:
-            # 2. 查询上一章节所有关系
             try:
+                # 2. 查询上一章节所有关系
                 query = f"""
-                MATCH (a:Character:Chapter{chapter - 1})-[r]->(b:Character:Chapter{chapter - 1})
-                RETURN a.id as from_id, b.id as to_id, type(r) as type, properties(r) as props
-                """
+                    MATCH (a:Character:Chapter{chapter - 1})-[r]->(b:Character:Chapter{chapter - 1})
+                    RETURN a.id as from_id, b.id as to_id, type(r) as type, properties(r) as props
+                    """
                 inherited_rels = self.connector.execute_query(query) or []
+                logger.info(f"从章节 {chapter - 1} 继承 {len(inherited_rels)} 条关系")
 
-                # 3. 用本章关系覆盖继承的关系
+                # 3. 构建要更新的关系列表
                 rels_to_update = []
-                # 先添加所有继承的关系
+
+                # 先添加所有继承的关系（复制到当前章节）
                 for rel in inherited_rels:
-                    rels_to_update.append({
+                    rel_data = {
                         'from_id': rel['from_id'],
                         'to_id': rel['to_id'],
                         'type': rel['type'],
                         **rel['props']
-                    })
+                    }
+                    # 确保关系标记为当前章节
+                    rel_data['chapter'] = chapter
+                    rels_to_update.append(rel_data)
 
-                # 用本章关系覆盖
-                for rel in self._relationship_cache.values():
-                    # 找到相同from_id/to_id的关系并替换
+                print("rels_to_update:", rels_to_update)
+
+
+                # 用本章关系覆盖继承的关系
+                # print(self._relationship_cache.values())
+                for new_rel in self._relationship_cache.values():
+                    # 确保新关系有正确的章节标记
+                    new_rel['chapter'] = chapter
+                    # print("new_rel:",new_rel)
+
+                    # 查找是否已存在相同 from_id/to_id 的关系（无论类型）
+                    found = False
+                    # print("rels_to_update:",rels_to_update)
                     for i, existing_rel in enumerate(rels_to_update):
-                        if existing_rel['from_id'] == rel['from_id'] and existing_rel['to_id'] == rel['to_id']:
-                            rels_to_update[i] = rel
+                        # print(i)
+                        # print(existing_rel)
+                        if (existing_rel['from_id'] == new_rel['from_id'] and
+                                existing_rel['to_id'] == new_rel['to_id']):
+                            # 覆盖现有关系（替换相同方向的关系）
+                            rels_to_update[i] = new_rel
+                            print("rels_to_update:",rels_to_update)
+                            found = True
+                            logger.info(
+                                f"替换关系: {new_rel['from_id']}->{new_rel['to_id']} ({existing_rel['type']} -> {new_rel['type']})")
                             break
-                    else:
-                        rels_to_update.append(rel)
+
+                    if not found:
+                        # 如果是全新的关系，添加到列表
+                        rels_to_update.append(new_rel)
+                        logger.info(f"新增关系: {new_rel['from_id']}->{new_rel['to_id']} ({new_rel['type']})")
+
+                print("rels_to_update:", rels_to_update)
 
             except Exception as e:
                 logger.error(f"关系更新失败: {str(e)}")
                 return
 
-        # 4. 批量更新关系
-        query = """
+        # 4. 批量更新关系到当前章节
+        query = f"""
             UNWIND $rels AS rel_data
-            MATCH (a:Character {id: rel_data.from_id})
-            MATCH (b:Character {id: rel_data.to_id})
+            MATCH (a:Character:Chapter{chapter} {{id: rel_data.from_id}})
+            MATCH (b:Character:Chapter{chapter} {{id: rel_data.to_id}})
             CALL apoc.merge.relationship(
                 a,
-                rel_data.type,  // 直接使用type作为关系类型
-                {chapter: $chapter},
-                {intensity: rel_data.intensity},
+                rel_data.type,
+                {{  // 匹配条件：关系类型、章节、from_id、to_id
+                    chapter: $chapter,
+                    from_id: rel_data.from_id,
+                    to_id: rel_data.to_id
+                }},
+                {{  // 如果匹配到，设置这些属性
+                    intensity: rel_data.intensity,
+                    awareness: COALESCE(rel_data.awareness, '未知'),
+                    new_detail: COALESCE(rel_data.new_detail, ''),
+                    reason: COALESCE(rel_data.reason, ''),
+                    chapter: $chapter
+                }},
                 b,
-                {}
+                {{  // 如果没有匹配到，创建关系时的属性
+                    intensity: rel_data.intensity,
+                    awareness: COALESCE(rel_data.awareness, '未知'),
+                    new_detail: COALESCE(rel_data.new_detail, ''),
+                    reason: COALESCE(rel_data.reason, ''),
+                    chapter: $chapter,
+                    from_id: rel_data.from_id,
+                    to_id: rel_data.to_id
+                }}
             ) YIELD rel
             RETURN count(rel) as count
             """
 
         try:
-            result = self.connector.execute_query(query, {
-                "rels": [{
+            # 准备关系数据
+            rels_data = []
+            for r in rels_to_update:
+                rel_data = {
                     "from_id": r["from_id"],
                     "to_id": r["to_id"],
                     "type": r["type"],
-                    "intensity": r.get("intensity", 3)
-                } for r in rels_to_update],
+                    "intensity": r.get("intensity", 3),
+                    "awareness": r.get("awareness", "未知"),
+                    "new_detail": r.get("new_detail", ""),
+                    "reason": r.get("reason", "")
+                }
+                rels_data.append(rel_data)
+                print("rels_data:",rels_data)
+
+            # 使用字符串替换来处理章节标签
+            query = query.replace(":Chapter$chapter", f":Chapter{chapter}")
+            print("query:", query)
+
+            result = self.connector.execute_query(query, {
+                "rels": rels_data,
                 "chapter": chapter
             })
-            logger.info(f"更新了 {result[0]['count']} 条关系")
+            print("result:",result)
+            logger.info(f"更新了 {result[0]['count']} 条关系到章节 {chapter}")
         except Exception as e:
             logger.error(f"关系更新失败: {str(e)}")
+
+    def cleanup_duplicate_relationships(self):
+        """清理数据库中所有重复的关系"""
+        query = """
+        MATCH (a:Character)-[r]->(b:Character)
+        WITH a, b, type(r) as relType, r.chapter as chapter, collect(r) as rels
+        WHERE size(rels) > 1
+        UNWIND rels[1..] AS duplicateRel
+        DELETE duplicateRel
+        RETURN count(duplicateRel) as deletedCount
+        """
+        try:
+            result = self.connector.execute_query(query)
+            logger.info(f"清理了 {result[0]['deletedCount']} 条重复关系")
+        except Exception as e:
+            logger.error(f"清理重复关系失败: {str(e)}")
+
+    def check_chapter_relationships(self, chapter: int, show_all: bool = False):
+        """检查指定章节的角色关系情况，检测重复关系
+
+        Args:
+            chapter: 要检查的章节编号
+            show_all: 是否显示所有关系（默认只显示问题关系）
+
+        Returns:
+            list: 查询结果列表
+        """
+        query = f"""
+        MATCH (a:Character:Chapter{chapter})-[r]->(b:Character:Chapter{chapter})
+        RETURN 
+            a.id as from_id, 
+            b.id as to_id, 
+            type(r) as relationship_type,
+            r.intensity as intensity,
+            r.awareness as awareness,
+            r.chapter as chapter,
+            count(r) as relationship_count
+        ORDER BY from_id, to_id, relationship_type
+        """
+
+        try:
+            results = self.connector.execute_query(query) or []
+
+            print(f"\n=== 第{chapter}章关系检查 ===")
+            print(f"共发现 {len(results)} 条关系记录")
+
+            duplicate_count = 0
+            normal_count = 0
+
+            for result in results:
+                count = result['relationship_count']
+                if count > 1:
+                    duplicate_count += 1
+                    print(
+                        f"⚠️  重复关系: {result['from_id']}->{result['to_id']} "
+                        f"({result['relationship_type']}) - 数量: {count}"
+                    )
+                elif show_all:
+                    normal_count += 1
+                    print(
+                        f"✅ 正常关系: {result['from_id']}->{result['to_id']} "
+                        f"({result['relationship_type']}) - 强度: {result['intensity']}"
+                    )
+
+            # 统计信息
+            print(f"\n📊 统计: {duplicate_count} 条重复关系, {len(results) - duplicate_count} 条正常关系")
+
+            if duplicate_count > 0:
+                print(f"🔍 建议: 考虑使用 MERGE 或检查关系创建逻辑")
+
+            return results
+
+        except Exception as e:
+            print(f"❌ 查询执行失败: {str(e)}")
+            return []
 
     def create_scene(self, chapter: int, **properties):
         """
@@ -502,9 +634,11 @@ class KnowledgeGraphBuilder:
         chapter = data['chapter']
         logger.info(f"开始处理第 {chapter} 章数据...")
 
-        # 清理当前章节的缓存
-        self._character_cache = {k: v for k, v in self._character_cache.items() if f":Chapter{chapter}" not in str(v)}
-        self._relationship_cache = {k: v for k, v in self._relationship_cache.items() if v.get('chapter') != chapter}
+        # 清理可能存在的重复关系
+        self.cleanup_duplicate_relationships()
+
+        # 清理当前章节的关系缓存
+        self._relationship_cache = {}  # 完全清空关系缓存
 
         # 更新人物缓存
         updated_characters = set()
@@ -541,8 +675,6 @@ class KnowledgeGraphBuilder:
         self._update_characters(chapter)
         self._update_relationships(chapter)
 
-        # 存储章节的人物记忆
-        # self.save_character_memories(chapter)
         logger.info(f"✅ 第 {chapter} 章处理完成，更新了 {len(updated_characters)} 个人物和 {len(updated_rels)} 条关系")
 
     def get_character_profile(self, character_id: str, chapter: int):
@@ -564,47 +696,53 @@ class KnowledgeGraphBuilder:
         """
         # 1. 查询基本信息
         query = f"""
-            MATCH (p:Character:Chapter{chapter} {{id: $character_id}})
-            RETURN p {{.*}} as properties
-            """
+                MATCH (p:Character:Chapter{chapter} {{id: $character_id}})
+                RETURN p {{.*}} as properties
+                """
         character_info = self.connector.execute_query(query, {"character_id": character_id})
 
         if not character_info:
             return {"error": "Character not found"}
 
-        # 2. 查询Outgoing关系
+        # 2. 修复关系查询 - 添加参数化查询
         rel_query = f"""
-        MATCH (p:Character {{id: $character_id}})-[r]->(other:Character)
-        WHERE r.chapter = {chapter}
-        RETURN {{
-            character_id: other.id,
-            name: other.name,
-            type: TYPE(r),  // 改为直接获取关系类型
-            intensity: r.intensity,
-            chapter: r.chapter
-        }} AS relationship
-        """
-        relationships = self.connector.execute_query(rel_query, {"character_id": character_id}) or []
+            MATCH (p:Character:Chapter{chapter} {{id: $character_id}})-[r]->(other:Character:Chapter{chapter})
+            WHERE r.chapter = $chapter 
+            RETURN {{
+                character_id: other.id,
+                name: other.name,
+                type: TYPE(r),
+                intensity: r.intensity,
+                awareness: r.awareness,
+                new_detail: r.new_detail,
+                chapter: r.chapter
+            }} AS relationship
+            """
+        relationships = self.connector.execute_query(rel_query, {
+            "character_id": character_id,
+            "chapter": chapter  # 添加chapter参数
+        }) or []
+        print("relationships:",relationships)
 
-        # 3. 查询人物参与的事件（保持不变）
+        # 3. 查询人物参与的事件
         events_query = f"""
-                MATCH (p:Character:Chapter{chapter} {{id: $character_id}})-[r:IN_EVENT]->(e:Event:Chapter{chapter})-[o:OCCURRED_IN]->(s:Scene:Chapter{chapter})
-                RETURN 
-                    e.id as event_id,
-                    e.name as event_name,
-                    e.order as event_order,
-                    e.details as details,
-                    s.id as scene_id,
-                    s.name as scene_name,
-                    s.place as scene_place,
-                    e.emotional_impact as emotional_impact,
-                    e.consequences as consequences
-                ORDER BY e.order
-                """
+                    MATCH (p:Character:Chapter{chapter} {{id: $character_id}})-[r:IN_EVENT]->(e:Event:Chapter{chapter})-[o:OCCURRED_IN]->(s:Scene:Chapter{chapter})
+                    RETURN 
+                        e.id as event_id,
+                        e.name as event_name,
+                        e.order as event_order,
+                        e.details as details,
+                        s.id as scene_id,
+                        s.name as scene_name,
+                        s.place as scene_place,
+                        e.emotional_impact as emotional_impact,
+                        e.consequences as consequences
+                    ORDER BY e.order
+                    """
 
         events = self.connector.execute_query(events_query, {"character_id": character_id})
 
-        # 情感影响处理逻辑（保持不变）
+        # 情感影响处理逻辑
         for event in events:
             if event["emotional_impact"]:
                 try:
@@ -615,7 +753,6 @@ class KnowledgeGraphBuilder:
             else:
                 event["emotional_impact"] = "无记录"
 
-        # 返回档案信息（仅包含Outgoing关系）
         return {
             "properties": character_info[0]['properties'],
             "relationships": [r["relationship"] for r in relationships],
