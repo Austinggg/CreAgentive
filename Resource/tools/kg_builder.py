@@ -16,6 +16,22 @@ class KnowledgeGraphBuilder:
     知识图谱构建器类，用于处理章节数据并构建知识图谱。
     该类负责从JSON文件加载章节数据，创建和更新人物、场景和事件节点，
     以及处理人物之间的关系。
+    该类包含的方法：
+    - __init__: 初始化函数，设置Neo4j连接器，并在初始化时执行数据清理和约束设置。
+    - clear_all_data: 清空Neo4j数据库中的所有数据。
+    - load_initial_data: 从JSON文件加载初始数据，包括人物和关系信息。
+    - process_chapter: 处理指定章节的JSON数据，更新缓存和Neo4j数据库。
+    - create_scene: 创建或更新场景节点。
+    - create_event: 创建事件节点并关联场景。
+    - get_character_profile: 查询人物完整档案。
+    - clear_chapter_data: 清理指定章节的所有数据。
+    - _update_characters: 批量更新人物节点。
+    - _update_relationships: 批量更新人物关系。
+    - _prepare_properties: 准备节点/关系的属性字典，合并默认值和提供的值。
+    - _check_apoc_available: 检查APOC插件是否可用。
+    - _clean_duplicate_data: 清理重复数据。
+    - _setup_constraints: 创建必要的约束。
+    该类依赖于Neo4jConnector类来执行实际的数据库操作。
     """
 
     # 设置一个函数，其功能是将属性字典中的None值转换为空字符串

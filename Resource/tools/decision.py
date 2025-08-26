@@ -87,9 +87,9 @@ async def evaluate_plan(plans,model_client):
         plan_scores.append((plan, score))
 
     # 选出评分最高的故事方案
-    if plan_scores:
-        best_plan, best_score = max(plan_scores, key=lambda x: x[1])
-        
+    if plan_scores:  # 确保列表不为空
+        best_plan, best_score = max(plan_scores, key=lambda x: x[1])  # 按评分排序，取最高的，返回方案和评分，其中方案是最佳方案
+
     else:
         best_plan, best_score = None, 0
 

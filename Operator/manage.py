@@ -1,7 +1,7 @@
-from agent.WriterAgent import WriterAgent
-from agent.CharacterAgent import CharacterAgent
+from Agent.WriteAgent import WriterAgent
+from Agent.CharacterAgent import CharacterAgent
 from agent.DecicionAgent import DecisionAgent
-from agent.MemoryAgent import MemoryAgent
+from Agent.MemoryAgent import MemoryAgent
 
 class Manage:
     """

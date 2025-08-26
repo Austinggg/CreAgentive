@@ -3,9 +3,11 @@ import re
 import json
 from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.messages import TextMessage
+from collections import Counter
+import numpy as np  # 用于标准差计算，如果环境中不可用，可用math.sqrt(sum((x - mean)**2 for x in lst) / (len(lst)-1)) 替换
 
 from Resource.llmclient import LLMClientManager
-from Resource.template.story_accessment_prompt.accessment_prompt_in_Chinese import LOCAL_PROMPT, GLOBAL_PROMPT, get_local_prompt ,get_global_prompt
+from Resource.template.story_accessment_prompt.accessment_prompt_in_Chinese import LOCAL_PROMPT, GLOBAL_PROMPT ,LOCAL_PROMPT_TEMPLATE ,GLOBAL_PROMPT_TEMPLATE
 llm_client = LLMClientManager().get_client("deepseek-v3")
 
 
@@ -39,6 +41,7 @@ class AccessmentWorkflow :
 		}
 		self.object_condition = ""  # 用于存储当前世界的客观条件
 		self.chapter_words_count = []  # 用于存储每一章的字数统计
+		self.text_features = []  # 用于存储每一章的文字特征
 
 	def __initialize_agent(self) :
 		"""
@@ -88,6 +91,157 @@ class AccessmentWorkflow :
 
 		return chapters_content
 
+	# 定义一个计算章节内容文字特征的函数__get_text_features，包含词汇多样性、句式复杂度等特征。该函数返回的内容包括
+	def __get_text_features(self, chapter_content):
+		"""
+		计算章节内容的文字特征，包括词汇多样性和句式复杂度。
+		该函数设计为支持中文和英文小说文本的分析。
+		- 语言检测：通过计算文本中中文字符的比例来自动检测主要语言。如果中文字符比例 > 50%，则视为中文模式（以单个汉字作为“词”单位）；否则视为英文模式（以空格分隔的单词作为“词”单位）。
+		- 词汇多样性：针对不同语言模式调整分词逻辑。英文使用正则匹配单词，中文使用单个汉字。
+		- 句式复杂度：句子分割支持中英文标点。复合句和衔接词关键词列表包含中英文常用词。
+		- 词性分布：由于标准库无NLP支持（如nltk或jieba），此部分未实现（返回占位符）。
+		- 依赖：仅使用Python标准库（re, collections, numpy - 但numpy在工具环境中可用，如果不可用可移除std计算或用math代替）。
+		:param chapter_content: 章节内容字符串。
+		:return: 包含文字特征的字典。
+		"""
+		import re
+		from collections import Counter
+		import numpy as np  # 用于标准差计算，如果环境中不可用，可用math.sqrt(sum((x - mean)**2 for x in lst) / (len(lst)-1)) 替换
+
+		features = {}
+
+		# 1. 语言检测：计算中文字符比例
+		chinese_chars = re.findall(r'[\u4e00-\u9fa5]', chapter_content)
+		total_chars = len(re.sub(r'\s+', '', chapter_content))  # 总非空白字符数
+		chinese_ratio = len(chinese_chars) / total_chars if total_chars > 0 else 0.0
+		is_chinese = chinese_ratio > 0.5  # 如果 >50% 为中文字符，则视为中文模式
+
+		# 2. 分词逻辑
+		if is_chinese:
+			# 中文模式：提取单个汉字作为“词”
+			words = chinese_chars  # 已从上面提取
+		else:
+			# 英文模式：提取单词（忽略标点，转换为小写）
+			words = re.findall(r'\b[a-zA-Z]+\b', chapter_content.lower())
+
+		total_words = len(words)
+		if total_words == 0:
+			# 如果没有词，返回空特征
+			return features
+
+		# 3. 词汇多样性
+		# 型例比（TTR）
+		unique_words = set(words)
+		ttr = len(unique_words) / total_words
+		features['型例比'] = ttr
+
+		# 修正TTR（滑动窗口，每1000词的TTR均值）
+		window_size = 1000
+		corrected_ttrs = []
+		if total_words >= window_size:
+			step = window_size // 2  # 步长为窗口一半，增加平滑
+			for i in range(0, total_words - window_size + 1, step):
+				window = words[i:i + window_size]
+				window_ttr = len(set(window)) / len(window)
+				corrected_ttrs.append(window_ttr)
+			corrected_ttr = sum(corrected_ttrs) / len(corrected_ttrs) if corrected_ttrs else ttr
+		else:
+			corrected_ttr = ttr
+		features['修正型例比'] = corrected_ttr
+
+		# 词汇重复率：3-gram重复率（基于连续3个“词”）
+		n = 3
+		ngrams = [''.join(words[i:i + n]) for i in range(total_words - n + 1)]  # 对于英文，join会无空格；中文已无空格
+		if ngrams:
+			ngram_counter = Counter(ngrams)
+			# 计算重复次数（每个ngram出现超过1次的额外计数）
+			repeated_count = sum(count - 1 for count in ngram_counter.values() if count > 1)
+			repeat_rate = repeated_count / len(ngrams) if len(ngrams) > 0 else 0.0
+		else:
+			repeat_rate = 0.0
+		features['N-gram重复率'] = repeat_rate
+
+		# 词频分布：高频词（出现>10次）占比，低频词（出现=1次）占比
+		word_counter = Counter(words)
+		high_freq_threshold = 10
+		high_freq_count = sum(count for count in word_counter.values() if count > high_freq_threshold)
+		high_freq_ratio = high_freq_count / total_words if total_words else 0.0
+		low_freq_count = sum(1 for count in word_counter.values() if count == 1)
+		low_freq_ratio = low_freq_count / len(unique_words) if unique_words else 0.0  # 低频词占比 = 唯一词中出现1次的比例
+		features['高频词占比'] = high_freq_ratio
+		features['低频词占比'] = low_freq_ratio
+
+		# 词性分布：无法实现（需要NLP库如nltk for English 或 jieba for Chinese）
+		features['词性分布'] = '未实现，需要NLP库'
+
+		# 4. 句式复杂度
+		# 分割句子（支持中英文标点）
+		sentences = re.split(r'[.。!！?？;；:：]', chapter_content)
+		sentences = [s.strip() for s in sentences if s.strip()]
+		total_sentences = len(sentences)
+		if total_sentences == 0:
+			return features
+
+		# 句子长度（按非空白字符数计算，通用中英）
+		sent_lengths = [len(re.sub(r'\s+', '', s)) for s in sentences]  # 移除空格后计数
+
+		# 平均句子长度
+		avg_sentence_length = sum(sent_lengths) / total_sentences
+		features['平均句子长度'] = avg_sentence_length
+
+		# 句子长度标准差
+		if total_sentences > 1:
+			sentence_length_std = np.std(sent_lengths)
+		else:
+			sentence_length_std = 0.0
+		features['句子长度标准差'] = sentence_length_std
+
+		# 长句（>30字）、中句（10-30字）、短句（<10字）比例（字数通用中英，非空白字符）
+		long_sentence_count = sum(1 for length in sent_lengths if length > 30)
+		medium_sentence_count = sum(1 for length in sent_lengths if 10 <= length <= 30)
+		short_sentence_count = sum(1 for length in sent_lengths if length < 10)
+		features['长句比例'] = long_sentence_count / total_sentences if total_sentences else 0.0
+		features['中句比例'] = medium_sentence_count / total_sentences if total_sentences else 0.0
+		features['短句比例'] = short_sentence_count / total_sentences if total_sentences else 0.0
+
+		# 复合句比例：含常见从句或连词（支持中英文关键词）
+		compound_keywords = [
+			# 中文
+			'因为', '所以', '但是', '而且', '虽然', '然而', '如果', '并且', '不过', '即使',
+			# 英文 (小写匹配，假设文本lower())
+			'because', 'so', 'but', 'and', 'although', 'however', 'if', 'also', 'though', 'even'
+		]
+		lower_content = chapter_content.lower()  # 为英文匹配转小写
+		compound_count = sum(1 for s in sentences if any(kw in s.lower() for kw in compound_keywords))
+		compound_ratio = compound_count / total_sentences if total_sentences else 0.0
+		features['复合句比例'] = compound_ratio
+
+		# 衔接词密度：衔接词出现次数 / 总词数
+		connectives = [
+			# 中文
+			'然而', '因此', '而且', '但是', '所以', '因为', '虽然', '并且', '如果', '不过', '即使', '然后', '于是',
+			# 英文
+			'however', 'therefore', 'moreover', 'but', 'so', 'because', 'although', 'and', 'if', 'though', 'even',
+			'then', 'thus'
+		]
+		connective_count = sum(lower_content.count(kw.lower()) for kw in connectives)  # 转小写计数
+		connective_density = connective_count / total_words if total_words else 0.0
+		features['衔接词密度'] = connective_density
+
+		return features
+
+	# 这个函数是用来获取局部智能体的提示词的，输入是前一章的情节概要和当前章节的内容
+	def __get_local_prompt(self, *, prev_plot, object_condition, next_content):
+		return LOCAL_PROMPT_TEMPLATE.format(
+			prev_plot = prev_plot,
+			object_condition = object_condition,
+			next_content = next_content
+		)
+
+	def __get_global_prompt(self, *, global_features):
+		return GLOBAL_PROMPT_TEMPLATE.format(
+			global_features = global_features
+		)
 	# 这个函数是要将全局特征处理成规范的字符串形式作为输入给全局智能体
 	def __process_global_features(self) :
 		response_string = ""
@@ -218,7 +372,7 @@ class AccessmentWorkflow :
 			# 先统计每一章的字数
 			word_count = self.__count_words(chapter)
 			print(f"第{len(self.global_features) + 1}章的字数：", word_count)
-			input_message = get_local_prompt(prev_plot = self.__process_global_features(),
+			input_message = self.__get_local_prompt(prev_plot = self.__process_global_features(),
 				object_condition = self.object_condition, next_content = chapter)
 			response_local = await local_agent.run(
 				task = input_message
@@ -238,6 +392,23 @@ class AccessmentWorkflow :
 				# 输出大模型的输出内容
 				print(f"第{len(self.global_features)}章的局部评分：", local_scores)
 				print(f"第{len(self.global_features)}章的表面特征：", features)
+			# 以上的代码完成了对于每一章的局部评分和表面特征的提取，现在要进行全局评分的计算，现在我要提取每一章节的文字特征
+			text_features = self.__get_text_features(chapter)
+			print(f"第{len(self.global_features)}章的文字特征：", text_features)
+			self.text_features.append(text_features) # 将每一章的文字特征存入成员变量中
+		# 现在要计算出小说的平均文字特征得分，目前text_features存储了每一章的文字特征，接下来要计算平均值
+		# 计算每一章的文字特征的平均值
+		average_text_features = {}
+		for feature in self.text_features :
+			for key, value in feature.items() :
+				if key not in average_text_features :
+					average_text_features[key] = []
+				average_text_features[key].append(value)
+		# 计算平均值
+		for key, values in average_text_features.items() :
+			average_text_features[key] = sum(values) / len(values) if values else 0
+		# 输出每一章的文字特征平均值
+		print("每一章的文字特征平均值：", average_text_features)
 
 		# 计算局部指标的平均值
 		local_scores = {key: sum(values) / len(values) if values else 0 for key, values in self.local_scores.items()}
@@ -245,7 +416,7 @@ class AccessmentWorkflow :
 		# 现在需要计算全局评分
 		global_plot = self.__process_global_features()
 		response_global = await global_agent.run(
-			task = get_global_prompt(global_features = get_global_prompt(global_features=global_plot))
+			task = self.__get_global_prompt(global_features = self.__get_global_prompt(global_features=global_plot))
 		)
 		# 现在要解析大模型的输出内容为json格式
 		if response_global :

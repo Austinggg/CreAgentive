@@ -62,7 +62,7 @@ def create_agents(model_client):
         system_message=script_write_prompt_template,
     )
 
-    def format_task(task):
+    def format_task(task): #
         """确保任务数据格式正确"""
         if isinstance(task, str):
             try:
@@ -71,12 +71,13 @@ def create_agents(model_client):
                 task = {"content": task}
         return task if isinstance(task, dict) else {"content": str(task)}
 
-    # 修改异步调用包装器
+    # 修改异步调用包装器，其作用是确保传入的任务始终为字符串格式
     def async_run_wrapper(agent, task):
         # 确保任务始终为字典格式，避免字符串直接传入
         formatted_task = format_task(task)
         # 使用json.dumps将字典转为字符串，确保类型正确
-        return agent.run(task=json.dumps(formatted_task))  # 新增此行转换
+        new_task = json.dumps(formatted_task,ensure_ascii=False)
+        return agent.run(task=new_task)  # 新增此行转换
 
     recallAgent.a_run = lambda task: async_run_wrapper(recallAgent, task)
     diggerAgent.a_run = lambda task: async_run_wrapper(diggerAgent, task)

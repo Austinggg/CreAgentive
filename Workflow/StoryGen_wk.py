@@ -23,6 +23,23 @@ from Resource.template.story_template import story_plan_template, story_plan_exa
 
 
 class StoryGenWorkflow:
+    """
+    该类包含的方法：
+    1. 初始化方法 __init__：设置模型客户端、最大轮次参数，加载初始数据，初始化知识图谱连接等。
+    2. 私有方法 _load_initial_data：加载初始数据文件，并验证数据完整性。
+    3. 私有方法 _get_next_chapter_number：获取下一个章节编号。
+    4. 私有方法 _create_agents：创建所有智能体。
+    5. 私有方法 _get_role_identity：获取角色基本信息（结构化格式）。
+    6. 私有方法 _get_role_relation：获取角色在上一章节的关系网络（结构化格式）。
+    7. 私有方法 _get_role_events：获取角色在上一章节参与的事件（结构化格式）。
+    8. 私有方法 _create_role_prompt：创建角色智能体的系统提示词。
+    9. 私有方法 _process_llm_output：处理LLM输出并拼接固定字段。
+    10. 私有方法 _create_team_from_config：根据配置创建 Agent 团队并构建协作流程。
+    11. 私有方法 _save_chapter：将生成的章节保存为 JSON 文件，并更新知识图谱。
+    12. 私有方法 _if_get_longgoal：判断是否实现了长期目标。
+
+
+    """
     def __init__(self, model_client, maxround=3):
         # 设置模型客户端和最大轮次参数
         self.model_client = model_client  #设置模型客户端
@@ -44,7 +61,6 @@ class StoryGenWorkflow:
 
         # 直接调用MemoryAgent加载初始化人物和关系，保存至知识图谱
         self.memory_agent.load_initial_data(init_file)
-
 
         # 存储上一章节的方案
         self.last_plan = None
@@ -278,7 +294,7 @@ class StoryGenWorkflow:
             else:
                 fixed.append(raw)
         agents_config = fixed
-        # —— 到此结束 —— 
+        # —— 到此结束 ——
 
         # print("agents_config ==============================\n")
         # print(self.agents_config)
@@ -304,7 +320,7 @@ class StoryGenWorkflow:
             print(f"当前角色名称{role_name}")
 
             agent = AssistantAgent(
-                name=role_name, # 要修改name读取逻辑
+                name=role_name,  # 要修改name读取逻辑
                 model_client=self.model_client,
                 system_message=role_prompt
             )
@@ -379,7 +395,7 @@ class StoryGenWorkflow:
         """
         # TODO: 需要完善 LonggoalAgent 的提示词
         # 判断当前方案是否实现长期目标
-        
+
         # .run 需要加入参数，调通阶段，暂时不加参数
         response = await self.longgoal_agent.run()
         await self.longgoal_agent.model_context.clear()
@@ -417,16 +433,18 @@ class StoryGenWorkflow:
         except Exception as e:
             print(f"⚠️ 初始化失败: {str(e)}")
             return
-        
+
         print("初始化完毕\n")
 
         # === 2. 章节生成主循环 ===
-        
+
         # while self.current_chapter < 10: # 生成固定章节数，测试用
         while True:
             chapter_num = self._get_next_chapter_number()
             print(f"\n📖 开始生成第 {chapter_num} 章...")
-
+            round_plans = []  # 用来存放三个不同的短期目标对应的方案
+            short_goal_backup = []
+            # 首先循环利用短期智能体生成三个短期目标，并且存入short_goal_backup[]，之后利用故事生成team循环生成三个对应的故事方案，并存入round_plans中。
             # -- 2.1 生成短期目标 --
             try:
                 # 构造短期目标生成提示（包含长期目标和当前环境）
@@ -436,31 +454,36 @@ class StoryGenWorkflow:
                     last_plan=json.dumps(self.last_plan, ensure_ascii=False) if self.last_plan else '无',
                     chapter_num=chapter_num
                 )
-                
+
                 print(f"短期目标生成提示：\n{shortgoal_prompt}")
 
-                # 调用短期目标智能体（直接await异步调用）
-                short_goal = await self.shortgoal_agent.run(task=shortgoal_prompt) # 获取短期目标 智能体的system prompt 的变量是否正确获取？
-                await self.shortgoal_agent.model_context.clear() # 清楚短期目标智能体的记忆
+                # 这里要循环调用shortgoal_agent生成三个不同的短期目标
+                for i in range(0, 3):
+                    try:
+                        # 调用短期目标智能体（直接await异步调用）
+                        short_goal = await self.shortgoal_agent.run(
+                            task = shortgoal_prompt)  # 获取短期目标 智能体的system prompt 的变量是否正确获取？
+                        # 进行记忆的清除
+                        await self.shortgoal_agent.model_context.clear()
+                        # 需从 autogen 的输出中剥离 shortgoal，并且要去掉 Markdown 语法
+                        short_goal = strip_markdown_codeblock(extract_llm_content(short_goal))
+                        # 这里需要排查：1.是否提示词正常传入  A：提示词正常加载
+                        # 2.最终调用LLM的model_context是否存在重复内容  A：用户的task提示词拼接在系统提示词之后输入给LLM
+                        # 打印短期目标
+                        print(f"短期目标：\n{short_goal}")
+                        short_goal = json.loads(short_goal)  # 解析为JSON
+                        chapter_title = short_goal.get("chapter_title", f"第{chapter_num}章")
+                        chapter_goal = short_goal.get("chapter_goal", "")
+                        # 现在要加上之前制定的短期目标以及标题
+                        short_goal["chapter_title"] = chapter_title
+                        short_goal["chapter_goal"] = chapter_goal
+                        short_goal_backup.append(short_goal)  # 保存三个不同的短期目标
 
-                # 打印短期目标
-                print(f"短期目标：\n{short_goal}")
-
-                # 需从 autogen 的输出中剥离 shortgoal，并且要去掉 Markdown 语法
-                short_goal = strip_markdown_codeblock(extract_llm_content(short_goal))
-                try:
-                    short_goal = json.loads(short_goal)  # 解析为JSON
-                    chapter_title = short_goal.get("chapter_title", f"第{chapter_num}章")
-                    chapter_goal = short_goal.get("chapter_goal", "")
-                except json.JSONDecodeError:
-                    chapter_title = f"第{chapter_num}章"
-                    chapter_goal = ""
-                print(f"短期目标的类型: {type(short_goal)}")
-                print(f"短期目标,优化后：\n{short_goal}")
-
-                # 确保返回值为字符串（智能体可能返回不同格式）
-                if not isinstance(short_goal, str):
-                    short_goal = str(short_goal)
+                    except json.JSONDecodeError:
+                        chapter_title = f"第{chapter_num}章"
+                        chapter_goal = ""
+                    print(f"短期目标的类型: {type(chapter_goal)}")
+                    print(f"短期目标,优化后：\n{chapter_goal}")
             except Exception as e:
                 print(f"⚠️ 生成短期目标失败: {str(e)}")
                 continue  # 跳过本章节
@@ -469,12 +492,18 @@ class StoryGenWorkflow:
 
             # -- 2.2 多轮方案生成 --
             round_plans = []
-            for round_num in range(1, 4):  # 生成三轮不同方案
-                print(f"  第 {round_num} 轮方案生成中...")
-
+            # 现在我要遍历short_backup，利用里面的三个不同的短期目标，循环生成三个不同的故事方案，并存入round_plans中，同时还要记录下序号。
+            counts = 0
+            for short_goal_bp in short_goal_backup:
+                print(f"\n🚀 开始第 {counts + 1} 轮方案生成...")
                 try:
                     # 创建角色团队（包含环境智能体和所有角色智能体）
-                    team = self._create_team_from_config(short_goal)
+                    team = self._create_team_from_config(short_goal_bp)
+
+                    """
+                    排查点：
+                    team的配置，智能体的数量和prompt是否正确
+                    """
 
                     # 运行团队讨论（明确指定任务格式）
                     response = await team.run(
@@ -492,16 +521,24 @@ class StoryGenWorkflow:
                     # 输出响应内容（不尝试解析）
                     print(f"原始输出信息\n{response}")
                     # 提取LLM的回答
-                    llm_content=extract_llm_content(response)
+                    llm_content = extract_llm_content(response)
+                    """
+                    排查点：
+                    进行内容提取前后，llm_content的内容
+                    """
                     print(f"llm_content: \n{llm_content}")
                     final_content = self._process_llm_output(llm_content)
+                    # 现在每一个短期目标的故事方案都已经生成，现在我们要在该字典中加上其对应的 chapter_title 和 chapter_goal
+                    final_content["chapter_title"] = short_goal_bp.get("chapter_title", f"第{chapter_num}章")
+                    final_content["chapter_goal"] = short_goal_bp.get("chapter_goal", "")
                     round_plans.append(final_content)
                     print(f"团队讨论结果\n{final_content}")
                     print(round_plans)
-                    print(f"第 {round_num} 轮方案已保存")
+                    print(f"第 {counts + 1} 轮方案生成完毕")
+                    counts += 1
 
                 except Exception as e:
-                    print(f"⚠️ 第 {round_num} 轮生成失败: {str(e)}")
+                    print(f"⚠️ 第 {counts + 1} 轮生成失败: {str(e)}")
                     continue
 
             # -- 2.4 方案评估与保存 --
@@ -519,16 +556,19 @@ class StoryGenWorkflow:
                 print(f"✅ 最佳方案评分: {best_score}")
                 print(f"✅ 最佳方案: {best_plan}")
 
-                # 创建新的有序字典，将章节标题和目标放在最前面
-                ordered_plan = {
-                    "chapter": self.current_chapter,
-                    "chapter_title": chapter_title,
-                    "chapter_goal": chapter_goal,
-                    "characters": self.agents_config,
-                    **{k: v for k, v in best_plan.items() if k not in ["chapter", "chapter_title", "chapter_goal","characters","agents_config"]}
-                }
+                # 我现在已经选出了评分最高的方案 best_plan，里面包含 chapter, characters, relationships, scenes, events
+                # 所以我现在要把 best_plan 里面的内容进行补全，补全 chapter_title, chapter_goal, characters
 
-                # 保存章节数据+更新知识图谱
+                ordered_plan = {  # ordered_plan这个变量要存储最终保存的章节数据
+                    "chapter": self.current_chapter,
+                    "chapter_title": best_plan.get("chapter_title"),  # 读取最佳方案的章节标题
+                    "chapter_goal": best_plan.get("chapter_goal"),  # 读取最佳方案的章节目标
+                    "characters": self.agents_config,
+                    **{k: v for k, v in best_plan.items() if
+                       k not in ["chapter", "chapter_title", "chapter_goal", "characters", "agents_config"]}
+                }
+                # 这个order_plan
+                # 保存章节数据 + 更新知识图谱
                 self._save_chapter(ordered_plan)
                 self.last_plan = ordered_plan  # 保存当前章节作为下一章的"上一章"
 

@@ -169,6 +169,12 @@ class WritingWorkflow:
                     event_details = self.memory_agent.get_event_details(pos["id"])
                     if event_details:
                         dig_events.append(event_details)
+                        # 该函数返回的内容dig_resp是一个字典，包含是否需要挖掘伏笔的标志和具体位置，
+                        # 比如{"need_dig": "Yes", "positions": [{"id": "event123", "reason": "Foreshadowing for climax"}]}
+                        # 其中positions是一个列表，包含了需要挖掘伏笔的事件ID和挖掘理由。
+                        # 返回的dig_events是一个列表，包含了从Neo4j数据库中查询到的具体伏笔事件的详细信息，
+                        # 比如[{"id": "event123", "description": "A mysterious stranger appears", ...}]。
+
             return dig_resp, dig_events
         except Exception as e:
             print(f"❌ 伏笔分析失败: {str(e)}")
@@ -266,8 +272,10 @@ class WritingWorkflow:
 
         try:
             # 根据文章体裁调用对应类别的写作智能体
+
             write_result = await writer.a_run(task=combined_data)
             # 调用完成后要求清空该 agent 的上下文
+            print("调用写作智能体结束")
             await self.novel_writer.model_context.clear()
             await self.script_writer.model_context.clear()
 
@@ -283,8 +291,6 @@ class WritingWorkflow:
             # 打印原始输出
             print("\n💡 写作Agent原始输出:")
             print(raw_output)
-
-
 
             # 移除Markdown代码块
             output_text = strip_markdown_codeblock(raw_output)
@@ -349,19 +355,20 @@ class WritingWorkflow:
             生成的章节文本内容
         """
         # 1. 加载当前章节数据
-        current_data = self._load_current_chapter(chapter_file)
-        chapter_num = current_data.get("chapter", "unknown")
+        current_data = self._load_current_chapter(chapter_file)  # 加载章节数据
+        chapter_num = current_data.get("chapter", "unknown")  # 获取章节编号
 
         # 2. 伏笔和回忆分析
         dig_resp, dig_data = await self._need_dig_and_load(current_data)
+        # dig_resp和dig_data的
         recall_resp, recall_data = await self._need_recall_and_load(current_data)
         print(dig_resp)
         print(dig_data)
         print(recall_resp)
         print(recall_data)
 
-
         # 3. 数据整合
+        # 这里的_combine_plans函数会将当前章节数据与挖掘到的伏笔事件和回忆事件进行整合
         combined_data = await self._combine_plans(current_data, dig_data, recall_data)
         print(combined_data)
 
@@ -371,9 +378,9 @@ class WritingWorkflow:
     async def run_all_chapters(self, article_type="novel"):
         """
         处理所有章节（按文件名排序）
-
         :param article_type: 文本类型（novel/script）
         """
+
         print(f"检查目录: {self.chapters_dir}")
         print(f"目录内容: {os.listdir(self.chapters_dir)}")
 
@@ -389,6 +396,7 @@ class WritingWorkflow:
 
         self.chapter_count = len(all_files)
         print(f"📑 共发现 {len(all_files)} 个章节文件（跳过chapter_0.json），开始批量处理...")
+        # 现在开始处理每个章节，调用函数run_single_chapter进行处理
         for i, chapter_file in enumerate(all_files, 1):
             self.current_chapter = i
             print(f"\n===== 处理第{i}/{len(all_files)}章: {chapter_file} =====")
@@ -398,7 +406,6 @@ class WritingWorkflow:
     async def run(self, article_type="novel"):
         """
         启动完整写作流程
-
         :param article_type: 文本类型（novel/script）
         """
         # 1. 验证输入类型
@@ -406,6 +413,8 @@ class WritingWorkflow:
 
         # 2. 初始化智能体
         self._create_agents()
+        if self.novel_writer is None:
+            raise ValueError("小说写作智能体未正确初始化")
 
         # 3. 处理所有章节
         await self.run_all_chapters(article_type)
