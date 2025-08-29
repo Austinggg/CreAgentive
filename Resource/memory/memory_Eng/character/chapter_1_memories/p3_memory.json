@@ -1,0 +1,112 @@
+{
+  "chapter": 1,
+  "properties": {
+    "affiliations": [
+      "Royal Caribbean Cruise Lines"
+    ],
+    "id": "p3",
+    "occupation": [
+      "Cruise Ship Steward"
+    ],
+    "name": "Chen Xiaodao",
+    "age": 22,
+    "gender": "MALE",
+    "health_status": "Ultraviolet allergy (long-sleeved uniform)",
+    "personality": "Seems timid but actually has amazing powers of observation",
+    "aliases": [
+      "Waiter"
+    ]
+  },
+  "relationships": [
+    {
+      "new_detail": "",
+      "chapter": 1,
+      "name": "Su Mingyue",
+      "intensity": 3,
+      "awareness": "One-sided hidden",
+      "character_id": "p2",
+      "type": "Gratitude (Chen Xiaodao secretly protects Su Mingyue)"
+    },
+    {
+      "new_detail": "",
+      "chapter": 1,
+      "name": "Lin Xiu",
+      "intensity": 4,
+      "awareness": "Both parties are aware",
+      "character_id": "p1",
+      "type": "Fear and respect (Chen Xiaodao has seen Lin Xiu cheat and kill)"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e1",
+      "event_name": "Malfunction Alert",
+      "event_order": 1,
+      "details": "Chen Xiaodao notices his digital watch and crew communicator malfunctioning simultaneously, along with flickering lights throughout the crew quarters",
+      "scene_id": "s1",
+      "scene_name": "Electronic Anomalies",
+      "scene_place": "Cruise Ship Crew Quarters",
+      "emotional_impact": "Wary",
+      "consequences": [
+        "Triggers his investigative instincts",
+        "Makes note of the timing and pattern"
+      ]
+    },
+    {
+      "event_id": "e2",
+      "event_name": "Unauthorized Movement",
+      "event_order": 2,
+      "details": "While conducting his nightly rounds, Chen spots Su Mingyue and Lin Xiu entering normally restricted areas separately, both appearing suspicious",
+      "scene_id": "s2",
+      "scene_name": "Steward's Duty",
+      "scene_place": "Passenger Corridor",
+      "emotional_impact": "Alert",
+      "consequences": [
+        "Begins tracking both individuals' movements",
+        "Notices the electronic malfunctions coincide with their presence"
+      ]
+    },
+    {
+      "event_id": "e3",
+      "event_name": "Elevator Surveillance",
+      "event_order": 3,
+      "details": "Chen uses the service elevator's blind spots to observe Lin Xiu tampering with electronic panels, causing brief power surges",
+      "scene_id": "s3",
+      "scene_name": "Observation Post",
+      "scene_place": "Service Elevator",
+      "emotional_impact": "Fearful",
+      "consequences": [
+        "Confirms Lin Xiu's involvement in the malfunctions",
+        "Strengthens his desire to protect Su Mingyue"
+      ]
+    },
+    {
+      "event_id": "e4",
+      "event_name": "Locker Room Clue",
+      "event_order": 4,
+      "details": "Chen finds a hand-drawn map of the ship's electrical systems in Su Mingyue's locker, showing planned interference points matching the malfunctions",
+      "scene_id": "s4",
+      "scene_name": "Hidden Message",
+      "scene_place": "Staff Locker Room",
+      "emotional_impact": "Disturbed",
+      "consequences": [
+        "Raises questions about Su's involvement",
+        "Discovers notes about 'temporal anomalies'"
+      ]
+    },
+    {
+      "event_id": "e5",
+      "event_name": "Converging Paths",
+      "event_order": 5,
+      "details": "Following power fluctuations, Chen discovers both Su Mingyue and Lin Xiu in the lower deck storage area, surrounded by strange electronic equipment that appears decades more advanced than the ship's technology",
+      "scene_id": "s5",
+      "scene_name": "Dangerous Discovery",
+      "scene_place": "Lower Deck Storage",
+      "emotional_impact": "Shocked",
+      "consequences": [
+        "Reveals the malfunctions are intentional and connected to the ship's disappearance",
+        "Chen must choose between reporting them or investigating further"
+      ]
+    }
+  ]
+}

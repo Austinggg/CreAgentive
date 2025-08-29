@@ -27,8 +27,8 @@ class WritingWorkflow:
             model_client: Language model client (e.g., DeepSeek) used for agent invocation.
         """
         self.model_client = model_client
-        self.chapters_dir = os.path.join("Resource", "memory", "story_plan")
-        self.save_dir = os.path.join("Resource", "story")
+        self.chapters_dir = os.path.join("Resource", "memory", "memory_Eng" , "story_plan")
+        self.save_dir = os.path.join("Resource", "story_Eng")
         self.current_chapter = 0
         self.chapter_count = 0
         self.memory_agent = MemoryAgent()

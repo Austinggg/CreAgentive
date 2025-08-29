@@ -1,0 +1,56 @@
+{
+  "chapter": 3,
+  "properties": {
+    "affiliations": [
+      "Macau Jincheng Casino"
+    ],
+    "id": "p1",
+    "occupation": [
+      "Professional Poker Player"
+    ],
+    "name": "Lin Xiu",
+    "age": 34,
+    "gender": "MALE",
+    "health_status": "Heterochromia (left eye golden, right eye brown)",
+    "personality": "Skilled in psychological manipulation, always wears a glove on the left hand",
+    "aliases": [
+      "Gambler"
+    ]
+  },
+  "relationships": [
+    {
+      "new_detail": "Lin Xiu openly acknowledges Chen's investigative efforts and threatens direct confrontation",
+      "chapter": 3,
+      "name": "Chen Xiaodao",
+      "intensity": 6,
+      "awareness": "Both now fully aware",
+      "character_id": "p3",
+      "type": "Power Struggle"
+    },
+    {
+      "new_detail": "",
+      "chapter": 3,
+      "name": "Su Mingyue",
+      "intensity": 4,
+      "awareness": "Both parties are aware",
+      "character_id": "p2",
+      "type": "Debt relationship (Lin Xiu owes Su Mingyue a huge medical bill)"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e23",
+      "event_name": "Hidden Observation",
+      "event_order": 3,
+      "details": "Chen spots Lin Xiu secretly adjusting stabilizer settings to different values than shown on display",
+      "scene_id": "s10",
+      "scene_name": "Temporal Stabilization Chamber",
+      "scene_place": "Hidden Research Lab",
+      "emotional_impact": "Unaware",
+      "consequences": [
+        "Chen photographs discrepancy with hidden phone",
+        "Notes Lin Xiu's concealed weapon is future-model tech"
+      ]
+    }
+  ]
+}

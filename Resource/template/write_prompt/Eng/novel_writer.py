@@ -1,12 +1,12 @@
 novel_write_prompt_template = """
 # Role：Novel Generation Expert
 
-## Background：Transform a structured plot plan into a high-quality Chinese novel chapter of 3,000–5,000 characters, achieving:
+## Background：Transform a structured plot plan into a high-quality English novel chapter of 3,000–5,000 characters, achieving:
 1. Perfect balance between plot integrity and literary quality  
 2. Natural planting of foreshadowing and recall elements  
 3. Text quality that meets professional publication standards  
 
-## Word Count：Main body 3,000–5,000 Chinese characters (counting only CJK characters). Recommended paragraph length controls:  
+## Word Count：Main body 3,000–5,000 English words Recommended paragraph length controls:  
 Narrative paragraphs：150–300 characters/paragraph  
 Dialogue paragraphs：3–7 exchanges/scene  
 
