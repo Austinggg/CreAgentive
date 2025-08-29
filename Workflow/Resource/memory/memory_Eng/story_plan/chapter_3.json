@@ -1,0 +1,186 @@
+{
+    "chapter": 3,
+    "chapter_title": "The Waiter's Secret",
+    "chapter_goal": "Investigate Chen Xiaodao's mysterious past connection",
+    "characters": [
+        {
+            "id": "p1",
+            "name": "Lin Xiu",
+            "aliases": [
+                "Gambler"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "Professional Poker Player"
+            ],
+            "affiliations": [
+                "Macau Jincheng Casino"
+            ],
+            "personality": "Skilled in psychological manipulation, always wears a glove on the left hand",
+            "health_status": "Heterochromia (left eye golden, right eye brown)"
+        },
+        {
+            "id": "p2",
+            "name": "Su Mingyue",
+            "aliases": [
+                "Doctor Miss"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "Emergency Doctor"
+            ],
+            "affiliations": [
+                "Shanghai First Hospital"
+            ],
+            "personality": "Obsessive-compulsive, unconsciously counts prime numbers",
+            "health_status": "Immune to anesthetics"
+        },
+        {
+            "id": "p3",
+            "name": "Chen Xiaodao",
+            "aliases": [
+                "Waiter"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "Cruise Ship Steward"
+            ],
+            "affiliations": [
+                "Royal Caribbean Cruise Lines"
+            ],
+            "personality": "Seems timid but actually has amazing powers of observation",
+            "health_status": "Ultraviolet allergy (long-sleeved uniform)"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "Survivor's guilt",
+            "intensity": 3,
+            "awareness": "Unilateral (Chen aware)",
+            "new_detail": "Discovers Lin Xiu was present during the original accident that gave Chen his UV sensitivity"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "Secret admiration",
+            "intensity": 4,
+            "awareness": "Unilateral",
+            "new_detail": "Notices Su Mingyue's medical knowledge may hold key to breaking the time loop"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s4",
+            "name": "Crew Quarters",
+            "place": "Phantom Cruise Ship - Staff Berthing",
+            "time_period": "NIGHT",
+            "atmosphere": "Claustrophobic with faint radio static"
+        },
+        {
+            "id": "s5",
+            "name": "Engine Room Access",
+            "place": "Phantom Cruise Ship - Lower Decks",
+            "time_period": "MIDNIGHT",
+            "atmosphere": "Humming machinery with chemical traces"
+        },
+        {
+            "id": "s6",
+            "name": "Ship's Infirmary",
+            "place": "Phantom Cruise Ship - Medical Bay",
+            "time_period": "PRE-DAWN",
+            "atmosphere": "Sterile but flickering lights"
+        }
+    ],
+    "events": [
+        {
+            "id": "e8",
+            "name": "Personal Belongings",
+            "order": 8,
+            "scene_id": "s4",
+            "details": "Searches his assigned crew bunk and finds his own 20-year-old seaman's documents with UV-sensitive ink markings",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "Existential dread"
+            },
+            "consequences": [
+                "Confirms he's a reincarnated victim",
+                "Finds coordinates written in UV ink"
+            ]
+        },
+        {
+            "id": "e9",
+            "name": "Chemical Reaction",
+            "order": 9,
+            "scene_id": "s5",
+            "details": "Uses spilled cleaning chemicals that react to his UV allergy to reveal hidden ship blueprints in engine room",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "Painful determination"
+            },
+            "consequences": [
+                "Discovers secret compartment location",
+                "Chemical burns worsen his condition"
+            ]
+        },
+        {
+            "id": "e10",
+            "name": "Medical Diversion",
+            "order": 10,
+            "scene_id": "s6",
+            "details": "Steals specific medications to treat his burns, leaving coded notes for Su Mingyue about the time loop mechanism",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "Calculated risk-taking"
+            },
+            "consequences": [
+                "Establishes indirect communication with Su",
+                "Medical supplies show anomalous depletion"
+            ]
+        },
+        {
+            "id": "e11",
+            "name": "Radio Broadcast",
+            "order": 11,
+            "scene_id": "s1",
+            "details": "Transmits coordinates hidden in crew documents using his UV-tuned hearing to filter distortion",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "Focused desperation"
+            },
+            "consequences": [
+                "Sends critical location data",
+                "Draws attention from Lin Xiu"
+            ]
+        },
+        {
+            "id": "e12",
+            "name": "Encounter Avoidance",
+            "order": 12,
+            "scene_id": "s5",
+            "details": "Uses staff tunnels to evade Lin Xiu while tracking chemical trails to secret compartment",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "Heightened paranoia"
+            },
+            "consequences": [
+                "Maintains stealth operations",
+                "Chemical markers fade dangerously"
+            ]
+        }
+    ]
+}

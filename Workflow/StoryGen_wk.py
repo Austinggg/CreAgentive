@@ -40,7 +40,7 @@ class StoryGenWorkflow:
 
 
     """
-    def __init__(self, model_client, maxround=3):
+    def __init__(self, model_client, maxround=1):
         # 设置模型客户端和最大轮次参数
         self.model_client = model_client  #设置模型客户端
         self.maxround = int(maxround)  #设置模型最大轮次参数, 所有角色智能体参与一次对话为一轮
@@ -300,7 +300,7 @@ class StoryGenWorkflow:
         # print(self.agents_config)
         # print(f"agent_config的类型:{type(self.agents_config)}")
         # print("agents_config ==============================\n")
-
+        # agent_config存储的是角色信息
         # 2. 动态创建角色 agent
         role_agents = []
         for agent_config in agents_config:
@@ -312,7 +312,7 @@ class StoryGenWorkflow:
             role_identity = self._get_role_identity(agent_config) # 读取角色的基本信息
             print(f"{role_identity}")
             role_prompt = self._create_role_prompt(role_relation, role_events, role_identity, short_goal)
-
+            # 获取上一章该角色的关系以及事件，传入创建 prompt 的函数中
             # 获取合法的 agent name（用于内部逻辑）
             agent_id = agent_config.get("id", f"role_{len(role_agents)}")
             role_name = to_valid_identifier(agent_id)
@@ -354,6 +354,10 @@ class StoryGenWorkflow:
             - relationships: 角色关系
             - scenes: 场景信息
             - events: 事件列表
+
+            这部分有两个关键的函数：
+            load_chapter
+            save_character_memories
         """
 
         # story_plan 保存路径
@@ -504,10 +508,7 @@ class StoryGenWorkflow:
                     排查点：
                     team的配置，智能体的数量和prompt是否正确
                     """
-
-                    # 运行团队讨论（明确指定任务格式）
-                    response = await team.run(
-                        task=json.dumps({
+                    in_task = json.dumps({
                             "instruction": "生成完整故事方案",
                             "requirements": [
                                 f"故事所处背景: {self.background}\n"
@@ -515,7 +516,14 @@ class StoryGenWorkflow:
                                 "保持角色性格一致性",
                                 "推进长期目标发展",
                             ]
-                        })
+
+                        },
+                            ensure_ascii = False
+                        )
+
+                    # 运行团队讨论（明确指定任务格式）
+                    response = await team.run(
+                        task=in_task
                     )
 
                     # 输出响应内容（不尝试解析）
@@ -567,6 +575,7 @@ class StoryGenWorkflow:
                     **{k: v for k, v in best_plan.items() if
                        k not in ["chapter", "chapter_title", "chapter_goal", "characters", "agents_config"]}
                 }
+
                 # 这个order_plan
                 # 保存章节数据 + 更新知识图谱
                 self._save_chapter(ordered_plan)

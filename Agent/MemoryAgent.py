@@ -80,6 +80,7 @@ class MemoryAgent:
                 chapter_data = json.load(f)
                 self.current_chapter = chapter_data["chapter"]
 
+            # 这里的json_path是章节文件路径
             # 处理章节数据（更新Neo4j）
             self.builder.process_chapter(json_path)
 

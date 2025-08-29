@@ -28,7 +28,6 @@ class Neo4jConnector:
         self.password = os.getenv("NEO4J_PASSWORD")
         # 打印Neo4j数据库的URI、用户名和密码
         # print(self.uri, self.user, self.password)
-
          # 检查是否设置了密码环境变量，如果没有设置，则抛出异常
         if not self.password:
             raise ValueError("NEO4J_PASSWORD环境变量未设置")

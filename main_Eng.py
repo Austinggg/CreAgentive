@@ -1,16 +1,14 @@
 import asyncio
-
 # from Workflow.Init_wk import InitialWorkflow
 # from Workflow.Writing_wk import WritingWorkflow
 # from Workflow.StoryGen_wk import StoryGenWorkflow
 from Resource.llmclient import LLMClientManager
 from collections import deque # 用于测试输入队列
 from Workflow.Accessment_wk import AccessmentWorkflow
-
 # 导入英文版的测试代码
-from Workflow.Init_wk import InitialWorkflow
-from Workflow.Writing_wk import WritingWorkflow
-from Workflow.StoryGen_wk import StoryGenWorkflow
+from Workflow.Wok_Eng.Init_wk import InitialWorkflow
+from Workflow.Wok_Eng.Writing_wk import WritingWorkflow
+from Workflow.Wok_Eng.StoryGen_wk import StoryGenWorkflow
 # 初始化模型客户端
 model_client = LLMClientManager().get_client("deepseek-v3")
 
@@ -37,9 +35,9 @@ test_inputs_Eng = deque([
 ])
 
 # 创建工作流实例
-initialworkflow = InitialWorkflow(model_client, test_inputs) # 初始化工作流
-storygenworkflow = StoryGenWorkflow(model_client) # 故事生成工作流
-writingworkflow = WritingWorkflow(model_client) # 写作工作流
+initialworkflow = InitialWorkflow(model_client, test_inputs_Eng)  # 初始化工作流
+storygenworkflow = StoryGenWorkflow(model_client)  # 故事生成工作流
+writingworkflow = WritingWorkflow(model_client)  # 写作工作流
 # accessmentworkflow = AccessmentWorkflow(model_client)
 
 # ============================================================================
@@ -47,6 +45,7 @@ writingworkflow = WritingWorkflow(model_client) # 写作工作流
 # ============================================================================
 
 async def main():
+    # print("开始初始化")
     # 运行初始化工作流
     # init_result = await initialworkflow.run()
     # # 运行故事生成工作流

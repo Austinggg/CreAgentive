@@ -292,8 +292,13 @@ class KnowledgeGraphBuilder:
         else:
             try:
                 # 2. 查询上一章节所有关系
-                query = f"""
+                # query = f"""
+                #     MATCH (a:Character:Chapter{chapter - 1})-[r]->(b:Character:Chapter{chapter - 1})
+                #     RETURN a.id as from_id, b.id as to_id, type(r) as type, properties(r) as props
+                #     """
+                query = f""" 
                     MATCH (a:Character:Chapter{chapter - 1})-[r]->(b:Character:Chapter{chapter - 1})
+                    WHERE r.chapter = {chapter - 1}
                     RETURN a.id as from_id, b.id as to_id, type(r) as type, properties(r) as props
                     """
                 inherited_rels = self.connector.execute_query(query) or []
@@ -417,13 +422,14 @@ class KnowledgeGraphBuilder:
     def cleanup_duplicate_relationships(self):
         """清理数据库中所有重复的关系"""
         query = """
-        MATCH (a:Character)-[r]->(b:Character)
+        MATCH (a:Character)-[r]->(b:Character)      
         WITH a, b, type(r) as relType, r.chapter as chapter, collect(r) as rels
         WHERE size(rels) > 1
         UNWIND rels[1..] AS duplicateRel
         DELETE duplicateRel
         RETURN count(duplicateRel) as deletedCount
         """
+        # 上面这段查询的作用是将所有重复的关系找出来，并删除多余的，只保留一条
         try:
             result = self.connector.execute_query(query)
             logger.info(f"清理了 {result[0]['deletedCount']} 条重复关系")
@@ -632,7 +638,7 @@ class KnowledgeGraphBuilder:
     def process_chapter(self, json_file: str):
         """
         处理指定章节的JSON数据，更新缓存和Neo4j数据库。
-
+        处理的是存入story_data/chapters/目录下的章节文件。要将其存入neo4j
         本函数首先读取和解析给定的JSON文件，然后根据文件中的数据更新内部缓存，
         包括人物和关系的缓存。接着，根据数据中的场景和事件调用相应的处理函数，
         最后更新Neo4j数据库中的信息。
@@ -657,7 +663,7 @@ class KnowledgeGraphBuilder:
         self._relationship_cache = {}  # 完全清空关系缓存
 
         # 更新人物缓存
-        updated_characters = set()
+        updated_characters = set()  # 存入的还是角色的ID
         for character in data.get('characters', []):
             character_id = character['id']
             if character_id in self._character_cache:
@@ -672,7 +678,7 @@ class KnowledgeGraphBuilder:
         # 更新关系缓存
         updated_rels = set()
         for rel in data.get('relationships', []):
-            rel_key = f"{rel['from_id']}-{rel['to_id']}-{rel['type']}"
+            rel_key = f"{rel['from_id']}-{rel['to_id']}-{rel['type']}"  # 获取关系的唯一键
             if rel_key in self._relationship_cache:
                 # 更新现有关系
                 self._relationship_cache[rel_key].update(rel)
