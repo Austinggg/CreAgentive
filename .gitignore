@@ -3,3 +3,5 @@ Resource/memory/character/*
 Resource/memory/story_plan/*
 !Resource/memory/story_plan/
 !Resource/memory/story_plan/chapter_0.json
+Resource/story/*
+Resource/story_Eng/*

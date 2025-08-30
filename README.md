@@ -43,7 +43,6 @@ python .\resource\ds_neo4j_client.py
 
 项目结构按照 HAWK 的层次架构进行分布。
 
-
 故事生成工作流 生成的每一章方案 存放在 [Resource/memory/story_plan](Resource/memory/story_plan)
 生成的故事存储在 [Resource/memory/story](Resource/memory/story)
 
