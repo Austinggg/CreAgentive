@@ -49,10 +49,10 @@ async def main():
     # 运行初始化工作流
     # init_result = await initialworkflow.run()
     # # 运行故事生成工作流
-    # await storygenworkflow.run()
+    await storygenworkflow.run()
 
     # 运行写作工作流
-    await writingworkflow.run()
+    # await writingworkflow.run()
 
     # await accessmentworkflow.run()
 

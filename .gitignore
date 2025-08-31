@@ -1,7 +1,12 @@
 .env
-Resource/memory/character/*
-Resource/memory/story_plan/*
+Resource/memory/character/
+Resource/memory/story_plan/
 !Resource/memory/story_plan/
 !Resource/memory/story_plan/chapter_0.json
-Resource/story/*
-Resource/story_Eng/*
+Resource/story/
+Resource/story_Eng/
+Resource/memory_Eng/character/
+Resource/memory/memory_Eng/story_plan/
+!Resource/memory_Eng/story_plan/
+!Resource/memory_Eng/story_plan/chapter_0.json
+Agent/Specification.py
