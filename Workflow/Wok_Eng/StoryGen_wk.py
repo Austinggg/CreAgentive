@@ -1,7 +1,5 @@
 # Standard libraries
-import os
 import json
-import asyncio
 import logging
 from pathlib import Path
 
@@ -49,7 +47,7 @@ class StoryGenWorkflow:
         self.current_chapter = 0  # Chapter counter (starts from 0)
 
         # Load initial data (directly use chapter_0.json)
-        init_file = Path("Resource") / "memory" / "memory_Eng" / "story_plan" / "chapter_0.json"
+        init_file = Path("Resource") / "memory_Eng" / "story_plan" / "chapter_0.json"
         self.initial_data = self._load_initial_data(init_file)
         # 这里查看一下initial_data的格式
 
@@ -248,6 +246,7 @@ class StoryGenWorkflow:
             example_str=example_str
         )
 
+        print(f"Generated role prompt:\n{role_prompt}")
         return role_prompt
 
     def _process_llm_output(self, llm_output: str) -> dict:
@@ -351,7 +350,7 @@ class StoryGenWorkflow:
             plan (dict or str): Chapter data to save.
         """
         print("\n--- DEBUG: Entering _save_chapter function! ---")
-        folder_path = Path(__file__).parent.parent.parent / "Resource" / "memory" / "memory_Eng" / "story_plan"
+        folder_path = Path(__file__).parent.parent.parent / "Resource" / "memory_Eng" / "story_plan"
         folder_path.mkdir(parents=True, exist_ok=True)
 
         new_file_name = f"chapter_{self.current_chapter}.json"
