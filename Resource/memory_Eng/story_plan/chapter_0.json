@@ -1,0 +1,88 @@
+{
+  "title": "Phantom Cruise Ship",
+  "background": {
+    "worldview": "Modern slightly supernatural real world",
+    "natural_environment": "A phantom cruise ship suddenly appears in the Pacific Ocean, where all electronic equipment malfunctions",
+    "historical_context": "This ship disappeared in a mysterious case 20 years ago"
+  },
+  "longgoal": "To uncover the truth behind the reappearance of the cruise ship and find a way to escape within 7 days",
+  "characters": [
+    {
+      "id": "p1",
+      "name": "Lin Xiu",
+      "aliases": ["Gambler"],
+      "gender": "MALE",
+      "age": 34,
+      "occupation": ["Professional Poker Player"],
+      "affiliations": ["Macau Jincheng Casino"],
+      "personality": "Skilled in psychological manipulation, always wears a glove on the left hand",
+      "health_status": "Heterochromia (left eye golden, right eye brown)"
+    },
+    {
+      "id": "p2",
+      "name": "Su Mingyue",
+      "aliases": ["Doctor Miss"],
+      "gender": "FEMALE",
+      "age": 29,
+      "occupation": ["Emergency Doctor"],
+      "affiliations": ["Shanghai First Hospital"],
+      "personality": "Obsessive-compulsive, unconsciously counts prime numbers",
+      "health_status": "Immune to anesthetics"
+    },
+    {
+      "id": "p3",
+      "name": "Chen Xiaodao",
+      "aliases": ["Waiter"],
+      "gender": "MALE",
+      "age": 22,
+      "occupation": ["Cruise Ship Steward"],
+      "affiliations": ["Royal Caribbean Cruise Lines"],
+      "personality": "Seems timid but actually has amazing powers of observation",
+      "health_status": "Ultraviolet allergy (long-sleeved uniform)"
+    }
+  ],
+  "relationships": [
+    {
+      "from_id": "p1",
+      "to_id": "p2",
+      "type": "Debt relationship (Lin Xiu owes Su Mingyue a huge medical bill)",
+      "intensity": 4,
+      "awareness": "Both parties are aware"
+    },
+    {
+      "from_id": "p2",
+      "to_id": "p1",
+      "type": "Professional aversion (Su Mingyue dislikes gambling addicts)",
+      "intensity": 3,
+      "awareness": "One-sided hidden"
+    },
+    {
+      "from_id": "p1",
+      "to_id": "p3",
+      "type": "Exploitative relationship (Lin Xiu knows Chen Xiaodao's true identity)",
+      "intensity": 5,
+      "awareness": "One-sided known"
+    },
+    {
+      "from_id": "p3",
+      "to_id": "p1",
+      "type": "Fear and respect (Chen Xiaodao has seen Lin Xiu cheat and kill)",
+      "intensity": 4,
+      "awareness": "Both parties are aware"
+    },
+    {
+      "from_id": "p2",
+      "to_id": "p3",
+      "type": "Doctor-patient relationship (once performed an emergency surgery on Chen Xiaodao)",
+      "intensity": 2,
+      "awareness": "Both parties are aware"
+    },
+    {
+      "from_id": "p3",
+      "to_id": "p2",
+      "type": "Gratitude (Chen Xiaodao secretly protects Su Mingyue)",
+      "intensity": 3,
+      "awareness": "One-sided hidden"
+    }
+  ]
+}

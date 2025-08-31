@@ -1,0 +1,198 @@
+{
+    "chapter": 3,
+    "chapter_title": "The Saboteur Revealed",
+    "chapter_goal": "Confront the stowaway about the sabotage and hidden documents",
+    "characters": [
+        {
+            "id": "p1",
+            "name": "Lin Xiu",
+            "aliases": [
+                "Gambler"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "Professional Poker Player"
+            ],
+            "affiliations": [
+                "Macau Jincheng Casino"
+            ],
+            "personality": "Skilled in psychological manipulation, always wears a glove on the left hand",
+            "health_status": "Heterochromia (left eye golden, right eye brown)"
+        },
+        {
+            "id": "p2",
+            "name": "Su Mingyue",
+            "aliases": [
+                "Doctor Miss"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "Emergency Doctor"
+            ],
+            "affiliations": [
+                "Shanghai First Hospital"
+            ],
+            "personality": "Obsessive-compulsive, unconsciously counts prime numbers",
+            "health_status": "Immune to anesthetics"
+        },
+        {
+            "id": "p3",
+            "name": "Chen Xiaodao",
+            "aliases": [
+                "Waiter"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "Cruise Ship Steward"
+            ],
+            "affiliations": [
+                "Royal Caribbean Cruise Lines"
+            ],
+            "personality": "Seems timid but actually has amazing powers of observation",
+            "health_status": "Ultraviolet allergy (long-sleeved uniform)"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p3",
+            "to_id": "p2",
+            "type": "Protective Friendship",
+            "intensity": 4,
+            "awareness": "One-sided (Chen towards Su)",
+            "new_detail": "Chen shares crucial timeline data from his observations to protect Su from ghostly encounters"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "Supernatural Mentor",
+            "intensity": 5,
+            "awareness": "Mutually known",
+            "new_detail": "Chen teaches Lin advanced techniques to control temporal visions during golden eye activations"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "stowaway",
+            "type": "Antagonistic",
+            "intensity": 3,
+            "awareness": "Mutually known",
+            "new_detail": "Confrontational relationship formed after sabotage discovery"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s9",
+            "name": "Confrontation Chamber",
+            "place": "Hidden crew storage area behind kitchen",
+            "time_period": "NIGHT",
+            "atmosphere": "Claustrophobic with flickering emergency lighting"
+        },
+        {
+            "id": "s10",
+            "name": "Document Vault",
+            "place": "Abandoned first-class cabin converted to storage",
+            "time_period": "NIGHT",
+            "atmosphere": "Dust-filled with lingering scent of old perfume"
+        },
+        {
+            "id": "s11",
+            "name": "Lifeboat Repair Station",
+            "place": "Outer deck launch area",
+            "time_period": "NIGHT",
+            "atmosphere": "Wind-swept with salt spray and creaking metal"
+        }
+    ],
+    "events": [
+        {
+            "id": "e16",
+            "name": "Saboteur Ambush",
+            "order": 1,
+            "scene_id": "s9",
+            "details": "Chen strategically 'accidentally' reveals his knowledge of the stowaway's identity to force a confrontation",
+            "participants": [
+                "p3",
+                "stowaway"
+            ],
+            "emotional_impact": {
+                "p3": "Calculated tension",
+                "stowaway": "Panicked aggression"
+            },
+            "consequences": [
+                "Stowaway reveals partial truth about documents",
+                "Physical altercation leaves evidence of struggle"
+            ]
+        },
+        {
+            "id": "e17",
+            "name": "Memory Triggered Discovery",
+            "order": 2,
+            "scene_id": "s10",
+            "details": "While handling the documents, Chen experiences violent flashbacks to the original crew's final moments",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "Trauma mixed with revelation"
+            },
+            "consequences": [
+                "Learns the ship disappeared during a temporal experiment",
+                "Discovers his own name in crew manifests"
+            ]
+        },
+        {
+            "id": "e18",
+            "name": "Ghostly Collaboration",
+            "order": 3,
+            "scene_id": "s9",
+            "details": "Original crew members manifest to corroborate Chen's discovered information about the documents",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "Eerie acceptance"
+            },
+            "consequences": [
+                "Verifies authenticity of documents",
+                "Ghosts begin showing Chen specific repair procedures"
+            ]
+        },
+        {
+            "id": "e19",
+            "name": "Emergency Lifeboat Preparation",
+            "order": 4,
+            "scene_id": "s11",
+            "details": "Chen implements secret repairs using knowledge from both documents and ghostly instructions",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "Focused determination"
+            },
+            "consequences": [
+                "One lifeboat made operational",
+                "Creates emergency escape option"
+            ]
+        },
+        {
+            "id": "e20",
+            "name": "Truth Reveal to Lin Xiu",
+            "order": 5,
+            "scene_id": "s10",
+            "details": "Chen shares the full contents of the documents and his reincarnation theory with Lin Xiu",
+            "participants": [
+                "p3",
+                "p1"
+            ],
+            "emotional_impact": {
+                "p3": "Relieved but vulnerable",
+                "p1": "Shocked realization"
+            },
+            "consequences": [
+                "Lin Xiu's golden eye confirms parts of Chen's claims",
+                "Decision made to confront authorities about the truth"
+            ]
+        }
+    ]
+}

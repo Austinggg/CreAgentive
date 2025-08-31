@@ -1,0 +1,196 @@
+{
+    "chapter": 4,
+    "chapter_title": "The Gambler's Secret",
+    "chapter_goal": "Confront Lin Xiu about his hidden modifications",
+    "characters": [
+        {
+            "id": "p1",
+            "name": "Lin Xiu",
+            "aliases": [
+                "Gambler"
+            ],
+            "gender": "MALE",
+            "age": 34,
+            "occupation": [
+                "Professional Poker Player"
+            ],
+            "affiliations": [
+                "Macau Jincheng Casino"
+            ],
+            "personality": "Skilled in psychological manipulation, always wears a glove on the left hand",
+            "health_status": "Heterochromia (left eye golden, right eye brown)"
+        },
+        {
+            "id": "p2",
+            "name": "Su Mingyue",
+            "aliases": [
+                "Doctor Miss"
+            ],
+            "gender": "FEMALE",
+            "age": 29,
+            "occupation": [
+                "Emergency Doctor"
+            ],
+            "affiliations": [
+                "Shanghai First Hospital"
+            ],
+            "personality": "Obsessive-compulsive, unconsciously counts prime numbers",
+            "health_status": "Immune to anesthetics"
+        },
+        {
+            "id": "p3",
+            "name": "Chen Xiaodao",
+            "aliases": [
+                "Waiter"
+            ],
+            "gender": "MALE",
+            "age": 22,
+            "occupation": [
+                "Cruise Ship Steward"
+            ],
+            "affiliations": [
+                "Royal Caribbean Cruise Lines"
+            ],
+            "personality": "Seems timid but actually has amazing powers of observation",
+            "health_status": "Ultraviolet allergy (long-sleeved uniform)"
+        }
+    ],
+    "relationships": [
+        {
+            "from_id": "p2",
+            "to_id": "p3",
+            "type": "Protective Alliance",
+            "intensity": 6,
+            "awareness": "Mutual",
+            "new_detail": "Su Mingyue notices Chen's counting rituals worsening and intervenes medically"
+        },
+        {
+            "from_id": "p3",
+            "to_id": "p1",
+            "type": "Investigative Suspicion",
+            "intensity": 5,
+            "awareness": "One-sided (Chen aware)",
+            "new_detail": "Chen deciphers Lin's poker tells confirming deliberate temporal sabotage"
+        }
+    ],
+    "scenes": [
+        {
+            "id": "s13",
+            "name": "Emergency Infirmary",
+            "place": "Medical Bay",
+            "time_period": "EARLY_MORNING",
+            "atmosphere": "Sterile with flickering lights"
+        },
+        {
+            "id": "s14",
+            "name": "Service Corridors",
+            "place": "Crew Access Tunnels",
+            "time_period": "MIDDAY",
+            "atmosphere": "Claustrophobic with ozone smell"
+        },
+        {
+            "id": "s15",
+            "name": "Captain's Poker Game",
+            "place": "Officers' Lounge",
+            "time_period": "NIGHT",
+            "atmosphere": "False joviality masking tension"
+        }
+    ],
+    "events": [
+        {
+            "id": "e27",
+            "name": "Temporal Seizure",
+            "order": 1,
+            "scene_id": "s13",
+            "details": "Chen collapses with temporal feedback burns, his counting now appearing in glowing numerals on his skin",
+            "participants": [
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p2": "Medical urgency",
+                "p3": "Disoriented terror"
+            },
+            "consequences": [
+                "Su administers experimental temporal stabilizer from ship's original logs",
+                "Burns form cryptic coordinate patterns"
+            ]
+        },
+        {
+            "id": "e28",
+            "name": "Hidden Blueprints",
+            "order": 2,
+            "scene_id": "s13",
+            "details": "While treating Chen, Su discovers the ship's original schematic showing hidden compartments matching his burn patterns",
+            "participants": [
+                "p2",
+                "p3"
+            ],
+            "emotional_impact": {
+                "p2": "Scientific excitement",
+                "p3": "Painful realization"
+            },
+            "consequences": [
+                "Chen recognizes one compartment as Lin's claimed 'storage room'",
+                "Duplicates schematic using laundry marking techniques"
+            ]
+        },
+        {
+            "id": "e29",
+            "name": "Poker Face Analysis",
+            "order": 3,
+            "scene_id": "s15",
+            "details": "Chen serves drinks at officer's game, noticing Lin's micro-expressions change when temporal stabilizer is mentioned",
+            "participants": [
+                "p3",
+                "p1"
+            ],
+            "emotional_impact": {
+                "p3": "Analytical focus",
+                "p1": "Guarded tension"
+            },
+            "consequences": [
+                "Confirms Lin's knowledge of future events through betting patterns",
+                "Photographs Lin's special chips with UV-sensitive phone"
+            ]
+        },
+        {
+            "id": "e30",
+            "name": "Decoding the Countdown",
+            "order": 4,
+            "scene_id": "s14",
+            "details": "Comparing burn coordinates with service maps, Chen finds hidden maintenance logs showing previous temporal loops",
+            "participants": [
+                "p3"
+            ],
+            "emotional_impact": {
+                "p3": "Dreaded confirmation"
+            },
+            "consequences": [
+                "Discovers the ship has reappeared seven times before",
+                "Each disappearance occurred when countdown reached zero"
+            ]
+        },
+        {
+            "id": "e31",
+            "name": "Emergency Confrontation",
+            "order": 5,
+            "scene_id": "s15",
+            "details": "Chen deliberately spills drink on Lin, revealing temporal energy sparks - prompting violent reaction",
+            "participants": [
+                "p3",
+                "p1",
+                "p2"
+            ],
+            "emotional_impact": {
+                "p3": "Strategic provocation",
+                "p1": "Uncontrolled rage",
+                "p2": "Medical alarm"
+            },
+            "consequences": [
+                "Lin's future-tech weapon partially materializes",
+                "Su administers sedative proving effective against temporal anomalies"
+            ]
+        }
+    ]
+}
