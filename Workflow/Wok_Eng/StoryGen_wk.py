@@ -1,7 +1,12 @@
 # Standard libraries
 import json
-import logging
+# import logging
 from pathlib import Path
+
+# 添加以下代码来禁用 autogen_core 的 INFO 日志
+import logging
+logging.getLogger('autogen_core').setLevel(logging.WARNING)
+logging.getLogger('autogen_core.events').setLevel(logging.WARNING)
 
 # Autogen
 from autogen_agentchat.agents import AssistantAgent
@@ -63,11 +68,11 @@ class StoryGenWorkflow:
         # Store the last chapter's plan
         self.last_plan = None
 
-        logging.info(
-            f"Initialization completed - Title: {self.title}, "
-            f"Number of characters: {len(self.initial_data['characters'])}, "
-            f"Number of relationships: {len(self.initial_data['relationships'])}"
-        )
+        # logging.info(
+        #     f"Initialization completed - Title: {self.title}, "
+        #     f"Number of characters: {len(self.initial_data['characters'])}, "
+        #     f"Number of relationships: {len(self.initial_data['relationships'])}"
+        # )
 
     def _load_initial_data(self, file_path: str) -> dict:
         """
@@ -94,10 +99,10 @@ class StoryGenWorkflow:
             with open(path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
         except json.JSONDecodeError as e:
-            logging.error(f"Invalid JSON format in initial data file: {str(e)}")
+            # logging.error(f"Invalid JSON format in initial data file: {str(e)}")
             raise
         except Exception as e:
-            logging.error(f"Failed to load initial data: {str(e)}")
+            # logging.error(f"Failed to load initial data: {str(e)}")
             raise
 
         required_fields = ["title", "background", "longgoal", "characters", "relationships"]
@@ -146,7 +151,7 @@ class StoryGenWorkflow:
             memory = self.memory_agent.get_character_memory(role_id, max(0, self.current_chapter - 1))
             return {"characters": memory["characters"]}
         except Exception as e:
-            logging.error(f"Failed to retrieve character identity: {str(e)}")
+            # logging.error(f"Failed to retrieve character identity: {str(e)}")
             return {"error": str(e)}
 
     def _get_role_relation(self, agent_config):
@@ -178,7 +183,7 @@ class StoryGenWorkflow:
 
             return {"relationships": memory["relationships"]}
         except Exception as e:
-            logging.error(f"Failed to retrieve character relationships: {str(e)}")
+            # logging.error(f"Failed to retrieve character relationships: {str(e)}")
             return {"error": str(e)}
 
     def _get_role_events(self, agent_config):
@@ -217,7 +222,7 @@ class StoryGenWorkflow:
             return {"events": memory["events"]}
 
         except Exception as e:
-            logging.error(f"Failed to retrieve character events - ID: {role_id}, Error: {str(e)}", exc_info=True)
+            # logging.error(f"Failed to retrieve character events - ID: {role_id}, Error: {str(e)}", exc_info=True)
             return {"events": [], "error": f"Event retrieval failed: {str(e)}"}
 
     def _create_role_prompt(self, role_relation, role_events, role_identity, short_goal):
@@ -278,7 +283,7 @@ class StoryGenWorkflow:
             return final_data
 
         except Exception as e:
-            logging.error(f"Failed to process LLM output: {str(e)}")
+            # logging.error(f"Failed to process LLM output: {str(e)}")
             raise
 
     def _create_team_from_config(self, short_goal):
@@ -367,16 +372,16 @@ class StoryGenWorkflow:
             with open(new_file_path, 'w', encoding='utf-8') as f:
                 json.dump(plan_data, f, ensure_ascii=False, indent=4, cls=CustomJSONEncoder)
 
-            logging.info(f"New chapter saved: {new_file_path}")
+            # logging.info(f"New chapter saved: {new_file_path}")
 
             self.memory_agent.load_chapter(str(new_file_path))
-            logging.info("Knowledge graph updated")
+            # logging.info("Knowledge graph updated")
 
             self.memory_agent.save_character_memories(self.current_chapter)
-            logging.info("Character memories saved")
+            # logging.info("Character memories saved")
 
         except Exception as e:
-            logging.error(f"Failed to save chapter: {str(e)}", exc_info=True)
+            # logging.error(f"Failed to save chapter: {str(e)}", exc_info=True)
             raise
 
     async def _if_get_longgoal(self, long_goal, plan):
