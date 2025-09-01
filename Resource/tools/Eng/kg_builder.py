@@ -799,7 +799,7 @@ class KnowledgeGraphBuilder:
                 # Correctly calculate the project root directory (adjust levels based on actual directory structure)
                 project_root = current_dir.parent.parent.parent  # Assuming structure: project_root/Resource/tools/kg_builder.py
                 # Set the default character memory storage directory
-                base_path = project_root / "Resource" / "memory" / "memory_Eng" / "character"
+                base_path = project_root / "Resource" / "memory_Eng" / "character"
             else:
                 # Handle custom path (supports string or Path object)
                 base_path = Path(base_path)  # Ensure conversion to Path object

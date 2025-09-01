@@ -534,7 +534,7 @@ class StoryGenWorkflow:
                 print(f"⚠️ Failed to save plan: {str(e)}")
                 continue
 
-            # -- 2.5 Long-term goal check --
+            # -- 2. Long-term goal check --
             try:
                 if await self._if_get_longgoal(self.longgoal, best_plan):
                     print("🎉 Long-term goal achieved. Story generation completed!")

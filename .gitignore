@@ -1,12 +1,30 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# .env
 .env
-Resource/memory/character/
-Resource/memory/story_plan/
+
+# IDE and build files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Resource directories: ignore all contents, but allow specific files
+Resource/memory/character/**
+Resource/memory/story_plan/**
+Resource/story/**
+Resource/story_Eng/**
+Resource/memory_Eng/character/**
+Resource/memory_Eng/story_plan/**
+
+# But explicitly allow these to be tracked
 !Resource/memory/story_plan/
 !Resource/memory/story_plan/chapter_0.json
-Resource/story/
-Resource/story_Eng/
-Resource/memory_Eng/character/
-Resource/memory/memory_Eng/story_plan/
 !Resource/memory_Eng/story_plan/
 !Resource/memory_Eng/story_plan/chapter_0.json
+
+# Other files to ignore
 Agent/Specification.py
